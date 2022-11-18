@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct ColorData{
-    let backGroundColor: Color = Color(red: 22/255, green: 24/255, blue: 31/255)
+class ColorData: ObservableObject{
+    static var shared = ColorData()
+   var backGroundColor: Color = Color(red: 22/255, green: 24/255, blue: 31/255)
 }

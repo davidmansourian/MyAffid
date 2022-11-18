@@ -10,7 +10,7 @@ import SwiftUI
 struct GetStartedView: View {
     var body: some View {
         ZStack{
-            ColorData().backGroundColor
+            ColorData.shared.backGroundColor
                 .edgesIgnoringSafeArea(.all)
             VStack{
                 ZStack{
