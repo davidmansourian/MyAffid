@@ -19,6 +19,11 @@
 		DBD744BC2927B76E0058225A /* ColorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744BB2927B76E0058225A /* ColorData.swift */; };
 		DBD744C12927BC4B0058225A /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744C02927BC4B0058225A /* GoogleButton.swift */; };
 		DBD744C42927C0930058225A /* AppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744C32927C0930058225A /* AppleButton.swift */; };
+		DBD744C92927D2560058225A /* GetStartedCloudsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744C82927D2560058225A /* GetStartedCloudsView.swift */; };
+		DBD744CC2927D2B50058225A /* LoginSignUpCloudsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744CB2927D2B50058225A /* LoginSignUpCloudsView.swift */; };
+		DBD744D02927D2F90058225A /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744CF2927D2F90058225A /* LoginFormView.swift */; };
+		DBD744D22927D3930058225A /* LoginExternalPlatformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744D12927D3930058225A /* LoginExternalPlatformView.swift */; };
+		DBD744D42927D3C30058225A /* LoginCloudsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744D32927D3C30058225A /* LoginCloudsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,11 +36,16 @@
 		DBD744A52927A9240058225A /* Affid.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Affid.xcdatamodel; sourceTree = "<group>"; };
 		DBD744B22927AB750058225A /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
 		DBD744B62927B0640058225A /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
-		DBD744B82927B73B0058225A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = "Affid/Views/Get Started/LoginView.swift"; sourceTree = SOURCE_ROOT; };
+		DBD744B82927B73B0058225A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = Affid/Views/Login/LoginView.swift; sourceTree = SOURCE_ROOT; };
 		DBD744BB2927B76E0058225A /* ColorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorData.swift; sourceTree = "<group>"; };
 		DBD744C02927BC4B0058225A /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
 		DBD744C22927BFBD0058225A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DBD744C32927C0930058225A /* AppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleButton.swift; sourceTree = "<group>"; };
+		DBD744C82927D2560058225A /* GetStartedCloudsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedCloudsView.swift; sourceTree = "<group>"; };
+		DBD744CB2927D2B50058225A /* LoginSignUpCloudsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpCloudsView.swift; sourceTree = "<group>"; };
+		DBD744CF2927D2F90058225A /* LoginFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
+		DBD744D12927D3930058225A /* LoginExternalPlatformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExternalPlatformView.swift; sourceTree = "<group>"; };
+		DBD744D32927D3C30058225A /* LoginCloudsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCloudsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +125,8 @@
 		DBD744B02927AA260058225A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DBD744CE2927D2D50058225A /* Sign Up */,
+				DBD744CD2927D2D10058225A /* Login */,
 				DBD744BD2927B7D40058225A /* Get Started */,
 				DBD744B12927AA920058225A /* Buttons */,
 				DBD7449B2927A9220058225A /* ContentView.swift */,
@@ -144,9 +156,28 @@
 			isa = PBXGroup;
 			children = (
 				DBD744B22927AB750058225A /* GetStartedView.swift */,
-				DBD744B82927B73B0058225A /* LoginView.swift */,
+				DBD744C82927D2560058225A /* GetStartedCloudsView.swift */,
 			);
 			path = "Get Started";
+			sourceTree = "<group>";
+		};
+		DBD744CD2927D2D10058225A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DBD744CB2927D2B50058225A /* LoginSignUpCloudsView.swift */,
+				DBD744B82927B73B0058225A /* LoginView.swift */,
+				DBD744CF2927D2F90058225A /* LoginFormView.swift */,
+				DBD744D12927D3930058225A /* LoginExternalPlatformView.swift */,
+				DBD744D32927D3C30058225A /* LoginCloudsView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		DBD744CE2927D2D50058225A /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Sign Up";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,9 +256,14 @@
 				DBD744BC2927B76E0058225A /* ColorData.swift in Sources */,
 				DBD744C42927C0930058225A /* AppleButton.swift in Sources */,
 				DBD744C12927BC4B0058225A /* GoogleButton.swift in Sources */,
+				DBD744D22927D3930058225A /* LoginExternalPlatformView.swift in Sources */,
+				DBD744D42927D3C30058225A /* LoginCloudsView.swift in Sources */,
+				DBD744C92927D2560058225A /* GetStartedCloudsView.swift in Sources */,
 				DBD7449C2927A9220058225A /* ContentView.swift in Sources */,
 				DBD7449A2927A9220058225A /* AffidApp.swift in Sources */,
 				DBD744B32927AB750058225A /* GetStartedView.swift in Sources */,
+				DBD744CC2927D2B50058225A /* LoginSignUpCloudsView.swift in Sources */,
+				DBD744D02927D2F90058225A /* LoginFormView.swift in Sources */,
 				DBD744B72927B0640058225A /* BlueButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

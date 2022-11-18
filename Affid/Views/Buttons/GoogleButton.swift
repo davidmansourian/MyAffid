@@ -17,7 +17,7 @@ struct GoogleButton: ButtonStyle {
             .foregroundColor(Color.black.opacity(0.54))
             .bold()
             .cornerRadius(38)
-            .scaleEffect(configuration.isPressed ? 1.05 : 1)
+            .scaleEffect(configuration.isPressed ? 1.2 : 1)
             .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
     }
 }

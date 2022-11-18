@@ -9,61 +9,43 @@ import SwiftUI
 
 struct GetStartedView: View {
     var body: some View {
-        ZStack{
-            ColorData.shared.backGroundColor
-                .edgesIgnoringSafeArea(.all)
-            VStack{
-                ZStack{
-                    HStack{
-                        Image("clouds")
-                            .offset(x: -22, y: 50)
-                        Image("clouds")
-                            .offset(x: 50, y: -55)
-                        Image("clouds")
-                            .offset(x: 10, y: 39)
-                        
-                    }
-                    HStack{
-                        Text("Affid")
-                            .foregroundColor(.white)
-                            .font(.largeTitle)
-                            .bold()
-                    }
-                    HStack{
-                        Image("birdOnBranch")
-                            .offset(y: 120)
-                        
-                    }
-                }
-                Spacer()
-                Spacer()
-                Spacer()
+        NavigationStack{
+            ZStack{
+                ColorData.shared.backGroundColor
+                    .edgesIgnoringSafeArea(.all)
                 VStack{
-                    Text("Get Started")
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                    Text("Dive deeper into yourself and experience calmness ")
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
-                        .offset(y: 10)
+                    GetStartedCloudsView()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    VStack{
+                        Text("Get Started")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
+                        Text("Dive deeper into yourself and experience calmness ")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                            .offset(y: 10)
+                        
+                    }
                     
+                    VStack{
+                        NavigationLink(
+                            destination: LoginView(),
+                            label:{ Text("LOG IN")
+                        })
+                        .buttonStyle(BlueButton())
+                        Button("SIGN UP"){
+                            print("Button Test")
+                        }
+                        .offset(y: 10)
+                        .buttonStyle(BlueButton())
+                    }
+                    .padding()
+                    Spacer()
                 }
                 
-                VStack{
-                    Button("LOG IN"){
-                        print("Button Test")
-                    }
-                    .buttonStyle(BlueButton())
-                    Button("SIGN UP"){
-                        print("Button Test")
-                    }
-                    .offset(y: 10)
-                    .buttonStyle(BlueButton())
-                }
-                .padding()
-                Spacer()
             }
-            
         }
     }
 }
