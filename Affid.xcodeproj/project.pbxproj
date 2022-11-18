@@ -13,6 +13,10 @@
 		DBD744A12927A9240058225A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD744A02927A9240058225A /* Preview Assets.xcassets */; };
 		DBD744A32927A9240058225A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744A22927A9240058225A /* Persistence.swift */; };
 		DBD744A62927A9240058225A /* Affid.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBD744A42927A9240058225A /* Affid.xcdatamodeld */; };
+		DBD744B32927AB750058225A /* GetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744B22927AB750058225A /* GetStartedView.swift */; };
+		DBD744B72927B0640058225A /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744B62927B0640058225A /* BlueButton.swift */; };
+		DBD744B92927B73B0058225A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744B82927B73B0058225A /* LoginView.swift */; };
+		DBD744BC2927B76E0058225A /* ColorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744BB2927B76E0058225A /* ColorData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,10 @@
 		DBD744A02927A9240058225A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DBD744A22927A9240058225A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		DBD744A52927A9240058225A /* Affid.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Affid.xcdatamodel; sourceTree = "<group>"; };
+		DBD744B22927AB750058225A /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
+		DBD744B62927B0640058225A /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
+		DBD744B82927B73B0058225A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = "Affid/Views/Get Started/LoginView.swift"; sourceTree = SOURCE_ROOT; };
+		DBD744BB2927B76E0058225A /* ColorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +64,12 @@
 			isa = PBXGroup;
 			children = (
 				DBD744992927A9220058225A /* AffidApp.swift */,
-				DBD7449B2927A9220058225A /* ContentView.swift */,
+				DBD744BA2927B7570058225A /* Data */,
+				DBD744AF2927AA1F0058225A /* Models */,
+				DBD744AE2927AA130058225A /* ViewModels */,
+				DBD744B02927AA260058225A /* Views */,
 				DBD7449D2927A9240058225A /* Assets.xcassets */,
-				DBD744A22927A9240058225A /* Persistence.swift */,
-				DBD744A42927A9240058225A /* Affid.xcdatamodeld */,
+				DBD744AC2927AA090058225A /* CoreData */,
 				DBD7449F2927A9240058225A /* Preview Content */,
 			);
 			path = Affid;
@@ -71,6 +81,64 @@
 				DBD744A02927A9240058225A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DBD744AC2927AA090058225A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				DBD744A22927A9240058225A /* Persistence.swift */,
+				DBD744A42927A9240058225A /* Affid.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		DBD744AE2927AA130058225A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DBD744AF2927AA1F0058225A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DBD744B02927AA260058225A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DBD744BD2927B7D40058225A /* Get Started */,
+				DBD744B12927AA920058225A /* Buttons */,
+				DBD7449B2927A9220058225A /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DBD744B12927AA920058225A /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				DBD744B62927B0640058225A /* BlueButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		DBD744BA2927B7570058225A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DBD744BB2927B76E0058225A /* ColorData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DBD744BD2927B7D40058225A /* Get Started */ = {
+			isa = PBXGroup;
+			children = (
+				DBD744B22927AB750058225A /* GetStartedView.swift */,
+				DBD744B82927B73B0058225A /* LoginView.swift */,
+			);
+			path = "Get Started";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,9 +212,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBD744A62927A9240058225A /* Affid.xcdatamodeld in Sources */,
+				DBD744B92927B73B0058225A /* LoginView.swift in Sources */,
 				DBD744A32927A9240058225A /* Persistence.swift in Sources */,
+				DBD744BC2927B76E0058225A /* ColorData.swift in Sources */,
 				DBD7449C2927A9220058225A /* ContentView.swift in Sources */,
 				DBD7449A2927A9220058225A /* AffidApp.swift in Sources */,
+				DBD744B32927AB750058225A /* GetStartedView.swift in Sources */,
+				DBD744B72927B0640058225A /* BlueButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
