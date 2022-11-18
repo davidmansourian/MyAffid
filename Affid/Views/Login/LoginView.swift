@@ -47,7 +47,7 @@ struct LoginView: View {
                 Spacer()
                 
                 HStack {
-                    Button("LOG IN"){
+                    Button("LOGIN"){
                         print("testing login button")
                     }
                     .buttonStyle(BlueButton())

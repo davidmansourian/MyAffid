@@ -20,10 +20,13 @@
 		DBD744C12927BC4B0058225A /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744C02927BC4B0058225A /* GoogleButton.swift */; };
 		DBD744C42927C0930058225A /* AppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744C32927C0930058225A /* AppleButton.swift */; };
 		DBD744C92927D2560058225A /* GetStartedCloudsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744C82927D2560058225A /* GetStartedCloudsView.swift */; };
-		DBD744CC2927D2B50058225A /* LoginSignUpCloudsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744CB2927D2B50058225A /* LoginSignUpCloudsView.swift */; };
 		DBD744D02927D2F90058225A /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744CF2927D2F90058225A /* LoginFormView.swift */; };
 		DBD744D22927D3930058225A /* LoginExternalPlatformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744D12927D3930058225A /* LoginExternalPlatformView.swift */; };
 		DBD744D42927D3C30058225A /* LoginCloudsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744D32927D3C30058225A /* LoginCloudsView.swift */; };
+		DBD744D62927E7AE0058225A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744D52927E7AD0058225A /* SignUpView.swift */; };
+		DBD744D82927E8950058225A /* SignUpExternalPlatformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744D72927E8950058225A /* SignUpExternalPlatformView.swift */; };
+		DBD744DA2927E8E10058225A /* SignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744D92927E8E10058225A /* SignUpFormView.swift */; };
+		DBD744DC2927E9C10058225A /* SignUpPrivacyPolicyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744DB2927E9C10058225A /* SignUpPrivacyPolicyRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,10 +45,13 @@
 		DBD744C22927BFBD0058225A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DBD744C32927C0930058225A /* AppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleButton.swift; sourceTree = "<group>"; };
 		DBD744C82927D2560058225A /* GetStartedCloudsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedCloudsView.swift; sourceTree = "<group>"; };
-		DBD744CB2927D2B50058225A /* LoginSignUpCloudsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUpCloudsView.swift; sourceTree = "<group>"; };
 		DBD744CF2927D2F90058225A /* LoginFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
 		DBD744D12927D3930058225A /* LoginExternalPlatformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExternalPlatformView.swift; sourceTree = "<group>"; };
 		DBD744D32927D3C30058225A /* LoginCloudsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCloudsView.swift; sourceTree = "<group>"; };
+		DBD744D52927E7AD0058225A /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		DBD744D72927E8950058225A /* SignUpExternalPlatformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpExternalPlatformView.swift; sourceTree = "<group>"; };
+		DBD744D92927E8E10058225A /* SignUpFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormView.swift; sourceTree = "<group>"; };
+		DBD744DB2927E9C10058225A /* SignUpPrivacyPolicyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPrivacyPolicyRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +170,6 @@
 		DBD744CD2927D2D10058225A /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				DBD744CB2927D2B50058225A /* LoginSignUpCloudsView.swift */,
 				DBD744B82927B73B0058225A /* LoginView.swift */,
 				DBD744CF2927D2F90058225A /* LoginFormView.swift */,
 				DBD744D12927D3930058225A /* LoginExternalPlatformView.swift */,
@@ -176,6 +181,10 @@
 		DBD744CE2927D2D50058225A /* Sign Up */ = {
 			isa = PBXGroup;
 			children = (
+				DBD744D52927E7AD0058225A /* SignUpView.swift */,
+				DBD744D72927E8950058225A /* SignUpExternalPlatformView.swift */,
+				DBD744D92927E8E10058225A /* SignUpFormView.swift */,
+				DBD744DB2927E9C10058225A /* SignUpPrivacyPolicyRow.swift */,
 			);
 			path = "Sign Up";
 			sourceTree = "<group>";
@@ -251,6 +260,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBD744A62927A9240058225A /* Affid.xcdatamodeld in Sources */,
+				DBD744DC2927E9C10058225A /* SignUpPrivacyPolicyRow.swift in Sources */,
+				DBD744DA2927E8E10058225A /* SignUpFormView.swift in Sources */,
 				DBD744B92927B73B0058225A /* LoginView.swift in Sources */,
 				DBD744A32927A9240058225A /* Persistence.swift in Sources */,
 				DBD744BC2927B76E0058225A /* ColorData.swift in Sources */,
@@ -258,11 +269,12 @@
 				DBD744C12927BC4B0058225A /* GoogleButton.swift in Sources */,
 				DBD744D22927D3930058225A /* LoginExternalPlatformView.swift in Sources */,
 				DBD744D42927D3C30058225A /* LoginCloudsView.swift in Sources */,
+				DBD744D82927E8950058225A /* SignUpExternalPlatformView.swift in Sources */,
 				DBD744C92927D2560058225A /* GetStartedCloudsView.swift in Sources */,
 				DBD7449C2927A9220058225A /* ContentView.swift in Sources */,
 				DBD7449A2927A9220058225A /* AffidApp.swift in Sources */,
 				DBD744B32927AB750058225A /* GetStartedView.swift in Sources */,
-				DBD744CC2927D2B50058225A /* LoginSignUpCloudsView.swift in Sources */,
+				DBD744D62927E7AE0058225A /* SignUpView.swift in Sources */,
 				DBD744D02927D2F90058225A /* LoginFormView.swift in Sources */,
 				DBD744B72927B0640058225A /* BlueButton.swift in Sources */,
 			);
