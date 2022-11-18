@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
         ZStack{
             ColorData.shared.backGroundColor
@@ -15,7 +16,7 @@ struct LoginView: View {
             VStack{
                 
                 Spacer()
-
+                
                 LoginCloudsView()
                 
                 HStack{
@@ -56,9 +57,22 @@ struct LoginView: View {
             }
         }
         .toolbar{
+            ToolbarItemGroup(placement: .navigationBarLeading){
+                // Solution below was taken from https://stackoverflow.com/a/58159783
+                Button(action: { self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    Image(systemName: "chevron.backward")
+                        .foregroundColor(Color.gray)
+                        .padding(10)
+                        .background(Color.gray.opacity(0.05))
+                        .clipShape(Circle())
+                }
+            }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
+
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
