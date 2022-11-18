@@ -43,6 +43,7 @@ struct CreateNewPasswordView: View {
                 Spacer()
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

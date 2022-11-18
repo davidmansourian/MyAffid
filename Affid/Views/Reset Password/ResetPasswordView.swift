@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ResetPasswordView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
         ZStack{
             ColorData.shared.backGroundColor
@@ -35,18 +36,32 @@ struct ResetPasswordView: View {
                 }
                 .padding()
                 
-                HStack{
-                    Button("Reset"){
-                        print("Testing reset button")
-                    }
+                    NavigationLink(
+                        destination: OTPView(),
+                        label:{ Text("Reset")
+                        })
                     .buttonStyle(BlueButton())
-                }
-                .padding()
+                    .padding()
                 Spacer()
                 Spacer()
                 Spacer()
             }
         }
+        .toolbar{
+            ToolbarItemGroup(placement: .navigationBarLeading){
+                // Solution below was taken from https://stackoverflow.com/a/58159783
+                Button(action: { self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    Image(systemName: "chevron.backward")
+                        .foregroundColor(Color.white)
+                        .padding(10)
+                        .overlay(
+                            Circle()
+                                .stroke(.white))
+                }
+            }
+        }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

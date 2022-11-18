@@ -38,7 +38,10 @@ struct LoginView: View {
                 LoginFormView()
                 
                 HStack{
-                    Text("RESET PASSWORD")
+                    NavigationLink(
+                        destination: ResetPasswordView(),
+                        label:{ Text("RESET PASSWORD")
+                        })
                         .foregroundColor(.gray)
                         .font(.footnote)
                         .offset(x: -110)

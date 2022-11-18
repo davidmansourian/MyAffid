@@ -25,13 +25,15 @@ struct OTPView: View {
                 
                 OTPTextFieldView()
                 
-                Button("Continue"){
-                    print("Testing OTP continue Button")
-                }
+                NavigationLink(
+                    destination: CreateNewPasswordView(),
+                    label:{ Text("Continue")
+                    })
                 .buttonStyle(BlueButton())
                 .padding()
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
