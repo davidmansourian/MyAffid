@@ -62,10 +62,11 @@ struct LoginView: View {
                 Button(action: { self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Image(systemName: "chevron.backward")
-                        .foregroundColor(Color.gray)
+                        .foregroundColor(Color.white)
                         .padding(10)
-                        .background(Color.gray.opacity(0.05))
-                        .clipShape(Circle())
+                        .overlay(
+                            Circle()
+                                .stroke(.white))
                 }
             }
         }
