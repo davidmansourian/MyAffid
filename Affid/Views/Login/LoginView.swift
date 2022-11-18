@@ -41,7 +41,7 @@ struct LoginView: View {
                     Text("RESET PASSWORD")
                         .foregroundColor(.gray)
                         .font(.footnote)
-                        .offset(x: -100)
+                        .offset(x: -110)
                 } // need to align properly without depending on offset
                 
                 Spacer()

@@ -29,19 +29,8 @@ struct GetStartedView: View {
                         
                     }
                     
-                    VStack{
-                        NavigationLink(
-                            destination: LoginView(),
-                            label:{ Text("LOG IN")
-                        })
-                        .buttonStyle(BlueButton())
-                        Button("SIGN UP"){
-                            print("Button Test")
-                        }
-                        .offset(y: 10)
-                        .buttonStyle(BlueButton())
-                    }
-                    .padding()
+                   GetStartedNavigationLinks()
+                    
                     Spacer()
                 }
                 

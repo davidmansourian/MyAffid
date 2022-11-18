@@ -1,5 +1,5 @@
 //
-//  SignUpFormView.swift
+//  NewPasswordPickerView.swift
 //  Affid
 //
 //  Created by David on 2022-11-18.
@@ -7,13 +7,12 @@
 
 import SwiftUI
 
-struct SignUpFormView: View {
-    @State var name: String = ""
-    @State var email: String = ""
+struct NewPasswordPickerView: View {
     @State var password: String = ""
+    @State var confirmPassword: String = ""
     var body: some View {
         VStack{
-            TextField("Name", text: $name)
+            TextField("Set Password", text: $password)
                 .foregroundColor(Color.white)
                 .font(.headline)
                 .padding()
@@ -24,7 +23,7 @@ struct SignUpFormView: View {
                         .frame(height: 55)
                         .cornerRadius(38)
                 )
-            TextField("Email Address", text: $email)
+            TextField("Confirm Password", text: $confirmPassword)
                 .foregroundColor(Color.white)
                 .font(.headline)
                 .padding()
@@ -36,27 +35,12 @@ struct SignUpFormView: View {
                         .cornerRadius(38)
                 )
                 .offset(y: 10)
-            ZStack(alignment: .leading){
-                TextField("", text: $password)
-                    .foregroundColor(Color.white)
-                    .font(.headline)
-                    .padding()
-                    .background(
-                        Rectangle()
-                            .fill(ColorData.shared.textFieldColor)
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 55)
-                            .cornerRadius(38)
-                    )
-                    .offset(y: 20)
-            }
         }
-        .padding()
     }
 }
 
-struct SignUpFormView_Previews: PreviewProvider {
+struct NewPasswordPickerView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpFormView()
+        NewPasswordPickerView()
     }
 }

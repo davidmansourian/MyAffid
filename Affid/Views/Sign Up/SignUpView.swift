@@ -19,29 +19,33 @@ struct SignUpView: View {
                 LoginCloudsView()
                     .offset(y: 39)
                 
-                HStack{
-                    Text("Create your account")
-                        .font(.title)
-                        .bold()
-                        .foregroundColor(.white)
+                    HStack{
+                        Text("Create your account")
+                            .font(.title)
+                            .bold()
+                            .foregroundColor(.white)
+                    }
+                    
+                    SignUpExternalPlatformView()
+                
+                Group{
+                    HStack{
+                        Text("OR SIGN UP WITH EMAIL")
+                            .foregroundColor(.gray)
+                            .font(.footnote)
+                    }
+                    .padding()
+                    
+                    SignUpFormView()
+                    
+                    Spacer()
                 }
-                
-                SignUpExternalPlatformView()
-                
-                HStack{
-                    Text("OR SIGN UP WITH EMAIL")
-                        .foregroundColor(.gray)
-                        .font(.footnote)
-                }
-                .padding()
-                
-                SignUpFormView()
-                
                 Spacer()
                 
                 SignUpPrivacyPolicyRow()
                     .padding()
                 
+                Spacer()
                 
                 HStack {
                     Button("SIGN UP"){
@@ -55,6 +59,21 @@ struct SignUpView: View {
                 
             }
         }
+        .toolbar{
+            ToolbarItemGroup(placement: .navigationBarLeading){
+                // Solution below was taken from https://stackoverflow.com/a/58159783
+                Button(action: { self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    Image(systemName: "chevron.backward")
+                        .foregroundColor(Color.white)
+                        .padding(10)
+                        .overlay(
+                            Circle()
+                                .stroke(.white))
+                }
+            }
+        }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
