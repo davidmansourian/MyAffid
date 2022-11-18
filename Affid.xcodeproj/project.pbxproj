@@ -17,6 +17,8 @@
 		DBD744B72927B0640058225A /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744B62927B0640058225A /* BlueButton.swift */; };
 		DBD744B92927B73B0058225A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744B82927B73B0058225A /* LoginView.swift */; };
 		DBD744BC2927B76E0058225A /* ColorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744BB2927B76E0058225A /* ColorData.swift */; };
+		DBD744C12927BC4B0058225A /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744C02927BC4B0058225A /* GoogleButton.swift */; };
+		DBD744C42927C0930058225A /* AppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744C32927C0930058225A /* AppleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,9 @@
 		DBD744B62927B0640058225A /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
 		DBD744B82927B73B0058225A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = "Affid/Views/Get Started/LoginView.swift"; sourceTree = SOURCE_ROOT; };
 		DBD744BB2927B76E0058225A /* ColorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorData.swift; sourceTree = "<group>"; };
+		DBD744C02927BC4B0058225A /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
+		DBD744C22927BFBD0058225A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DBD744C32927C0930058225A /* AppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,7 @@
 		DBD744982927A9220058225A /* Affid */ = {
 			isa = PBXGroup;
 			children = (
+				DBD744C22927BFBD0058225A /* Info.plist */,
 				DBD744992927A9220058225A /* AffidApp.swift */,
 				DBD744BA2927B7570058225A /* Data */,
 				DBD744AF2927AA1F0058225A /* Models */,
@@ -120,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				DBD744B62927B0640058225A /* BlueButton.swift */,
+				DBD744C02927BC4B0058225A /* GoogleButton.swift */,
+				DBD744C32927C0930058225A /* AppleButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -215,6 +223,8 @@
 				DBD744B92927B73B0058225A /* LoginView.swift in Sources */,
 				DBD744A32927A9240058225A /* Persistence.swift in Sources */,
 				DBD744BC2927B76E0058225A /* ColorData.swift in Sources */,
+				DBD744C42927C0930058225A /* AppleButton.swift in Sources */,
+				DBD744C12927BC4B0058225A /* GoogleButton.swift in Sources */,
 				DBD7449C2927A9220058225A /* ContentView.swift in Sources */,
 				DBD7449A2927A9220058225A /* AffidApp.swift in Sources */,
 				DBD744B32927AB750058225A /* GetStartedView.swift in Sources */,
@@ -350,6 +360,7 @@
 				DEVELOPMENT_TEAM = M46F4B7U6P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Affid/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -379,6 +390,7 @@
 				DEVELOPMENT_TEAM = M46F4B7U6P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Affid/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

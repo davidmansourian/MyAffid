@@ -10,5 +10,7 @@ import SwiftUI
 
 class ColorData: ObservableObject{
     static var shared = ColorData()
-   var backGroundColor: Color = Color(red: 22/255, green: 24/255, blue: 31/255)
+    var backGroundColor: Color = Color(red: 22/255, green: 24/255, blue: 31/255)
+    var textFieldColor: Color = Color(red: 63/255, green:  65/255, blue: 78/255)
+    
 }

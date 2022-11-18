@@ -30,7 +30,7 @@ struct GetStartedView: View {
                             .bold()
                     }
                     HStack{
-                        Image("birdonbranch")
+                        Image("birdOnBranch")
                             .offset(y: 120)
                         
                     }
