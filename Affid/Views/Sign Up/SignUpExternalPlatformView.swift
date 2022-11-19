@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SignUpExternalPlatformView: View {
     var body: some View {
-        VStack{
+        VStack(spacing: 20){
             ZStack {
                 Button("Sign up with Google"){
                     print("Testing google button")
@@ -28,7 +28,6 @@ struct SignUpExternalPlatformView: View {
                 Image("appleLogo")
                     .offset(x: -130)
             }
-            .offset(y: 5)
             
         }
         .padding()

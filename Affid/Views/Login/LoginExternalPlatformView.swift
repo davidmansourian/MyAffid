@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoginExternalPlatformView: View {
     var body: some View {
-        VStack(spacing: 10){
+        VStack(spacing: 20){
             ZStack {
                 Button("Continue with Google"){
                     print("Testing google button")

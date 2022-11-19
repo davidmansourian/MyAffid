@@ -39,7 +39,7 @@ struct SignUpView: View {
                     }
                     .padding()
                     
-                    VStack(spacing: -20){
+                    VStack(spacing: -10){
                         CustomTextField(placeHolderText: "Name", text: $name)
                         CustomTextField(placeHolderText: "Email", text: $email)
                         CustomTextField(placeHolderText: "Password", text: $password)

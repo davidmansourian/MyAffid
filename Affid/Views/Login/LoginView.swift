@@ -21,23 +21,24 @@ struct LoginView: View {
                 
                 LoginCloudsView()
                 
-                HStack{
-                    Text("Hi there! Login below")
-                        .font(.title)
-                        .bold()
-                        .foregroundColor(.white)
+                Group{
+                    HStack{
+                        Text("Hi there! Login below")
+                            .font(.title)
+                            .bold()
+                            .foregroundColor(.white)
+                    }
+                    
+                    LoginExternalPlatformView()
+                    
+                    HStack{
+                        Text("OR LOGIN WITH EMAIL")
+                            .foregroundColor(.gray)
+                            .font(.footnote)
+                    }
+                    .padding()
                 }
-                
-                LoginExternalPlatformView()
-                
-                HStack{
-                    Text("OR LOGIN WITH EMAIL")
-                        .foregroundColor(.gray)
-                        .font(.footnote)
-                }
-                .padding()
-                
-                VStack(spacing: -20){
+                VStack(spacing: -10){
                     CustomTextField(placeHolderText: "Email Address", text: $email)
                     CustomTextField(placeHolderText: "Password", text: $password)
                 }
