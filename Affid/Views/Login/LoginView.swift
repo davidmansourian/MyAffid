@@ -52,8 +52,7 @@ struct LoginView: View {
                         .foregroundColor(.gray)
                         .font(.footnote)
                     Spacer()
-                        //.offset(x: -110)
-                } // need to align properly without depending on offset
+                }
                 .padding(.horizontal, 30)
                 
                 Spacer()

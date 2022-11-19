@@ -9,12 +9,10 @@ import SwiftUI
 
 struct SignUpPrivacyPolicyRow: View {
     var body: some View {
-        HStack{
+        HStack(spacing: 100){
             Text("I have read the Privacy Policy")
-                .offset(x: -40)
                 .foregroundColor(Color.gray)
             Image(systemName: "square")
-                .offset(x: 40)
                 .foregroundColor(Color.gray) // Should toggle white when filled
         }
     }
