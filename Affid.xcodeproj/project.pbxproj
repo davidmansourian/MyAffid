@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		DB2F62F42927F80A00D0BFFD /* BlueButtonSmaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F62F32927F80A00D0BFFD /* BlueButtonSmaller.swift */; };
 		DB2F62F72927F8F700D0BFFD /* CreateNewPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F62F62927F8F700D0BFFD /* CreateNewPasswordView.swift */; };
-		DB2F62FB2927F99600D0BFFD /* NewPasswordPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F62FA2927F99600D0BFFD /* NewPasswordPickerView.swift */; };
+		DB2F6303292962AB00D0BFFD /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6302292962AB00D0BFFD /* CustomTextField.swift */; };
+		DB2F63052929635E00D0BFFD /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F63042929635E00D0BFFD /* OTPTextField.swift */; };
 		DBD7449A2927A9220058225A /* AffidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744992927A9220058225A /* AffidApp.swift */; };
 		DBD7449C2927A9220058225A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7449B2927A9220058225A /* ContentView.swift */; };
 		DBD7449E2927A9240058225A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD7449D2927A9240058225A /* Assets.xcassets */; };
@@ -23,24 +24,21 @@
 		DBD744C12927BC4B0058225A /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744C02927BC4B0058225A /* GoogleButton.swift */; };
 		DBD744C42927C0930058225A /* AppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744C32927C0930058225A /* AppleButton.swift */; };
 		DBD744C92927D2560058225A /* GetStartedCloudsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744C82927D2560058225A /* GetStartedCloudsView.swift */; };
-		DBD744D02927D2F90058225A /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744CF2927D2F90058225A /* LoginFormView.swift */; };
 		DBD744D22927D3930058225A /* LoginExternalPlatformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744D12927D3930058225A /* LoginExternalPlatformView.swift */; };
 		DBD744D42927D3C30058225A /* LoginCloudsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744D32927D3C30058225A /* LoginCloudsView.swift */; };
 		DBD744D62927E7AE0058225A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744D52927E7AD0058225A /* SignUpView.swift */; };
 		DBD744D82927E8950058225A /* SignUpExternalPlatformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744D72927E8950058225A /* SignUpExternalPlatformView.swift */; };
-		DBD744DA2927E8E10058225A /* SignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744D92927E8E10058225A /* SignUpFormView.swift */; };
 		DBD744DC2927E9C10058225A /* SignUpPrivacyPolicyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744DB2927E9C10058225A /* SignUpPrivacyPolicyRow.swift */; };
 		DBD744DE2927EB4E0058225A /* GetStartedNavigationLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744DD2927EB4E0058225A /* GetStartedNavigationLinks.swift */; };
 		DBD744E12927F1950058225A /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744E02927F1950058225A /* ResetPasswordView.swift */; };
-		DBD744E62927F3A80058225A /* ResetPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744E52927F3A80058225A /* ResetPasswordTextField.swift */; };
 		DBD744E82927F4E00058225A /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744E72927F4E00058225A /* OTPView.swift */; };
-		DBD744EB2927F6480058225A /* OTPTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744EA2927F6480058225A /* OTPTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DB2F62F32927F80A00D0BFFD /* BlueButtonSmaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonSmaller.swift; sourceTree = "<group>"; };
 		DB2F62F62927F8F700D0BFFD /* CreateNewPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordView.swift; sourceTree = "<group>"; };
-		DB2F62FA2927F99600D0BFFD /* NewPasswordPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordPickerView.swift; sourceTree = "<group>"; };
+		DB2F6302292962AB00D0BFFD /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		DB2F63042929635E00D0BFFD /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 		DBD744962927A9220058225A /* Affid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD744992927A9220058225A /* AffidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffidApp.swift; sourceTree = "<group>"; };
 		DBD7449B2927A9220058225A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,18 +54,14 @@
 		DBD744C22927BFBD0058225A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DBD744C32927C0930058225A /* AppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleButton.swift; sourceTree = "<group>"; };
 		DBD744C82927D2560058225A /* GetStartedCloudsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedCloudsView.swift; sourceTree = "<group>"; };
-		DBD744CF2927D2F90058225A /* LoginFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
 		DBD744D12927D3930058225A /* LoginExternalPlatformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginExternalPlatformView.swift; sourceTree = "<group>"; };
 		DBD744D32927D3C30058225A /* LoginCloudsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCloudsView.swift; sourceTree = "<group>"; };
 		DBD744D52927E7AD0058225A /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		DBD744D72927E8950058225A /* SignUpExternalPlatformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpExternalPlatformView.swift; sourceTree = "<group>"; };
-		DBD744D92927E8E10058225A /* SignUpFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormView.swift; sourceTree = "<group>"; };
 		DBD744DB2927E9C10058225A /* SignUpPrivacyPolicyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPrivacyPolicyRow.swift; sourceTree = "<group>"; };
 		DBD744DD2927EB4E0058225A /* GetStartedNavigationLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedNavigationLinks.swift; sourceTree = "<group>"; };
 		DBD744E02927F1950058225A /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
-		DBD744E52927F3A80058225A /* ResetPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordTextField.swift; sourceTree = "<group>"; };
 		DBD744E72927F4E00058225A /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
-		DBD744EA2927F6480058225A /* OTPTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +79,26 @@
 			isa = PBXGroup;
 			children = (
 				DB2F62F62927F8F700D0BFFD /* CreateNewPasswordView.swift */,
-				DB2F62FA2927F99600D0BFFD /* NewPasswordPickerView.swift */,
 			);
 			path = "New Password";
+			sourceTree = "<group>";
+		};
+		DB2F62FC29295CE500D0BFFD /* Reusables */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F63012929626E00D0BFFD /* TextFields */,
+				DBD744B12927AA920058225A /* Buttons */,
+			);
+			path = Reusables;
+			sourceTree = "<group>";
+		};
+		DB2F63012929626E00D0BFFD /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F6302292962AB00D0BFFD /* CustomTextField.swift */,
+				DB2F63042929635E00D0BFFD /* OTPTextField.swift */,
+			);
+			path = TextFields;
 			sourceTree = "<group>";
 		};
 		DBD7448D2927A9220058225A = {
@@ -116,8 +127,9 @@
 				DBD744AE2927AA130058225A /* ViewModels */,
 				DBD744B02927AA260058225A /* Views */,
 				DBD7449D2927A9240058225A /* Assets.xcassets */,
-				DBD744AC2927AA090058225A /* CoreData */,
+				DBD7449B2927A9220058225A /* ContentView.swift */,
 				DBD7449F2927A9240058225A /* Preview Content */,
+				DBD744AC2927AA090058225A /* CoreData */,
 			);
 			path = Affid;
 			sourceTree = "<group>";
@@ -156,12 +168,11 @@
 		DBD744B02927AA260058225A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DB2F62FC29295CE500D0BFFD /* Reusables */,
 				DBD744DF2927F1830058225A /* Reset Password */,
 				DBD744CE2927D2D50058225A /* Sign Up */,
 				DBD744CD2927D2D10058225A /* Login */,
 				DBD744BD2927B7D40058225A /* Get Started */,
-				DBD744B12927AA920058225A /* Buttons */,
-				DBD7449B2927A9220058225A /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,7 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				DBD744B82927B73B0058225A /* LoginView.swift */,
-				DBD744CF2927D2F90058225A /* LoginFormView.swift */,
 				DBD744D12927D3930058225A /* LoginExternalPlatformView.swift */,
 				DBD744D32927D3C30058225A /* LoginCloudsView.swift */,
 			);
@@ -211,7 +221,6 @@
 			children = (
 				DBD744D52927E7AD0058225A /* SignUpView.swift */,
 				DBD744D72927E8950058225A /* SignUpExternalPlatformView.swift */,
-				DBD744D92927E8E10058225A /* SignUpFormView.swift */,
 				DBD744DB2927E9C10058225A /* SignUpPrivacyPolicyRow.swift */,
 			);
 			path = "Sign Up";
@@ -223,7 +232,6 @@
 				DB2F62F52927F8E800D0BFFD /* New Password */,
 				DBD744E92927F6150058225A /* OTP View */,
 				DBD744E02927F1950058225A /* ResetPasswordView.swift */,
-				DBD744E52927F3A80058225A /* ResetPasswordTextField.swift */,
 			);
 			path = "Reset Password";
 			sourceTree = "<group>";
@@ -232,7 +240,6 @@
 			isa = PBXGroup;
 			children = (
 				DBD744E72927F4E00058225A /* OTPView.swift */,
-				DBD744EA2927F6480058225A /* OTPTextFieldView.swift */,
 			);
 			path = "OTP View";
 			sourceTree = "<group>";
@@ -309,12 +316,8 @@
 			files = (
 				DBD744E82927F4E00058225A /* OTPView.swift in Sources */,
 				DBD744A62927A9240058225A /* Affid.xcdatamodeld in Sources */,
-				DB2F62FB2927F99600D0BFFD /* NewPasswordPickerView.swift in Sources */,
 				DBD744DC2927E9C10058225A /* SignUpPrivacyPolicyRow.swift in Sources */,
-				DBD744DA2927E8E10058225A /* SignUpFormView.swift in Sources */,
-				DBD744EB2927F6480058225A /* OTPTextFieldView.swift in Sources */,
 				DBD744B92927B73B0058225A /* LoginView.swift in Sources */,
-				DBD744E62927F3A80058225A /* ResetPasswordTextField.swift in Sources */,
 				DBD744A32927A9240058225A /* Persistence.swift in Sources */,
 				DBD744BC2927B76E0058225A /* ColorData.swift in Sources */,
 				DBD744C42927C0930058225A /* AppleButton.swift in Sources */,
@@ -328,11 +331,12 @@
 				DBD7449A2927A9220058225A /* AffidApp.swift in Sources */,
 				DBD744B32927AB750058225A /* GetStartedView.swift in Sources */,
 				DBD744D62927E7AE0058225A /* SignUpView.swift in Sources */,
-				DBD744D02927D2F90058225A /* LoginFormView.swift in Sources */,
 				DBD744B72927B0640058225A /* BlueButton.swift in Sources */,
+				DB2F6303292962AB00D0BFFD /* CustomTextField.swift in Sources */,
 				DB2F62F42927F80A00D0BFFD /* BlueButtonSmaller.swift in Sources */,
 				DBD744DE2927EB4E0058225A /* GetStartedNavigationLinks.swift in Sources */,
 				DB2F62F72927F8F700D0BFFD /* CreateNewPasswordView.swift in Sources */,
+				DB2F63052929635E00D0BFFD /* OTPTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GetStartedNavigationLinks: View {
     var body: some View {
-        VStack{
+        VStack(spacing: 10){
             NavigationLink(
                 destination: LoginView(),
                 label:{ Text("LOGIN")
@@ -19,7 +19,6 @@ struct GetStartedNavigationLinks: View {
                 destination: SignUpView(),
                 label:{ Text("SIGN UP")
                 })
-            .offset(y: 10)
             .buttonStyle(BlueButton())
         }
         .padding()

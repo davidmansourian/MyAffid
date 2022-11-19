@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SignUpView: View {
+    @State var name: String = ""
+    @State var email: String = ""
+    @State var password: String = ""
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
         ZStack{
@@ -36,7 +39,11 @@ struct SignUpView: View {
                     }
                     .padding()
                     
-                    SignUpFormView()
+                    VStack(spacing: -20){
+                        CustomTextField(placeHolderText: "Name", text: $name)
+                        CustomTextField(placeHolderText: "Email", text: $email)
+                        CustomTextField(placeHolderText: "Password", text: $password)
+                    }
                     
                     Spacer()
                 }

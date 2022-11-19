@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ResetPasswordView: View {
+    @State var email: String = ""
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
         ZStack{
@@ -32,9 +33,8 @@ struct ResetPasswordView: View {
                 }
                 
                 HStack{
-                    ResetPasswordTextField()
+                    CustomTextField(placeHolderText: "Email", text: $email)
                 }
-                .padding()
                 
                     NavigationLink(
                         destination: OTPView(),

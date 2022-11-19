@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CreateNewPasswordView: View {
+    @State var newPasssord: String = ""
+    @State var repeatNewPassword: String = ""
     var body: some View {
         ZStack{
             ColorData.shared.backGroundColor
@@ -25,10 +27,10 @@ struct CreateNewPasswordView: View {
                         .font(.title2)
                 }
                 
-                VStack{
-                    NewPasswordPickerView()
+                VStack(spacing: -10){
+                    CustomTextField(placeHolderText: "New Password", text: $newPasssord)
+                    CustomTextField(placeHolderText: "Repeat New Password", text: $repeatNewPassword)
                 }
-                .padding()
 
                 
                 HStack{

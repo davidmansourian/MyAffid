@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
+    @State var email: String = ""
+    @State var password: String = ""
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
         ZStack{
@@ -35,7 +37,11 @@ struct LoginView: View {
                 }
                 .padding()
                 
-                LoginFormView()
+                VStack(spacing: -20){
+                    CustomTextField(placeHolderText: "Email Address", text: $email)
+                    CustomTextField(placeHolderText: "Password", text: $password)
+                }
+                    
                 
                 HStack{
                     NavigationLink(
@@ -44,8 +50,10 @@ struct LoginView: View {
                         })
                         .foregroundColor(.gray)
                         .font(.footnote)
-                        .offset(x: -110)
+                    Spacer()
+                        //.offset(x: -110)
                 } // need to align properly without depending on offset
+                .padding(.horizontal, 30)
                 
                 Spacer()
                 

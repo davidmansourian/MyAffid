@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct OTPView: View {
+    @State var firstDigit: String = ""
+    @State var secondDigit: String = ""
+    @State var thirdDigit: String = ""
+    @State var fourthDigit: String = ""
+    @State var fifthDigit: String = ""
+    
     var body: some View {
         ZStack{
             
@@ -23,7 +29,14 @@ struct OTPView: View {
                     .bold()
                     .padding()
                 
-                OTPTextFieldView()
+                HStack{
+                    OTPTextField(placeHolderText: "", text: $firstDigit)
+                    OTPTextField(placeHolderText: "", text: $secondDigit)
+                    OTPTextField(placeHolderText: "", text: $thirdDigit)
+                    OTPTextField(placeHolderText: "", text: $fourthDigit)
+                    OTPTextField(placeHolderText: "", text: $fifthDigit)
+                }
+                .padding()
                 
                 NavigationLink(
                     destination: CreateNewPasswordView(),
