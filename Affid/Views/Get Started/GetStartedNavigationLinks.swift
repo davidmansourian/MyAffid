@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GetStartedNavigationLinks: View {
     var body: some View {
-        VStack(spacing: 10){
+        VStack(spacing: 30){
             NavigationLink(
                 destination: LoginView(),
                 label:{ Text("LOGIN")

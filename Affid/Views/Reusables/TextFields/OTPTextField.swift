@@ -14,14 +14,13 @@ struct OTPTextField: View {
         VStack{
             HStack{
                 TextField(placeHolderText, text: $text)
-                    .padding()
+                    .multilineTextAlignment(.center)
                     .foregroundColor(.white)
                     .background(
-                        Rectangle()
+                        Capsule()
                             .fill(ColorData.shared.textFieldColor.opacity(0.3))
                             .frame(width: 55)
                             .frame(height: 55)
-                            .clipShape(Capsule())
                     )
                     .padding()
             }

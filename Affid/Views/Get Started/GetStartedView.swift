@@ -18,14 +18,13 @@ struct GetStartedView: View {
                     Spacer()
                     Spacer()
                     Spacer()
-                    VStack{
+                    VStack(spacing: 20){
                         Text("Get Started")
                             .font(.largeTitle)
                             .foregroundColor(.white)
                         Text("Dive deeper into yourself and experience calmness ")
                             .font(.subheadline)
                             .foregroundColor(.gray)
-                            .offset(y: 10)
                         
                     }
                     
