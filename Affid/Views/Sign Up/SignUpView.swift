@@ -43,7 +43,7 @@ struct SignUpView: View {
                     VStack(spacing: -10){
                         CustomTextField(placeHolderText: "Name", text: $name)
                         CustomTextField(placeHolderText: "Email", text: $email)
-                        CustomTextField(placeHolderText: "Password", text: $password)
+                        CustomTextField(placeHolderText: "Password", isSecureField: true, text: $password)
                     }
                     
                     Spacer()

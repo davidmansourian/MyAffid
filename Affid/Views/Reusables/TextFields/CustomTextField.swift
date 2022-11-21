@@ -9,22 +9,39 @@ import SwiftUI
 
 struct CustomTextField: View {
     let placeHolderText: String
+    var isSecureField: Bool? = false
     @Binding var text: String
     var body: some View {
         VStack{
             HStack{
-                TextField(placeHolderText, text: $text)
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(
-                        Rectangle()
-                            .fill(ColorData.shared.textFieldColor.opacity(0.3))
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 55)
-                            .clipShape(Capsule())
-                    )
-                    .padding()
+                if isSecureField ?? false{
+                    SecureField(placeHolderText, text: $text)
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(
+                            Rectangle()
+                                .fill(ColorData.shared.textFieldColor.opacity(0.3))
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 55)
+                                .clipShape(Capsule())
+                        )
+                        .padding()
+                }
+                else{
+                    TextField(placeHolderText, text: $text)
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(
+                            Rectangle()
+                                .fill(ColorData.shared.textFieldColor.opacity(0.3))
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 55)
+                                .clipShape(Capsule())
+                        )
+                        .padding()
+                }
             }
+            
         }
     }
 }
@@ -36,3 +53,15 @@ struct CustomTextField_Previews: PreviewProvider {
             text: .constant("Hallå"))
     }
 }
+
+/*                TextField(placeHolderText, text: $text)
+ .padding()
+ .foregroundColor(.white)
+ .background(
+     Rectangle()
+         .fill(ColorData.shared.textFieldColor.opacity(0.3))
+         .frame(maxWidth: .infinity)
+         .frame(height: 55)
+         .clipShape(Capsule())
+ )
+ .padding()*/

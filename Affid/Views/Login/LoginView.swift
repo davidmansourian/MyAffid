@@ -41,7 +41,7 @@ struct LoginView: View {
                 }
                 VStack(spacing: -10){
                     CustomTextField(placeHolderText: "Email Address", text: $email)
-                    CustomTextField(placeHolderText: "Password", text: $password)
+                    CustomTextField(placeHolderText: "Password", isSecureField: true, text: $password)
                 }
                 
                 
