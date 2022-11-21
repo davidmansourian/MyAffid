@@ -45,7 +45,7 @@ struct MainTabView: View {
                     Text("Profile")
                 }.tag(2)
         }
-        .accentColor(.yellow)
+        .accentColor(ColorData.shared.appSystemYellow)
         
     }
 }

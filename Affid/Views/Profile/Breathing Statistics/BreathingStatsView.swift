@@ -8,19 +8,28 @@
 import SwiftUI
 
 struct BreathingStatsView: View {
-    @State var pickerSelectedItem = 0
+    @State var animate = false
+    @State var dataPoints: [CGFloat] = [50, 100, 150, 130, 90, 70, 10]
     var body: some View {
         ZStack{
-            VStack{
+            VStack(alignment: .leading, spacing: -10){
                 Text("Breathing Stats")
-                    .font(.system(size: 20))
+                    .font(.caption)
                     .fontWeight(.semibold)
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 70)
                 
-                Picker(selection: $pickerSelectedItem, label: Text("")){
-                    Text("Weekly").tag(0)
-                    Text("Monthly").tag(1)
-                    Text("Yearly").tag(2)
-                }.pickerStyle(SegmentedPickerStyle())
+                HStack(spacing: 20){
+                    theChart
+                    theChart
+                    theChart
+                    theChart
+                    theChart
+                    theChart
+                    theChart
+                }
+                .padding(.horizontal, 70)
+                .padding(.top, 30)
             }
         }
     }
@@ -29,5 +38,21 @@ struct BreathingStatsView: View {
 struct BreathingStatsView_Previews: PreviewProvider {
     static var previews: some View {
         BreathingStatsView()
+    }
+}
+
+extension BreathingStatsView{
+    var theChart: some View{
+        VStack {
+            ZStack(alignment: .bottom){
+                Capsule().frame(width: 20, height: 200)
+                    .foregroundColor(ColorData.shared.appSystemBlue)
+                Capsule().frame(width: 20, height: 100)
+                    .foregroundColor(ColorData.shared.appSystemYellow)
+            }
+            Text("M")
+                .foregroundColor(.white)
+                .padding(.top, 8)
+        }
     }
 }

@@ -14,17 +14,23 @@ struct ProfileView: View {
                 .edgesIgnoringSafeArea(.top)
             
             VStack{
+            Spacer()
+                Group{
+                    Image("bird")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100)
+                    
+                    Text("David")
+                        .foregroundColor(.white)
+                        .font(.title)
+                        .fontWeight(.semibold)
+                }
+                Spacer()
                 
-                Image("bird")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 100)
+                BreathingStatsView()
                 
-                Text("David")
-                    .foregroundColor(.white)
-                    .font(.title)
-                    .fontWeight(.semibold)
-                
+                Spacer()
                 
             }
         }

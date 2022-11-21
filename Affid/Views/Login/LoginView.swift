@@ -69,7 +69,7 @@ struct LoginView: View {
         }
         .toolbar{
             ToolbarItemGroup(placement: .navigationBarLeading){
-                // Solution below was taken from https://stackoverflow.com/a/58159783
+                // Solution below was taken from //https://stackoverflow.com/a/58159783
                 Button(action: { self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Image(systemName: "chevron.backward")

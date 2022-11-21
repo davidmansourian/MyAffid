@@ -15,5 +15,7 @@ class ColorData: ObservableObject{
     var tabViewShadowColor: UIColor = UIColor(Color(red: 84/255, green: 87/255, blue: 92/255).opacity(0.5))
     var tabViewBackgroundColor: UIColor = UIColor(Color(red: 22/255, green: 24/255, blue: 31/255))
     
+    let appSystemBlue: Color = Color(red: 13/255, green: 110/255, blue: 253/255)
+    let appSystemYellow: Color = Color(red: 255/255, green: 203/255, blue: 20/255)
     
 }
