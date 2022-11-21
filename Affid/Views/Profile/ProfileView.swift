@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
         ZStack{
             ColorData.shared.backGroundColor
@@ -53,8 +54,8 @@ struct ProfileView: View {
                             .font(.system(size: 100))
                             .foregroundColor(.white)
                         HStack{
-                            NavigationLink {
-                                //
+                            Button {
+                                viewModel.signOut()
                             } label: {
                                 Image(systemName: "figure.wave")
                                     .foregroundColor(.gray)
