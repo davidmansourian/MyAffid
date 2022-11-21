@@ -11,6 +11,14 @@
 		DB2F62F72927F8F700D0BFFD /* CreateNewPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F62F62927F8F700D0BFFD /* CreateNewPasswordView.swift */; };
 		DB2F6303292962AB00D0BFFD /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6302292962AB00D0BFFD /* CustomTextField.swift */; };
 		DB2F63052929635E00D0BFFD /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F63042929635E00D0BFFD /* OTPTextField.swift */; };
+		DB2F6308292B5C6500D0BFFD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6307292B5C6500D0BFFD /* HomeView.swift */; };
+		DB2F6311292B60AB00D0BFFD /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6310292B60AB00D0BFFD /* MainTabView.swift */; };
+		DB2F6315292B61D900D0BFFD /* MainMeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6314292B61D900D0BFFD /* MainMeditationView.swift */; };
+		DB2F6317292B61E800D0BFFD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6316292B61E800D0BFFD /* ProfileView.swift */; };
+		DB2F6324292B7BBD00D0BFFD /* FocusAndProductivityButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6323292B7BBD00D0BFFD /* FocusAndProductivityButtons.swift */; };
+		DB2F6326292B7BD800D0BFFD /* SuperHumanMeditationButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6325292B7BD800D0BFFD /* SuperHumanMeditationButtons.swift */; };
+		DB2F6328292B80B500D0BFFD /* SoundsOfNatureButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6327292B80B500D0BFFD /* SoundsOfNatureButtons.swift */; };
+		DB2F632D292BA0EA00D0BFFD /* BreathingStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F632C292BA0EA00D0BFFD /* BreathingStatsView.swift */; };
 		DBD7449A2927A9220058225A /* AffidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744992927A9220058225A /* AffidApp.swift */; };
 		DBD7449C2927A9220058225A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7449B2927A9220058225A /* ContentView.swift */; };
 		DBD7449E2927A9240058225A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD7449D2927A9240058225A /* Assets.xcassets */; };
@@ -39,6 +47,14 @@
 		DB2F62F62927F8F700D0BFFD /* CreateNewPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordView.swift; sourceTree = "<group>"; };
 		DB2F6302292962AB00D0BFFD /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		DB2F63042929635E00D0BFFD /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
+		DB2F6307292B5C6500D0BFFD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DB2F6310292B60AB00D0BFFD /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		DB2F6314292B61D900D0BFFD /* MainMeditationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMeditationView.swift; sourceTree = "<group>"; };
+		DB2F6316292B61E800D0BFFD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		DB2F6323292B7BBD00D0BFFD /* FocusAndProductivityButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusAndProductivityButtons.swift; sourceTree = "<group>"; };
+		DB2F6325292B7BD800D0BFFD /* SuperHumanMeditationButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHumanMeditationButtons.swift; sourceTree = "<group>"; };
+		DB2F6327292B80B500D0BFFD /* SoundsOfNatureButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsOfNatureButtons.swift; sourceTree = "<group>"; };
+		DB2F632C292BA0EA00D0BFFD /* BreathingStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingStatsView.swift; sourceTree = "<group>"; };
 		DBD744962927A9220058225A /* Affid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD744992927A9220058225A /* AffidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffidApp.swift; sourceTree = "<group>"; };
 		DBD7449B2927A9220058225A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +115,58 @@
 				DB2F63042929635E00D0BFFD /* OTPTextField.swift */,
 			);
 			path = TextFields;
+			sourceTree = "<group>";
+		};
+		DB2F6306292B5C5000D0BFFD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F6307292B5C6500D0BFFD /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DB2F630F292B609B00D0BFFD /* Main Tabview */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F6310292B60AB00D0BFFD /* MainTabView.swift */,
+			);
+			path = "Main Tabview";
+			sourceTree = "<group>";
+		};
+		DB2F6312292B61B200D0BFFD /* Meditation */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F631C292B749800D0BFFD /* Buttons */,
+				DB2F6314292B61D900D0BFFD /* MainMeditationView.swift */,
+			);
+			path = Meditation;
+			sourceTree = "<group>";
+		};
+		DB2F6313292B61CB00D0BFFD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F6329292BA05A00D0BFFD /* Breathing Statistics */,
+				DB2F6316292B61E800D0BFFD /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		DB2F631C292B749800D0BFFD /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F6325292B7BD800D0BFFD /* SuperHumanMeditationButtons.swift */,
+				DB2F6323292B7BBD00D0BFFD /* FocusAndProductivityButtons.swift */,
+				DB2F6327292B80B500D0BFFD /* SoundsOfNatureButtons.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		DB2F6329292BA05A00D0BFFD /* Breathing Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F632C292BA0EA00D0BFFD /* BreathingStatsView.swift */,
+			);
+			path = "Breathing Statistics";
 			sourceTree = "<group>";
 		};
 		DBD7448D2927A9220058225A = {
@@ -169,6 +237,10 @@
 			isa = PBXGroup;
 			children = (
 				DB2F62FC29295CE500D0BFFD /* Reusables */,
+				DB2F630F292B609B00D0BFFD /* Main Tabview */,
+				DB2F6313292B61CB00D0BFFD /* Profile */,
+				DB2F6312292B61B200D0BFFD /* Meditation */,
+				DB2F6306292B5C5000D0BFFD /* Home */,
 				DBD744DF2927F1830058225A /* Reset Password */,
 				DBD744CE2927D2D50058225A /* Sign Up */,
 				DBD744CD2927D2D10058225A /* Login */,
@@ -314,7 +386,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB2F632D292BA0EA00D0BFFD /* BreathingStatsView.swift in Sources */,
+				DB2F6326292B7BD800D0BFFD /* SuperHumanMeditationButtons.swift in Sources */,
 				DBD744E82927F4E00058225A /* OTPView.swift in Sources */,
+				DB2F6317292B61E800D0BFFD /* ProfileView.swift in Sources */,
 				DBD744A62927A9240058225A /* Affid.xcdatamodeld in Sources */,
 				DBD744DC2927E9C10058225A /* SignUpPrivacyPolicyRow.swift in Sources */,
 				DBD744B92927B73B0058225A /* LoginView.swift in Sources */,
@@ -323,6 +398,7 @@
 				DBD744C42927C0930058225A /* AppleButton.swift in Sources */,
 				DBD744E12927F1950058225A /* ResetPasswordView.swift in Sources */,
 				DBD744C12927BC4B0058225A /* GoogleButton.swift in Sources */,
+				DB2F6315292B61D900D0BFFD /* MainMeditationView.swift in Sources */,
 				DBD744D22927D3930058225A /* LoginExternalPlatformView.swift in Sources */,
 				DBD744D42927D3C30058225A /* LoginCloudsView.swift in Sources */,
 				DBD744D82927E8950058225A /* SignUpExternalPlatformView.swift in Sources */,
@@ -333,8 +409,12 @@
 				DBD744D62927E7AE0058225A /* SignUpView.swift in Sources */,
 				DBD744B72927B0640058225A /* BlueButton.swift in Sources */,
 				DB2F6303292962AB00D0BFFD /* CustomTextField.swift in Sources */,
+				DB2F6311292B60AB00D0BFFD /* MainTabView.swift in Sources */,
+				DB2F6328292B80B500D0BFFD /* SoundsOfNatureButtons.swift in Sources */,
 				DB2F62F42927F80A00D0BFFD /* BlueButtonSmaller.swift in Sources */,
+				DB2F6324292B7BBD00D0BFFD /* FocusAndProductivityButtons.swift in Sources */,
 				DBD744DE2927EB4E0058225A /* GetStartedNavigationLinks.swift in Sources */,
+				DB2F6308292B5C6500D0BFFD /* HomeView.swift in Sources */,
 				DB2F62F72927F8F700D0BFFD /* CreateNewPasswordView.swift in Sources */,
 				DB2F63052929635E00D0BFFD /* OTPTextField.swift in Sources */,
 			);
