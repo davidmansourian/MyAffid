@@ -11,7 +11,7 @@ import SwiftUI
 struct GoogleButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .frame(height: 30)
+            .frame(height: 25)
             .frame(maxWidth: .infinity)
             .padding()
             .background(.white)

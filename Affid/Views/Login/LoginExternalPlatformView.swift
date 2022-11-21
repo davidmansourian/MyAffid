@@ -11,24 +11,35 @@ struct LoginExternalPlatformView: View {
     var body: some View {
         VStack(spacing: 20){
             ZStack {
-                Button("Continue with Google"){
+                Button {
                     print("Testing google button")
+                } label: {
+                    Label {
+                        Text("Continue With Google")
+                    } icon: {
+                        Image("googleLogo")
+                            .padding(.leading, -38)
+                    }
                 }
                 .font(.title3)
                 .buttonStyle(GoogleButton())
-                Image("googleLogo")
-                    .offset(x: -130)
             }
+            
             ZStack {
-                Button("Continue With Apple"){
-                    print("Testing Apple button")
+                Button {
+                    print("Testing apple button")
+                } label: {
+                    Label {
+                        Text("Continue With Apple")
+                    } icon: {
+                        Image("appleLogo")
+                            .padding(.leading, -38)
+                    }
                 }
                 .font(.title3)
                 .buttonStyle(AppleButton())
-                Image("appleLogo")
-                    .offset(x: -130)
+                
             }
-            
         }
         .padding()
     }

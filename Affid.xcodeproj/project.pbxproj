@@ -208,16 +208,17 @@
 		DBD744982927A9220058225A /* Affid */ = {
 			isa = PBXGroup;
 			children = (
+				DBD7449B2927A9220058225A /* ContentView.swift */,
+				DBD744AC2927AA090058225A /* CoreData */,
 				DBD744992927A9220058225A /* AffidApp.swift */,
-				DB2F6341292BF73200D0BFFD /* GoogleService-Info.plist */,
-				DBD744C22927BFBD0058225A /* Info.plist */,
 				DBD7449D2927A9240058225A /* Assets.xcassets */,
+				DBD744C22927BFBD0058225A /* Info.plist */,
+				DB2F6341292BF73200D0BFFD /* GoogleService-Info.plist */,
 				DBD744BA2927B7570058225A /* Data */,
 				DBD744AF2927AA1F0058225A /* Models */,
 				DBD744AE2927AA130058225A /* ViewModels */,
 				DBD744B02927AA260058225A /* Views */,
 				DBD7449F2927A9240058225A /* Preview Content */,
-				DBD744AC2927AA090058225A /* CoreData */,
 			);
 			path = Affid;
 			sourceTree = "<group>";
@@ -257,7 +258,6 @@
 		DBD744B02927AA260058225A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DBD7449B2927A9220058225A /* ContentView.swift */,
 				DB2F62FC29295CE500D0BFFD /* Reusables */,
 				DB2F630F292B609B00D0BFFD /* Main Tabview */,
 				DB2F6313292B61CB00D0BFFD /* Profile */,
