@@ -13,8 +13,8 @@ struct MainMeditationView: View {
             ColorData.shared.backGroundColor
                 .edgesIgnoringSafeArea(.top)
             
-            LoginCloudsView()
-                .offset(y: -130)
+           /* LoginCloudsView()
+                .offset(y: -130)*/
             
             VStack(spacing: 30){
                 Spacer()
@@ -30,8 +30,6 @@ struct MainMeditationView: View {
                         .fontWeight(.light)
                     
                 }
-                
-                Spacer()
                 
                 ScrollView(.vertical, showsIndicators: false){
                     VStack(alignment: .leading, spacing: 25){

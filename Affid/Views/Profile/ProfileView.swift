@@ -31,53 +31,61 @@ struct ProfileView: View {
                 BreathingStatsView()
                 
                 Spacer()
-                
-                VStack(alignment: .leading){
-                    HStack{
-                        NavigationLink {
-                            //
-                        } label: {
-                            Image(systemName: "figure.stand")
-                                .foregroundColor(.gray)
-                                .font(.title3)
-                                .fontWeight(.light)
-
-                            Text("Me")
-                                .foregroundColor(.white)
-                                .font(.title3)
-                                .fontWeight(.light)
+                Group{
+                    VStack(alignment: .leading){
+                        HStack{
+                            NavigationLink {
+                                //
+                            } label: {
+                                Image(systemName: "bookmark.fill")
+                                    .foregroundColor(.gray)
+                                    .font(.title3)
+                                    .fontWeight(.light)
+                                
+                                Text("Bookmarked")
+                                    .foregroundColor(.white)
+                                    .font(.title3)
+                                    .fontWeight(.light)
+                            }
                         }
-                    }
-                    .padding()
-                    Divider()
-                        .font(.system(size: 100))
-                        .foregroundColor(.white)
-                    HStack{
-                        NavigationLink {
-                            //
-                        } label: {
-                            Image(systemName: "bookmark.fill")
-                                .foregroundColor(.gray)
-                                .font(.title3)
-                                .fontWeight(.light)
-                            Text("Bookmarked")
-                                .foregroundColor(.white)
-                                .font(.title3)
-                                .fontWeight(.light)
-
+                        .padding()
+                        Divider()
+                            .font(.system(size: 100))
+                            .foregroundColor(.white)
+                        HStack{
+                            NavigationLink {
+                                //
+                            } label: {
+                                Image(systemName: "figure.wave")
+                                    .foregroundColor(.gray)
+                                    .font(.title3)
+                                    .fontWeight(.light)
+                                Text("Sign out")
+                                    .foregroundColor(.white)
+                                    .font(.title3)
+                                    .fontWeight(.light)
+                                
+                            }
                         }
+                        .padding()
                     }
+                    .frame(height: 140)
+                    .frame(maxWidth: .infinity)
+                    .background(ColorData.shared.profileMenuColor)
+                    .cornerRadius(32)
                     .padding()
                 }
-                .frame(height: 140)
-                .frame(maxWidth: .infinity)
-                .background(ColorData.shared.profileMenuColor)
-                .cornerRadius(32)
-                .padding()
+                Spacer()
                 
-                Spacer()
-                Spacer()
-                Spacer()
+                NavigationLink {
+                    //
+                } label: {
+                    Text("DELETE ACCOUNT")
+                        .foregroundColor(.red)
+                        .padding(.bottom, 40)
+                }
+
+                
                 
             }
         }

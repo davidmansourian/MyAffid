@@ -42,28 +42,29 @@ struct LoginView: View {
                     CustomTextField(placeHolderText: "Email Address", text: $email)
                     CustomTextField(placeHolderText: "Password", text: $password)
                 }
-                    
+                
                 
                 HStack{
                     NavigationLink(
                         destination: ResetPasswordView(),
                         label:{ Text("RESET PASSWORD")
                         })
-                        .foregroundColor(.gray)
-                        .font(.footnote)
+                    .foregroundColor(.gray)
+                    .font(.footnote)
                     Spacer()
                 }
                 .padding(.horizontal, 30)
                 
                 Spacer()
                 
-                HStack {
-                    Button("LOGIN"){
-                        print("testing login button")
-                    }
+                NavigationLink(
+                    destination: MainTabView(),
+                    label:{ Text("Login")
+                    })
                     .buttonStyle(BlueButton())
                     .padding()
-                }
+                
+                
                 Spacer()
             }
         }

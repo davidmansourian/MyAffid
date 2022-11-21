@@ -46,6 +46,7 @@ struct MainTabView: View {
                 }.tag(2)
         }
         .accentColor(ColorData.shared.appSystemYellow)
+        .navigationBarBackButtonHidden(true)
         
     }
 }
