@@ -19,12 +19,12 @@
 		DB2F6326292B7BD800D0BFFD /* SuperHumanMeditationButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6325292B7BD800D0BFFD /* SuperHumanMeditationButtons.swift */; };
 		DB2F6328292B80B500D0BFFD /* SoundsOfNatureButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6327292B80B500D0BFFD /* SoundsOfNatureButtons.swift */; };
 		DB2F632D292BA0EA00D0BFFD /* BreathingStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F632C292BA0EA00D0BFFD /* BreathingStatsView.swift */; };
-		DB2F6332292BDB5F00D0BFFD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB2F6331292BDB5F00D0BFFD /* GoogleService-Info.plist */; };
 		DB2F6335292BDC7300D0BFFD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DB2F6334292BDC7300D0BFFD /* FirebaseAuth */; };
 		DB2F6337292BDC7300D0BFFD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DB2F6336292BDC7300D0BFFD /* FirebaseFirestore */; };
 		DB2F6339292BDC7300D0BFFD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DB2F6338292BDC7300D0BFFD /* FirebaseFirestoreSwift */; };
 		DB2F633B292BDC7300D0BFFD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DB2F633A292BDC7300D0BFFD /* FirebaseStorage */; };
 		DB2F633E292BE00C00D0BFFD /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F633D292BE00C00D0BFFD /* AuthViewModel.swift */; };
+		DB2F6342292BF73200D0BFFD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB2F6341292BF73200D0BFFD /* GoogleService-Info.plist */; };
 		DBD7449A2927A9220058225A /* AffidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744992927A9220058225A /* AffidApp.swift */; };
 		DBD7449C2927A9220058225A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7449B2927A9220058225A /* ContentView.swift */; };
 		DBD7449E2927A9240058225A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD7449D2927A9240058225A /* Assets.xcassets */; };
@@ -61,8 +61,8 @@
 		DB2F6325292B7BD800D0BFFD /* SuperHumanMeditationButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHumanMeditationButtons.swift; sourceTree = "<group>"; };
 		DB2F6327292B80B500D0BFFD /* SoundsOfNatureButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsOfNatureButtons.swift; sourceTree = "<group>"; };
 		DB2F632C292BA0EA00D0BFFD /* BreathingStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingStatsView.swift; sourceTree = "<group>"; };
-		DB2F6331292BDB5F00D0BFFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DB2F633D292BE00C00D0BFFD /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		DB2F6341292BF73200D0BFFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DBD744962927A9220058225A /* Affid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD744992927A9220058225A /* AffidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffidApp.swift; sourceTree = "<group>"; };
 		DBD7449B2927A9220058225A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -208,15 +208,14 @@
 		DBD744982927A9220058225A /* Affid */ = {
 			isa = PBXGroup;
 			children = (
-				DB2F6331292BDB5F00D0BFFD /* GoogleService-Info.plist */,
-				DBD744C22927BFBD0058225A /* Info.plist */,
 				DBD744992927A9220058225A /* AffidApp.swift */,
+				DB2F6341292BF73200D0BFFD /* GoogleService-Info.plist */,
+				DBD744C22927BFBD0058225A /* Info.plist */,
+				DBD7449D2927A9240058225A /* Assets.xcassets */,
 				DBD744BA2927B7570058225A /* Data */,
 				DBD744AF2927AA1F0058225A /* Models */,
 				DBD744AE2927AA130058225A /* ViewModels */,
 				DBD744B02927AA260058225A /* Views */,
-				DBD7449D2927A9240058225A /* Assets.xcassets */,
-				DBD7449B2927A9220058225A /* ContentView.swift */,
 				DBD7449F2927A9240058225A /* Preview Content */,
 				DBD744AC2927AA090058225A /* CoreData */,
 			);
@@ -258,6 +257,7 @@
 		DBD744B02927AA260058225A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DBD7449B2927A9220058225A /* ContentView.swift */,
 				DB2F62FC29295CE500D0BFFD /* Reusables */,
 				DB2F630F292B609B00D0BFFD /* Main Tabview */,
 				DB2F6313292B61CB00D0BFFD /* Profile */,
@@ -407,7 +407,7 @@
 			files = (
 				DBD744A12927A9240058225A /* Preview Assets.xcassets in Resources */,
 				DBD7449E2927A9240058225A /* Assets.xcassets in Resources */,
-				DB2F6332292BDB5F00D0BFFD /* GoogleService-Info.plist in Resources */,
+				DB2F6342292BF73200D0BFFD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
