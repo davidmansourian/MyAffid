@@ -11,6 +11,7 @@ struct LoginView: View {
     @State var email: String = ""
     @State var password: String = ""
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
         ZStack{
             ColorData.shared.backGroundColor
@@ -57,12 +58,13 @@ struct LoginView: View {
                 
                 Spacer()
                 
-                NavigationLink(
-                    destination: MainTabView(),
-                    label:{ Text("Login")
-                    })
-                    .buttonStyle(BlueButton())
-                    .padding()
+                Button {
+                    viewModel.login(withEmail: email, password: password)
+                } label: {
+                    Text("Login")
+                }
+                .buttonStyle(BlueButton()) 
+
                 
                 
                 Spacer()

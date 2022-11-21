@@ -12,6 +12,7 @@ struct SignUpView: View {
     @State var email: String = ""
     @State var password: String = ""
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
         ZStack{
             ColorData.shared.backGroundColor
@@ -54,13 +55,11 @@ struct SignUpView: View {
                 
                 Spacer()
                 
-                HStack {
                     Button("SIGN UP"){
-                        print("testing signup button")
+                        viewModel.register(firstName: name, withEmail: email, password: password)
                     }
                     .buttonStyle(BlueButton())
                     .padding()
-                }
                 
                 Spacer()
                 

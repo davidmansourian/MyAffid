@@ -24,6 +24,7 @@
 		DB2F6337292BDC7300D0BFFD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DB2F6336292BDC7300D0BFFD /* FirebaseFirestore */; };
 		DB2F6339292BDC7300D0BFFD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DB2F6338292BDC7300D0BFFD /* FirebaseFirestoreSwift */; };
 		DB2F633B292BDC7300D0BFFD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DB2F633A292BDC7300D0BFFD /* FirebaseStorage */; };
+		DB2F633E292BE00C00D0BFFD /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F633D292BE00C00D0BFFD /* AuthViewModel.swift */; };
 		DBD7449A2927A9220058225A /* AffidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744992927A9220058225A /* AffidApp.swift */; };
 		DBD7449C2927A9220058225A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7449B2927A9220058225A /* ContentView.swift */; };
 		DBD7449E2927A9240058225A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD7449D2927A9240058225A /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		DB2F6327292B80B500D0BFFD /* SoundsOfNatureButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsOfNatureButtons.swift; sourceTree = "<group>"; };
 		DB2F632C292BA0EA00D0BFFD /* BreathingStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingStatsView.swift; sourceTree = "<group>"; };
 		DB2F6331292BDB5F00D0BFFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DB2F633D292BE00C00D0BFFD /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		DBD744962927A9220058225A /* Affid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD744992927A9220058225A /* AffidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffidApp.swift; sourceTree = "<group>"; };
 		DBD7449B2927A9220058225A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -179,6 +181,14 @@
 			path = "Breathing Statistics";
 			sourceTree = "<group>";
 		};
+		DB2F633C292BDFFE00D0BFFD /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F633D292BE00C00D0BFFD /* AuthViewModel.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		DBD7448D2927A9220058225A = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +243,7 @@
 		DBD744AE2927AA130058225A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DB2F633C292BDFFE00D0BFFD /* Authentication */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -419,6 +430,7 @@
 				DBD744C42927C0930058225A /* AppleButton.swift in Sources */,
 				DBD744E12927F1950058225A /* ResetPasswordView.swift in Sources */,
 				DBD744C12927BC4B0058225A /* GoogleButton.swift in Sources */,
+				DB2F633E292BE00C00D0BFFD /* AuthViewModel.swift in Sources */,
 				DB2F6315292B61D900D0BFFD /* MainMeditationView.swift in Sources */,
 				DBD744D22927D3930058225A /* LoginExternalPlatformView.swift in Sources */,
 				DBD744D42927D3C30058225A /* LoginCloudsView.swift in Sources */,
