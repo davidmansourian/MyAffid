@@ -56,7 +56,9 @@ struct SignUpView: View {
                 Spacer()
                 
                     Button("SIGN UP"){
-                        viewModel.register(firstName: name, withEmail: email, password: password)
+                        viewModel.register(firstName: name,
+                                           withEmail: email,
+                                           password: password)
                     }
                     .buttonStyle(BlueButton())
                     .padding()
