@@ -9,7 +9,6 @@ import SwiftUI
 
 struct BreathingStatsView: View {
     @State var animate = false
-    @State var dataPoints: [CGFloat] = [50, 100, 150, 130, 90, 70, 10]
     var body: some View {
         ZStack{
             VStack(alignment: .leading, spacing: -10){
