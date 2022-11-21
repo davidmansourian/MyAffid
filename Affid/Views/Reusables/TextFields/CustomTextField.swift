@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+// customTextField and secureTextfield implementation taken from video:
+// https://www.youtube.com/watch?v=3pIXMwvJLZs
+
 struct CustomTextField: View {
     let placeHolderText: String
     var isSecureField: Bool? = false

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-
+// Idea taken from https://www.hackingwithswift.com/quick-start/swiftui/customizing-button-with-buttonstyle
 struct BlueButtonSmaller: ButtonStyle {
     let blueButtonColor: Color = Color(red: 13/255, green: 110/255, blue: 253/255)
     func makeBody(configuration: Self.Configuration) -> some View {

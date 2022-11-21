@@ -9,6 +9,8 @@ import SwiftUI
 import FirebaseAuth
 import Firebase
 
+//Firebase tutorial from video:
+// https://www.youtube.com/watch?v=3pIXMwvJLZs , around 2h 24min to approximately 2h 50min
 class AuthViewModel: ObservableObject{
     @Published var userSession: FirebaseAuth.User?
     

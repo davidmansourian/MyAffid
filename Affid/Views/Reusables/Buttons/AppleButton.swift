@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Idea taken from https://www.hackingwithswift.com/quick-start/swiftui/customizing-button-with-buttonstyle
 struct AppleButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
