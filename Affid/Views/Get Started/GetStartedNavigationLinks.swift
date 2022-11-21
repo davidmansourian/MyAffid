@@ -12,12 +12,12 @@ struct GetStartedNavigationLinks: View {
         VStack(spacing: 30){
             NavigationLink(
                 destination: LoginView(),
-                label:{ Text("LOGIN")
+                label:{ Text("Login")
                 })
             .buttonStyle(BlueButton())
             NavigationLink(
                 destination: SignUpView(),
-                label:{ Text("SIGN UP")
+                label:{ Text("Sign up")
                 })
             .buttonStyle(BlueButton())
         }
