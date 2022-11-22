@@ -27,6 +27,8 @@
 		DB2F6342292BF73200D0BFFD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB2F6341292BF73200D0BFFD /* GoogleService-Info.plist */; };
 		DB2F6345292CB17B00D0BFFD /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6344292CB17B00D0BFFD /* UserService.swift */; };
 		DB2F6347292CB42900D0BFFD /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6346292CB42900D0BFFD /* UserModel.swift */; };
+		DB2F634A292CCE6A00D0BFFD /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6349292CCE6A00D0BFFD /* SplashScreenView.swift */; };
+		DB2F634D292CD4C000D0BFFD /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F634C292CD4C000D0BFFD /* LoadingView.swift */; };
 		DBD7449A2927A9220058225A /* AffidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744992927A9220058225A /* AffidApp.swift */; };
 		DBD7449C2927A9220058225A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7449B2927A9220058225A /* ContentView.swift */; };
 		DBD7449E2927A9240058225A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD7449D2927A9240058225A /* Assets.xcassets */; };
@@ -67,6 +69,8 @@
 		DB2F6341292BF73200D0BFFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DB2F6344292CB17B00D0BFFD /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		DB2F6346292CB42900D0BFFD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		DB2F6349292CCE6A00D0BFFD /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		DB2F634C292CD4C000D0BFFD /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		DBD744962927A9220058225A /* Affid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD744992927A9220058225A /* AffidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffidApp.swift; sourceTree = "<group>"; };
 		DBD7449B2927A9220058225A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -201,6 +205,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		DB2F634B292CD4A000D0BFFD /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F6349292CCE6A00D0BFFD /* SplashScreenView.swift */,
+				DB2F634C292CD4C000D0BFFD /* LoadingView.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
 		DBD7448D2927A9220058225A = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +285,7 @@
 		DBD744B02927AA260058225A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DB2F634B292CD4A000D0BFFD /* Loading */,
 				DB2F62FC29295CE500D0BFFD /* Reusables */,
 				DB2F630F292B609B00D0BFFD /* Main Tabview */,
 				DB2F6313292B61CB00D0BFFD /* Profile */,
@@ -439,6 +453,7 @@
 				DBD744A62927A9240058225A /* Affid.xcdatamodeld in Sources */,
 				DBD744DC2927E9C10058225A /* SignUpPrivacyPolicyRow.swift in Sources */,
 				DBD744B92927B73B0058225A /* LoginView.swift in Sources */,
+				DB2F634A292CCE6A00D0BFFD /* SplashScreenView.swift in Sources */,
 				DBD744A32927A9240058225A /* Persistence.swift in Sources */,
 				DB2F6347292CB42900D0BFFD /* UserModel.swift in Sources */,
 				DBD744BC2927B76E0058225A /* ColorData.swift in Sources */,
@@ -448,6 +463,7 @@
 				DB2F633E292BE00C00D0BFFD /* AuthViewModel.swift in Sources */,
 				DB2F6315292B61D900D0BFFD /* MainMeditationView.swift in Sources */,
 				DBD744D22927D3930058225A /* LoginExternalPlatformView.swift in Sources */,
+				DB2F634D292CD4C000D0BFFD /* LoadingView.swift in Sources */,
 				DBD744D42927D3C30058225A /* LoginCloudsView.swift in Sources */,
 				DBD744D82927E8950058225A /* SignUpExternalPlatformView.swift in Sources */,
 				DB2F6345292CB17B00D0BFFD /* UserService.swift in Sources */,

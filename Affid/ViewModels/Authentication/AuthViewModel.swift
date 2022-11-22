@@ -14,6 +14,7 @@ import Combine
 //Firebase tutorial from video:
 // https://www.youtube.com/watch?v=3pIXMwvJLZs , around 2h 24min to approximately 2h 50min, and 4h in
 class AuthViewModel: ObservableObject{
+    @Published var loading = false
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: UserModel?
     private var userCancellable: Cancellable?
@@ -80,11 +81,16 @@ class AuthViewModel: ObservableObject{
     }
     
     func fetchUser(){
+        loading = true
         guard let uid = self.userSession?.uid else{
+            self.loading = false
             return
         }
         service.fetchUser(withUid: uid) { userData in
-            self.currentUser = userData
+            DispatchQueue.main.async{
+                self.currentUser = userData
+                self.loading = false
+            }
         }
     }
 }

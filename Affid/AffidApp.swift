@@ -28,7 +28,7 @@ struct AffidApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView{
-                ContentView()
+                SplashScreenView()
             }
             .environmentObject(viewModel)
         }

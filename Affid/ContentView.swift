@@ -11,17 +11,22 @@ struct ContentView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
-        
         Group{
             if viewModel.userSession == nil {
                 GetStartedView()
             }
             else{
-                // user logged in
-                MainTabView()
+                if viewModel.loading{
+                    withAnimation{
+                        LoadingView()
+                    }
+                }
+                else{
+                    MainTabView()
+                }
             }
         }
-            
+        
     }
     
     
