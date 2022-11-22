@@ -32,6 +32,8 @@ struct CustomTextField: View {
                 }
                 else{
                     TextField(placeHolderText, text: $text)
+                        .textInputAutocapitalization(.never)
+                        .autocorrectionDisabled(true)
                         .padding()
                         .foregroundColor(.white)
                         .background(

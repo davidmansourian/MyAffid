@@ -37,6 +37,7 @@ class AuthViewModel: ObservableObject{
                 return
             }
             self.userSession = user
+            self.fetchUser()
             print("DEBUG: Did log user in")
             
         }
@@ -54,6 +55,7 @@ class AuthViewModel: ObservableObject{
                 return
             }
             self.userSession = user
+            self.fetchUser()
             
             print("DEBUG: Registered user successfully")
             print("DEBUG: User is \(self.userSession)")
