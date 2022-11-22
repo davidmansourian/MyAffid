@@ -58,13 +58,17 @@ struct LoginView: View {
                 
                 Spacer()
                 
+                
                 Button {
-                    viewModel.login(withEmail: email,
-                                    password: password)
+                    withAnimation{
+                        viewModel.login(withEmail: email,
+                                        password: password)
+                    }
                 } label: {
                     Text("Login")
                 }
-                .buttonStyle(BlueButton()) 
+                .padding()
+                .buttonStyle(BlueButton())
 
                 
                 

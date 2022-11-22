@@ -9,23 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var viewModel: AuthViewModel
+    @State var animation = false
     
     var body: some View {
         Group{
             if viewModel.userSession == nil {
                 GetStartedView()
+                
             }
             else{
                 if viewModel.loading{
-                    withAnimation{
-                        LoadingView()
-                    }
+                    LoadingView()
                 }
                 else{
                     MainTabView()
                 }
             }
         }
+        .animation(.default)
+        
         
     }
     
