@@ -10,84 +10,86 @@ import SwiftUI
 struct ProfileView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
-        ZStack{
-            ColorData.shared.backGroundColor
-                .edgesIgnoringSafeArea(.top)
-            
-            VStack{
-            Spacer()
-                Group{
-                    Image("bird")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 100)
-                    
-                    Text("David")
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .fontWeight(.semibold)
-                }
-                Spacer()
+        if let authedUser = viewModel.currentUser{
+            ZStack{
+                ColorData.shared.backGroundColor
+                    .edgesIgnoringSafeArea(.top)
                 
-                BreathingStatsView()
-                
+                VStack{
                 Spacer()
-                Group{
-                    VStack(alignment: .leading){
-                        HStack{
-                            NavigationLink {
-                                //
-                            } label: {
-                                Image(systemName: "bookmark.fill")
-                                    .foregroundColor(.gray)
-                                    .font(.title3)
-                                    .fontWeight(.light)
-                                
-                                Text("Bookmarked")
-                                    .foregroundColor(.white)
-                                    .font(.title3)
-                                    .fontWeight(.light)
-                            }
-                        }
-                        .padding()
-                        Divider()
-                            .font(.system(size: 100))
+                    Group{
+                        Image("bird")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 100)
+                        
+                        Text(authedUser.firstName)
                             .foregroundColor(.white)
-                        HStack{
-                            Button {
-                                viewModel.signOut()
-                            } label: {
-                                Image(systemName: "figure.wave")
-                                    .foregroundColor(.gray)
-                                    .font(.title3)
-                                    .fontWeight(.light)
-                                Text("Sign out")
-                                    .foregroundColor(.white)
-                                    .font(.title3)
-                                    .fontWeight(.light)
-                                
+                            .font(.title)
+                            .fontWeight(.semibold)
+                    }
+                    Spacer()
+                    
+                    BreathingStatsView()
+                    
+                    Spacer()
+                    Group{
+                        VStack(alignment: .leading){
+                            HStack{
+                                NavigationLink {
+                                    //
+                                } label: {
+                                    Image(systemName: "bookmark.fill")
+                                        .foregroundColor(.gray)
+                                        .font(.title3)
+                                        .fontWeight(.light)
+                                    
+                                    Text("Bookmarked")
+                                        .foregroundColor(.white)
+                                        .font(.title3)
+                                        .fontWeight(.light)
+                                }
                             }
+                            .padding()
+                            Divider()
+                                .font(.system(size: 100))
+                                .foregroundColor(.white)
+                            HStack{
+                                Button {
+                                    viewModel.signOut()
+                                } label: {
+                                    Image(systemName: "figure.wave")
+                                        .foregroundColor(.gray)
+                                        .font(.title3)
+                                        .fontWeight(.light)
+                                    Text("Sign out")
+                                        .foregroundColor(.white)
+                                        .font(.title3)
+                                        .fontWeight(.light)
+                                    
+                                }
+                            }
+                            .padding()
                         }
+                        .frame(height: 140)
+                        .frame(maxWidth: .infinity)
+                        .background(ColorData.shared.profileMenuColor)
+                        .cornerRadius(32)
                         .padding()
                     }
-                    .frame(height: 140)
-                    .frame(maxWidth: .infinity)
-                    .background(ColorData.shared.profileMenuColor)
-                    .cornerRadius(32)
-                    .padding()
-                }
-                Spacer()
-                
-                NavigationLink {
-                    //
-                } label: {
-                    Text("DELETE ACCOUNT")
-                        .foregroundColor(.red)
-                        .padding(.bottom, 40)
-                }
+                    Spacer()
+                    
+                    NavigationLink {
+                        //
+                    } label: {
+                        Text("DELETE ACCOUNT")
+                            .foregroundColor(.red)
+                            .padding(.bottom, 40)
+                    }
 
-                
-                
+                    
+                    
+                }
             }
         }
     }

@@ -8,15 +8,22 @@
 import SwiftUI
 import FirebaseAuth
 import Firebase
+import FirebaseFirestore
+import Combine
 
 //Firebase tutorial from video:
-// https://www.youtube.com/watch?v=3pIXMwvJLZs , around 2h 24min to approximately 2h 50min
+// https://www.youtube.com/watch?v=3pIXMwvJLZs , around 2h 24min to approximately 2h 50min, and 4h in
 class AuthViewModel: ObservableObject{
     @Published var userSession: FirebaseAuth.User?
+    @Published var currentUser: UserModel?
+    private var userCancellable: Cancellable?
+    private let service = UserService()
     
     init(){
         self.userSession = Auth.auth().currentUser
-        print("DEBUG: User session is \(self.userSession?.uid)")
+        self.fetchUser()
+        
+        
     }
     
     func login(withEmail email: String, password: String){
@@ -68,5 +75,14 @@ class AuthViewModel: ObservableObject{
     func signOut(){
         userSession = nil
         try? Auth.auth().signOut()
+    }
+    
+    func fetchUser(){
+        guard let uid = self.userSession?.uid else{
+            return
+        }
+        service.fetchUser(withUid: uid) { userData in
+            self.currentUser = userData
+        }
     }
 }

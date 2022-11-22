@@ -25,6 +25,8 @@
 		DB2F633B292BDC7300D0BFFD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DB2F633A292BDC7300D0BFFD /* FirebaseStorage */; };
 		DB2F633E292BE00C00D0BFFD /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F633D292BE00C00D0BFFD /* AuthViewModel.swift */; };
 		DB2F6342292BF73200D0BFFD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB2F6341292BF73200D0BFFD /* GoogleService-Info.plist */; };
+		DB2F6345292CB17B00D0BFFD /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6344292CB17B00D0BFFD /* UserService.swift */; };
+		DB2F6347292CB42900D0BFFD /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6346292CB42900D0BFFD /* UserModel.swift */; };
 		DBD7449A2927A9220058225A /* AffidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744992927A9220058225A /* AffidApp.swift */; };
 		DBD7449C2927A9220058225A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7449B2927A9220058225A /* ContentView.swift */; };
 		DBD7449E2927A9240058225A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD7449D2927A9240058225A /* Assets.xcassets */; };
@@ -63,6 +65,8 @@
 		DB2F632C292BA0EA00D0BFFD /* BreathingStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingStatsView.swift; sourceTree = "<group>"; };
 		DB2F633D292BE00C00D0BFFD /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		DB2F6341292BF73200D0BFFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DB2F6344292CB17B00D0BFFD /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		DB2F6346292CB42900D0BFFD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		DBD744962927A9220058225A /* Affid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD744992927A9220058225A /* AffidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffidApp.swift; sourceTree = "<group>"; };
 		DBD7449B2927A9220058225A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -189,6 +193,14 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		DB2F6343292CB16200D0BFFD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F6344292CB17B00D0BFFD /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		DBD7448D2927A9220058225A = {
 			isa = PBXGroup;
 			children = (
@@ -208,12 +220,13 @@
 		DBD744982927A9220058225A /* Affid */ = {
 			isa = PBXGroup;
 			children = (
-				DBD7449B2927A9220058225A /* ContentView.swift */,
-				DBD744AC2927AA090058225A /* CoreData */,
 				DBD744992927A9220058225A /* AffidApp.swift */,
-				DBD7449D2927A9240058225A /* Assets.xcassets */,
 				DBD744C22927BFBD0058225A /* Info.plist */,
+				DBD7449D2927A9240058225A /* Assets.xcassets */,
 				DB2F6341292BF73200D0BFFD /* GoogleService-Info.plist */,
+				DBD7449B2927A9220058225A /* ContentView.swift */,
+				DB2F6343292CB16200D0BFFD /* Services */,
+				DBD744AC2927AA090058225A /* CoreData */,
 				DBD744BA2927B7570058225A /* Data */,
 				DBD744AF2927AA1F0058225A /* Models */,
 				DBD744AE2927AA130058225A /* ViewModels */,
@@ -251,6 +264,7 @@
 		DBD744AF2927AA1F0058225A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DB2F6346292CB42900D0BFFD /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -426,6 +440,7 @@
 				DBD744DC2927E9C10058225A /* SignUpPrivacyPolicyRow.swift in Sources */,
 				DBD744B92927B73B0058225A /* LoginView.swift in Sources */,
 				DBD744A32927A9240058225A /* Persistence.swift in Sources */,
+				DB2F6347292CB42900D0BFFD /* UserModel.swift in Sources */,
 				DBD744BC2927B76E0058225A /* ColorData.swift in Sources */,
 				DBD744C42927C0930058225A /* AppleButton.swift in Sources */,
 				DBD744E12927F1950058225A /* ResetPasswordView.swift in Sources */,
@@ -435,6 +450,7 @@
 				DBD744D22927D3930058225A /* LoginExternalPlatformView.swift in Sources */,
 				DBD744D42927D3C30058225A /* LoginCloudsView.swift in Sources */,
 				DBD744D82927E8950058225A /* SignUpExternalPlatformView.swift in Sources */,
+				DB2F6345292CB17B00D0BFFD /* UserService.swift in Sources */,
 				DBD744C92927D2560058225A /* GetStartedCloudsView.swift in Sources */,
 				DBD7449C2927A9220058225A /* ContentView.swift in Sources */,
 				DBD7449A2927A9220058225A /* AffidApp.swift in Sources */,

@@ -8,30 +8,33 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
-        ZStack{
-            ColorData.shared.backGroundColor
-                .edgesIgnoringSafeArea(.top)
-            
-            LoginCloudsView()
-            
-            VStack{
-                Spacer()
-                Text("Good morning, David!")
-                    .foregroundColor(.white)
-                    .font(.title3)
-                    .fontWeight(.semibold)
+        if let authedUser = viewModel.currentUser{
+            ZStack{
+                ColorData.shared.backGroundColor
+                    .edgesIgnoringSafeArea(.top)
                 
-                Spacer()
+                LoginCloudsView()
                 
                 VStack{
-                    Text("Quick meditation?")
+                    Spacer()
+                    Text("Good morning, \(authedUser.firstName)!")
                         .foregroundColor(.white)
-                        .font(.title)
+                        .font(.title3)
                         .fontWeight(.semibold)
+                    
+                    Spacer()
+                    
+                    VStack{
+                        Text("Quick meditation?")
+                            .foregroundColor(.white)
+                            .font(.title)
+                            .fontWeight(.semibold)
+                    }
+                    Spacer()
+                    
                 }
-                Spacer()
-                
             }
         }
     }
