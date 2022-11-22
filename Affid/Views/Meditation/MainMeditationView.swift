@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainMeditationView: View {
+    @State var showingSheet = false
     var body: some View {
         ZStack{
             ColorData.shared.backGroundColor
@@ -42,18 +43,24 @@ struct MainMeditationView: View {
                             
                             ScrollView(.horizontal, showsIndicators: false){
                                 HStack(spacing: 20){
-                                    NavigationLink {
-                                        //
+                                    Button {
+                                        showingSheet.toggle()
                                     } label: {
                                         Image("fireBreathingButton")
                                     }
                                     .padding(.leading, 20)
-
+                                    .sheet(isPresented: $showingSheet) {
+                                        MeditationSettingsSheetView()
+                                            .presentationDetents([.height(550)])
+                                    }
                                     
-                                    NavigationLink {
-                                        //
+                                    Button {
+                                        showingSheet.toggle()
                                     } label: {
                                         Image("nasalBreathingButton")
+                                    }
+                                    .sheet(isPresented: $showingSheet) {
+                                        Text("Alfred")
                                     }
 
                                     
@@ -71,24 +78,33 @@ struct MainMeditationView: View {
                                 
                                 
                                 HStack(spacing: 20){
-                                    NavigationLink {
-                                        //
+                                    Button {
+                                        showingSheet.toggle()
                                     } label: {
                                         Image("reduceStressButton")
                                     }
                                     .padding(.leading, 20)
+                                    .sheet(isPresented: $showingSheet) {
+                                        Text("Alfred")
+                                    }
 
                                     
-                                    NavigationLink {
-                                        //
+                                    Button {
+                                        showingSheet.toggle()
                                     } label: {
                                         Image("eightHourSleepButton")
                                     }
+                                    .sheet(isPresented: $showingSheet) {
+                                        Text("Alfred")
+                                    }
                                     
-                                    NavigationLink {
-                                        //
+                                    Button {
+                                        showingSheet.toggle()
                                     } label: {
                                         Image("fireBreathingButton")
+                                    }
+                                    .sheet(isPresented: $showingSheet) {
+                                        Text("Alfred")
                                     }
                                     
                                 }
@@ -106,17 +122,24 @@ struct MainMeditationView: View {
                             
                             ScrollView(.horizontal, showsIndicators: false){
                                 HStack(spacing: 20){
-                                    NavigationLink {
-                                        //
+                                    Button {
+                                        showingSheet.toggle()
                                     } label: {
                                         Image("rainSoundsButton")
                                     }
                                     .padding(.leading, 20)
+                                    .sheet(isPresented: $showingSheet) {
+                                        Text("Alfred")
+                                    }
                                     
-                                    NavigationLink {
-                                        //
+                                    Button {
+                                        showingSheet.toggle()
                                     } label: {
                                         Image("oceanSoundsButton")
+                                    }
+                                    .sheet(isPresented: $showingSheet) {
+                                        MeditationSettingsSheetView()
+                                            .presentationDetents([.fraction((0.2)), .medium])
                                     }
                                     
                                 }

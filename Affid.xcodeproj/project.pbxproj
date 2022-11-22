@@ -33,6 +33,7 @@
 		DB2F6352292D006E00D0BFFD /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DB2F6351292D006E00D0BFFD /* GoogleSignInSwift */; };
 		DB2F6358292D113800D0BFFD /* OTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6357292D113800D0BFFD /* OTPModel.swift */; };
 		DB2F635B292D12BF00D0BFFD /* ResetLinkSentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F635A292D12BF00D0BFFD /* ResetLinkSentView.swift */; };
+		DB2F635E292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F635D292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift */; };
 		DBD7449A2927A9220058225A /* AffidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744992927A9220058225A /* AffidApp.swift */; };
 		DBD7449C2927A9220058225A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7449B2927A9220058225A /* ContentView.swift */; };
 		DBD7449E2927A9240058225A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD7449D2927A9240058225A /* Assets.xcassets */; };
@@ -77,6 +78,7 @@
 		DB2F634C292CD4C000D0BFFD /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		DB2F6357292D113800D0BFFD /* OTPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPModel.swift; sourceTree = "<group>"; };
 		DB2F635A292D12BF00D0BFFD /* ResetLinkSentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetLinkSentView.swift; sourceTree = "<group>"; };
+		DB2F635D292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationSettingsSheetView.swift; sourceTree = "<group>"; };
 		DBD744962927A9220058225A /* Affid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD744992927A9220058225A /* AffidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffidApp.swift; sourceTree = "<group>"; };
 		DBD7449B2927A9220058225A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		DB2F6312292B61B200D0BFFD /* Meditation */ = {
 			isa = PBXGroup;
 			children = (
+				DB2F635C292D5B4C00D0BFFD /* Sheets */,
 				DB2F631C292B749800D0BFFD /* Buttons */,
 				DB2F6314292B61D900D0BFFD /* MainMeditationView.swift */,
 			);
@@ -228,6 +231,14 @@
 				DB2F635A292D12BF00D0BFFD /* ResetLinkSentView.swift */,
 			);
 			path = "Reset Sent";
+			sourceTree = "<group>";
+		};
+		DB2F635C292D5B4C00D0BFFD /* Sheets */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F635D292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift */,
+			);
+			path = Sheets;
 			sourceTree = "<group>";
 		};
 		DBD7448D2927A9220058225A = {
@@ -470,6 +481,7 @@
 				DB2F635B292D12BF00D0BFFD /* ResetLinkSentView.swift in Sources */,
 				DB2F632D292BA0EA00D0BFFD /* BreathingStatsView.swift in Sources */,
 				DB2F6326292B7BD800D0BFFD /* SuperHumanMeditationButtons.swift in Sources */,
+				DB2F635E292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift in Sources */,
 				DBD744E82927F4E00058225A /* OTPView.swift in Sources */,
 				DB2F6317292B61E800D0BFFD /* ProfileView.swift in Sources */,
 				DBD744A62927A9240058225A /* Affid.xcdatamodeld in Sources */,
