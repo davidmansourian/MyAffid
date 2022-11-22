@@ -10,6 +10,7 @@ import SwiftUI
 struct OTPTextField: View {
     let placeHolderText: String
     @Binding var text: String
+    var isSelected = false
     var body: some View {
         VStack{
             HStack{
@@ -21,8 +22,8 @@ struct OTPTextField: View {
                             .fill(ColorData.shared.textFieldColor.opacity(0.3))
                             .frame(width: 55)
                             .frame(height: 55)
+                            .overlay(Capsule().stroke(isSelected ? ColorData.shared.appSystemYellow : Color.clear, lineWidth: 4))
                     )
-                    .padding()
             }
         }
     }
@@ -30,6 +31,6 @@ struct OTPTextField: View {
 
 struct OTPTextField_Previews: PreviewProvider {
     static var previews: some View {
-        OTPTextField(placeHolderText: "Text", text: .constant("Hejsan"))
+        OTPTextField(placeHolderText: "Text", text: .constant("1"), isSelected: true)
     }
 }

@@ -93,4 +93,14 @@ class AuthViewModel: ObservableObject{
             }
         }
     }
+    
+    func resetPassword(withEmail email: String){
+        Auth.auth().sendPasswordReset(withEmail: email){ error in
+            if let error = error{
+                print("DEBUG: failed to send reset password link with error \(error.localizedDescription)")
+                return
+            }
+            print("DEBUG: Reset password email sent")
+        }
+    }
 }

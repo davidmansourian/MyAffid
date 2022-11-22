@@ -35,6 +35,7 @@ struct GetStartedView: View {
                 
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

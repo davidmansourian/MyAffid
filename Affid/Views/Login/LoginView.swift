@@ -24,7 +24,7 @@ struct LoginView: View {
                 
                 Group{
                     HStack{
-                        Text("Hi there! Login below")
+                        Text("Welcome back!")
                             .font(.title)
                             .bold()
                             .foregroundColor(.white)
@@ -60,10 +60,8 @@ struct LoginView: View {
                 
                 
                 Button {
-                    withAnimation{
                         viewModel.login(withEmail: email,
                                         password: password)
-                    }
                 } label: {
                     Text("Login")
                 }
