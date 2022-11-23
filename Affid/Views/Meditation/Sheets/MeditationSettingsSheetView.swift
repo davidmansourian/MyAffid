@@ -13,6 +13,7 @@ struct MeditationSettingsSheetView: View {
     @State var retentionPhaseMusic = false
     var theRed = Color(red: 250/255, green: 110/255, blue: 90/255)
     var thedarkerRed = Color(red: 240/255, green: 93/255, blue: 72/255)
+    var theOrange = Color(red: 204/255, green: 109/255, blue: 67/255)
     
     init() {
         UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(ColorData.shared.appSystemYellow)
@@ -24,19 +25,23 @@ struct MeditationSettingsSheetView: View {
     var body: some View {
         ZStack{
             Group{
-                LinearGradient(gradient: Gradient(colors: [theRed, thedarkerRed, ColorData.shared.appSystemYellow]), startPoint: .top, endPoint: .bottom).opacity(1)
+                LinearGradient(gradient: Gradient(colors: [thedarkerRed, theRed, ColorData.shared.appSystemYellow]), startPoint: .top, endPoint: .bottom).opacity(1)
                     .cornerRadius(10)
                     .edgesIgnoringSafeArea(.all)
-                Image("megaCloud")
-                    .resizable()
-                    .frame(maxHeight: 300).opacity(1)
-                    .offset(y: 270)
-                    .edgesIgnoringSafeArea(.all)
-                    .opacity(0.5)
-                Image("bird")
-                    .rotationEffect(Angle(degrees: 10))
-                    .offset(y: 120)
             }
+            
+            VStack{
+                Image("testFlames2")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(maxHeight: 100)
+                    .offset(y: 400)
+                    .opacity(0.1)
+                    .edgesIgnoringSafeArea(.all)
+                Image("birdOnBranch")
+                    .padding(.trailing, -130)
+            }
+            
             VStack(alignment: .leading){
                 Picker("Breathing Style", selection: $breathingStyle) {
                     Text("Fast Breathing").tag(0)
