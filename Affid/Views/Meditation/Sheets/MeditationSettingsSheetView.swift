@@ -31,43 +31,27 @@ struct MeditationSettingsSheetView: View {
             }
             
             VStack{
-                Image("testFlames2")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(maxHeight: 100)
-                    .offset(y: 400)
-                    .opacity(0.1)
-                    .edgesIgnoringSafeArea(.all)
-                Image("birdOnBranch")
+                Image("cloudsBirdBranchSheetBG")
                     .padding(.trailing, -130)
+                    .offset(y: 200)
+
             }
             
             VStack(alignment: .leading){
-                Picker("Breathing Style", selection: $breathingStyle) {
-                    Text("Fast Breathing").tag(0)
-                    Text("Slow Breathing").tag(1)
-                }
-                .padding(.horizontal, 20)
-                .padding(.vertical, 10)
-                .offset(y: 15)
-                .pickerStyle(.segmented)
-                .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
-                Divider()
-                    .overlay(.white)
-                    .padding()
+                Spacer()
                 Group{
                     Toggle("Breathing Phase Music", isOn: $breathingPhaseMusic)
                         .font(.title3)
                         .fontWeight(.medium)
                         .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
-                        .foregroundColor(breathingPhaseMusic ? ColorData.shared.appSystemYellow : .white)
+                        .foregroundColor(.white)
                         .padding(.horizontal, 30)
                         .toggleStyle(CheckmarkToggleView())
                     Divider()
                         .overlay(.white)
                         .padding()
                     Toggle("Retention Phase Music", isOn: $retentionPhaseMusic)
-                        .foregroundColor(retentionPhaseMusic ? ColorData.shared.appSystemYellow : .white)
+                        .foregroundColor(.white)
                         .font(.title3)
                         .fontWeight(.medium)
                         .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
@@ -95,6 +79,8 @@ struct MeditationSettingsSheetView: View {
                 }
                 Spacer()
             }
+            .offset(y: -170)
+            
             
             
         }

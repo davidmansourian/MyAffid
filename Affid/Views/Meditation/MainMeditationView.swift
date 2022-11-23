@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MainMeditationView: View {
     @State var showingSheet = false
+    @State var showingFireBreathingSheet = false
+    @State var showingNasalBreathingSheet = false
     var body: some View {
         ZStack{
             ColorData.shared.backGroundColor
@@ -44,23 +46,24 @@ struct MainMeditationView: View {
                             ScrollView(.horizontal, showsIndicators: false){
                                 HStack(spacing: 20){
                                     Button {
-                                        showingSheet.toggle()
+                                        showingFireBreathingSheet.toggle()
                                     } label: {
                                         Image("fireBreathingButton")
                                     }
                                     .padding(.leading, 20)
-                                    .sheet(isPresented: $showingSheet) {
+                                    .sheet(isPresented: $showingFireBreathingSheet) {
                                         MeditationSettingsSheetView()
                                             .presentationDetents([.height(630)])
                                     }
                                     
                                     Button {
-                                        showingSheet.toggle()
+                                        showingNasalBreathingSheet.toggle()
                                     } label: {
                                         Image("nasalBreathingButton")
                                     }
-                                    .sheet(isPresented: $showingSheet) {
-                                        Text("Alfred")
+                                    .sheet(isPresented: $showingNasalBreathingSheet) {
+                                        NasalBreathingSheetView()
+                                            .presentationDetents([.height(630)])
                                     }
 
                                     

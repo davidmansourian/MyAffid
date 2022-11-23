@@ -36,6 +36,8 @@
 		DB2F635E292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F635D292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift */; };
 		DB2F6361292E074600D0BFFD /* CheckmarkToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6360292E074600D0BFFD /* CheckmarkToggleView.swift */; };
 		DB2F6363292E087500D0BFFD /* SquareCheckmarkToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6362292E087500D0BFFD /* SquareCheckmarkToggleView.swift */; };
+		DB2F6365292E3EDB00D0BFFD /* NasalBreathingSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6364292E3EDB00D0BFFD /* NasalBreathingSheetView.swift */; };
+		DB2F6368292E576600D0BFFD /* CustomHorizontalPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6367292E576600D0BFFD /* CustomHorizontalPickerView.swift */; };
 		DBD7449A2927A9220058225A /* AffidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744992927A9220058225A /* AffidApp.swift */; };
 		DBD7449C2927A9220058225A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7449B2927A9220058225A /* ContentView.swift */; };
 		DBD7449E2927A9240058225A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD7449D2927A9240058225A /* Assets.xcassets */; };
@@ -83,6 +85,8 @@
 		DB2F635D292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationSettingsSheetView.swift; sourceTree = "<group>"; };
 		DB2F6360292E074600D0BFFD /* CheckmarkToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkToggleView.swift; sourceTree = "<group>"; };
 		DB2F6362292E087500D0BFFD /* SquareCheckmarkToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareCheckmarkToggleView.swift; sourceTree = "<group>"; };
+		DB2F6364292E3EDB00D0BFFD /* NasalBreathingSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingSheetView.swift; sourceTree = "<group>"; };
+		DB2F6367292E576600D0BFFD /* CustomHorizontalPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHorizontalPickerView.swift; sourceTree = "<group>"; };
 		DBD744962927A9220058225A /* Affid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD744992927A9220058225A /* AffidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffidApp.swift; sourceTree = "<group>"; };
 		DBD7449B2927A9220058225A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 		DB2F62FC29295CE500D0BFFD /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				DB2F6366292E575100D0BFFD /* Pickers */,
 				DB2F635F292E073000D0BFFD /* Toggles */,
 				DB2F63012929626E00D0BFFD /* TextFields */,
 				DBD744B12927AA920058225A /* Buttons */,
@@ -242,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				DB2F635D292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift */,
+				DB2F6364292E3EDB00D0BFFD /* NasalBreathingSheetView.swift */,
 			);
 			path = Sheets;
 			sourceTree = "<group>";
@@ -253,6 +259,14 @@
 				DB2F6362292E087500D0BFFD /* SquareCheckmarkToggleView.swift */,
 			);
 			path = Toggles;
+			sourceTree = "<group>";
+		};
+		DB2F6366292E575100D0BFFD /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F6367292E576600D0BFFD /* CustomHorizontalPickerView.swift */,
+			);
+			path = Pickers;
 			sourceTree = "<group>";
 		};
 		DBD7448D2927A9220058225A = {
@@ -495,6 +509,7 @@
 				DB2F635B292D12BF00D0BFFD /* ResetLinkSentView.swift in Sources */,
 				DB2F632D292BA0EA00D0BFFD /* BreathingStatsView.swift in Sources */,
 				DB2F6326292B7BD800D0BFFD /* SuperHumanMeditationButtons.swift in Sources */,
+				DB2F6365292E3EDB00D0BFFD /* NasalBreathingSheetView.swift in Sources */,
 				DB2F635E292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift in Sources */,
 				DBD744E82927F4E00058225A /* OTPView.swift in Sources */,
 				DB2F6363292E087500D0BFFD /* SquareCheckmarkToggleView.swift in Sources */,
@@ -515,6 +530,7 @@
 				DBD744D22927D3930058225A /* LoginExternalPlatformView.swift in Sources */,
 				DB2F634D292CD4C000D0BFFD /* LoadingView.swift in Sources */,
 				DBD744D42927D3C30058225A /* LoginCloudsView.swift in Sources */,
+				DB2F6368292E576600D0BFFD /* CustomHorizontalPickerView.swift in Sources */,
 				DBD744D82927E8950058225A /* SignUpExternalPlatformView.swift in Sources */,
 				DB2F6345292CB17B00D0BFFD /* UserService.swift in Sources */,
 				DBD744C92927D2560058225A /* GetStartedCloudsView.swift in Sources */,
