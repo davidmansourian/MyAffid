@@ -14,6 +14,13 @@ struct MeditationSettingsSheetView: View {
     var theRed = Color(red: 250/255, green: 110/255, blue: 90/255)
     var thedarkerRed = Color(red: 240/255, green: 93/255, blue: 72/255)
     
+    init() {
+        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(ColorData.shared.appSystemYellow)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
+        UISegmentedControl.appearance().backgroundColor = UIColor(thedarkerRed)
+    }
+    
     var body: some View {
         ZStack{
             Group{
@@ -38,20 +45,31 @@ struct MeditationSettingsSheetView: View {
                 .padding(.horizontal, 20)
                 .padding(.vertical, 10)
                 .offset(y: 15)
-                .pickerStyle(.automatic)
-                .tint(.white)
+                .pickerStyle(.segmented)
+                .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                 Divider()
+                    .overlay(.white)
                     .padding()
                 Group{
                     Toggle("Breathing Phase Music", isOn: $breathingPhaseMusic)
-                        .foregroundColor(.white)
+                        .font(.title3)
+                        .fontWeight(.medium)
+                        .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
+                        .foregroundColor(breathingPhaseMusic ? ColorData.shared.appSystemYellow : .white)
                         .padding(.horizontal, 30)
+                        .toggleStyle(CheckmarkToggleView())
                     Divider()
+                        .overlay(.white)
                         .padding()
                     Toggle("Retention Phase Music", isOn: $retentionPhaseMusic)
-                        .foregroundColor(.white)
+                        .foregroundColor(retentionPhaseMusic ? ColorData.shared.appSystemYellow : .white)
+                        .font(.title3)
+                        .fontWeight(.medium)
+                        .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                         .padding(.horizontal, 30)
+                        .toggleStyle(CheckmarkToggleView())
                     Divider()
+                        .overlay(.white)
                         .padding()
                     HStack{
                         Spacer()
@@ -64,20 +82,15 @@ struct MeditationSettingsSheetView: View {
                         .padding(20)
                         .overlay(
                             Circle()
-                                .stroke(.white))
+                                .stroke(ColorData.shared.appSystemYellow, lineWidth: 3)
+                                .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2))
                         Spacer()
                     }
-
+                    
                 }
                 Spacer()
             }
-            .background(
-                Rectangle()
-                    .foregroundColor(.white)
-                    .opacity(0.1)
-                    .cornerRadius(10)
-                    .edgesIgnoringSafeArea(.all)
-            )
+            
             
         }
     }

@@ -51,7 +51,7 @@ struct MainMeditationView: View {
                                     .padding(.leading, 20)
                                     .sheet(isPresented: $showingSheet) {
                                         MeditationSettingsSheetView()
-                                            .presentationDetents([.height(550)])
+                                            .presentationDetents([.height(630)])
                                     }
                                     
                                     Button {

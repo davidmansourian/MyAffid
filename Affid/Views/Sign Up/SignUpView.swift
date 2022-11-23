@@ -11,6 +11,7 @@ struct SignUpView: View {
     @State var name: String = ""
     @State var email: String = ""
     @State var password: String = ""
+    @State var acceptedPolicy = false
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
@@ -45,20 +46,25 @@ struct SignUpView: View {
                         CustomTextField(placeHolderText: "Email", text: $email)
                         CustomTextField(placeHolderText: "Password", isSecureField: true, text: $password)
                     }
-                    
-                    Spacer()
                 }
-                Spacer()
                 
-                SignUpPrivacyPolicyRow()
-                    .padding()
-                
-                Spacer()
+                HStack{
+                    Toggle("I have read the Privacy Policy", isOn: $acceptedPolicy)
+                        .foregroundColor(acceptedPolicy ? .white : .gray)
+                        .padding()
+                        .toggleStyle(SquareCheckmarkToggleView())
+                }
+                .padding()
                 
                     Button("SIGN UP"){
-                        viewModel.register(firstName: name,
-                                           withEmail: email,
-                                           password: password)
+                        if(acceptedPolicy){
+                            viewModel.register(firstName: name,
+                                               withEmail: email,
+                                               password: password)
+                        }
+                        else{
+                            print("hasn't accepted privacy policy")
+                        }
                     }
                     .buttonStyle(BlueButton())
                     .padding()
