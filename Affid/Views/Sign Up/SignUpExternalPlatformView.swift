@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SignUpExternalPlatformView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
         VStack(spacing: 20){
             ZStack {
@@ -27,7 +28,7 @@ struct SignUpExternalPlatformView: View {
             
             ZStack {
                 Button {
-                    print("Testing apple button")
+                   // viewModel.signInWithApple()
                 } label: {
                     Label {
                         Text("Sign Up With Apple")
@@ -43,6 +44,7 @@ struct SignUpExternalPlatformView: View {
         }
         .padding()
     }
+    
 }
 
 struct SignUpExternalPlatformView_Previews: PreviewProvider {

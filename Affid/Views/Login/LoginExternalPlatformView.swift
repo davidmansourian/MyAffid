@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 struct LoginExternalPlatformView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
         VStack(spacing: 20){
             ZStack {
@@ -26,18 +28,14 @@ struct LoginExternalPlatformView: View {
             }
             
             ZStack {
-                Button {
-                    print("Testing apple button")
-                } label: {
-                    Label {
-                        Text("Continue With Apple")
-                    } icon: {
-                        Image("appleLogo")
-                            .padding(.leading, -38)
-                    }
+                SignInWithAppleButton { request in
+                    viewModel.signInWithApple(request)
+                } onCompletion: { result in
+                    viewModel.handleSignInWithAppleCompletion(result)
                 }
-                .font(.title3)
-                .buttonStyle(AppleButton())
+                .frame(maxWidth: .infinity)
+                .frame(height: 60)
+                .cornerRadius(38)
                 
             }
         }

@@ -12,9 +12,11 @@ struct NasalBreathingSheetView: View {
     @State var breathingStyle = 0
     @State var breathingPhaseMusic = false
     @State var retentionPhaseMusic = false
+    @State private var highlighted: Int?
     var theLighterGreen = Color(red: 118/255, green: 199/255, blue: 158/255)
     var theDarkerGreen = Color(red: 108/255, green: 178/255, blue: 142/255)
     var theOrange = Color(red: 204/255, green: 109/255, blue: 67/255)
+    var roundsArr: [Int] = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
     
     
     init() {
@@ -76,39 +78,55 @@ struct NasalBreathingSheetView: View {
                         .overlay(.white)
                         .padding()
                     
-                    ScrollView(.vertical){
-                        VStack(spacing: 0){
-                            ForEach(1...50, id: \.self){number in
+                    ScrollView(.horizontal, showsIndicators: false){
+                        ScrollViewReader{ recognized in
+                            GeometryReader{ geo in
+                            HStack(spacing: 0){
+                                    ForEach(roundsArr, id: \.self){ round in
+                                        Text("\(round)")
+                                            .foregroundColor(.white)
+                                            .font(.title2)
+                                            .padding()
+                                        //.background(.yellow)
+                                            .frame(width: 60, height: 30)
+                                            .cornerRadius(200)
+                                            .onTapGesture{
+                                                print("Global Center is \(geo.frame(in: .global).midX) x \(geo.frame(in: .global).midY) ")
+                                                print("Local Center is \(geo.frame(in: .local).midX) x \(geo.frame(in: .local).midY) ")
+                                                print(recognized)
+                                            }
+                                    }
+                                }
                             }
                         }
-                        
-                        Divider()
-                            .overlay(.white)
-                            .padding()
-                        
-                        
-                        HStack{
-                            Spacer()
-                            Button {
-                                //
-                            } label: {
-                                Text("Start")
-                                    .foregroundColor(.white)
-                            }
-                            .padding(20)
-                            .overlay(
-                                Circle()
-                                    .stroke(ColorData.shared.appSystemYellow, lineWidth: 3)
-                                    .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2))
-                            Spacer()
-                        }
-                        
                     }
-                    Spacer()
+                    
+                    Divider()
+                        .overlay(.white)
+                        .padding()
+                    
+                    
+                    HStack{
+                        Spacer()
+                        Button {
+                            //
+                        } label: {
+                            Text("Start")
+                                .foregroundColor(.white)
+                        }
+                        .padding(20)
+                        .overlay(
+                            Circle()
+                                .stroke(ColorData.shared.appSystemYellow, lineWidth: 3)
+                                .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2))
+                        Spacer()
+                    }
+                    
                 }
-                
-                
+                Spacer()
             }
+            
+            
         }
     }
 }
