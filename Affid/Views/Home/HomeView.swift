@@ -37,9 +37,6 @@ struct HomeView: View {
                     
                 }
             }
-            .onAppear(){
-                SoundManager.shared.playURLSound(sound: "gs://affid-777aa.appspot.com/noise/rainsounds.mp3")
-            }
         }
     }
 }

@@ -54,6 +54,7 @@
 		DBB0C4E5293FB59F00373517 /* TimerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4E4293FB59F00373517 /* TimerButtonView.swift */; };
 		DBB0C4E7293FD13800373517 /* SoundsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4E6293FD13800373517 /* SoundsModel.swift */; };
 		DBB0C4E9293FD17300373517 /* SoundsStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4E8293FD17300373517 /* SoundsStoreService.swift */; };
+		DBB0C4EC293FDE3200373517 /* RainSoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4EB293FDE3200373517 /* RainSoundsView.swift */; };
 		DBD7449A2927A9220058225A /* AffidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744992927A9220058225A /* AffidApp.swift */; };
 		DBD7449C2927A9220058225A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7449B2927A9220058225A /* ContentView.swift */; };
 		DBD7449E2927A9240058225A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD7449D2927A9240058225A /* Assets.xcassets */; };
@@ -121,6 +122,7 @@
 		DBB0C4E4293FB59F00373517 /* TimerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButtonView.swift; sourceTree = "<group>"; };
 		DBB0C4E6293FD13800373517 /* SoundsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsModel.swift; sourceTree = "<group>"; };
 		DBB0C4E8293FD17300373517 /* SoundsStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsStoreService.swift; sourceTree = "<group>"; };
+		DBB0C4EB293FDE3200373517 /* RainSoundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainSoundsView.swift; sourceTree = "<group>"; };
 		DBD744962927A9220058225A /* Affid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD744992927A9220058225A /* AffidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffidApp.swift; sourceTree = "<group>"; };
 		DBD7449B2927A9220058225A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -343,10 +345,19 @@
 		DBB0C4E1293F56ED00373517 /* Meditation */ = {
 			isa = PBXGroup;
 			children = (
+				DBB0C4EA293FDE2900373517 /* SoundsOfNature */,
 				DBB0C4DA293F55DF00373517 /* BreathingCircle */,
 				DBB0C4E2293F570E00373517 /* MeditationFinishedView.swift */,
 			);
 			path = Meditation;
+			sourceTree = "<group>";
+		};
+		DBB0C4EA293FDE2900373517 /* SoundsOfNature */ = {
+			isa = PBXGroup;
+			children = (
+				DBB0C4EB293FDE3200373517 /* RainSoundsView.swift */,
+			);
+			path = SoundsOfNature;
 			sourceTree = "<group>";
 		};
 		DBD7448D2927A9220058225A = {
@@ -647,6 +658,7 @@
 				DB2F62F42927F80A00D0BFFD /* BlueButtonSmaller.swift in Sources */,
 				DB2F6324292B7BBD00D0BFFD /* FocusAndProductivityButtons.swift in Sources */,
 				DBD744DE2927EB4E0058225A /* GetStartedNavigationLinks.swift in Sources */,
+				DBB0C4EC293FDE3200373517 /* RainSoundsView.swift in Sources */,
 				DB2F6308292B5C6500D0BFFD /* HomeView.swift in Sources */,
 				DBB0C4D3293F417800373517 /* TimerViewModel.swift in Sources */,
 				DBB0C4E7293FD13800373517 /* SoundsModel.swift in Sources */,

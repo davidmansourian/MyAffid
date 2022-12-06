@@ -11,6 +11,7 @@ struct MainMeditationView: View {
     @State var showingSheet = false
     @State var showingFireBreathingSheet = false
     @State var showingNasalBreathingSheet = false
+    @State var showingRainSoundsView = false
     var body: some View {
         ZStack{
             ColorData.shared.backGroundColor
@@ -121,13 +122,15 @@ struct MainMeditationView: View {
                             ScrollView(.horizontal, showsIndicators: false){
                                 HStack(spacing: 20){
                                     Button {
-                                        showingSheet.toggle()
+                                        showingRainSoundsView.toggle()
                                     } label: {
                                         Image("rainSoundsButton")
                                     }
                                     .padding(.leading, 20)
-                                    .sheet(isPresented: $showingSheet) {
-                                        Text("Alfred")
+                                    .fullScreenCover(isPresented: $showingRainSoundsView, onDismiss: {
+                                        showingRainSoundsView = false
+                                    }) {
+                                        RainSoundsView()
                                     }
                                     
                                     Button {
