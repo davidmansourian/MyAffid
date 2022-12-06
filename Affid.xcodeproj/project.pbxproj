@@ -37,6 +37,14 @@
 		DB2F6361292E074600D0BFFD /* CheckmarkToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6360292E074600D0BFFD /* CheckmarkToggleView.swift */; };
 		DB2F6363292E087500D0BFFD /* SquareCheckmarkToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6362292E087500D0BFFD /* SquareCheckmarkToggleView.swift */; };
 		DB2F6365292E3EDB00D0BFFD /* NasalBreathingSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6364292E3EDB00D0BFFD /* NasalBreathingSheetView.swift */; };
+		DBB0C4C1293F406D00373517 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4C0293F406D00373517 /* APIService.swift */; };
+		DBB0C4C5293F40D600373517 /* softgong.wav in Resources */ = {isa = PBXBuildFile; fileRef = DBB0C4C4293F40D600373517 /* softgong.wav */; };
+		DBB0C4C8293F40F600373517 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4C7293F40F600373517 /* SoundManager.swift */; };
+		DBB0C4CA293F410600373517 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4C9293F410600373517 /* CoreDataManager.swift */; };
+		DBB0C4CD293F414400373517 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4CC293F414400373517 /* TimerModel.swift */; };
+		DBB0C4CF293F414D00373517 /* QuotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4CE293F414D00373517 /* QuotesModel.swift */; };
+		DBB0C4D1293F415700373517 /* BarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4D0293F415700373517 /* BarModel.swift */; };
+		DBB0C4D3293F417800373517 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4D2293F417800373517 /* TimerViewModel.swift */; };
 		DBD7449A2927A9220058225A /* AffidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744992927A9220058225A /* AffidApp.swift */; };
 		DBD7449C2927A9220058225A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7449B2927A9220058225A /* ContentView.swift */; };
 		DBD7449E2927A9240058225A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD7449D2927A9240058225A /* Assets.xcassets */; };
@@ -58,6 +66,8 @@
 		DBD744DE2927EB4E0058225A /* GetStartedNavigationLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744DD2927EB4E0058225A /* GetStartedNavigationLinks.swift */; };
 		DBD744E12927F1950058225A /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744E02927F1950058225A /* ResetPasswordView.swift */; };
 		DBD744E82927F4E00058225A /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744E72927F4E00058225A /* OTPView.swift */; };
+		DBDF41162932583A000992FD /* BreathCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDF41152932583A000992FD /* BreathCountModel.swift */; };
+		DBDF4118293258B6000992FD /* BreathCountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDF4117293258B6000992FD /* BreathCountViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +95,14 @@
 		DB2F6360292E074600D0BFFD /* CheckmarkToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkToggleView.swift; sourceTree = "<group>"; };
 		DB2F6362292E087500D0BFFD /* SquareCheckmarkToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareCheckmarkToggleView.swift; sourceTree = "<group>"; };
 		DB2F6364292E3EDB00D0BFFD /* NasalBreathingSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingSheetView.swift; sourceTree = "<group>"; };
+		DBB0C4C0293F406D00373517 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		DBB0C4C4293F40D600373517 /* softgong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = softgong.wav; sourceTree = "<group>"; };
+		DBB0C4C7293F40F600373517 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		DBB0C4C9293F410600373517 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		DBB0C4CC293F414400373517 /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
+		DBB0C4CE293F414D00373517 /* QuotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesModel.swift; sourceTree = "<group>"; };
+		DBB0C4D0293F415700373517 /* BarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarModel.swift; sourceTree = "<group>"; };
+		DBB0C4D2293F417800373517 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		DBD744962927A9220058225A /* Affid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD744992927A9220058225A /* AffidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffidApp.swift; sourceTree = "<group>"; };
 		DBD7449B2927A9220058225A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +127,8 @@
 		DBD744E02927F1950058225A /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		DBD744E72927F4E00058225A /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
 		DBDF41122930F1AB000992FD /* Affid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Affid.entitlements; sourceTree = "<group>"; };
+		DBDF41152932583A000992FD /* BreathCountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathCountModel.swift; sourceTree = "<group>"; };
+		DBDF4117293258B6000992FD /* BreathCountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathCountViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				DB2F6344292CB17B00D0BFFD /* UserService.swift */,
+				DBB0C4C0293F406D00373517 /* APIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -259,6 +280,32 @@
 			path = Toggles;
 			sourceTree = "<group>";
 		};
+		DBB0C4C2293F40AC00373517 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DBB0C4C6293F40E600373517 /* Managers */,
+				DBB0C4C3293F40CA00373517 /* Sounds */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		DBB0C4C3293F40CA00373517 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				DBB0C4C4293F40D600373517 /* softgong.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		DBB0C4C6293F40E600373517 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DBB0C4C7293F40F600373517 /* SoundManager.swift */,
+				DBB0C4C9293F410600373517 /* CoreDataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		DBD7448D2927A9220058225A = {
 			isa = PBXGroup;
 			children = (
@@ -281,9 +328,10 @@
 				DBDF41122930F1AB000992FD /* Affid.entitlements */,
 				DBD744992927A9220058225A /* AffidApp.swift */,
 				DBD744C22927BFBD0058225A /* Info.plist */,
-				DBD7449D2927A9240058225A /* Assets.xcassets */,
 				DB2F6341292BF73200D0BFFD /* GoogleService-Info.plist */,
 				DBD7449B2927A9220058225A /* ContentView.swift */,
+				DBD7449D2927A9240058225A /* Assets.xcassets */,
+				DBB0C4C2293F40AC00373517 /* Utilities */,
 				DB2F6343292CB16200D0BFFD /* Services */,
 				DBD744AC2927AA090058225A /* CoreData */,
 				DBD744BA2927B7570058225A /* Data */,
@@ -316,6 +364,8 @@
 			isa = PBXGroup;
 			children = (
 				DB2F633C292BDFFE00D0BFFD /* Authentication */,
+				DBDF4117293258B6000992FD /* BreathCountViewModel.swift */,
+				DBB0C4D2293F417800373517 /* TimerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -325,6 +375,10 @@
 			children = (
 				DB2F6346292CB42900D0BFFD /* UserModel.swift */,
 				DB2F6357292D113800D0BFFD /* OTPModel.swift */,
+				DBDF41152932583A000992FD /* BreathCountModel.swift */,
+				DBB0C4CC293F414400373517 /* TimerModel.swift */,
+				DBB0C4CE293F414D00373517 /* QuotesModel.swift */,
+				DBB0C4D0293F415700373517 /* BarModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -487,6 +541,7 @@
 				DBD744A12927A9240058225A /* Preview Assets.xcassets in Resources */,
 				DBD7449E2927A9240058225A /* Assets.xcassets in Resources */,
 				DB2F6342292BF73200D0BFFD /* GoogleService-Info.plist in Resources */,
+				DBB0C4C5293F40D600373517 /* softgong.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,14 +559,19 @@
 				DB2F635E292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift in Sources */,
 				DBD744E82927F4E00058225A /* OTPView.swift in Sources */,
 				DB2F6363292E087500D0BFFD /* SquareCheckmarkToggleView.swift in Sources */,
+				DBB0C4D1293F415700373517 /* BarModel.swift in Sources */,
 				DB2F6317292B61E800D0BFFD /* ProfileView.swift in Sources */,
 				DBD744A62927A9240058225A /* Affid.xcdatamodeld in Sources */,
+				DBDF41162932583A000992FD /* BreathCountModel.swift in Sources */,
 				DBD744DC2927E9C10058225A /* SignUpPrivacyPolicyRow.swift in Sources */,
 				DBD744B92927B73B0058225A /* LoginView.swift in Sources */,
 				DB2F634A292CCE6A00D0BFFD /* SplashScreenView.swift in Sources */,
+				DBB0C4C8293F40F600373517 /* SoundManager.swift in Sources */,
 				DB2F6361292E074600D0BFFD /* CheckmarkToggleView.swift in Sources */,
 				DBD744A32927A9240058225A /* Persistence.swift in Sources */,
+				DBB0C4CA293F410600373517 /* CoreDataManager.swift in Sources */,
 				DB2F6347292CB42900D0BFFD /* UserModel.swift in Sources */,
+				DBB0C4C1293F406D00373517 /* APIService.swift in Sources */,
 				DBD744BC2927B76E0058225A /* ColorData.swift in Sources */,
 				DBD744C42927C0930058225A /* AppleButton.swift in Sources */,
 				DBD744E12927F1950058225A /* ResetPasswordView.swift in Sources */,
@@ -520,10 +580,12 @@
 				DB2F6315292B61D900D0BFFD /* MainMeditationView.swift in Sources */,
 				DBD744D22927D3930058225A /* LoginExternalPlatformView.swift in Sources */,
 				DB2F634D292CD4C000D0BFFD /* LoadingView.swift in Sources */,
+				DBB0C4CF293F414D00373517 /* QuotesModel.swift in Sources */,
 				DBD744D42927D3C30058225A /* LoginCloudsView.swift in Sources */,
 				DBD744D82927E8950058225A /* SignUpExternalPlatformView.swift in Sources */,
 				DB2F6345292CB17B00D0BFFD /* UserService.swift in Sources */,
 				DBD744C92927D2560058225A /* GetStartedCloudsView.swift in Sources */,
+				DBDF4118293258B6000992FD /* BreathCountViewModel.swift in Sources */,
 				DBD7449C2927A9220058225A /* ContentView.swift in Sources */,
 				DBD7449A2927A9220058225A /* AffidApp.swift in Sources */,
 				DBD744B32927AB750058225A /* GetStartedView.swift in Sources */,
@@ -536,7 +598,9 @@
 				DB2F6324292B7BBD00D0BFFD /* FocusAndProductivityButtons.swift in Sources */,
 				DBD744DE2927EB4E0058225A /* GetStartedNavigationLinks.swift in Sources */,
 				DB2F6308292B5C6500D0BFFD /* HomeView.swift in Sources */,
+				DBB0C4D3293F417800373517 /* TimerViewModel.swift in Sources */,
 				DB2F6358292D113800D0BFFD /* OTPModel.swift in Sources */,
+				DBB0C4CD293F414400373517 /* TimerModel.swift in Sources */,
 				DB2F62F72927F8F700D0BFFD /* CreateNewPasswordView.swift in Sources */,
 				DB2F63052929635E00D0BFFD /* OTPTextField.swift in Sources */,
 			);

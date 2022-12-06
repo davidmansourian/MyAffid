@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct NasalBreathingSheetView: View {
+    @StateObject var breathCountViewModel = BreathCountViewModel()
     @State var numberPicked = 0
     @State var breathingStyle = 0
     @State var breathingPhaseMusic = false
     @State var retentionPhaseMusic = false
-    @State private var highlighted: Int?
+    @State private var currentIndex: Int = 0
     var theLighterGreen = Color(red: 118/255, green: 199/255, blue: 158/255)
     var theDarkerGreen = Color(red: 108/255, green: 178/255, blue: 142/255)
-    var theOrange = Color(red: 204/255, green: 109/255, blue: 67/255)
-    var roundsArr: [Int] = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+    @Namespace private var ns
     
     
     init() {
@@ -41,18 +41,22 @@ struct NasalBreathingSheetView: View {
             }
             
             VStack(alignment: .leading){
-                Picker("Breathing Style", selection: $breathingStyle) {
-                    Text("Fast Breathing").tag(0)
-                    Text("Slow Breathing").tag(1)
+                
+                Group{
+                    Picker("Breathing Style", selection: $breathingStyle) {
+                        Text("Fast Breathing").tag(0)
+                        Text("Slow Breathing").tag(1)
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 10)
+                    .offset(y: 15)
+                    .pickerStyle(.segmented)
+                    .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                 }
-                .padding(.horizontal, 20)
-                .padding(.vertical, 10)
-                .offset(y: 15)
-                .pickerStyle(.segmented)
-                .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                 Divider()
                     .overlay(.white)
                     .padding()
+                
                 Group{
                     Toggle("Breathing Phase Music", isOn: $breathingPhaseMusic)
                         .font(.title3)
@@ -73,39 +77,60 @@ struct NasalBreathingSheetView: View {
                         .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                         .padding(.horizontal, 30)
                         .toggleStyle(CheckmarkToggleView())
+                }
                     
                     Divider()
                         .overlay(.white)
                         .padding()
                     
-                    ScrollView(.horizontal, showsIndicators: false){
-                        ScrollViewReader{ recognized in
-                            GeometryReader{ geo in
-                            HStack(spacing: 0){
-                                    ForEach(roundsArr, id: \.self){ round in
-                                        Text("\(round)")
-                                            .foregroundColor(.white)
-                                            .font(.title2)
-                                            .padding()
-                                        //.background(.yellow)
-                                            .frame(width: 60, height: 30)
-                                            .cornerRadius(200)
-                                            .onTapGesture{
-                                                print("Global Center is \(geo.frame(in: .global).midX) x \(geo.frame(in: .global).midY) ")
-                                                print("Local Center is \(geo.frame(in: .local).midX) x \(geo.frame(in: .local).midY) ")
-                                                print(recognized)
+                Group{
+                    HStack{
+                        Text("Rounds")
+                            .foregroundColor(.white)
+                            .font(.title2)
+                            .padding()
+                        
+                        ScrollView(.horizontal, showsIndicators: false){
+                            ScrollViewReader{ scroll in
+                                
+                                HStack(spacing: 20){
+                                    
+                                    ForEach(breathCountViewModel.roundsArr){ rounds in
+                                        if rounds.breathIndex == currentIndex{
+                                            ZStack{
+                                                Text("\(rounds.count)")
+                                                    .foregroundColor(.white)
+                                                    .font(.title2)
+                                                    .padding()
+                                                VStack() {
+                                                    Circle()
+                                                        .stroke(ColorData.shared.appSystemYellow, lineWidth: 3)
+                                                        .frame(width: 40, height: 40)
+                                                        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+                                                }.matchedGeometryEffect(id: "animation", in: ns)
                                             }
+                                        }else {
+                                            Text("\(rounds.count)")
+                                                .foregroundColor(.white)
+                                                .font(.title2)
+                                                .padding()
+                                                .onTapGesture {
+                                                    withAnimation {
+                                                        currentIndex = rounds.breathIndex
+                                                        numberPicked = currentIndex
+                                                        scroll.scrollTo(rounds.breathIndex)
+                                                    }
+                                                }
+                                        }
                                     }
                                 }
                             }
                         }
                     }
-                    
-                    Divider()
-                        .overlay(.white)
-                        .padding()
-                    
-                    
+                    .padding()
+                }
+                
+                Group{
                     HStack{
                         Spacer()
                         Button {
@@ -121,15 +146,19 @@ struct NasalBreathingSheetView: View {
                                 .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2))
                         Spacer()
                     }
-                    
+                    .padding(.top, 50)
                 }
+                
                 Spacer()
+
             }
-            
-            
+
         }
     }
+    
+    
 }
+
 
 struct NasalBreathingSheetView_Previews: PreviewProvider {
     static var previews: some View {
