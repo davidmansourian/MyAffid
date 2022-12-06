@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var viewModel: AuthViewModel
+    @StateObject var soundsService = SoundsStoreService()
     var body: some View {
         if let authedUser = viewModel.currentUser{
             ZStack{
@@ -35,6 +36,9 @@ struct HomeView: View {
                     Spacer()
                     
                 }
+            }
+            .onAppear(){
+                SoundManager.shared.playURLSound(sound: "gs://affid-777aa.appspot.com/noise/rainsounds.mp3")
             }
         }
     }

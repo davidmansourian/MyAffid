@@ -27,11 +27,6 @@ struct MainMeditationView: View {
                         .font(.largeTitle)
                         .fontWeight(.light)
                     
-                    Image(systemName: "bookmark")
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .fontWeight(.light)
-                    
                 }
                 
                 ScrollView(.vertical, showsIndicators: false){

@@ -7,12 +7,15 @@
 
 import Foundation
 import AVKit
+import FirebaseFirestore
+import FirebaseStorage
 
 
 class SoundManager{
     static let shared = SoundManager()
     
-    var player: AVAudioPlayer?
+    var playerLocal: AVAudioPlayer?
+    var playerRemote: AVPlayer?
     
     enum SoundOption: String{
         case softgong
@@ -23,12 +26,28 @@ class SoundManager{
         guard let url = Bundle.main.url(forResource: sound.rawValue, withExtension: ".wav") else { return }
         
         do {
-            player = try AVAudioPlayer(contentsOf: url)
-            player?.play()
+            playerLocal = try AVAudioPlayer(contentsOf: url)
+            playerLocal?.play()
         } catch let error {
             print("DEBUG: Couldn't get audio due to \(error.localizedDescription)")
         }
         
+    }
+    
+    func playURLSound(sound: String){
+        let storage = Storage.storage().reference(forURL: sound)
+        storage.downloadURL(){ url, error in
+            guard let url = url else{
+                print(error)
+                return
+            }
+            do {
+                self.playerRemote = try AVPlayer(playerItem: AVPlayerItem(url: url))
+                self.playerRemote?.play()
+            } catch let error {
+                print("DEBUG: Couldn't get audio due to \(error.localizedDescription)")
+            }
+        }
     }
     
 }

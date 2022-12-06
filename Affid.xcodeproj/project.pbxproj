@@ -52,6 +52,8 @@
 		DBB0C4E0293F56A600373517 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4DF293F56A600373517 /* TimerView.swift */; };
 		DBB0C4E3293F570E00373517 /* MeditationFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4E2293F570E00373517 /* MeditationFinishedView.swift */; };
 		DBB0C4E5293FB59F00373517 /* TimerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4E4293FB59F00373517 /* TimerButtonView.swift */; };
+		DBB0C4E7293FD13800373517 /* SoundsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4E6293FD13800373517 /* SoundsModel.swift */; };
+		DBB0C4E9293FD17300373517 /* SoundsStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4E8293FD17300373517 /* SoundsStoreService.swift */; };
 		DBD7449A2927A9220058225A /* AffidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744992927A9220058225A /* AffidApp.swift */; };
 		DBD7449C2927A9220058225A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7449B2927A9220058225A /* ContentView.swift */; };
 		DBD7449E2927A9240058225A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD7449D2927A9240058225A /* Assets.xcassets */; };
@@ -117,6 +119,8 @@
 		DBB0C4DF293F56A600373517 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		DBB0C4E2293F570E00373517 /* MeditationFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationFinishedView.swift; sourceTree = "<group>"; };
 		DBB0C4E4293FB59F00373517 /* TimerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButtonView.swift; sourceTree = "<group>"; };
+		DBB0C4E6293FD13800373517 /* SoundsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsModel.swift; sourceTree = "<group>"; };
+		DBB0C4E8293FD17300373517 /* SoundsStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsStoreService.swift; sourceTree = "<group>"; };
 		DBD744962927A9220058225A /* Affid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD744992927A9220058225A /* AffidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffidApp.swift; sourceTree = "<group>"; };
 		DBD7449B2927A9220058225A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -256,6 +260,7 @@
 			children = (
 				DB2F6344292CB17B00D0BFFD /* UserService.swift */,
 				DBB0C4C0293F406D00373517 /* APIService.swift */,
+				DBB0C4E8293FD17300373517 /* SoundsStoreService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 				DBB0C4CC293F414400373517 /* TimerModel.swift */,
 				DBB0C4CE293F414D00373517 /* QuotesModel.swift */,
 				DBB0C4D0293F415700373517 /* BarModel.swift */,
+				DBB0C4E6293FD13800373517 /* SoundsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -622,6 +628,7 @@
 				DB2F633E292BE00C00D0BFFD /* AuthViewModel.swift in Sources */,
 				DB2F6315292B61D900D0BFFD /* MainMeditationView.swift in Sources */,
 				DBD744D22927D3930058225A /* LoginExternalPlatformView.swift in Sources */,
+				DBB0C4E9293FD17300373517 /* SoundsStoreService.swift in Sources */,
 				DB2F634D292CD4C000D0BFFD /* LoadingView.swift in Sources */,
 				DBB0C4CF293F414D00373517 /* QuotesModel.swift in Sources */,
 				DBD744D42927D3C30058225A /* LoginCloudsView.swift in Sources */,
@@ -642,6 +649,7 @@
 				DBD744DE2927EB4E0058225A /* GetStartedNavigationLinks.swift in Sources */,
 				DB2F6308292B5C6500D0BFFD /* HomeView.swift in Sources */,
 				DBB0C4D3293F417800373517 /* TimerViewModel.swift in Sources */,
+				DBB0C4E7293FD13800373517 /* SoundsModel.swift in Sources */,
 				DB2F6358292D113800D0BFFD /* OTPModel.swift in Sources */,
 				DBB0C4D7293F41BF00373517 /* BarChartViewModel.swift in Sources */,
 				DBB0C4CD293F414400373517 /* TimerModel.swift in Sources */,

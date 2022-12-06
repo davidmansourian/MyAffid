@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BarView: View {
     @StateObject var barChartVm = BarChartViewModel()
+    @State private var barAppearing: Bool = false
     
     var body: some View {
         VStack{
@@ -17,9 +18,17 @@ struct BarView: View {
                         ZStack{
                             Rectangle()
                                 .foregroundColor(barChartVm.yearlyChart.last?.color)
-                                .frame(width: 60, height: 100, alignment: .bottom)
+                                .frame(width: 60, height: barAppearing ? 100 : 0, alignment: .bottom)
                                 .cornerRadius(6)
                                 .foregroundColor(.white)
+                                .onAppear(){
+                                    withAnimation(.easeOut(duration: 1)){
+                                        barAppearing = true
+                                    }
+                                }
+                                .onDisappear(){
+                                        barAppearing = false
+                                }
                             
                             Text("\(Int(Float(barChartVm.yearlyChart.last!.value)))")
                                 .foregroundColor(.blue)
@@ -37,7 +46,7 @@ struct BarView: View {
             
         }
         .onAppear(){
-            barChartVm.loadBarChart()
+           barChartVm.loadBarChart()
         }
     }
 }
