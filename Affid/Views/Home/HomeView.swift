@@ -13,25 +13,25 @@ struct HomeView: View {
         if let authedUser = viewModel.currentUser{
             ZStack{
                 ColorData.shared.backGroundColor
-                    .edgesIgnoringSafeArea(.top)
+                    .edgesIgnoringSafeArea(.all)
                 
                 LoginCloudsView()
+                    .offset(y: -50)
                 
-                VStack{
-                    Spacer()
+                VStack(spacing: 40){
                     Text("Good morning, \(authedUser.firstName)!")
                         .foregroundColor(.white)
-                        .font(.title3)
-                        .fontWeight(.semibold)
+                        .font(.title)
+                        .fontWeight(.light)
+                        .padding(.top, 80)
                     
-                    Spacer()
-                    
-                    VStack{
                         Text("Quick meditation?")
                             .foregroundColor(.white)
-                            .font(.title)
-                            .fontWeight(.semibold)
-                    }
+                            .font(.title2)
+                            .fontWeight(.light)
+                    
+                        BreathingCircleView()
+                    
                     Spacer()
                     
                 }

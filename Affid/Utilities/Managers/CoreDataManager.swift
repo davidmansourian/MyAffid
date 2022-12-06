@@ -53,7 +53,7 @@ class CoreDataManager: ObservableObject{
         let today = Date.now
         let thisYear = Calendar.current.dateInterval(of: .year, for: today)!
         let fetchRequest: NSFetchRequest<Session> = Session.fetchRequest()
-        let predicate = NSPredicate(format: "date >= %@ AND date < %@", thisYear.start as NSDate, thisYear.end as NSDate)
+        let predicate = NSPredicate(format: "date >= %@ AND date < %@ AND completed == %@", thisYear.start as NSDate, thisYear.end as NSDate, NSNumber(booleanLiteral: true))
         var fetchedData: [Session] = []
         fetchRequest.predicate = predicate
         do {

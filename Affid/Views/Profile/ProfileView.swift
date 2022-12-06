@@ -30,7 +30,7 @@ struct ProfileView: View {
                     }
                     Spacer()
                     
-                    BreathingStatsView()
+                    BarView()
                     
                     Spacer()
                     Group{

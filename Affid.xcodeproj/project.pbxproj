@@ -18,7 +18,6 @@
 		DB2F6324292B7BBD00D0BFFD /* FocusAndProductivityButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6323292B7BBD00D0BFFD /* FocusAndProductivityButtons.swift */; };
 		DB2F6326292B7BD800D0BFFD /* SuperHumanMeditationButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6325292B7BD800D0BFFD /* SuperHumanMeditationButtons.swift */; };
 		DB2F6328292B80B500D0BFFD /* SoundsOfNatureButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6327292B80B500D0BFFD /* SoundsOfNatureButtons.swift */; };
-		DB2F632D292BA0EA00D0BFFD /* BreathingStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F632C292BA0EA00D0BFFD /* BreathingStatsView.swift */; };
 		DB2F6335292BDC7300D0BFFD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DB2F6334292BDC7300D0BFFD /* FirebaseAuth */; };
 		DB2F6337292BDC7300D0BFFD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DB2F6336292BDC7300D0BFFD /* FirebaseFirestore */; };
 		DB2F6339292BDC7300D0BFFD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DB2F6338292BDC7300D0BFFD /* FirebaseFirestoreSwift */; };
@@ -47,6 +46,12 @@
 		DBB0C4D3293F417800373517 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4D2293F417800373517 /* TimerViewModel.swift */; };
 		DBB0C4D5293F41A200373517 /* QuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4D4293F41A200373517 /* QuotesViewModel.swift */; };
 		DBB0C4D7293F41BF00373517 /* BarChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4D6293F41BF00373517 /* BarChartViewModel.swift */; };
+		DBB0C4D9293F436600373517 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4D8293F436600373517 /* BarView.swift */; };
+		DBB0C4DC293F560800373517 /* BreathingCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4DB293F560800373517 /* BreathingCircleView.swift */; };
+		DBB0C4DE293F564200373517 /* CirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4DD293F564200373517 /* CirclesView.swift */; };
+		DBB0C4E0293F56A600373517 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4DF293F56A600373517 /* TimerView.swift */; };
+		DBB0C4E3293F570E00373517 /* MeditationFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4E2293F570E00373517 /* MeditationFinishedView.swift */; };
+		DBB0C4E5293FB59F00373517 /* TimerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4E4293FB59F00373517 /* TimerButtonView.swift */; };
 		DBD7449A2927A9220058225A /* AffidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744992927A9220058225A /* AffidApp.swift */; };
 		DBD7449C2927A9220058225A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7449B2927A9220058225A /* ContentView.swift */; };
 		DBD7449E2927A9240058225A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD7449D2927A9240058225A /* Assets.xcassets */; };
@@ -84,7 +89,6 @@
 		DB2F6323292B7BBD00D0BFFD /* FocusAndProductivityButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusAndProductivityButtons.swift; sourceTree = "<group>"; };
 		DB2F6325292B7BD800D0BFFD /* SuperHumanMeditationButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHumanMeditationButtons.swift; sourceTree = "<group>"; };
 		DB2F6327292B80B500D0BFFD /* SoundsOfNatureButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsOfNatureButtons.swift; sourceTree = "<group>"; };
-		DB2F632C292BA0EA00D0BFFD /* BreathingStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingStatsView.swift; sourceTree = "<group>"; };
 		DB2F633D292BE00C00D0BFFD /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		DB2F6341292BF73200D0BFFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DB2F6344292CB17B00D0BFFD /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -107,6 +111,12 @@
 		DBB0C4D2293F417800373517 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		DBB0C4D4293F41A200373517 /* QuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewModel.swift; sourceTree = "<group>"; };
 		DBB0C4D6293F41BF00373517 /* BarChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartViewModel.swift; sourceTree = "<group>"; };
+		DBB0C4D8293F436600373517 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
+		DBB0C4DB293F560800373517 /* BreathingCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingCircleView.swift; sourceTree = "<group>"; };
+		DBB0C4DD293F564200373517 /* CirclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesView.swift; sourceTree = "<group>"; };
+		DBB0C4DF293F56A600373517 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		DBB0C4E2293F570E00373517 /* MeditationFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationFinishedView.swift; sourceTree = "<group>"; };
+		DBB0C4E4293FB59F00373517 /* TimerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButtonView.swift; sourceTree = "<group>"; };
 		DBD744962927A9220058225A /* Affid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD744992927A9220058225A /* AffidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffidApp.swift; sourceTree = "<group>"; };
 		DBD7449B2927A9220058225A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -182,6 +192,7 @@
 		DB2F6306292B5C5000D0BFFD /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DBB0C4E1293F56ED00373517 /* Meditation */,
 				DB2F6307292B5C6500D0BFFD /* HomeView.swift */,
 			);
 			path = Home;
@@ -227,7 +238,7 @@
 		DB2F6329292BA05A00D0BFFD /* Breathing Statistics */ = {
 			isa = PBXGroup;
 			children = (
-				DB2F632C292BA0EA00D0BFFD /* BreathingStatsView.swift */,
+				DBB0C4D8293F436600373517 /* BarView.swift */,
 			);
 			path = "Breathing Statistics";
 			sourceTree = "<group>";
@@ -287,6 +298,9 @@
 		DBB0C4C2293F40AC00373517 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DBD744AC2927AA090058225A /* CoreData */,
+				DBD744BA2927B7570058225A /* Data */,
+				DB2F6343292CB16200D0BFFD /* Services */,
 				DBB0C4C6293F40E600373517 /* Managers */,
 				DBB0C4C3293F40CA00373517 /* Sounds */,
 			);
@@ -308,6 +322,26 @@
 				DBB0C4C9293F410600373517 /* CoreDataManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		DBB0C4DA293F55DF00373517 /* BreathingCircle */ = {
+			isa = PBXGroup;
+			children = (
+				DBB0C4DB293F560800373517 /* BreathingCircleView.swift */,
+				DBB0C4DD293F564200373517 /* CirclesView.swift */,
+				DBB0C4DF293F56A600373517 /* TimerView.swift */,
+				DBB0C4E4293FB59F00373517 /* TimerButtonView.swift */,
+			);
+			path = BreathingCircle;
+			sourceTree = "<group>";
+		};
+		DBB0C4E1293F56ED00373517 /* Meditation */ = {
+			isa = PBXGroup;
+			children = (
+				DBB0C4DA293F55DF00373517 /* BreathingCircle */,
+				DBB0C4E2293F570E00373517 /* MeditationFinishedView.swift */,
+			);
+			path = Meditation;
 			sourceTree = "<group>";
 		};
 		DBD7448D2927A9220058225A = {
@@ -336,9 +370,6 @@
 				DBD7449B2927A9220058225A /* ContentView.swift */,
 				DBD7449D2927A9240058225A /* Assets.xcassets */,
 				DBB0C4C2293F40AC00373517 /* Utilities */,
-				DB2F6343292CB16200D0BFFD /* Services */,
-				DBD744AC2927AA090058225A /* CoreData */,
-				DBD744BA2927B7570058225A /* Data */,
 				DBD744AF2927AA1F0058225A /* Models */,
 				DBD744AE2927AA130058225A /* ViewModels */,
 				DBD744B02927AA260058225A /* Views */,
@@ -559,11 +590,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB2F635B292D12BF00D0BFFD /* ResetLinkSentView.swift in Sources */,
-				DB2F632D292BA0EA00D0BFFD /* BreathingStatsView.swift in Sources */,
+				DBB0C4E3293F570E00373517 /* MeditationFinishedView.swift in Sources */,
 				DB2F6326292B7BD800D0BFFD /* SuperHumanMeditationButtons.swift in Sources */,
 				DB2F6365292E3EDB00D0BFFD /* NasalBreathingSheetView.swift in Sources */,
 				DB2F635E292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift in Sources */,
 				DBD744E82927F4E00058225A /* OTPView.swift in Sources */,
+				DBB0C4E5293FB59F00373517 /* TimerButtonView.swift in Sources */,
 				DB2F6363292E087500D0BFFD /* SquareCheckmarkToggleView.swift in Sources */,
 				DBB0C4D1293F415700373517 /* BarModel.swift in Sources */,
 				DB2F6317292B61E800D0BFFD /* ProfileView.swift in Sources */,
@@ -573,14 +605,18 @@
 				DBD744B92927B73B0058225A /* LoginView.swift in Sources */,
 				DB2F634A292CCE6A00D0BFFD /* SplashScreenView.swift in Sources */,
 				DBB0C4C8293F40F600373517 /* SoundManager.swift in Sources */,
+				DBB0C4E0293F56A600373517 /* TimerView.swift in Sources */,
 				DB2F6361292E074600D0BFFD /* CheckmarkToggleView.swift in Sources */,
+				DBB0C4DE293F564200373517 /* CirclesView.swift in Sources */,
 				DBD744A32927A9240058225A /* Persistence.swift in Sources */,
 				DBB0C4D5293F41A200373517 /* QuotesViewModel.swift in Sources */,
+				DBB0C4D9293F436600373517 /* BarView.swift in Sources */,
 				DBB0C4CA293F410600373517 /* CoreDataManager.swift in Sources */,
 				DB2F6347292CB42900D0BFFD /* UserModel.swift in Sources */,
 				DBB0C4C1293F406D00373517 /* APIService.swift in Sources */,
 				DBD744BC2927B76E0058225A /* ColorData.swift in Sources */,
 				DBD744C42927C0930058225A /* AppleButton.swift in Sources */,
+				DBB0C4DC293F560800373517 /* BreathingCircleView.swift in Sources */,
 				DBD744E12927F1950058225A /* ResetPasswordView.swift in Sources */,
 				DBD744C12927BC4B0058225A /* GoogleButton.swift in Sources */,
 				DB2F633E292BE00C00D0BFFD /* AuthViewModel.swift in Sources */,

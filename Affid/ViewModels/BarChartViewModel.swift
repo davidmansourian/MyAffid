@@ -30,10 +30,8 @@ class BarChartViewModel: ObservableObject{
     func getYearlyStats(){
         for session in coreDataManager.getSessionsPerMonth(){
             let monthInt = Calendar.current.component(.month, from: session.date!)
-            print(monthInt)
             monthlyCountArr[monthInt-1].count += 1 // minus 1 because dictionary loads from 0 to 11
         }
-        print(monthlyCountArr)
     }
     
     func loadBarChart(){
@@ -45,11 +43,8 @@ class BarChartViewModel: ObservableObject{
         
         for month in monthlyCountArr{
             let barItem = Bar(name: "\(month.month)", month: months[month.month-1], value: Double(month.count), color: color)
-            print (month.count)
             yearlyChart.append(barItem)
         }
-        
-        print(yearlyChart)
         
     }
 }

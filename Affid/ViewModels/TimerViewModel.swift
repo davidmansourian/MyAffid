@@ -41,7 +41,7 @@ class TimerViewModel: ObservableObject{
     
     
     func loadPickerWithMinutes(){
-        for theMinute in 1...120{
+        for theMinute in 1...60{
             pickerArr.append(TimerModel(id: theMinute, number: theMinute, text: "min"))
         }
     }
