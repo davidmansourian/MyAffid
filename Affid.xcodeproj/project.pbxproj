@@ -45,6 +45,8 @@
 		DBB0C4CF293F414D00373517 /* QuotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4CE293F414D00373517 /* QuotesModel.swift */; };
 		DBB0C4D1293F415700373517 /* BarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4D0293F415700373517 /* BarModel.swift */; };
 		DBB0C4D3293F417800373517 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4D2293F417800373517 /* TimerViewModel.swift */; };
+		DBB0C4D5293F41A200373517 /* QuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4D4293F41A200373517 /* QuotesViewModel.swift */; };
+		DBB0C4D7293F41BF00373517 /* BarChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4D6293F41BF00373517 /* BarChartViewModel.swift */; };
 		DBD7449A2927A9220058225A /* AffidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744992927A9220058225A /* AffidApp.swift */; };
 		DBD7449C2927A9220058225A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7449B2927A9220058225A /* ContentView.swift */; };
 		DBD7449E2927A9240058225A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD7449D2927A9240058225A /* Assets.xcassets */; };
@@ -103,6 +105,8 @@
 		DBB0C4CE293F414D00373517 /* QuotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesModel.swift; sourceTree = "<group>"; };
 		DBB0C4D0293F415700373517 /* BarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarModel.swift; sourceTree = "<group>"; };
 		DBB0C4D2293F417800373517 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		DBB0C4D4293F41A200373517 /* QuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewModel.swift; sourceTree = "<group>"; };
+		DBB0C4D6293F41BF00373517 /* BarChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartViewModel.swift; sourceTree = "<group>"; };
 		DBD744962927A9220058225A /* Affid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD744992927A9220058225A /* AffidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffidApp.swift; sourceTree = "<group>"; };
 		DBD7449B2927A9220058225A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -366,6 +370,8 @@
 				DB2F633C292BDFFE00D0BFFD /* Authentication */,
 				DBDF4117293258B6000992FD /* BreathCountViewModel.swift */,
 				DBB0C4D2293F417800373517 /* TimerViewModel.swift */,
+				DBB0C4D4293F41A200373517 /* QuotesViewModel.swift */,
+				DBB0C4D6293F41BF00373517 /* BarChartViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -569,6 +575,7 @@
 				DBB0C4C8293F40F600373517 /* SoundManager.swift in Sources */,
 				DB2F6361292E074600D0BFFD /* CheckmarkToggleView.swift in Sources */,
 				DBD744A32927A9240058225A /* Persistence.swift in Sources */,
+				DBB0C4D5293F41A200373517 /* QuotesViewModel.swift in Sources */,
 				DBB0C4CA293F410600373517 /* CoreDataManager.swift in Sources */,
 				DB2F6347292CB42900D0BFFD /* UserModel.swift in Sources */,
 				DBB0C4C1293F406D00373517 /* APIService.swift in Sources */,
@@ -600,6 +607,7 @@
 				DB2F6308292B5C6500D0BFFD /* HomeView.swift in Sources */,
 				DBB0C4D3293F417800373517 /* TimerViewModel.swift in Sources */,
 				DB2F6358292D113800D0BFFD /* OTPModel.swift in Sources */,
+				DBB0C4D7293F41BF00373517 /* BarChartViewModel.swift in Sources */,
 				DBB0C4CD293F414400373517 /* TimerModel.swift in Sources */,
 				DB2F62F72927F8F700D0BFFD /* CreateNewPasswordView.swift in Sources */,
 				DB2F63052929635E00D0BFFD /* OTPTextField.swift in Sources */,
