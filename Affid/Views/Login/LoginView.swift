@@ -13,81 +13,91 @@ struct LoginView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
-        ZStack{
-            ColorData.shared.backGroundColor
-                .edgesIgnoringSafeArea(.all)
-            VStack{
-                
-                Spacer()
-                
-                LoginCloudsView()
-                
-                Group{
-                    HStack{
-                        Text("Welcome back!")
-                            .font(.title)
-                            .bold()
-                            .foregroundColor(.white)
-                    }
+        if viewModel.loading{
+            LoadingView()
+        }
+        else{
+            ZStack{
+                ColorData.shared.backGroundColor
+                    .edgesIgnoringSafeArea(.all)
+                VStack{
                     
-                    LoginExternalPlatformView()
-                    
-                    HStack{
-                        Text("OR LOGIN WITH EMAIL")
-                            .foregroundColor(.gray)
-                            .font(.footnote)
-                    }
-                    .padding()
-                }
-                VStack(spacing: -10){
-                    CustomTextField(placeHolderText: "Email Address", text: $email)
-                    CustomTextField(placeHolderText: "Password", isSecureField: true, text: $password)
-                }
-                
-                
-                HStack{
-                    NavigationLink(
-                        destination: ResetPasswordView(),
-                        label:{ Text("RESET PASSWORD")
-                        })
-                    .foregroundColor(.gray)
-                    .font(.footnote)
                     Spacer()
-                }
-                .padding(.horizontal, 30)
-                
-                Spacer()
-                
-                
-                Button {
+                    
+                    LoginCloudsView()
+                    
+                    Group{
+                        HStack{
+                            Text("Welcome back!")
+                                .font(.title)
+                                .bold()
+                                .foregroundColor(.white)
+                        }
+                        
+                        LoginExternalPlatformView()
+                        
+                        HStack{
+                            Text("OR LOGIN WITH EMAIL")
+                                .foregroundColor(.gray)
+                                .font(.footnote)
+                        }
+                        .padding()
+                    }
+                    VStack(spacing: -10){
+                        CustomTextField(placeHolderText: "Email Address", text: $email)
+                        CustomTextField(placeHolderText: "Password", isSecureField: true, text: $password)
+                    }
+                    
+                    
+                    HStack{
+                        NavigationLink(
+                            destination: ResetPasswordView(),
+                            label:{ Text("RESET PASSWORD")
+                            })
+                        .foregroundColor(.gray)
+                        .font(.footnote)
+                        Spacer()
+                    }
+                    .padding(.horizontal, 30)
+                    
+                    Spacer()
+                    
+                    
+                    Button {
                         viewModel.login(withEmail: email,
                                         password: password)
-                } label: {
-                    Text("Login")
-                }
-                .padding()
-                .buttonStyle(BlueButton())
-
-                
-                
-                Spacer()
-            }
-        }
-        .toolbar{
-            ToolbarItemGroup(placement: .navigationBarLeading){
-                // Solution below was taken from //https://stackoverflow.com/a/58159783
-                Button(action: { self.presentationMode.wrappedValue.dismiss()
-                }) {
-                    Image(systemName: "chevron.backward")
-                        .foregroundColor(Color.white)
-                        .padding(10)
-                        .overlay(
-                            Circle()
-                                .stroke(.white))
+                    } label: {
+                        Text("Login")
+                    }
+                    .padding()
+                    .buttonStyle(BlueButton())
+                    
+                    
+                    
+                    Spacer()
                 }
             }
+            .alert("\(viewModel.authError)", isPresented: $viewModel.isError) {
+                Button("OK", role: .cancel) {
+                    viewModel.isError = false
+                }
+            }
+            .toolbar{
+                ToolbarItemGroup(placement: .navigationBarLeading){
+                    // Solution below was taken from //https://stackoverflow.com/a/58159783
+                    Button(action: { self.presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Image(systemName: "chevron.backward")
+                            .foregroundColor(Color.white)
+                            .padding(10)
+                            .overlay(
+                                Circle()
+                                    .stroke(.white))
+                    }
+                }
+            }
+            .navigationBarBackButtonHidden(true)
         }
-        .navigationBarBackButtonHidden(true)
     }
 }
 

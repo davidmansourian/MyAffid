@@ -55,6 +55,8 @@
 		DBB0C4E7293FD13800373517 /* SoundsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4E6293FD13800373517 /* SoundsModel.swift */; };
 		DBB0C4E9293FD17300373517 /* SoundsStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4E8293FD17300373517 /* SoundsStoreService.swift */; };
 		DBB0C4EC293FDE3200373517 /* RainSoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4EB293FDE3200373517 /* RainSoundsView.swift */; };
+		DBB0C4EE29408EB200373517 /* OceanSoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4ED29408EB200373517 /* OceanSoundsView.swift */; };
+		DBB0C4F02940C02300373517 /* SignUpTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4EF2940C02200373517 /* SignUpTextFieldView.swift */; };
 		DBD7449A2927A9220058225A /* AffidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744992927A9220058225A /* AffidApp.swift */; };
 		DBD7449C2927A9220058225A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7449B2927A9220058225A /* ContentView.swift */; };
 		DBD7449E2927A9240058225A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD7449D2927A9240058225A /* Assets.xcassets */; };
@@ -123,6 +125,8 @@
 		DBB0C4E6293FD13800373517 /* SoundsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsModel.swift; sourceTree = "<group>"; };
 		DBB0C4E8293FD17300373517 /* SoundsStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsStoreService.swift; sourceTree = "<group>"; };
 		DBB0C4EB293FDE3200373517 /* RainSoundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainSoundsView.swift; sourceTree = "<group>"; };
+		DBB0C4ED29408EB200373517 /* OceanSoundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OceanSoundsView.swift; sourceTree = "<group>"; };
+		DBB0C4EF2940C02200373517 /* SignUpTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextFieldView.swift; sourceTree = "<group>"; };
 		DBD744962927A9220058225A /* Affid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD744992927A9220058225A /* AffidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffidApp.swift; sourceTree = "<group>"; };
 		DBD7449B2927A9220058225A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -215,6 +219,7 @@
 		DB2F6312292B61B200D0BFFD /* Meditation */ = {
 			isa = PBXGroup;
 			children = (
+				DBB0C4EA293FDE2900373517 /* SoundsOfNature */,
 				DB2F635C292D5B4C00D0BFFD /* Sheets */,
 				DB2F631C292B749800D0BFFD /* Buttons */,
 				DB2F6314292B61D900D0BFFD /* MainMeditationView.swift */,
@@ -345,7 +350,6 @@
 		DBB0C4E1293F56ED00373517 /* Meditation */ = {
 			isa = PBXGroup;
 			children = (
-				DBB0C4EA293FDE2900373517 /* SoundsOfNature */,
 				DBB0C4DA293F55DF00373517 /* BreathingCircle */,
 				DBB0C4E2293F570E00373517 /* MeditationFinishedView.swift */,
 			);
@@ -356,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				DBB0C4EB293FDE3200373517 /* RainSoundsView.swift */,
+				DBB0C4ED29408EB200373517 /* OceanSoundsView.swift */,
 			);
 			path = SoundsOfNature;
 			sourceTree = "<group>";
@@ -499,6 +504,7 @@
 				DBD744D52927E7AD0058225A /* SignUpView.swift */,
 				DBD744D72927E8950058225A /* SignUpExternalPlatformView.swift */,
 				DBD744DB2927E9C10058225A /* SignUpPrivacyPolicyRow.swift */,
+				DBB0C4EF2940C02200373517 /* SignUpTextFieldView.swift */,
 			);
 			path = "Sign Up";
 			sourceTree = "<group>";
@@ -641,6 +647,7 @@
 				DBD744D22927D3930058225A /* LoginExternalPlatformView.swift in Sources */,
 				DBB0C4E9293FD17300373517 /* SoundsStoreService.swift in Sources */,
 				DB2F634D292CD4C000D0BFFD /* LoadingView.swift in Sources */,
+				DBB0C4F02940C02300373517 /* SignUpTextFieldView.swift in Sources */,
 				DBB0C4CF293F414D00373517 /* QuotesModel.swift in Sources */,
 				DBD744D42927D3C30058225A /* LoginCloudsView.swift in Sources */,
 				DBD744D82927E8950058225A /* SignUpExternalPlatformView.swift in Sources */,
@@ -661,6 +668,7 @@
 				DBB0C4EC293FDE3200373517 /* RainSoundsView.swift in Sources */,
 				DB2F6308292B5C6500D0BFFD /* HomeView.swift in Sources */,
 				DBB0C4D3293F417800373517 /* TimerViewModel.swift in Sources */,
+				DBB0C4EE29408EB200373517 /* OceanSoundsView.swift in Sources */,
 				DBB0C4E7293FD13800373517 /* SoundsModel.swift in Sources */,
 				DB2F6358292D113800D0BFFD /* OTPModel.swift in Sources */,
 				DBB0C4D7293F41BF00373517 /* BarChartViewModel.swift in Sources */,

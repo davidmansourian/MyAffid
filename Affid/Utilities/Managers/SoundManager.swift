@@ -13,7 +13,7 @@ import FirebaseStorage
 
 class SoundManager{
     static let shared = SoundManager()
-    
+    @Published var loading: Bool = false
     var playerLocal: AVAudioPlayer?
     var playerRemote: AVPlayer?
     
@@ -43,9 +43,12 @@ class SoundManager{
             }
             do {
                 self.playerRemote = try AVPlayer(playerItem: AVPlayerItem(url: url))
+                try AVAudioSession.sharedInstance().setCategory(.playback)
+                try AVAudioSession.sharedInstance().setActive(true)
                 self.playerRemote?.play()
             } catch let error {
                 print("DEBUG: Couldn't get audio due to \(error.localizedDescription)")
+                self.loading = false
             }
         }
     }

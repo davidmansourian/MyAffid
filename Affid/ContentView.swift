@@ -15,7 +15,6 @@ struct ContentView: View {
         Group{
             if viewModel.userSession == nil {
                 GetStartedView()
-                
             }
             else{
                 if viewModel.loading{

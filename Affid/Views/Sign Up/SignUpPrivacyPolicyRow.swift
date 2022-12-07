@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct SignUpPrivacyPolicyRow: View {
-    @State var acceptedPolicy = false
+    @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
         HStack{
-            Toggle("I have read the Privacy Policy", isOn: $acceptedPolicy)
-                .foregroundColor(acceptedPolicy ? .white : .gray)
+            Toggle("I have read the Privacy Policy", isOn: $viewModel.acceptedPrivacyPolicy)
+                .foregroundColor(viewModel.acceptedPrivacyPolicy ? .white : .gray)
                 .padding()
                 .toggleStyle(SquareCheckmarkToggleView())
         }

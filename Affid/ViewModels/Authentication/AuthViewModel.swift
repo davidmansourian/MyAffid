@@ -17,9 +17,12 @@ import AuthenticationServices
 //Firebase tutorial from video:
 // https://www.youtube.com/watch?v=3pIXMwvJLZs , around 2h 24min to approximately 2h 50min, and 4h in
 class AuthViewModel: ObservableObject{
+    @Published var isError: Bool = false
+    @Published var authError: String = ""
     @Published var loading = false
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: UserModel?
+    @Published var acceptedPrivacyPolicy: Bool = false
     private var userCancellable: Cancellable?
     private let service = UserService()
     fileprivate var currentNonce: String?
@@ -33,10 +36,35 @@ class AuthViewModel: ObservableObject{
     }
     
     
+    // error handling https://stackoverflow.com/questions/69997679/swiftui-firebase-how-to-do-custom-error-handling
     func login(withEmail email: String, password: String){
+        self.loading = true
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
             if let error = error{
-                print("DEBUG: Failed to sign in with erorr \(error.localizedDescription)")
+                let err = error as NSError
+                self.isError = true
+                print(self.isError)
+                switch err.code{
+                case AuthErrorCode.invalidEmail.rawValue:
+                    if email.isEmpty{
+                        self.authError = "You need to enter an email address"
+                    }
+                    else{
+                        self.authError = err.localizedDescription
+                    }
+                case AuthErrorCode.wrongPassword.rawValue:
+                    if password.isEmpty{
+                        self.authError = "You need to enter a password"
+                    }
+                    else{
+                        self.authError = "Incorrect password."
+                    }
+                case AuthErrorCode.networkError.rawValue:
+                    self.authError = ("Failed to login. Please check your network connection")
+                default:
+                    self.authError = ("\(err.localizedDescription)")
+                }
+                self.loading = false
                 return
             }
             
@@ -52,9 +80,47 @@ class AuthViewModel: ObservableObject{
     }
     
     func register(firstName: String, withEmail email: String, password: String){
+        self.loading = true
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            guard !firstName.isEmpty else {
+                self.isError = true
+                self.authError = ("You need to enter a first name")
+                self.loading = false
+                return
+            }
+            guard self.acceptedPrivacyPolicy else {
+                self.isError = true
+                self.authError = ("You need to accepept the privacy policy to continue")
+                self.loading = false
+                return
+            }
             if let error = error{
-                print("DEBUG: Failed to register with erorr \(error.localizedDescription)")
+                let err = error as NSError
+                self.isError = true
+                print(self.isError)
+                switch err.code{
+                case AuthErrorCode.emailAlreadyInUse.rawValue:
+                    self.authError = ("Email is already in use.")
+                case AuthErrorCode.invalidEmail.rawValue:
+                    if email.isEmpty{
+                        self.authError = "You need to enter an email address"
+                    }
+                    else{
+                        self.authError = err.localizedDescription
+                    }
+                case AuthErrorCode.wrongPassword.rawValue:
+                    if password.isEmpty{
+                        self.authError = "You need to enter a password"
+                    }
+                    else{
+                        self.authError = "Incorrect password."
+                    }
+                case AuthErrorCode.networkError.rawValue:
+                    self.authError = ("Failed to login. Please check your network connection")
+                default:
+                    self.authError = ("\(err.localizedDescription)")
+                }
+                self.loading = false
                 return
             }
             
@@ -191,7 +257,7 @@ extension AuthViewModel{
                                                            idToken: idTokenString,
                                                            rawNonce: nonce)
                 
-    
+                
                 
                 Auth.auth().signIn(with: credential){result, error  in
                     if let error = error{
@@ -200,7 +266,7 @@ extension AuthViewModel{
                     }
                     
                     let docRef = Firestore.firestore().collection("users").document(result?.user.uid ?? "default")
-
+                    
                     docRef.getDocument { (document, error) in
                         if let document = document, document.exists {
                             let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
@@ -223,30 +289,9 @@ extension AuthViewModel{
                                     print("DEBUG: Did upload user data..")
                                 }
                             
-//                            self.service.fetchUser(withUid: result?.user.uid ?? "default") { userData in
-//                                DispatchQueue.main.async{
-//                                    self.currentUser = userData
-//                                }
-//                            }
-                        
-                        
+                            
                         }
                     }
-
-                    
-
-//                        let data = ["firstName": appleIDCredential.fullName?.givenName ?? "Unknown",
-//                                    "email": result?.user.email,
-//                                    "uid": result?.user.uid]
-//
-//                        Firestore.firestore().collection("users")
-//                            .document(result?.user.uid ?? "--")
-//                            .setData(data){ _ in
-//                                print("DEBUG: Did upload user data..")
-//                            }
-//
-//                    self.userSession = result?.user
-//                    self.fetchUser()
                 }
             }
         }

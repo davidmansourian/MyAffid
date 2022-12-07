@@ -18,6 +18,7 @@ struct LoadingView: View {
                     .scaleEffect(2)
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

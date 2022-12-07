@@ -12,14 +12,21 @@ struct MainMeditationView: View {
     @State var showingFireBreathingSheet = false
     @State var showingNasalBreathingSheet = false
     @State var showingRainSoundsView = false
+    @State var showingOceanSoundsView = false
     var body: some View {
         ZStack{
             ColorData.shared.backGroundColor
                 .edgesIgnoringSafeArea(.top)
             
+            if SoundManager.shared.loading{
+                withAnimation{
+                    Color.white.opacity(0.2)
+                }
+                LoadingView()
+            }
+            
            /* LoginCloudsView()
                 .offset(y: -130)*/
-            
             VStack(spacing: 30){
                 Spacer()
                 HStack(spacing: 40){
@@ -134,13 +141,14 @@ struct MainMeditationView: View {
                                     }
                                     
                                     Button {
-                                        showingSheet.toggle()
+                                        showingOceanSoundsView.toggle()
                                     } label: {
                                         Image("oceanSoundsButton")
                                     }
-                                    .sheet(isPresented: $showingSheet) {
-                                        MeditationSettingsSheetView()
-                                            .presentationDetents([.fraction((0.2)), .medium])
+                                    .fullScreenCover(isPresented: $showingOceanSoundsView, onDismiss: {
+                                        showingOceanSoundsView = false
+                                    }) {
+                                        OceanSoundsView()
                                     }
                                     
                                 }
