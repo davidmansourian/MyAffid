@@ -18,7 +18,10 @@ import AuthenticationServices
 // https://www.youtube.com/watch?v=3pIXMwvJLZs , around 2h 24min to approximately 2h 50min, and 4h in
 class AuthViewModel: ObservableObject{
     @Published var isError: Bool = false
+    @Published var isResetError: Bool = false
+    @Published var shouldSend: Bool = false
     @Published var authError: String = ""
+    @Published var resetError: String = ""
     @Published var loading = false
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: UserModel?
@@ -31,11 +34,8 @@ class AuthViewModel: ObservableObject{
     init(){
         self.userSession = Auth.auth().currentUser
         self.fetchUser()
-        
-        
     }
-    
-    
+
     // error handling https://stackoverflow.com/questions/69997679/swiftui-firebase-how-to-do-custom-error-handling
     func login(withEmail email: String, password: String){
         self.loading = true
@@ -131,7 +131,6 @@ class AuthViewModel: ObservableObject{
             self.fetchUser()
             
             print("DEBUG: Registered user successfully")
-            print("DEBUG: User is \(self.userSession)")
             
             let data = ["firstName": firstName,
                         "email": email,
@@ -148,10 +147,8 @@ class AuthViewModel: ObservableObject{
     }
     
     func signOut(){
-        loading = true
         userSession = nil
         try? Auth.auth().signOut()
-        loading = false
     }
     
     func fetchUser(){
@@ -171,9 +168,11 @@ class AuthViewModel: ObservableObject{
     func resetPassword(withEmail email: String){
         Auth.auth().sendPasswordReset(withEmail: email){ error in
             if let error = error{
-                print("DEBUG: failed to send reset password link with error \(error.localizedDescription)")
+                self.isResetError = true
+                self.resetError = error.localizedDescription
                 return
             }
+            self.shouldSend = true
             print("DEBUG: Reset password email sent")
         }
     }

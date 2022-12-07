@@ -11,7 +11,6 @@ struct SignUpView: View {
     @State private var name: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
@@ -76,16 +75,7 @@ struct SignUpView: View {
             }
             .toolbar{
                 ToolbarItemGroup(placement: .navigationBarLeading){
-                    // Solution below was taken from https://stackoverflow.com/a/58159783
-                    Button(action: { self.presentationMode.wrappedValue.dismiss()
-                    }) {
-                        Image(systemName: "chevron.backward")
-                            .foregroundColor(Color.white)
-                            .padding(10)
-                            .overlay(
-                                Circle()
-                                    .stroke(.white))
-                    }
+                    ToolbarBackButtonDismiss()
                 }
             }
             .navigationBarBackButtonHidden(true)

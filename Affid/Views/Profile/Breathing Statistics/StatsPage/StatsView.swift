@@ -51,6 +51,12 @@ struct StatsView: View {
                 
             }
         }
+        .toolbar{
+            ToolbarItemGroup(placement: .navigationBarLeading){
+                ToolbarBackButtonDismiss()
+            }
+        }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

@@ -68,6 +68,8 @@
 		DBB0C50A294117CD00373517 /* SessionsCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C509294117CD00373517 /* SessionsCompletedView.swift */; };
 		DBB0C50C29411B5600373517 /* FavoriteMeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C50B29411B5600373517 /* FavoriteMeditationView.swift */; };
 		DBB0C50E29411EA800373517 /* ProfileActionMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C50D29411EA800373517 /* ProfileActionMenuView.swift */; };
+		DBB0C510294127E400373517 /* ResetPasswordContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C50F294127E400373517 /* ResetPasswordContentView.swift */; };
+		DBB0C5122941358700373517 /* ToolbarBackButtonDismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C5112941358700373517 /* ToolbarBackButtonDismiss.swift */; };
 		DBD7449A2927A9220058225A /* AffidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744992927A9220058225A /* AffidApp.swift */; };
 		DBD7449C2927A9220058225A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7449B2927A9220058225A /* ContentView.swift */; };
 		DBD7449E2927A9240058225A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD7449D2927A9240058225A /* Assets.xcassets */; };
@@ -149,6 +151,8 @@
 		DBB0C509294117CD00373517 /* SessionsCompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsCompletedView.swift; sourceTree = "<group>"; };
 		DBB0C50B29411B5600373517 /* FavoriteMeditationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMeditationView.swift; sourceTree = "<group>"; };
 		DBB0C50D29411EA800373517 /* ProfileActionMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionMenuView.swift; sourceTree = "<group>"; };
+		DBB0C50F294127E400373517 /* ResetPasswordContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordContentView.swift; sourceTree = "<group>"; };
+		DBB0C5112941358700373517 /* ToolbarBackButtonDismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarBackButtonDismiss.swift; sourceTree = "<group>"; };
 		DBD744962927A9220058225A /* Affid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD744992927A9220058225A /* AffidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffidApp.swift; sourceTree = "<group>"; };
 		DBD7449B2927A9220058225A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 		DB2F62F52927F8E800D0BFFD /* New Password */ = {
 			isa = PBXGroup;
 			children = (
+				DBD744E92927F6150058225A /* OTP View */,
 				DB2F62F62927F8F700D0BFFD /* CreateNewPasswordView.swift */,
 			);
 			path = "New Password";
@@ -303,14 +308,6 @@
 				DB2F634C292CD4C000D0BFFD /* LoadingView.swift */,
 			);
 			path = Loading;
-			sourceTree = "<group>";
-		};
-		DB2F6359292D12A700D0BFFD /* Reset Sent */ = {
-			isa = PBXGroup;
-			children = (
-				DB2F635A292D12BF00D0BFFD /* ResetLinkSentView.swift */,
-			);
-			path = "Reset Sent";
 			sourceTree = "<group>";
 		};
 		DB2F635C292D5B4C00D0BFFD /* Sheets */ = {
@@ -531,6 +528,7 @@
 				DB2F62F32927F80A00D0BFFD /* BlueButtonSmaller.swift */,
 				DBD744C02927BC4B0058225A /* GoogleButton.swift */,
 				DBD744C32927C0930058225A /* AppleButton.swift */,
+				DBB0C5112941358700373517 /* ToolbarBackButtonDismiss.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -577,9 +575,9 @@
 		DBD744DF2927F1830058225A /* Reset Password */ = {
 			isa = PBXGroup;
 			children = (
-				DB2F6359292D12A700D0BFFD /* Reset Sent */,
 				DB2F62F52927F8E800D0BFFD /* New Password */,
-				DBD744E92927F6150058225A /* OTP View */,
+				DBB0C50F294127E400373517 /* ResetPasswordContentView.swift */,
+				DB2F635A292D12BF00D0BFFD /* ResetLinkSentView.swift */,
 				DBD744E02927F1950058225A /* ResetPasswordView.swift */,
 			);
 			path = "Reset Password";
@@ -743,8 +741,10 @@
 				DBB0C4FA2940F9D300373517 /* MeditationFinishedOnlineView.swift in Sources */,
 				DBB0C4D3293F417800373517 /* TimerViewModel.swift in Sources */,
 				DBB0C4EE29408EB200373517 /* OceanSoundsView.swift in Sources */,
+				DBB0C510294127E400373517 /* ResetPasswordContentView.swift in Sources */,
 				DBB0C4E7293FD13800373517 /* SoundsModel.swift in Sources */,
 				DBB0C501294111C700373517 /* TotalSessions.swift in Sources */,
+				DBB0C5122941358700373517 /* ToolbarBackButtonDismiss.swift in Sources */,
 				DBB0C50C29411B5600373517 /* FavoriteMeditationView.swift in Sources */,
 				DB2F6358292D113800D0BFFD /* OTPModel.swift in Sources */,
 				DBB0C4D7293F41BF00373517 /* BarChartViewModel.swift in Sources */,

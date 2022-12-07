@@ -84,16 +84,7 @@ struct LoginView: View {
             }
             .toolbar{
                 ToolbarItemGroup(placement: .navigationBarLeading){
-                    // Solution below was taken from //https://stackoverflow.com/a/58159783
-                    Button(action: { self.presentationMode.wrappedValue.dismiss()
-                    }) {
-                        Image(systemName: "chevron.backward")
-                            .foregroundColor(Color.white)
-                            .padding(10)
-                            .overlay(
-                                Circle()
-                                    .stroke(.white))
-                    }
+                    ToolbarBackButtonDismiss()
                 }
             }
             .navigationBarBackButtonHidden(true)

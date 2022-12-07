@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct ResetLinkSentView: View {
-    
-    
     var body: some View {
         ZStack{
             

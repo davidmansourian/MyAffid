@@ -39,16 +39,21 @@ struct ProfileView: View {
                     }
                     
                     Spacer()
-                    
-                    NavigationLink {
-                        //
-                    } label: {
-                        Text("DELETE ACCOUNT")
-                            .foregroundColor(.red)
-                            .padding(.bottom, 40)
-                    }
                 }
             }
         }
     }
 }
+
+
+
+// Delete user account
+/*
+ NavigationLink {
+     //
+ } label: {
+     Text("DELETE ACCOUNT")
+         .foregroundColor(.red)
+         .padding(.bottom, 40)
+ }
+ */
