@@ -30,8 +30,8 @@ class CoreDataManager: ObservableObject{
     
     
     // https://stackoverflow.com/questions/35378820/extract-entity-from-last-seven-days-core-data
-
-    func countTotalTimesMeditated() -> Int{
+    // total timesCompleted
+    func countTotalTimesMeditatedCompleted() -> Int{
         let calendar = NSCalendar.current
         let now = NSDate()
         let sevenDaysAgo = calendar.date(byAdding: .day, value: -7, to: now as Date)!
@@ -45,6 +45,39 @@ class CoreDataManager: ObservableObject{
             return count
         } catch let error as NSError {
             print("DEBUG: Could not fetch total meditation count \(error)")
+        }
+        return 0
+    }
+    
+    func countTotalTimesMeditated() -> Int{
+        let calendar = NSCalendar.current
+        let now = NSDate()
+        let sevenDaysAgo = calendar.date(byAdding: .day, value: -7, to: now as Date)!
+        let startDate = calendar.startOfDay(for: sevenDaysAgo)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Session")
+        let predicate = NSPredicate(format: "(date >= %@) AND (date < %@)", startDate as NSDate, now)
+        fetchRequest.predicate = predicate
+        do {
+            let count = try moc.count(for: fetchRequest)
+            print(count)
+            return count
+        } catch let error as NSError {
+            print("DEBUG: Could not fetch total meditation count \(error)")
+        }
+        return 0
+    }
+    
+    func countMeditations(meditationType: String) -> Int{
+        let favorite: String = ""
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Session")
+        let predicate = NSPredicate(format: "type == %@", meditationType)
+        fetchRequest.predicate = predicate
+        do {
+            let count = try moc.count(for: fetchRequest)
+            print(count)
+            return count
+        } catch let error as NSError {
+            print("DEBUG: Could not fetch meditation type count. \(error)")
         }
         return 0
     }

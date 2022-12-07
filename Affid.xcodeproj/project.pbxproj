@@ -61,6 +61,13 @@
 		DBB0C4F62940F6E700373517 /* OfflineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4F52940F6E700373517 /* OfflineView.swift */; };
 		DBB0C4FA2940F9D300373517 /* MeditationFinishedOnlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4F92940F9D300373517 /* MeditationFinishedOnlineView.swift */; };
 		DBB0C4FC2940F9DB00373517 /* MeditationFinishedOfflineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4FB2940F9DB00373517 /* MeditationFinishedOfflineView.swift */; };
+		DBB0C4FE29410E7E00373517 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4FD29410E7E00373517 /* StatsView.swift */; };
+		DBB0C501294111C700373517 /* TotalSessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C500294111C700373517 /* TotalSessions.swift */; };
+		DBB0C5032941133700373517 /* StatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C5022941133700373517 /* StatsViewModel.swift */; };
+		DBB0C506294115C500373517 /* AnimatableNumberModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C505294115C500373517 /* AnimatableNumberModifier.swift */; };
+		DBB0C50A294117CD00373517 /* SessionsCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C509294117CD00373517 /* SessionsCompletedView.swift */; };
+		DBB0C50C29411B5600373517 /* FavoriteMeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C50B29411B5600373517 /* FavoriteMeditationView.swift */; };
+		DBB0C50E29411EA800373517 /* ProfileActionMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C50D29411EA800373517 /* ProfileActionMenuView.swift */; };
 		DBD7449A2927A9220058225A /* AffidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744992927A9220058225A /* AffidApp.swift */; };
 		DBD7449C2927A9220058225A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7449B2927A9220058225A /* ContentView.swift */; };
 		DBD7449E2927A9240058225A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD7449D2927A9240058225A /* Assets.xcassets */; };
@@ -135,6 +142,13 @@
 		DBB0C4F52940F6E700373517 /* OfflineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineView.swift; sourceTree = "<group>"; };
 		DBB0C4F92940F9D300373517 /* MeditationFinishedOnlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationFinishedOnlineView.swift; sourceTree = "<group>"; };
 		DBB0C4FB2940F9DB00373517 /* MeditationFinishedOfflineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationFinishedOfflineView.swift; sourceTree = "<group>"; };
+		DBB0C4FD29410E7E00373517 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		DBB0C500294111C700373517 /* TotalSessions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalSessions.swift; sourceTree = "<group>"; };
+		DBB0C5022941133700373517 /* StatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewModel.swift; sourceTree = "<group>"; };
+		DBB0C505294115C500373517 /* AnimatableNumberModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableNumberModifier.swift; sourceTree = "<group>"; };
+		DBB0C509294117CD00373517 /* SessionsCompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsCompletedView.swift; sourceTree = "<group>"; };
+		DBB0C50B29411B5600373517 /* FavoriteMeditationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMeditationView.swift; sourceTree = "<group>"; };
+		DBB0C50D29411EA800373517 /* ProfileActionMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionMenuView.swift; sourceTree = "<group>"; };
 		DBD744962927A9220058225A /* Affid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Affid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD744992927A9220058225A /* AffidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffidApp.swift; sourceTree = "<group>"; };
 		DBD7449B2927A9220058225A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -240,6 +254,7 @@
 			children = (
 				DB2F6329292BA05A00D0BFFD /* Breathing Statistics */,
 				DB2F6316292B61E800D0BFFD /* ProfileView.swift */,
+				DBB0C50D29411EA800373517 /* ProfileActionMenuView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -257,6 +272,7 @@
 		DB2F6329292BA05A00D0BFFD /* Breathing Statistics */ = {
 			isa = PBXGroup;
 			children = (
+				DBB0C4FF2941114300373517 /* StatsPage */,
 				DBB0C4D8293F436600373517 /* BarView.swift */,
 			);
 			path = "Breathing Statistics";
@@ -318,6 +334,7 @@
 		DBB0C4C2293F40AC00373517 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DBB0C504294115B600373517 /* Modifiers */,
 				DBD744AC2927AA090058225A /* CoreData */,
 				DBD744BA2927B7570058225A /* Data */,
 				DB2F6343292CB16200D0BFFD /* Services */,
@@ -392,6 +409,25 @@
 			path = "Finished Views";
 			sourceTree = "<group>";
 		};
+		DBB0C4FF2941114300373517 /* StatsPage */ = {
+			isa = PBXGroup;
+			children = (
+				DBB0C4FD29410E7E00373517 /* StatsView.swift */,
+				DBB0C500294111C700373517 /* TotalSessions.swift */,
+				DBB0C509294117CD00373517 /* SessionsCompletedView.swift */,
+				DBB0C50B29411B5600373517 /* FavoriteMeditationView.swift */,
+			);
+			path = StatsPage;
+			sourceTree = "<group>";
+		};
+		DBB0C504294115B600373517 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				DBB0C505294115C500373517 /* AnimatableNumberModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		DBD7448D2927A9220058225A = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +487,7 @@
 				DBB0C4D2293F417800373517 /* TimerViewModel.swift */,
 				DBB0C4D4293F41A200373517 /* QuotesViewModel.swift */,
 				DBB0C4D6293F41BF00373517 /* BarChartViewModel.swift */,
+				DBB0C5022941133700373517 /* StatsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -640,6 +677,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBB0C5032941133700373517 /* StatsViewModel.swift in Sources */,
 				DB2F635B292D12BF00D0BFFD /* ResetLinkSentView.swift in Sources */,
 				DBB0C4E3293F570E00373517 /* MeditationFinishedView.swift in Sources */,
 				DB2F6326292B7BD800D0BFFD /* SuperHumanMeditationButtons.swift in Sources */,
@@ -652,7 +690,10 @@
 				DB2F6317292B61E800D0BFFD /* ProfileView.swift in Sources */,
 				DBB0C4F62940F6E700373517 /* OfflineView.swift in Sources */,
 				DBD744A62927A9240058225A /* Affid.xcdatamodeld in Sources */,
+				DBB0C50A294117CD00373517 /* SessionsCompletedView.swift in Sources */,
+				DBB0C4FE29410E7E00373517 /* StatsView.swift in Sources */,
 				DBDF41162932583A000992FD /* BreathCountModel.swift in Sources */,
+				DBB0C506294115C500373517 /* AnimatableNumberModifier.swift in Sources */,
 				DBD744DC2927E9C10058225A /* SignUpPrivacyPolicyRow.swift in Sources */,
 				DBD744B92927B73B0058225A /* LoginView.swift in Sources */,
 				DB2F634A292CCE6A00D0BFFD /* SplashScreenView.swift in Sources */,
@@ -673,6 +714,7 @@
 				DBD744E12927F1950058225A /* ResetPasswordView.swift in Sources */,
 				DBD744C12927BC4B0058225A /* GoogleButton.swift in Sources */,
 				DB2F633E292BE00C00D0BFFD /* AuthViewModel.swift in Sources */,
+				DBB0C50E29411EA800373517 /* ProfileActionMenuView.swift in Sources */,
 				DB2F6315292B61D900D0BFFD /* MainMeditationView.swift in Sources */,
 				DBD744D22927D3930058225A /* LoginExternalPlatformView.swift in Sources */,
 				DBB0C4E9293FD17300373517 /* SoundsStoreService.swift in Sources */,
@@ -702,6 +744,8 @@
 				DBB0C4D3293F417800373517 /* TimerViewModel.swift in Sources */,
 				DBB0C4EE29408EB200373517 /* OceanSoundsView.swift in Sources */,
 				DBB0C4E7293FD13800373517 /* SoundsModel.swift in Sources */,
+				DBB0C501294111C700373517 /* TotalSessions.swift in Sources */,
+				DBB0C50C29411B5600373517 /* FavoriteMeditationView.swift in Sources */,
 				DB2F6358292D113800D0BFFD /* OTPModel.swift in Sources */,
 				DBB0C4D7293F41BF00373517 /* BarChartViewModel.swift in Sources */,
 				DBB0C4CD293F414400373517 /* TimerModel.swift in Sources */,

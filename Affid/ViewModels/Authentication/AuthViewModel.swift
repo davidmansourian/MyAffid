@@ -148,8 +148,10 @@ class AuthViewModel: ObservableObject{
     }
     
     func signOut(){
+        loading = true
         userSession = nil
         try? Auth.auth().signOut()
+        loading = false
     }
     
     func fetchUser(){
