@@ -10,6 +10,7 @@ import Combine
 
 
 class TimerViewModel: ObservableObject{
+    var networkManager = NetworkManager()
     @Published var pickerArr: [TimerModel] = []
     @Published var picked: Int = 1
     @Published var pickedInSeconds: Int = 0
@@ -57,7 +58,9 @@ class TimerViewModel: ObservableObject{
     func reset(){
         let now = Date()
         let timeMeditated = self.pickedInSeconds - totalTimeRemaining
-        CoreDataManager.shared.saveSession(type: self.meditationType, length: timeMeditated, completed: false, theDate: now)
+        if networkManager.isConnected{
+            CoreDataManager.shared.saveSession(type: self.meditationType, length: timeMeditated, completed: false, theDate: now)
+        }
         print("saved session")
         self.minutes = Float(initialTime)
         self.isActive = false
@@ -71,7 +74,9 @@ class TimerViewModel: ObservableObject{
         
         if diff <= 0{
             self.isActive = false
-            CoreDataManager.shared.saveSession(type: self.meditationType, length: self.pickedInSeconds, completed: true, theDate: now)
+            if networkManager.isConnected{
+                CoreDataManager.shared.saveSession(type: self.meditationType, length: self.pickedInSeconds, completed: true, theDate: now)
+            }
             self.time = "0:00"
             self.showingAlert = true
             return

@@ -9,20 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var viewModel: AuthViewModel
+    @ObservedObject var networkManager = NetworkManager()
     @State var animation = false
     
     var body: some View {
         Group{
-            if viewModel.userSession == nil {
-                GetStartedView()
-            }
-            else{
-                if viewModel.loading{
-                    LoadingView()
+            if networkManager.isConnected{
+                if viewModel.userSession == nil {
+                    GetStartedView()
                 }
                 else{
-                    MainTabView()
+                    if viewModel.loading{
+                        LoadingView()
+                    }
+                    else{
+                        MainTabView()
+                    }
                 }
+            }
+            else{
+                OfflineView()
             }
         }
         .animation(.default)

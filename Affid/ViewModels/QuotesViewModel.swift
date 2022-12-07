@@ -11,7 +11,6 @@ import Combine
 
 class QuotesViewModel: ObservableObject{
     private var apiService = APIService()
-    private var coreDataManager = CoreDataManager.shared
     @Published var randomQuote: QuotesModel?
     @Published var totalCompletedMeditations: Int?
     private var cancellables = Set<AnyCancellable>()

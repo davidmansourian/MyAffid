@@ -11,7 +11,6 @@ import Combine
 
 
 class APIService{
-    static let shared = APIService()
     @Published var quotesArr: [QuotesModel] = []
     private var cancellables = Set<AnyCancellable>()
     

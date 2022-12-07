@@ -1,13 +1,13 @@
 //
-//  MeditationFinishedSheet.swift
-//  BreathingCircle
+//  MeditationFinishedOnlineView.swift
+//  Affid
 //
-//  Created by David on 2022-12-05.
+//  Created by David on 2022-12-07.
 //
 
 import SwiftUI
 
-struct MeditationFinishedSheet: View {
+struct MeditationFinishedOnlineView: View {
     @StateObject var quotesVm = QuotesViewModel()
     @Environment(\.dismiss) var dismiss
     var body: some View {
@@ -26,7 +26,6 @@ struct MeditationFinishedSheet: View {
                         .padding(.horizontal, 25)
                 }
                 
-                
                 Spacer()
                 
                 VStack(alignment: .leading){
@@ -43,18 +42,13 @@ struct MeditationFinishedSheet: View {
                         .fontWeight(.ultraLight)
                         .padding(.top, 4)
                         .padding(.horizontal, 25)
-
                 }
-                
 
-                
-                
                 Spacer()
                 Spacer()
 
                 Image("birdOnBranch")
                     .offset(x: 80)
-                
             }
         }
         .onAppear(){
@@ -64,11 +58,4 @@ struct MeditationFinishedSheet: View {
         }
     }
 }
-
-
- struct MeditationFinishedSheet_Previews: PreviewProvider {
-     static var previews: some View {
-         MeditationFinishedSheet()
-     }
- }
 

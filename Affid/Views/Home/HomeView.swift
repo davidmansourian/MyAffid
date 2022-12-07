@@ -20,7 +20,7 @@ struct HomeView: View {
                     .offset(y: -50)
                 
                 VStack(spacing: 40){
-                    Text("Good morning, \(authedUser.firstName)!")
+                    Text("Hi there, \(authedUser.firstName)!")
                         .foregroundColor(.white)
                         .font(.title)
                         .fontWeight(.light)

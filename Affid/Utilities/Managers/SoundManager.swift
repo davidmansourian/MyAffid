@@ -38,7 +38,7 @@ class SoundManager{
         let storage = Storage.storage().reference(forURL: sound)
         storage.downloadURL(){ url, error in
             guard let url = url else{
-                print(error)
+                print("hejsan", error)
                 return
             }
             do {

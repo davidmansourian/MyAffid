@@ -18,13 +18,6 @@ struct MainMeditationView: View {
             ColorData.shared.backGroundColor
                 .edgesIgnoringSafeArea(.top)
             
-            if SoundManager.shared.loading{
-                withAnimation{
-                    Color.white.opacity(0.2)
-                }
-                LoadingView()
-            }
-            
            /* LoginCloudsView()
                 .offset(y: -130)*/
             VStack(spacing: 30){
