@@ -30,7 +30,9 @@ struct MeditationFinishedOfflineView: View {
             }
         }
         .onAppear{
-            SoundManager.shared.playSound(sound: .softgong)
+            Task{
+                await SoundManager.shared.playSound(sound: .softgong)
+            }
         }
     }
 }

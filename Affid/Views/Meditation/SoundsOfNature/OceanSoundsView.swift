@@ -33,10 +33,15 @@ struct OceanSoundsView: View {
                 }
             }
             .onAppear(){
-                SoundManager.shared.playURLSound(sound: "gs://affid-777aa.appspot.com/noise/oceansounds.mp3")
+                Task{
+                    await SoundManager.shared.playURLSound(sound: "gs://affid-777aa.appspot.com/noise/oceansounds.mp3")
+                }
             }
             .onDisappear(){
-                SoundManager.shared.playerRemote?.pause()
+                Task{
+                    await SoundManager.shared.playerRemote?.pause()
+                }
+            
             }
         }
     }

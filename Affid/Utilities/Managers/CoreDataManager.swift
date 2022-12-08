@@ -14,6 +14,7 @@ class CoreDataManager: ObservableObject{
     static let shared = CoreDataManager()
     var moc = PersistenceController.shared.container.viewContext
     private var cancellable: Cancellable?
+    private let queue = DispatchQueue(label: "com.Affid.CoreDataMAnager")
     
     private init(){
     }

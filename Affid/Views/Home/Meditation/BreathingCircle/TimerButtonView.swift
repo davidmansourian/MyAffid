@@ -33,7 +33,9 @@ struct TimerButtonView: View {
             else if !timerVm.isActive{
                 Button {
                     timerVm.startTimer()
-                    SoundManager.shared.playSound(sound: .softgong)
+                    Task{
+                        await SoundManager.shared.playSound(sound: .softgong)
+                    }
                 } label: {
                     Text("Start")
                         .foregroundColor(.white)

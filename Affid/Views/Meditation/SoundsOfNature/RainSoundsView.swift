@@ -22,7 +22,6 @@ struct RainSoundsView: View {
                 .toolbar{
                     ToolbarItemGroup(placement: .navigationBarLeading){
                         Button {
-                            SoundManager.shared.playerRemote?.pause()
                             dismiss()
                         } label: {
                             Image(systemName: "x.circle")
@@ -34,11 +33,17 @@ struct RainSoundsView: View {
                 }
             }
             .onAppear(){
-                SoundManager.shared.playURLSound(sound: "gs://affid-777aa.appspot.com/noise/rainsounds.mp3")
-                if SoundManager.shared.loading{
-                    print("hejsan")
+                Task{
+                   await SoundManager.shared.playURLSound(sound: "gs://affid-777aa.appspot.com/noise/rainsounds.mp3")
                 }
             }
+            .onDisappear(){
+                Task{
+                    await SoundManager.shared.playerRemote?.pause()
+                }
+            
+            }
+
         }
     }
 }

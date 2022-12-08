@@ -54,7 +54,9 @@ struct MeditationFinishedOnlineView: View {
         .onAppear(){
             quotesVm.getTotalMeditationsCompleted()
             quotesVm.getQuote()
-            SoundManager.shared.playSound(sound: .softgong)
+            Task{
+                await SoundManager.shared.playSound(sound: .softgong)
+            }
         }
     }
 }

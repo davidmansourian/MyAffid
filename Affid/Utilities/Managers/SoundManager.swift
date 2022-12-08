@@ -11,7 +11,7 @@ import FirebaseFirestore
 import FirebaseStorage
 
 
-class SoundManager{
+actor SoundManager{
     static let shared = SoundManager()
     @Published var loading: Bool = false
     var playerLocal: AVAudioPlayer?
