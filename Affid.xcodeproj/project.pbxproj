@@ -36,6 +36,7 @@
 		DB2F6361292E074600D0BFFD /* CheckmarkToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6360292E074600D0BFFD /* CheckmarkToggleView.swift */; };
 		DB2F6363292E087500D0BFFD /* SquareCheckmarkToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6362292E087500D0BFFD /* SquareCheckmarkToggleView.swift */; };
 		DB2F6365292E3EDB00D0BFFD /* NasalBreathingSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6364292E3EDB00D0BFFD /* NasalBreathingSheetView.swift */; };
+		DB4F8631294B188B001E3D3F /* NasalBreathingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F8630294B188B001E3D3F /* NasalBreathingModel.swift */; };
 		DBB0C4C1293F406D00373517 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4C0293F406D00373517 /* APIService.swift */; };
 		DBB0C4C5293F40D600373517 /* softgong.wav in Resources */ = {isa = PBXBuildFile; fileRef = DBB0C4C4293F40D600373517 /* softgong.wav */; };
 		DBB0C4C8293F40F600373517 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4C7293F40F600373517 /* SoundManager.swift */; };
@@ -119,6 +120,7 @@
 		DB2F6360292E074600D0BFFD /* CheckmarkToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkToggleView.swift; sourceTree = "<group>"; };
 		DB2F6362292E087500D0BFFD /* SquareCheckmarkToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareCheckmarkToggleView.swift; sourceTree = "<group>"; };
 		DB2F6364292E3EDB00D0BFFD /* NasalBreathingSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingSheetView.swift; sourceTree = "<group>"; };
+		DB4F8630294B188B001E3D3F /* NasalBreathingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingModel.swift; sourceTree = "<group>"; };
 		DBB0C4C0293F406D00373517 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		DBB0C4C4293F40D600373517 /* softgong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = softgong.wav; sourceTree = "<group>"; };
 		DBB0C4C7293F40F600373517 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
@@ -328,6 +330,15 @@
 			path = Toggles;
 			sourceTree = "<group>";
 		};
+		DB4F862F294B1873001E3D3F /* NasalBreathingModels */ = {
+			isa = PBXGroup;
+			children = (
+				DBDF41152932583A000992FD /* BreathCountModel.swift */,
+				DB4F8630294B188B001E3D3F /* NasalBreathingModel.swift */,
+			);
+			path = NasalBreathingModels;
+			sourceTree = "<group>";
+		};
 		DBB0C4C2293F40AC00373517 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,9 +503,9 @@
 		DBD744AF2927AA1F0058225A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DB4F862F294B1873001E3D3F /* NasalBreathingModels */,
 				DB2F6346292CB42900D0BFFD /* UserModel.swift */,
 				DB2F6357292D113800D0BFFD /* OTPModel.swift */,
-				DBDF41152932583A000992FD /* BreathCountModel.swift */,
 				DBB0C4CC293F414400373517 /* TimerModel.swift */,
 				DBB0C4CE293F414D00373517 /* QuotesModel.swift */,
 				DBB0C4D0293F415700373517 /* BarModel.swift */,
@@ -732,6 +743,7 @@
 				DBD744B72927B0640058225A /* BlueButton.swift in Sources */,
 				DB2F6303292962AB00D0BFFD /* CustomTextField.swift in Sources */,
 				DB2F6311292B60AB00D0BFFD /* MainTabView.swift in Sources */,
+				DB4F8631294B188B001E3D3F /* NasalBreathingModel.swift in Sources */,
 				DB2F6328292B80B500D0BFFD /* SoundsOfNatureButtons.swift in Sources */,
 				DB2F62F42927F80A00D0BFFD /* BlueButtonSmaller.swift in Sources */,
 				DB2F6324292B7BBD00D0BFFD /* FocusAndProductivityButtons.swift in Sources */,
