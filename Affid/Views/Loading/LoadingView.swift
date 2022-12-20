@@ -21,9 +21,3 @@ struct LoadingView: View {
         .navigationBarBackButtonHidden(true)
     }
 }
-
-struct LoadingView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoadingView()
-    }
-}

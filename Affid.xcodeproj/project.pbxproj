@@ -38,6 +38,11 @@
 		DB2F6365292E3EDB00D0BFFD /* NasalBreathingSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6364292E3EDB00D0BFFD /* NasalBreathingSheetView.swift */; };
 		DB4F8631294B188B001E3D3F /* NasalBreathingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F8630294B188B001E3D3F /* NasalBreathingModel.swift */; };
 		DB4F86332951D90B001E3D3F /* NasalBreathingSettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F86322951D90B001E3D3F /* NasalBreathingSettingsData.swift */; };
+		DB4F863A2951DAA3001E3D3F /* NasalMusicChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F86392951DAA3001E3D3F /* NasalMusicChoiceView.swift */; };
+		DB4F863C2951DAB1001E3D3F /* NasalBreathSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F863B2951DAB1001E3D3F /* NasalBreathSelectorView.swift */; };
+		DB4F863F2951DE13001E3D3F /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F863E2951DE13001E3D3F /* DividerView.swift */; };
+		DB4F86422951E1E1001E3D3F /* NasalBreathingStartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F86412951E1E1001E3D3F /* NasalBreathingStartButtonView.swift */; };
+		DB4F86452951F1FC001E3D3F /* NasalBreathingCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F86442951F1FC001E3D3F /* NasalBreathingCircleView.swift */; };
 		DBB0C4C1293F406D00373517 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4C0293F406D00373517 /* APIService.swift */; };
 		DBB0C4C5293F40D600373517 /* softgong.wav in Resources */ = {isa = PBXBuildFile; fileRef = DBB0C4C4293F40D600373517 /* softgong.wav */; };
 		DBB0C4C8293F40F600373517 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4C7293F40F600373517 /* SoundManager.swift */; };
@@ -94,7 +99,7 @@
 		DBD744E12927F1950058225A /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744E02927F1950058225A /* ResetPasswordView.swift */; };
 		DBD744E82927F4E00058225A /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD744E72927F4E00058225A /* OTPView.swift */; };
 		DBDF41162932583A000992FD /* BreathCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDF41152932583A000992FD /* BreathCountModel.swift */; };
-		DBDF4118293258B6000992FD /* BreathCountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDF4117293258B6000992FD /* BreathCountViewModel.swift */; };
+		DBDF4118293258B6000992FD /* NasalBreathingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDF4117293258B6000992FD /* NasalBreathingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +128,11 @@
 		DB2F6364292E3EDB00D0BFFD /* NasalBreathingSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingSheetView.swift; sourceTree = "<group>"; };
 		DB4F8630294B188B001E3D3F /* NasalBreathingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingModel.swift; sourceTree = "<group>"; };
 		DB4F86322951D90B001E3D3F /* NasalBreathingSettingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingSettingsData.swift; sourceTree = "<group>"; };
+		DB4F86392951DAA3001E3D3F /* NasalMusicChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalMusicChoiceView.swift; sourceTree = "<group>"; };
+		DB4F863B2951DAB1001E3D3F /* NasalBreathSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathSelectorView.swift; sourceTree = "<group>"; };
+		DB4F863E2951DE13001E3D3F /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
+		DB4F86412951E1E1001E3D3F /* NasalBreathingStartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingStartButtonView.swift; sourceTree = "<group>"; };
+		DB4F86442951F1FC001E3D3F /* NasalBreathingCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingCircleView.swift; sourceTree = "<group>"; };
 		DBB0C4C0293F406D00373517 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		DBB0C4C4293F40D600373517 /* softgong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = softgong.wav; sourceTree = "<group>"; };
 		DBB0C4C7293F40F600373517 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
@@ -182,7 +192,7 @@
 		DBD744E72927F4E00058225A /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
 		DBDF41122930F1AB000992FD /* Affid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Affid.entitlements; sourceTree = "<group>"; };
 		DBDF41152932583A000992FD /* BreathCountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathCountModel.swift; sourceTree = "<group>"; };
-		DBDF4117293258B6000992FD /* BreathCountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathCountViewModel.swift; sourceTree = "<group>"; };
+		DBDF4117293258B6000992FD /* NasalBreathingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +224,7 @@
 		DB2F62FC29295CE500D0BFFD /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				DB4F86402951DE22001E3D3F /* Miscellanous */,
 				DB2F635F292E073000D0BFFD /* Toggles */,
 				DB2F63012929626E00D0BFFD /* TextFields */,
 				DBD744B12927AA920058225A /* Buttons */,
@@ -317,8 +328,8 @@
 		DB2F635C292D5B4C00D0BFFD /* Sheets */ = {
 			isa = PBXGroup;
 			children = (
+				DB4F86352951D9E1001E3D3F /* NasalBreathingSheet */,
 				DB2F635D292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift */,
-				DB2F6364292E3EDB00D0BFFD /* NasalBreathingSheetView.swift */,
 			);
 			path = Sheets;
 			sourceTree = "<group>";
@@ -340,6 +351,26 @@
 				DB4F86322951D90B001E3D3F /* NasalBreathingSettingsData.swift */,
 			);
 			path = NasalBreathingModels;
+			sourceTree = "<group>";
+		};
+		DB4F86352951D9E1001E3D3F /* NasalBreathingSheet */ = {
+			isa = PBXGroup;
+			children = (
+				DB2F6364292E3EDB00D0BFFD /* NasalBreathingSheetView.swift */,
+				DB4F86392951DAA3001E3D3F /* NasalMusicChoiceView.swift */,
+				DB4F863B2951DAB1001E3D3F /* NasalBreathSelectorView.swift */,
+				DB4F86412951E1E1001E3D3F /* NasalBreathingStartButtonView.swift */,
+				DB4F86442951F1FC001E3D3F /* NasalBreathingCircleView.swift */,
+			);
+			path = NasalBreathingSheet;
+			sourceTree = "<group>";
+		};
+		DB4F86402951DE22001E3D3F /* Miscellanous */ = {
+			isa = PBXGroup;
+			children = (
+				DB4F863E2951DE13001E3D3F /* DividerView.swift */,
+			);
+			path = Miscellanous;
 			sourceTree = "<group>";
 		};
 		DBB0C4C2293F40AC00373517 /* Utilities */ = {
@@ -494,7 +525,7 @@
 			isa = PBXGroup;
 			children = (
 				DB2F633C292BDFFE00D0BFFD /* Authentication */,
-				DBDF4117293258B6000992FD /* BreathCountViewModel.swift */,
+				DBDF4117293258B6000992FD /* NasalBreathingViewModel.swift */,
 				DBB0C4D2293F417800373517 /* TimerViewModel.swift */,
 				DBB0C4D4293F41A200373517 /* QuotesViewModel.swift */,
 				DBB0C4D6293F41BF00373517 /* BarChartViewModel.swift */,
@@ -689,6 +720,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB4F86452951F1FC001E3D3F /* NasalBreathingCircleView.swift in Sources */,
 				DBB0C5032941133700373517 /* StatsViewModel.swift in Sources */,
 				DB2F635B292D12BF00D0BFFD /* ResetLinkSentView.swift in Sources */,
 				DBB0C4E3293F570E00373517 /* MeditationFinishedView.swift in Sources */,
@@ -698,6 +730,7 @@
 				DBD744E82927F4E00058225A /* OTPView.swift in Sources */,
 				DBB0C4E5293FB59F00373517 /* TimerButtonView.swift in Sources */,
 				DB2F6363292E087500D0BFFD /* SquareCheckmarkToggleView.swift in Sources */,
+				DB4F863C2951DAB1001E3D3F /* NasalBreathSelectorView.swift in Sources */,
 				DBB0C4D1293F415700373517 /* BarModel.swift in Sources */,
 				DB2F6317292B61E800D0BFFD /* ProfileView.swift in Sources */,
 				DBB0C4F62940F6E700373517 /* OfflineView.swift in Sources */,
@@ -707,10 +740,12 @@
 				DBDF41162932583A000992FD /* BreathCountModel.swift in Sources */,
 				DBB0C506294115C500373517 /* AnimatableNumberModifier.swift in Sources */,
 				DBD744DC2927E9C10058225A /* SignUpPrivacyPolicyRow.swift in Sources */,
+				DB4F863F2951DE13001E3D3F /* DividerView.swift in Sources */,
 				DBD744B92927B73B0058225A /* LoginView.swift in Sources */,
 				DB2F634A292CCE6A00D0BFFD /* SplashScreenView.swift in Sources */,
 				DBB0C4C8293F40F600373517 /* SoundManager.swift in Sources */,
 				DBB0C4E0293F56A600373517 /* TimerView.swift in Sources */,
+				DB4F86422951E1E1001E3D3F /* NasalBreathingStartButtonView.swift in Sources */,
 				DB2F6361292E074600D0BFFD /* CheckmarkToggleView.swift in Sources */,
 				DBB0C4DE293F564200373517 /* CirclesView.swift in Sources */,
 				DBD744A32927A9240058225A /* Persistence.swift in Sources */,
@@ -718,6 +753,7 @@
 				DBB0C4D5293F41A200373517 /* QuotesViewModel.swift in Sources */,
 				DBB0C4D9293F436600373517 /* BarView.swift in Sources */,
 				DBB0C4CA293F410600373517 /* CoreDataManager.swift in Sources */,
+				DB4F863A2951DAA3001E3D3F /* NasalMusicChoiceView.swift in Sources */,
 				DB2F6347292CB42900D0BFFD /* UserModel.swift in Sources */,
 				DBB0C4C1293F406D00373517 /* APIService.swift in Sources */,
 				DBD744BC2927B76E0058225A /* ColorData.swift in Sources */,
@@ -738,7 +774,7 @@
 				DBD744D82927E8950058225A /* SignUpExternalPlatformView.swift in Sources */,
 				DB2F6345292CB17B00D0BFFD /* UserService.swift in Sources */,
 				DBD744C92927D2560058225A /* GetStartedCloudsView.swift in Sources */,
-				DBDF4118293258B6000992FD /* BreathCountViewModel.swift in Sources */,
+				DBDF4118293258B6000992FD /* NasalBreathingViewModel.swift in Sources */,
 				DBD7449C2927A9220058225A /* ContentView.swift in Sources */,
 				DBD7449A2927A9220058225A /* AffidApp.swift in Sources */,
 				DBD744B32927AB750058225A /* GetStartedView.swift in Sources */,
