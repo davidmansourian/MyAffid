@@ -44,6 +44,7 @@
 		DB4F864C29520586001E3D3F /* FocusAndProductivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F864B29520586001E3D3F /* FocusAndProductivityView.swift */; };
 		DB4F864E295205BE001E3D3F /* SoundsOfNatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F864D295205BE001E3D3F /* SoundsOfNatureView.swift */; };
 		DB4F865729520766001E3D3F /* NasalBreathingBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F865629520766001E3D3F /* NasalBreathingBodyView.swift */; };
+		DB4F8666295219B2001E3D3F /* NasalBreathingHoldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F8665295219B2001E3D3F /* NasalBreathingHoldView.swift */; };
 		DBB0C4C1293F406D00373517 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4C0293F406D00373517 /* APIService.swift */; };
 		DBB0C4C5293F40D600373517 /* softgong.wav in Resources */ = {isa = PBXBuildFile; fileRef = DBB0C4C4293F40D600373517 /* softgong.wav */; };
 		DBB0C4C8293F40F600373517 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4C7293F40F600373517 /* SoundManager.swift */; };
@@ -135,6 +136,7 @@
 		DB4F864B29520586001E3D3F /* FocusAndProductivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusAndProductivityView.swift; sourceTree = "<group>"; };
 		DB4F864D295205BE001E3D3F /* SoundsOfNatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsOfNatureView.swift; sourceTree = "<group>"; };
 		DB4F865629520766001E3D3F /* NasalBreathingBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingBodyView.swift; sourceTree = "<group>"; };
+		DB4F8665295219B2001E3D3F /* NasalBreathingHoldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingHoldView.swift; sourceTree = "<group>"; };
 		DBB0C4C0293F406D00373517 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		DBB0C4C4293F40D600373517 /* softgong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = softgong.wav; sourceTree = "<group>"; };
 		DBB0C4C7293F40F600373517 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 			children = (
 				DB4F865629520766001E3D3F /* NasalBreathingBodyView.swift */,
 				DB4F86442951F1FC001E3D3F /* NasalBreathingCircleView.swift */,
+				DB4F8665295219B2001E3D3F /* NasalBreathingHoldView.swift */,
 			);
 			path = MeditationScreen;
 			sourceTree = "<group>";
@@ -772,6 +775,7 @@
 				DB2F635E292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift in Sources */,
 				DBD744E82927F4E00058225A /* OTPView.swift in Sources */,
 				DBB0C4E5293FB59F00373517 /* TimerButtonView.swift in Sources */,
+				DB4F8666295219B2001E3D3F /* NasalBreathingHoldView.swift in Sources */,
 				DB2F6363292E087500D0BFFD /* SquareCheckmarkToggleView.swift in Sources */,
 				DB4F863C2951DAB1001E3D3F /* NasalBreathSelectorView.swift in Sources */,
 				DBB0C4D1293F415700373517 /* BarModel.swift in Sources */,

@@ -20,3 +20,8 @@ struct BreathHoldModel{
     let round: Int // round
     let timeBreathHeld: Int // time held
 }
+
+enum RoundState{
+    case countdown, breathing, hold, rest
+}
+
