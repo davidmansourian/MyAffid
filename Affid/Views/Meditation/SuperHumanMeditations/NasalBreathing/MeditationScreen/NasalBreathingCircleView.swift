@@ -21,31 +21,20 @@ struct NasalBreathingCircleView: View {
             VStack {
                 ZStack{
                     Circle()
-                        .fill(.white.opacity(0.1))
+                        .fill(ColorData.shared.appSystemYellow.opacity(0.9))
                         .frame(width: 230, height: 230)
                         .scaleEffect(scale)
-                        .animation(.easeOut(duration: 2).repeatCount((2*(nasalBreathingVm.totalBreaths)+1), autoreverses: true), value: nasalBreathingVm.animate)
-                    
-                    Circle()
-                        .fill(ColorData.shared.appSystemYellow)
-                        .frame(width: 185, height: 185)
-                        .shadow(color: .yellow, radius: 5)
-                        .scaleEffect(innerCircleScale)
-                        .animation(.easeInOut(duration: 1.98).repeatCount((2*(nasalBreathingVm.totalBreaths)+1), autoreverses: true), value: nasalBreathingVm.animate)
+                        .animation(.easeOut(duration: 2).repeatCount((2*(nasalBreathingVm.totalBreaths)), autoreverses: true), value: nasalBreathingVm.animate)
                     
                 }
             }
             .onAppear{
                 nasalBreathingVm.animate.toggle()
-                self.scale = nasalBreathingVm.animate ? 1.0 : 0.2
+                self.scale = nasalBreathingVm.animate ? 1.0 : 0.001
                 self.innerCircleScale = nasalBreathingVm.animate ? 1.0 : 0.5
                 
-            }
-            .onDisappear{
-                Task{
-                    await nasalBreathingVm.cleanSelections()
-                }
             }
         }
     }
 }
+

@@ -27,6 +27,9 @@ struct NasalBreathingBodyView: View {
                 ToolbarItemGroup(placement: .navigationBarLeading){
                     Button {
                         dismiss()
+                        Task{
+                            await nasalBreathingVm.cleanSelections()
+                        }
                     } label: {
                         Image(systemName: "x.circle")
                             .foregroundColor(.white)
