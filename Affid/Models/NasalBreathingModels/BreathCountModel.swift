@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct BreathCoundModel: Identifiable{
-    let id = UUID()
+struct BreathCoundModel: Hashable{
     let count: Int
     let breathIndex: Int
 }

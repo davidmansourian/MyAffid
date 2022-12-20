@@ -37,6 +37,7 @@
 		DB2F6363292E087500D0BFFD /* SquareCheckmarkToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6362292E087500D0BFFD /* SquareCheckmarkToggleView.swift */; };
 		DB2F6365292E3EDB00D0BFFD /* NasalBreathingSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6364292E3EDB00D0BFFD /* NasalBreathingSheetView.swift */; };
 		DB4F8631294B188B001E3D3F /* NasalBreathingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F8630294B188B001E3D3F /* NasalBreathingModel.swift */; };
+		DB4F86332951D90B001E3D3F /* NasalBreathingSettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F86322951D90B001E3D3F /* NasalBreathingSettingsData.swift */; };
 		DBB0C4C1293F406D00373517 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4C0293F406D00373517 /* APIService.swift */; };
 		DBB0C4C5293F40D600373517 /* softgong.wav in Resources */ = {isa = PBXBuildFile; fileRef = DBB0C4C4293F40D600373517 /* softgong.wav */; };
 		DBB0C4C8293F40F600373517 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4C7293F40F600373517 /* SoundManager.swift */; };
@@ -121,6 +122,7 @@
 		DB2F6362292E087500D0BFFD /* SquareCheckmarkToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareCheckmarkToggleView.swift; sourceTree = "<group>"; };
 		DB2F6364292E3EDB00D0BFFD /* NasalBreathingSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingSheetView.swift; sourceTree = "<group>"; };
 		DB4F8630294B188B001E3D3F /* NasalBreathingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingModel.swift; sourceTree = "<group>"; };
+		DB4F86322951D90B001E3D3F /* NasalBreathingSettingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingSettingsData.swift; sourceTree = "<group>"; };
 		DBB0C4C0293F406D00373517 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		DBB0C4C4293F40D600373517 /* softgong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = softgong.wav; sourceTree = "<group>"; };
 		DBB0C4C7293F40F600373517 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 			children = (
 				DBDF41152932583A000992FD /* BreathCountModel.swift */,
 				DB4F8630294B188B001E3D3F /* NasalBreathingModel.swift */,
+				DB4F86322951D90B001E3D3F /* NasalBreathingSettingsData.swift */,
 			);
 			path = NasalBreathingModels;
 			sourceTree = "<group>";
@@ -752,6 +755,7 @@
 				DB2F6308292B5C6500D0BFFD /* HomeView.swift in Sources */,
 				DBB0C4FA2940F9D300373517 /* MeditationFinishedOnlineView.swift in Sources */,
 				DBB0C4D3293F417800373517 /* TimerViewModel.swift in Sources */,
+				DB4F86332951D90B001E3D3F /* NasalBreathingSettingsData.swift in Sources */,
 				DBB0C4EE29408EB200373517 /* OceanSoundsView.swift in Sources */,
 				DBB0C510294127E400373517 /* ResetPasswordContentView.swift in Sources */,
 				DBB0C4E7293FD13800373517 /* SoundsModel.swift in Sources */,

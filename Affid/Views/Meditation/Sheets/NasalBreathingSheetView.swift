@@ -95,7 +95,7 @@ struct NasalBreathingSheetView: View {
                                 
                                 HStack(spacing: 20){
                                     
-                                    ForEach(breathCountViewModel.roundsArr){ rounds in
+                                    ForEach(breathCountViewModel.roundsArr, id: \.self){ rounds in
                                         if rounds.breathIndex == currentIndex{
                                             ZStack{
                                                 Text("\(rounds.count)")
