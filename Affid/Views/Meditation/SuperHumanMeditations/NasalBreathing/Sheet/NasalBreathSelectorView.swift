@@ -20,7 +20,7 @@ struct NasalBreathSelectorView: View {
     var body: some View {
         Group{
             HStack{
-                Text("Rounds")
+                Text("Breaths")
                     .foregroundColor(.white)
                     .font(.title2)
                     .padding()
@@ -55,7 +55,7 @@ struct NasalBreathSelectorView: View {
                                                 numberPicked = currentIndex
                                                 scroll.scrollTo(rounds.breathIndex)
                                             }
-                                            nasalBreathingVm.totalBreaths = numberPicked
+                                            nasalBreathingVm.totalBreaths = numberPicked*5
                                         }
                                 }
                             }

@@ -15,9 +15,6 @@
 		DB2F6311292B60AB00D0BFFD /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6310292B60AB00D0BFFD /* MainTabView.swift */; };
 		DB2F6315292B61D900D0BFFD /* MainMeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6314292B61D900D0BFFD /* MainMeditationView.swift */; };
 		DB2F6317292B61E800D0BFFD /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6316292B61E800D0BFFD /* ProfileView.swift */; };
-		DB2F6324292B7BBD00D0BFFD /* FocusAndProductivityButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6323292B7BBD00D0BFFD /* FocusAndProductivityButtons.swift */; };
-		DB2F6326292B7BD800D0BFFD /* SuperHumanMeditationButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6325292B7BD800D0BFFD /* SuperHumanMeditationButtons.swift */; };
-		DB2F6328292B80B500D0BFFD /* SoundsOfNatureButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6327292B80B500D0BFFD /* SoundsOfNatureButtons.swift */; };
 		DB2F6335292BDC7300D0BFFD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DB2F6334292BDC7300D0BFFD /* FirebaseAuth */; };
 		DB2F6337292BDC7300D0BFFD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DB2F6336292BDC7300D0BFFD /* FirebaseFirestore */; };
 		DB2F6339292BDC7300D0BFFD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DB2F6338292BDC7300D0BFFD /* FirebaseFirestoreSwift */; };
@@ -46,6 +43,7 @@
 		DB4F864A29520461001E3D3F /* SuperHumanMeditationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F864929520461001E3D3F /* SuperHumanMeditationsView.swift */; };
 		DB4F864C29520586001E3D3F /* FocusAndProductivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F864B29520586001E3D3F /* FocusAndProductivityView.swift */; };
 		DB4F864E295205BE001E3D3F /* SoundsOfNatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F864D295205BE001E3D3F /* SoundsOfNatureView.swift */; };
+		DB4F865729520766001E3D3F /* NasalBreathingBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F865629520766001E3D3F /* NasalBreathingBodyView.swift */; };
 		DBB0C4C1293F406D00373517 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4C0293F406D00373517 /* APIService.swift */; };
 		DBB0C4C5293F40D600373517 /* softgong.wav in Resources */ = {isa = PBXBuildFile; fileRef = DBB0C4C4293F40D600373517 /* softgong.wav */; };
 		DBB0C4C8293F40F600373517 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4C7293F40F600373517 /* SoundManager.swift */; };
@@ -114,9 +112,6 @@
 		DB2F6310292B60AB00D0BFFD /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		DB2F6314292B61D900D0BFFD /* MainMeditationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMeditationView.swift; sourceTree = "<group>"; };
 		DB2F6316292B61E800D0BFFD /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		DB2F6323292B7BBD00D0BFFD /* FocusAndProductivityButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusAndProductivityButtons.swift; sourceTree = "<group>"; };
-		DB2F6325292B7BD800D0BFFD /* SuperHumanMeditationButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHumanMeditationButtons.swift; sourceTree = "<group>"; };
-		DB2F6327292B80B500D0BFFD /* SoundsOfNatureButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsOfNatureButtons.swift; sourceTree = "<group>"; };
 		DB2F633D292BE00C00D0BFFD /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		DB2F6341292BF73200D0BFFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DB2F6344292CB17B00D0BFFD /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -139,6 +134,7 @@
 		DB4F864929520461001E3D3F /* SuperHumanMeditationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHumanMeditationsView.swift; sourceTree = "<group>"; };
 		DB4F864B29520586001E3D3F /* FocusAndProductivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusAndProductivityView.swift; sourceTree = "<group>"; };
 		DB4F864D295205BE001E3D3F /* SoundsOfNatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsOfNatureView.swift; sourceTree = "<group>"; };
+		DB4F865629520766001E3D3F /* NasalBreathingBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingBodyView.swift; sourceTree = "<group>"; };
 		DBB0C4C0293F406D00373517 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		DBB0C4C4293F40D600373517 /* softgong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = softgong.wav; sourceTree = "<group>"; };
 		DBB0C4C7293F40F600373517 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
@@ -267,10 +263,9 @@
 		DB2F6312292B61B200D0BFFD /* Meditation */ = {
 			isa = PBXGroup;
 			children = (
-				DB4F8652295206A7001E3D3F /* MeditationGroups */,
-				DB4F864829520445001E3D3F /* MainMeditationViews */,
+				DB4F865B29520B95001E3D3F /* MainMeditationSelectionView */,
+				DB4F865C29520BC4001E3D3F /* SuperHumanMeditations */,
 				DBB0C4EA293FDE2900373517 /* SoundsOfNature */,
-				DB2F631C292B749800D0BFFD /* Buttons */,
 			);
 			path = Meditation;
 			sourceTree = "<group>";
@@ -283,16 +278,6 @@
 				DBB0C50D29411EA800373517 /* ProfileActionMenuView.swift */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		DB2F631C292B749800D0BFFD /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-				DB2F6325292B7BD800D0BFFD /* SuperHumanMeditationButtons.swift */,
-				DB2F6323292B7BBD00D0BFFD /* FocusAndProductivityButtons.swift */,
-				DB2F6327292B80B500D0BFFD /* SoundsOfNatureButtons.swift */,
-			);
-			path = Buttons;
 			sourceTree = "<group>";
 		};
 		DB2F6329292BA05A00D0BFFD /* Breathing Statistics */ = {
@@ -331,15 +316,6 @@
 			path = Loading;
 			sourceTree = "<group>";
 		};
-		DB2F635C292D5B4C00D0BFFD /* Sheets */ = {
-			isa = PBXGroup;
-			children = (
-				DB4F864F29520648001E3D3F /* FirebreathingSheet */,
-				DB4F86352951D9E1001E3D3F /* NasalBreathingSheet */,
-			);
-			path = Sheets;
-			sourceTree = "<group>";
-		};
 		DB2F635F292E073000D0BFFD /* Toggles */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,17 +335,6 @@
 			path = NasalBreathingModels;
 			sourceTree = "<group>";
 		};
-		DB4F86352951D9E1001E3D3F /* NasalBreathingSheet */ = {
-			isa = PBXGroup;
-			children = (
-				DB2F6364292E3EDB00D0BFFD /* NasalBreathingSheetView.swift */,
-				DB4F86392951DAA3001E3D3F /* NasalMusicChoiceView.swift */,
-				DB4F863B2951DAB1001E3D3F /* NasalBreathSelectorView.swift */,
-				DB4F86412951E1E1001E3D3F /* NasalBreathingStartButtonView.swift */,
-			);
-			path = NasalBreathingSheet;
-			sourceTree = "<group>";
-		};
 		DB4F86402951DE22001E3D3F /* Miscellanous */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,7 +343,7 @@
 			path = Miscellanous;
 			sourceTree = "<group>";
 		};
-		DB4F864829520445001E3D3F /* MainMeditationViews */ = {
+		DB4F865B29520B95001E3D3F /* MainMeditationSelectionView */ = {
 			isa = PBXGroup;
 			children = (
 				DB2F6314292B61D900D0BFFD /* MainMeditationView.swift */,
@@ -386,40 +351,69 @@
 				DB4F864B29520586001E3D3F /* FocusAndProductivityView.swift */,
 				DB4F864D295205BE001E3D3F /* SoundsOfNatureView.swift */,
 			);
-			path = MainMeditationViews;
+			path = MainMeditationSelectionView;
 			sourceTree = "<group>";
 		};
-		DB4F864F29520648001E3D3F /* FirebreathingSheet */ = {
+		DB4F865C29520BC4001E3D3F /* SuperHumanMeditations */ = {
+			isa = PBXGroup;
+			children = (
+				DB4F865E29520BDB001E3D3F /* FireBreathing */,
+				DB4F865D29520BD7001E3D3F /* NasalBreathing */,
+			);
+			path = SuperHumanMeditations;
+			sourceTree = "<group>";
+		};
+		DB4F865D29520BD7001E3D3F /* NasalBreathing */ = {
+			isa = PBXGroup;
+			children = (
+				DB4F866329520CDC001E3D3F /* MeditationScreen */,
+				DB4F866229520CD9001E3D3F /* Sheet */,
+			);
+			path = NasalBreathing;
+			sourceTree = "<group>";
+		};
+		DB4F865E29520BDB001E3D3F /* FireBreathing */ = {
+			isa = PBXGroup;
+			children = (
+				DB4F866129520CD3001E3D3F /* MeditationScreen */,
+				DB4F866029520CCE001E3D3F /* Sheet */,
+			);
+			path = FireBreathing;
+			sourceTree = "<group>";
+		};
+		DB4F866029520CCE001E3D3F /* Sheet */ = {
 			isa = PBXGroup;
 			children = (
 				DB2F635D292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift */,
 			);
-			path = FirebreathingSheet;
+			path = Sheet;
 			sourceTree = "<group>";
 		};
-		DB4F8652295206A7001E3D3F /* MeditationGroups */ = {
+		DB4F866129520CD3001E3D3F /* MeditationScreen */ = {
 			isa = PBXGroup;
 			children = (
-				DB4F8653295206B1001E3D3F /* Meditations */,
-				DB2F635C292D5B4C00D0BFFD /* Sheets */,
 			);
-			path = MeditationGroups;
+			path = MeditationScreen;
 			sourceTree = "<group>";
 		};
-		DB4F8653295206B1001E3D3F /* Meditations */ = {
+		DB4F866229520CD9001E3D3F /* Sheet */ = {
 			isa = PBXGroup;
 			children = (
-				DB4F8654295206C6001E3D3F /* NasalBreathingMeditation */,
+				DB2F6364292E3EDB00D0BFFD /* NasalBreathingSheetView.swift */,
+				DB4F86392951DAA3001E3D3F /* NasalMusicChoiceView.swift */,
+				DB4F863B2951DAB1001E3D3F /* NasalBreathSelectorView.swift */,
+				DB4F86412951E1E1001E3D3F /* NasalBreathingStartButtonView.swift */,
 			);
-			path = Meditations;
+			path = Sheet;
 			sourceTree = "<group>";
 		};
-		DB4F8654295206C6001E3D3F /* NasalBreathingMeditation */ = {
+		DB4F866329520CDC001E3D3F /* MeditationScreen */ = {
 			isa = PBXGroup;
 			children = (
+				DB4F865629520766001E3D3F /* NasalBreathingBodyView.swift */,
 				DB4F86442951F1FC001E3D3F /* NasalBreathingCircleView.swift */,
 			);
-			path = NasalBreathingMeditation;
+			path = MeditationScreen;
 			sourceTree = "<group>";
 		};
 		DBB0C4C2293F40AC00373517 /* Utilities */ = {
@@ -774,7 +768,6 @@
 				DB2F635B292D12BF00D0BFFD /* ResetLinkSentView.swift in Sources */,
 				DB4F864C29520586001E3D3F /* FocusAndProductivityView.swift in Sources */,
 				DBB0C4E3293F570E00373517 /* MeditationFinishedView.swift in Sources */,
-				DB2F6326292B7BD800D0BFFD /* SuperHumanMeditationButtons.swift in Sources */,
 				DB2F6365292E3EDB00D0BFFD /* NasalBreathingSheetView.swift in Sources */,
 				DB2F635E292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift in Sources */,
 				DBD744E82927F4E00058225A /* OTPView.swift in Sources */,
@@ -824,6 +817,7 @@
 				DBB0C4CF293F414D00373517 /* QuotesModel.swift in Sources */,
 				DBD744D42927D3C30058225A /* LoginCloudsView.swift in Sources */,
 				DBD744D82927E8950058225A /* SignUpExternalPlatformView.swift in Sources */,
+				DB4F865729520766001E3D3F /* NasalBreathingBodyView.swift in Sources */,
 				DB2F6345292CB17B00D0BFFD /* UserService.swift in Sources */,
 				DBD744C92927D2560058225A /* GetStartedCloudsView.swift in Sources */,
 				DBDF4118293258B6000992FD /* NasalBreathingViewModel.swift in Sources */,
@@ -835,9 +829,7 @@
 				DB2F6303292962AB00D0BFFD /* CustomTextField.swift in Sources */,
 				DB2F6311292B60AB00D0BFFD /* MainTabView.swift in Sources */,
 				DB4F8631294B188B001E3D3F /* NasalBreathingModel.swift in Sources */,
-				DB2F6328292B80B500D0BFFD /* SoundsOfNatureButtons.swift in Sources */,
 				DB2F62F42927F80A00D0BFFD /* BlueButtonSmaller.swift in Sources */,
-				DB2F6324292B7BBD00D0BFFD /* FocusAndProductivityButtons.swift in Sources */,
 				DBD744DE2927EB4E0058225A /* GetStartedNavigationLinks.swift in Sources */,
 				DBB0C4EC293FDE3200373517 /* RainSoundsView.swift in Sources */,
 				DB2F6308292B5C6500D0BFFD /* HomeView.swift in Sources */,

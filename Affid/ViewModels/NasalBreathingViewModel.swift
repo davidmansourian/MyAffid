@@ -12,9 +12,9 @@ import Combine
 class NasalBreathingViewModel: ObservableObject{
     private var cancellable: Cancellable?
     @Published var roundsArr: [BreathCoundModel] = []
-    @Published var breathingPhaseMusic: Bool = false
-    @Published var retentionPhaseMusic: Bool = false
-    @Published var totalBreaths: Int = 0
+    @MainActor @Published var breathingPhaseMusic: Bool = false
+    @MainActor @Published var retentionPhaseMusic: Bool = false
+    @MainActor @Published var totalBreaths: Int = 0
     @MainActor @Published var sessionSelection: [NasalBreathingSettingsData] = []
     @MainActor @Published var animate: Bool = false
     private var cancellableSet = Set<AnyCancellable>()
@@ -29,6 +29,7 @@ class NasalBreathingViewModel: ObservableObject{
             let roundSize = BreathCoundModel(count: i*5, breathIndex: i)
             roundsArr.append(roundSize)
         }
+        print(roundsArr)
     }
     
     func getNasalBreathSettings() async{
@@ -41,10 +42,10 @@ class NasalBreathingViewModel: ObservableObject{
     }
     
     func cleanSelections() async{
-        self.breathingPhaseMusic = false
-        self.retentionPhaseMusic = false
-        self.totalBreaths = 0
         await MainActor.run(body: {
+            self.breathingPhaseMusic = false
+            self.retentionPhaseMusic = false
+            self.totalBreaths = 0
             self.sessionSelection.removeAll()
         })
         

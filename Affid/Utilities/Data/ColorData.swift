@@ -22,4 +22,7 @@ class ColorData: ObservableObject{
     
     let profileMenuColor: Color = Color(red: 32/255, green: 35/255, blue: 45/255)
     
+    var theLighterGreen = Color(red: 118/255, green: 199/255, blue: 158/255)
+    var theDarkerGreen = Color(red: 108/255, green: 178/255, blue: 142/255)
+    
 }

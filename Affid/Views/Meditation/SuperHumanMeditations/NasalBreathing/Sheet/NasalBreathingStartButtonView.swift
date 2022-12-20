@@ -9,9 +9,11 @@ import SwiftUI
 
 struct NasalBreathingStartButtonView: View {
     @StateObject var nasalBreathingVm: NasalBreathingViewModel
+    var closeAndDisplayFullScreen : () -> Void
     
-    init(nasalBreathingVm: NasalBreathingViewModel){
+    init(nasalBreathingVm: NasalBreathingViewModel, closeAndDisplayFullScreen: @escaping () -> Void){
         _nasalBreathingVm = StateObject(wrappedValue: nasalBreathingVm)
+        self.closeAndDisplayFullScreen = closeAndDisplayFullScreen
     }
     
     var body: some View {
@@ -22,6 +24,7 @@ struct NasalBreathingStartButtonView: View {
                     Task{
                         await nasalBreathingVm.getNasalBreathSettings()
                     }
+                    closeAndDisplayFullScreen()
                 } label: {
                     Text("Start")
                         .foregroundColor(.white)

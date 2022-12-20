@@ -10,6 +10,9 @@ import SwiftUI
 struct SuperHumanMeditationsView: View {
     @State var showingFireBreathingSheet = false
     @State var showingNasalBreathingSheet = false
+    @State var showingNasalBreathingFullScreen = false
+    @State var showingFireBreathingFullScreen = false
+    @StateObject var nasalBreathingVm = NasalBreathingViewModel()
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){
             HStack(spacing: 20){
@@ -30,8 +33,16 @@ struct SuperHumanMeditationsView: View {
                     Image("nasalBreathingButton")
                 }
                 .sheet(isPresented: $showingNasalBreathingSheet) {
-                    NasalBreathingSheetView()
+                    NasalBreathingSheetView(nasalBreathingVm: nasalBreathingVm) {
+                        showingNasalBreathingSheet = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                            showingNasalBreathingFullScreen = true
+                        }
+                    }
                        // .presentationDetents([.height(660)])
+                }
+                .fullScreenCover(isPresented: $showingNasalBreathingFullScreen){
+                    NasalBreathingBodyView(nasalBreathingVm: nasalBreathingVm)
                 }
 
                 
