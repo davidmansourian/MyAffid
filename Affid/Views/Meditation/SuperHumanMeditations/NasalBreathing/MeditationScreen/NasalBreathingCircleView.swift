@@ -24,15 +24,17 @@ struct NasalBreathingCircleView: View {
                         .fill(ColorData.shared.appSystemYellow.opacity(0.9))
                         .frame(width: 230, height: 230)
                         .scaleEffect(scale)
-                        .animation(.easeOut(duration: 2).repeatCount((2*(nasalBreathingVm.totalBreaths)), autoreverses: true), value: nasalBreathingVm.animate)
+                        .animation(.easeInOut(duration: 2).repeatCount((2*(nasalBreathingVm.totalBreaths)), autoreverses: true), value: nasalBreathingVm.animate)
                     
                 }
             }
             .onAppear{
                 nasalBreathingVm.animate.toggle()
-                self.scale = nasalBreathingVm.animate ? 1.0 : 0.001
+                self.scale = nasalBreathingVm.animate ? 1.0 : 0.5
                 self.innerCircleScale = nasalBreathingVm.animate ? 1.0 : 0.5
-                
+            }
+            .onDisappear{
+                nasalBreathingVm.animate.toggle()
             }
         }
     }
