@@ -21,7 +21,18 @@ struct NasalBreathingBodyView: View {
                     .cornerRadius(10)
                     .edgesIgnoringSafeArea(.all)
                 
-                NasalBreathingCircleView(nasalBreathingVm: nasalBreathingVm)
+                switch nasalBreathingVm.roundState{
+                case .countdown:
+                    NasalBreathingCountdownView(nasalBreathingVm: nasalBreathingVm)
+                case .breathing:
+                    NasalBreathingCircleView(nasalBreathingVm: nasalBreathingVm)
+                case .prepareHold:
+                    NasalBreathingHoldWarningView(nasalBreathingVm: nasalBreathingVm)
+                case .hold:
+                    NasalBreathingHoldView(nasalBreathingVm: nasalBreathingVm)
+                case .rest:
+                    Text("Tjena")
+                }
             }
             .toolbar{
                 ToolbarItemGroup(placement: .navigationBarLeading){

@@ -8,13 +8,49 @@
 import SwiftUI
 
 struct NasalBreathingHoldView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    @StateObject var nasalBreathingVm: NasalBreathingViewModel
+    @State var breathHoldSec: Int = 0
+    @State var stop: Bool = false
+    
+    init(nasalBreathingVm: NasalBreathingViewModel){
+        _nasalBreathingVm = StateObject(wrappedValue: nasalBreathingVm)
     }
-}
-
-struct NasalBreathingHoldView_Previews: PreviewProvider {
-    static var previews: some View {
-        NasalBreathingHoldView()
+    var body: some View {
+        ZStack{
+            VStack(spacing: 100){
+                Text("Hold your breath for as long as you can")
+                    .foregroundColor(.white)
+                    .font(.title)
+                    .fontWeight(.bold)
+                
+                Text("\(breathHoldSec)")
+                    .foregroundColor(.white)
+                    .font(.largeTitle)
+                    .fontWeight(.light)
+                    .onReceive(nasalBreathingVm.breathHoldTimer) { _ in
+                        if !stop{
+                            breathHoldSec += 1
+                        }
+                        else if stop{
+                            nasalBreathingVm.breathHoldTimer.upstream.connect().cancel()
+                            nasalBreathingVm.breathHoldSeconds = breathHoldSec
+                            nasalBreathingVm.appendSessionTracker()
+                            nasalBreathingVm.roundState = RoundState.rest
+                        }
+                    }
+                
+                Text("Double tap to rest")
+                    .foregroundColor(.white)
+                    .font(.title)
+                    .fontWeight(.bold)
+            }
+        }
+        .onTapGesture(count: 2){
+            stop = true
+        }
+        .onDisappear{
+            stop = false
+            nasalBreathingVm.breathHoldTimer.upstream.connect().cancel()
+        }
     }
 }

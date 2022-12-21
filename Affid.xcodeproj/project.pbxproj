@@ -45,6 +45,8 @@
 		DB4F864E295205BE001E3D3F /* SoundsOfNatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F864D295205BE001E3D3F /* SoundsOfNatureView.swift */; };
 		DB4F865729520766001E3D3F /* NasalBreathingBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F865629520766001E3D3F /* NasalBreathingBodyView.swift */; };
 		DB4F8666295219B2001E3D3F /* NasalBreathingHoldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F8665295219B2001E3D3F /* NasalBreathingHoldView.swift */; };
+		DB4F866829532645001E3D3F /* NasalBreathingCountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F866729532645001E3D3F /* NasalBreathingCountdownView.swift */; };
+		DB4F866B295338B3001E3D3F /* NasalBreathingHoldWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F866A295338B3001E3D3F /* NasalBreathingHoldWarningView.swift */; };
 		DBB0C4C1293F406D00373517 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4C0293F406D00373517 /* APIService.swift */; };
 		DBB0C4C5293F40D600373517 /* softgong.wav in Resources */ = {isa = PBXBuildFile; fileRef = DBB0C4C4293F40D600373517 /* softgong.wav */; };
 		DBB0C4C8293F40F600373517 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4C7293F40F600373517 /* SoundManager.swift */; };
@@ -137,6 +139,8 @@
 		DB4F864D295205BE001E3D3F /* SoundsOfNatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsOfNatureView.swift; sourceTree = "<group>"; };
 		DB4F865629520766001E3D3F /* NasalBreathingBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingBodyView.swift; sourceTree = "<group>"; };
 		DB4F8665295219B2001E3D3F /* NasalBreathingHoldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingHoldView.swift; sourceTree = "<group>"; };
+		DB4F866729532645001E3D3F /* NasalBreathingCountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingCountdownView.swift; sourceTree = "<group>"; };
+		DB4F866A295338B3001E3D3F /* NasalBreathingHoldWarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingHoldWarningView.swift; sourceTree = "<group>"; };
 		DBB0C4C0293F406D00373517 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		DBB0C4C4293F40D600373517 /* softgong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = softgong.wav; sourceTree = "<group>"; };
 		DBB0C4C7293F40F600373517 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
@@ -413,7 +417,9 @@
 			isa = PBXGroup;
 			children = (
 				DB4F865629520766001E3D3F /* NasalBreathingBodyView.swift */,
+				DB4F866729532645001E3D3F /* NasalBreathingCountdownView.swift */,
 				DB4F86442951F1FC001E3D3F /* NasalBreathingCircleView.swift */,
+				DB4F866A295338B3001E3D3F /* NasalBreathingHoldWarningView.swift */,
 				DB4F8665295219B2001E3D3F /* NasalBreathingHoldView.swift */,
 			);
 			path = MeditationScreen;
@@ -819,6 +825,7 @@
 				DBB0C4F02940C02300373517 /* SignUpTextFieldView.swift in Sources */,
 				DBB0C4FC2940F9DB00373517 /* MeditationFinishedOfflineView.swift in Sources */,
 				DBB0C4CF293F414D00373517 /* QuotesModel.swift in Sources */,
+				DB4F866829532645001E3D3F /* NasalBreathingCountdownView.swift in Sources */,
 				DBD744D42927D3C30058225A /* LoginCloudsView.swift in Sources */,
 				DBD744D82927E8950058225A /* SignUpExternalPlatformView.swift in Sources */,
 				DB4F865729520766001E3D3F /* NasalBreathingBodyView.swift in Sources */,
@@ -837,6 +844,7 @@
 				DBD744DE2927EB4E0058225A /* GetStartedNavigationLinks.swift in Sources */,
 				DBB0C4EC293FDE3200373517 /* RainSoundsView.swift in Sources */,
 				DB2F6308292B5C6500D0BFFD /* HomeView.swift in Sources */,
+				DB4F866B295338B3001E3D3F /* NasalBreathingHoldWarningView.swift in Sources */,
 				DBB0C4FA2940F9D300373517 /* MeditationFinishedOnlineView.swift in Sources */,
 				DBB0C4D3293F417800373517 /* TimerViewModel.swift in Sources */,
 				DB4F86332951D90B001E3D3F /* NasalBreathingSettingsData.swift in Sources */,

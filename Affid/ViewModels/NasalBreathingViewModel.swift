@@ -11,17 +11,30 @@ import Combine
 
 class NasalBreathingViewModel: ObservableObject{
     private var hasExited: Bool = false
+    private var sessionTracker: [BreathHoldModel] = [] // needs to be emptied when the session is intialized (not via init tho)
+    
+    let countdownTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect() // countdown timer
+    let breathingTimer = Timer.publish(every: 4, on: .main, in: .common).autoconnect() // breathcounter-timer
+    let breathHoldTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    let holdWarningTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     
     @Published var roundsArr: [BreathCoundModel] = []
     
-    @MainActor @Published var round: Int = 1
     @MainActor @Published var breathingPhaseMusic: Bool = false
     @MainActor @Published var retentionPhaseMusic: Bool = false
     @MainActor @Published var totalBreaths: Int = 0
     @MainActor @Published var sessionSelection: [NasalBreathingSettingsData] = []
+    
     @MainActor @Published var animate: Bool = false
-    @MainActor @Published var roundState = RoundState.self
+    
+    var round: Int = 1
+    
+    @MainActor @Published var roundState = RoundState.countdown
+    @MainActor @Published var countdown: Int = 5
+    @Published var breathHoldSeconds: Int = 0
+    
+    
     
     init(){
         loadBreathModel()
@@ -57,8 +70,14 @@ class NasalBreathingViewModel: ObservableObject{
         
     }
     
+    func appendSessionTracker(){
+        self.sessionTracker.append(BreathHoldModel(round: self.round, timeBreathHeld: self.breathHoldSeconds))
+    }
+    
+    
     func runRound(){
         while !hasExited{
+            // last rest screen need to check for full round completed
             
         }
     }
