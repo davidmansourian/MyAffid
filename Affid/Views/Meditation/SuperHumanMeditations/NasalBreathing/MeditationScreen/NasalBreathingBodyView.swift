@@ -30,6 +30,8 @@ struct NasalBreathingBodyView: View {
                     NasalBreathingHoldWarningView(nasalBreathingVm: nasalBreathingVm)
                 case .hold:
                     NasalBreathingHoldView(nasalBreathingVm: nasalBreathingVm)
+                case .preRest:
+                    NasalBreathingPreRestView(nasalBreathingVm: nasalBreathingVm)
                 case .rest:
                     Text("Tjena")
                 }
@@ -39,7 +41,7 @@ struct NasalBreathingBodyView: View {
                     Button {
                         dismiss()
                         Task{
-                            await nasalBreathingVm.cleanSelections()
+                            await nasalBreathingVm.cleanSession()
                         }
                     } label: {
                         Image(systemName: "x.circle")

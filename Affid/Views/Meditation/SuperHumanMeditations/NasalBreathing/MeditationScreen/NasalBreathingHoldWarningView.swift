@@ -27,7 +27,7 @@ struct NasalBreathingHoldWarningView: View {
                 .fontWeight(.bold)
             
             Text("\(countDown)")
-                .foregroundColor(.white)
+                .foregroundColor(ColorData.shared.appSystemYellow)
                 .font(.title)
                 .fontWeight(.bold)
                 .onReceive(nasalBreathingVm.holdWarningTimer) { _ in

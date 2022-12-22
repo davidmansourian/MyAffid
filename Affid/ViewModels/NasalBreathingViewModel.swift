@@ -14,9 +14,11 @@ class NasalBreathingViewModel: ObservableObject{
     private var sessionTracker: [BreathHoldModel] = [] // needs to be emptied when the session is intialized (not via init tho)
     
     let countdownTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect() // countdown timer
-    let breathingTimer = Timer.publish(every: 4, on: .main, in: .common).autoconnect() // breathcounter-timer
+    let breathingTimer = Timer.publish(every: 4, on: .main, in: .common).autoconnect() // breathcounter-timer // make generic timer for all that publish ever 1 sec
     let breathHoldTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     let holdWarningTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    let preRestInhaleTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     
     
     @Published var roundsArr: [BreathCoundModel] = []
@@ -59,12 +61,14 @@ class NasalBreathingViewModel: ObservableObject{
         })
     }
     
-    func cleanSelections() async{
+    func cleanSession() async{
         await MainActor.run(body: {
             self.breathingPhaseMusic = false
             self.retentionPhaseMusic = false
             self.totalBreaths = 0
             self.sessionSelection.removeAll()
+            self.roundState = RoundState.countdown
+            self.countdown = 5
         })
         hasExited = true
         
