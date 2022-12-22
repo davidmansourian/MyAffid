@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NasalBreathingPreRestView: View {
+struct NasalBreathingRestView: View {
     @StateObject var nasalBreathingVm: NasalBreathingViewModel
     @State var restTimer: Int = 15
     
@@ -19,17 +19,24 @@ struct NasalBreathingPreRestView: View {
         VStack{
             Text("Take a deep breath and hold")
                 .foregroundColor(.white)
-                .font(.title)
-                .fontWeight(.bold)
+                .font(.largeTitle)
+                .fontWeight(.light)
+                .padding()
             
             Text("\(restTimer)")
-                .onReceive(nasalBreathingVm.preRestInhaleTimer) { _ in
+                .foregroundColor(ColorData.shared.appSystemYellow)
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .padding()
+                .onReceive(nasalBreathingVm.oneSecondTimer) { _ in
                     if restTimer > 1{
                         restTimer -= 1
                     }
                     else if restTimer == 1{
-                        nasalBreathingVm.preRestInhaleTimer.upstream.connect().cancel()
-                        nasalBreathingVm.roundState = RoundState.breathing
+                        nasalBreathingVm.oneSecondTimer.upstream.connect().cancel()
+                        withAnimation(.default){
+                            nasalBreathingVm.roundState = RoundState.exhaleRest
+                        }
                     }
                 }
         }

@@ -17,19 +17,21 @@ struct NasalBreathingCountdownView: View {
     var body: some View {
         VStack{
             Text("Get Ready")
-                .foregroundColor(ColorData.shared.appSystemYellow)
-                .font(.largeTitle)
-                .fontWeight(.heavy)
-            Text("\(nasalBreathingVm.countdown)")
                 .foregroundColor(.white)
                 .font(.largeTitle)
-                .fontWeight(.heavy)
-                .onReceive(nasalBreathingVm.countdownTimer) { _ in
+                .fontWeight(.light)
+                .padding()
+            Text("\(nasalBreathingVm.countdown)")
+                .foregroundColor(ColorData.shared.appSystemYellow)
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .padding()
+                .onReceive(nasalBreathingVm.oneSecondTimer) { _ in
                     if nasalBreathingVm.countdown > 0{
                         nasalBreathingVm.countdown -= 1
                     }
                     else if nasalBreathingVm.countdown == 0{
-                        nasalBreathingVm.countdownTimer.upstream.connect().cancel() // in while-loop, at the beginning of the loop
+                        nasalBreathingVm.oneSecondTimer.upstream.connect().cancel() // in while-loop, at the beginning of the loop
                         // For each round, i need to be checking if countdown is 0. Then when user exits meditation, I need to reset the countdown to 5 seconds
                         withAnimation(.default){
                             nasalBreathingVm.roundState = RoundState.breathing
@@ -37,9 +39,6 @@ struct NasalBreathingCountdownView: View {
                         
                     }
                 }
-        }
-        .onDisappear{
-            nasalBreathingVm.countdownTimer.upstream.connect().cancel()
         }
     }
 }

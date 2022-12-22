@@ -20,7 +20,7 @@ struct NasalBreathingCircleView: View {
         ZStack{
             VStack {
                 ZStack{
-                   GenericBreathingCircleView(nasalBreathingVm: nasalBreathingVm)
+                    GenericBreathingCircleView(nasalBreathingVm: nasalBreathingVm)
                     Text("\(breathCounter)")
                         .foregroundColor(ColorData.shared.appSystemBlue)
                         .font(.largeTitle)
@@ -38,16 +38,14 @@ struct NasalBreathingCircleView: View {
                                 }
                             }
                         }
-                    
                 }
+                
             }
             .onAppear{
                 self.scale = nasalBreathingVm.animate ? 1.0 : 0.5
             }
             .onDisappear{
                 nasalBreathingVm.animate = false
-                breathCounter = 1
-                nasalBreathingVm.breathingTimer.upstream.connect().cancel()
             }
         }
     }

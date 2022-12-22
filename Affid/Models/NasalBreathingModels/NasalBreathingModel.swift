@@ -22,6 +22,6 @@ struct BreathHoldModel{
 }
 
 enum RoundState{
-    case countdown, breathing, prepareHold, hold, preRest, rest
+    case countdown, breathing, prepareHold, hold, rest, exhaleRest
 }
 

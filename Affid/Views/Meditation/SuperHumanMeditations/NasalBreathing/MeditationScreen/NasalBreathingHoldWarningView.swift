@@ -15,27 +15,30 @@ struct NasalBreathingHoldWarningView: View {
         _nasalBreathingVm = StateObject(wrappedValue: nasalBreathingVm)
     }
     var body: some View {
-        VStack(spacing: 100){
+        VStack{
             Text("Breath out fully")
                 .foregroundColor(.white)
-                .font(.title)
+                .font(.largeTitle)
                 .fontWeight(.bold)
+                .padding()
             
             Text("Time until hold:")
                 .foregroundColor(.white)
-                .font(.title2)
-                .fontWeight(.bold)
+                .font(.largeTitle)
+                .fontWeight(.light)
+                .padding()
             
             Text("\(countDown)")
                 .foregroundColor(ColorData.shared.appSystemYellow)
-                .font(.title)
+                .font(.largeTitle)
                 .fontWeight(.bold)
-                .onReceive(nasalBreathingVm.holdWarningTimer) { _ in
+                .padding()
+                .onReceive(nasalBreathingVm.oneSecondTimer) { _ in
                     if countDown > 0{
                         countDown -= 1
                     }
                     else if countDown == 0{
-                        nasalBreathingVm.holdWarningTimer.upstream.connect().cancel()
+                        nasalBreathingVm.oneSecondTimer.upstream.connect().cancel()
                         withAnimation(.default){
                             nasalBreathingVm.roundState = RoundState.hold
                         }

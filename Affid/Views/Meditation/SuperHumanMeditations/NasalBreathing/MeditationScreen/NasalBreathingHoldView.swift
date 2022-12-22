@@ -17,40 +17,40 @@ struct NasalBreathingHoldView: View {
     }
     var body: some View {
         ZStack{
-            VStack(spacing: 100){
+            VStack{
                 Text("Hold your breath for as long as you can")
-                    .foregroundColor(.white)
-                    .font(.title)
-                    .fontWeight(.bold)
-                
-                Text("\(breathHoldSec)")
                     .foregroundColor(.white)
                     .font(.largeTitle)
                     .fontWeight(.light)
-                    .onReceive(nasalBreathingVm.breathHoldTimer) { _ in
-                        if !stop{
+                    .padding()
+                
+                Text("\(breathHoldSec)")
+                    .foregroundColor(ColorData.shared.appSystemYellow)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding()
+                    .onReceive(nasalBreathingVm.oneSecondTimer) { _ in
+                        if !nasalBreathingVm.holdStop{
                             breathHoldSec += 1
                         }
-                        else if stop{
-                            nasalBreathingVm.breathHoldTimer.upstream.connect().cancel()
+                        else if nasalBreathingVm.holdStop{
+                            nasalBreathingVm.oneSecondTimer.upstream.connect().cancel()
                             nasalBreathingVm.breathHoldSeconds = breathHoldSec
                             nasalBreathingVm.appendSessionTracker()
-                            nasalBreathingVm.roundState = RoundState.preRest
+                            withAnimation(.default){
+                                nasalBreathingVm.roundState = RoundState.rest
+                            }
                         }
                     }
                 
                 Text("Double tap to rest")
                     .foregroundColor(.white)
                     .font(.title)
-                    .fontWeight(.bold)
+                    .fontWeight(.light)
             }
         }
-        .onTapGesture(count: 2){
-            stop = true
-        }
         .onDisappear{
-            stop = false
-            nasalBreathingVm.breathHoldTimer.upstream.connect().cancel()
+            nasalBreathingVm.holdStop = false
         }
     }
 }

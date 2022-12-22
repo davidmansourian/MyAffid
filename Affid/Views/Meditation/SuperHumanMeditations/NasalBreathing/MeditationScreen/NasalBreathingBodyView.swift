@@ -20,22 +20,40 @@ struct NasalBreathingBodyView: View {
                 LinearGradient(gradient: Gradient(colors: [ColorData.shared.theLighterGreen, ColorData.shared.theDarkerGreen, .white]), startPoint: .top, endPoint: .bottom).opacity(1)
                     .cornerRadius(10)
                     .edgesIgnoringSafeArea(.all)
-                
-                switch nasalBreathingVm.roundState{
-                case .countdown:
-                    NasalBreathingCountdownView(nasalBreathingVm: nasalBreathingVm)
-                case .breathing:
-                    NasalBreathingCircleView(nasalBreathingVm: nasalBreathingVm)
-                case .prepareHold:
-                    NasalBreathingHoldWarningView(nasalBreathingVm: nasalBreathingVm)
-                case .hold:
-                    NasalBreathingHoldView(nasalBreathingVm: nasalBreathingVm)
-                case .preRest:
-                    NasalBreathingPreRestView(nasalBreathingVm: nasalBreathingVm)
-                case .rest:
-                    Text("Tjena")
+                VStack{
+                    Text("Round \(nasalBreathingVm.round)")
+                        .foregroundColor(.white)
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .padding()
+                    
+                    Spacer()
+                    
+                    switch nasalBreathingVm.roundState{
+                    case .countdown:
+                        NasalBreathingCountdownView(nasalBreathingVm: nasalBreathingVm)
+                    case .breathing:
+                        NasalBreathingCircleView(nasalBreathingVm: nasalBreathingVm)
+                    case .prepareHold:
+                        NasalBreathingHoldWarningView(nasalBreathingVm: nasalBreathingVm)
+                    case .hold:
+                        NasalBreathingHoldView(nasalBreathingVm: nasalBreathingVm)
+                    case .rest:
+                        NasalBreathingRestView(nasalBreathingVm: nasalBreathingVm)
+                    case .exhaleRest:
+                        NasalBreathingBreatheOutRestView(nasalBreathingVm: nasalBreathingVm)
+                    }
+                    
+                    Spacer()
+                    Spacer()
+                    Spacer()
                 }
             }
+            .onTapGesture(count: 2, perform: {
+                if nasalBreathingVm.roundState == RoundState.hold{
+                    nasalBreathingVm.holdStop = true
+                }
+            })
             .toolbar{
                 ToolbarItemGroup(placement: .navigationBarLeading){
                     Button {
