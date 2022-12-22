@@ -29,10 +29,10 @@ struct NasalBreathingRestView: View {
                 .fontWeight(.bold)
                 .padding()
                 .onReceive(nasalBreathingVm.oneSecondTimer) { _ in
-                    if restTimer > 1{
+                    if restTimer > 0{
                         restTimer -= 1
                     }
-                    else if restTimer == 1{
+                    else if restTimer == 0{
                         nasalBreathingVm.oneSecondTimer.upstream.connect().cancel()
                         withAnimation(.default){
                             nasalBreathingVm.roundState = RoundState.exhaleRest

@@ -31,8 +31,8 @@ class NasalBreathingViewModel: ObservableObject{
     
     @MainActor @Published var roundState = RoundState.countdown
     @MainActor @Published var countdown: Int = 5
-    @Published var breathHoldSeconds: Int = 0
     @Published var holdStop: Bool = false
+    @Published var breathHoldSecondsFinished: Int = 0
     
     
     
@@ -75,7 +75,14 @@ class NasalBreathingViewModel: ObservableObject{
     }
     
     func appendSessionTracker(){
-        self.sessionTracker.append(BreathHoldModel(round: self.round, timeBreathHeld: self.breathHoldSeconds))
+        self.sessionTracker.append(BreathHoldModel(round: self.round, timeBreathHeld: self.breathHoldSecondsFinished))
         print(sessionTracker)
+    }
+    
+    func convertSecondsToTime(timeInSeconds: Int) -> String{
+        let minutes = timeInSeconds / 60
+        let seconds = timeInSeconds % 60
+        
+        return String(format: "%0i:%02i", minutes, seconds)
     }
 }

@@ -24,7 +24,7 @@ struct NasalBreathingHoldView: View {
                     .fontWeight(.light)
                     .padding()
                 
-                Text("\(breathHoldSec)")
+                Text("\(nasalBreathingVm.convertSecondsToTime(timeInSeconds: breathHoldSec))")
                     .foregroundColor(ColorData.shared.appSystemYellow)
                     .font(.largeTitle)
                     .fontWeight(.bold)
@@ -35,7 +35,7 @@ struct NasalBreathingHoldView: View {
                         }
                         else if nasalBreathingVm.holdStop{
                             nasalBreathingVm.oneSecondTimer.upstream.connect().cancel()
-                            nasalBreathingVm.breathHoldSeconds = breathHoldSec
+                            nasalBreathingVm.breathHoldSecondsFinished = breathHoldSec
                             nasalBreathingVm.appendSessionTracker()
                             withAnimation(.default){
                                 nasalBreathingVm.roundState = RoundState.rest
