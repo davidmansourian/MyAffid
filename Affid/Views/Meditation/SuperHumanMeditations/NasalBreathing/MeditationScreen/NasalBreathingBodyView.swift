@@ -42,6 +42,8 @@ struct NasalBreathingBodyView: View {
                         NasalBreathingRestView(nasalBreathingVm: nasalBreathingVm)
                     case .exhaleRest:
                         NasalBreathingBreatheOutRestView(nasalBreathingVm: nasalBreathingVm)
+                    case .finished:
+                        NasalBreathingFinishedView(nasalBreathingVm: nasalBreathingVm)
                     }
                     
                     Spacer()
@@ -59,7 +61,7 @@ struct NasalBreathingBodyView: View {
                     Button {
                         dismiss()
                         Task{
-                            await nasalBreathingVm.cleanSession()
+                            nasalBreathingVm.cleanSession()
                         }
                     } label: {
                         Image(systemName: "x.circle")
@@ -68,8 +70,18 @@ struct NasalBreathingBodyView: View {
                     }
                     
                 }
+                if nasalBreathingVm.roundState != RoundState.finished && nasalBreathingVm.firstRoundBreathHoldComplete{
+                    ToolbarItemGroup(placement: .navigationBarTrailing){
+                        Button {
+                            nasalBreathingVm.roundState = RoundState.finished
+                        } label: {
+                            Text("Finish")
+                                .foregroundColor(.white)
+                                .font(.title3)
+                        }
+                    }
+                }
             }
         }
     }
 }
-

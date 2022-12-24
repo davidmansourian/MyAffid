@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB2C89122955C8D1004EA602 /* NasalBreathingFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89112955C8D1004EA602 /* NasalBreathingFinishedView.swift */; };
 		DB2F62F42927F80A00D0BFFD /* BlueButtonSmaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F62F32927F80A00D0BFFD /* BlueButtonSmaller.swift */; };
 		DB2F62F72927F8F700D0BFFD /* CreateNewPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F62F62927F8F700D0BFFD /* CreateNewPasswordView.swift */; };
 		DB2F6303292962AB00D0BFFD /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6302292962AB00D0BFFD /* CustomTextField.swift */; };
@@ -110,6 +111,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB2C89112955C8D1004EA602 /* NasalBreathingFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingFinishedView.swift; sourceTree = "<group>"; };
 		DB2F62F32927F80A00D0BFFD /* BlueButtonSmaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonSmaller.swift; sourceTree = "<group>"; };
 		DB2F62F62927F8F700D0BFFD /* CreateNewPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordView.swift; sourceTree = "<group>"; };
 		DB2F6302292962AB00D0BFFD /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -430,6 +432,7 @@
 				DB4F8665295219B2001E3D3F /* NasalBreathingHoldView.swift */,
 				DB4F866C29546F23001E3D3F /* NasalBreathingRestView.swift */,
 				DB4F86702954C630001E3D3F /* NasalBreathingBreatheOutRestView.swift */,
+				DB2C89112955C8D1004EA602 /* NasalBreathingFinishedView.swift */,
 			);
 			path = MeditationScreen;
 			sourceTree = "<group>";
@@ -809,6 +812,7 @@
 				DB2F634A292CCE6A00D0BFFD /* SplashScreenView.swift in Sources */,
 				DBB0C4C8293F40F600373517 /* SoundManager.swift in Sources */,
 				DBB0C4E0293F56A600373517 /* TimerView.swift in Sources */,
+				DB2C89122955C8D1004EA602 /* NasalBreathingFinishedView.swift in Sources */,
 				DB4F86422951E1E1001E3D3F /* NasalBreathingStartButtonView.swift in Sources */,
 				DB2F6361292E074600D0BFFD /* CheckmarkToggleView.swift in Sources */,
 				DBB0C4DE293F564200373517 /* CirclesView.swift in Sources */,

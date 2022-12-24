@@ -31,6 +31,9 @@ struct NasalBreathingRestView: View {
                 .onReceive(nasalBreathingVm.oneSecondTimer) { _ in
                     if restTimer > 0{
                         restTimer -= 1
+                        if nasalBreathingVm.round == 1{
+                            nasalBreathingVm.firstRoundBreathHoldComplete = true
+                        }
                     }
                     else if restTimer == 0{
                         nasalBreathingVm.oneSecondTimer.upstream.connect().cancel()

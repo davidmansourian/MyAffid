@@ -16,12 +16,14 @@ struct NasalBreathingModel{
 }
 
 
-struct BreathHoldModel{
+struct BreathHoldModel: Identifiable{
+    let id = UUID()
     let round: Int // round
     let timeBreathHeld: Int // time held
+    
 }
 
 enum RoundState{
-    case countdown, breathing, prepareHold, hold, rest, exhaleRest
+    case countdown, breathing, prepareHold, hold, rest, exhaleRest, finished
 }
 
