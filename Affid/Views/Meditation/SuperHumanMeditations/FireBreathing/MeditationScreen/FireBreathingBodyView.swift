@@ -22,8 +22,53 @@ struct FireBreathingBodyView: View {
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack{
-                    CirclesView()
                     
+                    switch fireBreathingVm.roundState{
+                    case .normalBreathing:
+                        Text("Breath normally")
+                            .foregroundColor(.white)
+                            .font(.largeTitle)
+                            .fontWeight(.light)
+                            .padding()
+                    case .exhale:
+                        Text("Exhale fully")
+                            .foregroundColor(.white)
+                            .font(.largeTitle)
+                            .fontWeight(.light)
+                            .padding()
+                    case .hold:
+                        Text("Hold your breath for as long as you can")
+                            .foregroundColor(.white)
+                            .font(.largeTitle)
+                            .fontWeight(.light)
+                            .padding()
+                    }
+                    
+                    ZStack{
+                        
+                        CirclesView()
+                            .padding(.top, 50)
+                            .padding(.bottom, 50)
+                        
+                        switch fireBreathingVm.roundState{
+                        case .normalBreathing:
+                            FireBreathingNormalBreathView(fireBreathingVm: fireBreathingVm)
+                        case .exhale:
+                            FireBreathingExhaleView(fireBreathingVm: fireBreathingVm)
+                        case .hold:
+                            FireBreathingHoldView(fireBreathingVm: fireBreathingVm)
+                        }
+                    }
+                    
+                    if fireBreathingVm.roundState == FireBreathingRoundState.hold{
+                        Text("Double tap to rest")
+                            .foregroundColor(.white)
+                            .font(.title)
+                            .fontWeight(.light)
+                            .padding()
+                    }
+                    
+                    Spacer()
                 }
             }
             .toolbar{
@@ -31,16 +76,20 @@ struct FireBreathingBodyView: View {
                     Button {
                         dismiss()
                         Task{
-                            
+                            fireBreathingVm.cleanSession()
                         }
                     } label: {
                         Image(systemName: "x.circle")
                             .foregroundColor(.white)
                             .font(.title)
                     }
-                    
                 }
             }
+            .onTapGesture(count: 2, perform: {
+                if fireBreathingVm.roundState == FireBreathingRoundState.hold{
+                    fireBreathingVm.holdStop = true
+                }
+            })
         }
     }
 }
