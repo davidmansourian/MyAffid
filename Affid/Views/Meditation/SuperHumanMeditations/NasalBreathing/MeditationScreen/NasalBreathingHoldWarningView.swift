@@ -40,7 +40,7 @@ struct NasalBreathingHoldWarningView: View {
                     else if countDown == 0{
                         nasalBreathingVm.oneSecondTimer.upstream.connect().cancel()
                         withAnimation(.default){
-                            nasalBreathingVm.roundState = RoundState.hold
+                            nasalBreathingVm.roundState = NasalBreathingRoundState.hold
                         }
                     }
                 }

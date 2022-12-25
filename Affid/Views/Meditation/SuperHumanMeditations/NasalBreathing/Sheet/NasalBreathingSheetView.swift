@@ -31,13 +31,11 @@ struct NasalBreathingSheetView: View {
                     .cornerRadius(10)
                     .edgesIgnoringSafeArea(.all)
             }
-            
             VStack{
                 Image("cloudsBirdBranchSheetBG")
                     .padding(.trailing, -130)
                     .offset(y: 250)
             }
-            
             
             VStack(alignment: .leading){
                 NasalMusicChoiceView(nasalBreathingVm: nasalBreathingVm)

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		DB2C89122955C8D1004EA602 /* NasalBreathingFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89112955C8D1004EA602 /* NasalBreathingFinishedView.swift */; };
+		DB2C89142958BF7F004EA602 /* FireBreathingMusicChoiseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89132958BF7F004EA602 /* FireBreathingMusicChoiseView.swift */; };
+		DB2C89162958C006004EA602 /* FireBreathingStartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89152958C006004EA602 /* FireBreathingStartButtonView.swift */; };
+		DB2C89182958C150004EA602 /* FireBreathingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89172958C150004EA602 /* FireBreathingViewModel.swift */; };
+		DB2C891A2958C35E004EA602 /* FireBreathingBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89192958C35E004EA602 /* FireBreathingBodyView.swift */; };
+		DB2C891D2958C6FA004EA602 /* FireBreathingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C891C2958C6FA004EA602 /* FireBreathingModel.swift */; };
 		DB2F62F42927F80A00D0BFFD /* BlueButtonSmaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F62F32927F80A00D0BFFD /* BlueButtonSmaller.swift */; };
 		DB2F62F72927F8F700D0BFFD /* CreateNewPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F62F62927F8F700D0BFFD /* CreateNewPasswordView.swift */; };
 		DB2F6303292962AB00D0BFFD /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6302292962AB00D0BFFD /* CustomTextField.swift */; };
@@ -28,9 +33,8 @@
 		DB2F634D292CD4C000D0BFFD /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F634C292CD4C000D0BFFD /* LoadingView.swift */; };
 		DB2F6350292D006E00D0BFFD /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = DB2F634F292D006E00D0BFFD /* GoogleSignIn */; };
 		DB2F6352292D006E00D0BFFD /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DB2F6351292D006E00D0BFFD /* GoogleSignInSwift */; };
-		DB2F6358292D113800D0BFFD /* OTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6357292D113800D0BFFD /* OTPModel.swift */; };
 		DB2F635B292D12BF00D0BFFD /* ResetLinkSentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F635A292D12BF00D0BFFD /* ResetLinkSentView.swift */; };
-		DB2F635E292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F635D292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift */; };
+		DB2F635E292D5B8B00D0BFFD /* FireBreathingSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F635D292D5B8B00D0BFFD /* FireBreathingSheetView.swift */; };
 		DB2F6361292E074600D0BFFD /* CheckmarkToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6360292E074600D0BFFD /* CheckmarkToggleView.swift */; };
 		DB2F6363292E087500D0BFFD /* SquareCheckmarkToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6362292E087500D0BFFD /* SquareCheckmarkToggleView.swift */; };
 		DB2F6365292E3EDB00D0BFFD /* NasalBreathingSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6364292E3EDB00D0BFFD /* NasalBreathingSheetView.swift */; };
@@ -112,6 +116,11 @@
 
 /* Begin PBXFileReference section */
 		DB2C89112955C8D1004EA602 /* NasalBreathingFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingFinishedView.swift; sourceTree = "<group>"; };
+		DB2C89132958BF7F004EA602 /* FireBreathingMusicChoiseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreathingMusicChoiseView.swift; sourceTree = "<group>"; };
+		DB2C89152958C006004EA602 /* FireBreathingStartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreathingStartButtonView.swift; sourceTree = "<group>"; };
+		DB2C89172958C150004EA602 /* FireBreathingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreathingViewModel.swift; sourceTree = "<group>"; };
+		DB2C89192958C35E004EA602 /* FireBreathingBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreathingBodyView.swift; sourceTree = "<group>"; };
+		DB2C891C2958C6FA004EA602 /* FireBreathingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreathingModel.swift; sourceTree = "<group>"; };
 		DB2F62F32927F80A00D0BFFD /* BlueButtonSmaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonSmaller.swift; sourceTree = "<group>"; };
 		DB2F62F62927F8F700D0BFFD /* CreateNewPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordView.swift; sourceTree = "<group>"; };
 		DB2F6302292962AB00D0BFFD /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -126,9 +135,8 @@
 		DB2F6346292CB42900D0BFFD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		DB2F6349292CCE6A00D0BFFD /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		DB2F634C292CD4C000D0BFFD /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		DB2F6357292D113800D0BFFD /* OTPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPModel.swift; sourceTree = "<group>"; };
 		DB2F635A292D12BF00D0BFFD /* ResetLinkSentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetLinkSentView.swift; sourceTree = "<group>"; };
-		DB2F635D292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationSettingsSheetView.swift; sourceTree = "<group>"; };
+		DB2F635D292D5B8B00D0BFFD /* FireBreathingSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreathingSheetView.swift; sourceTree = "<group>"; };
 		DB2F6360292E074600D0BFFD /* CheckmarkToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkToggleView.swift; sourceTree = "<group>"; };
 		DB2F6362292E087500D0BFFD /* SquareCheckmarkToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareCheckmarkToggleView.swift; sourceTree = "<group>"; };
 		DB2F6364292E3EDB00D0BFFD /* NasalBreathingSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingSheetView.swift; sourceTree = "<group>"; };
@@ -228,6 +236,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB2C891B2958C5F7004EA602 /* FireBreathingModels */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C891C2958C6FA004EA602 /* FireBreathingModel.swift */,
+			);
+			path = FireBreathingModels;
+			sourceTree = "<group>";
+		};
+		DB2C891E2958C71A004EA602 /* MainNavigationModels */ = {
+			isa = PBXGroup;
+			children = (
+				DBB0C4CE293F414D00373517 /* QuotesModel.swift */,
+				DBB0C4CC293F414400373517 /* TimerModel.swift */,
+				DBB0C4D0293F415700373517 /* BarModel.swift */,
+				DB2F6346292CB42900D0BFFD /* UserModel.swift */,
+			);
+			path = MainNavigationModels;
+			sourceTree = "<group>";
+		};
 		DB2F62F52927F8E800D0BFFD /* New Password */ = {
 			isa = PBXGroup;
 			children = (
@@ -398,7 +425,9 @@
 		DB4F866029520CCE001E3D3F /* Sheet */ = {
 			isa = PBXGroup;
 			children = (
-				DB2F635D292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift */,
+				DB2F635D292D5B8B00D0BFFD /* FireBreathingSheetView.swift */,
+				DB2C89132958BF7F004EA602 /* FireBreathingMusicChoiseView.swift */,
+				DB2C89152958C006004EA602 /* FireBreathingStartButtonView.swift */,
 			);
 			path = Sheet;
 			sourceTree = "<group>";
@@ -406,6 +435,7 @@
 		DB4F866129520CD3001E3D3F /* MeditationScreen */ = {
 			isa = PBXGroup;
 			children = (
+				DB2C89192958C35E004EA602 /* FireBreathingBodyView.swift */,
 			);
 			path = MeditationScreen;
 			sourceTree = "<group>";
@@ -594,6 +624,7 @@
 				DBB0C4D4293F41A200373517 /* QuotesViewModel.swift */,
 				DBB0C4D6293F41BF00373517 /* BarChartViewModel.swift */,
 				DBB0C5022941133700373517 /* StatsViewModel.swift */,
+				DB2C89172958C150004EA602 /* FireBreathingViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -601,12 +632,9 @@
 		DBD744AF2927AA1F0058225A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DB2C891B2958C5F7004EA602 /* FireBreathingModels */,
 				DB4F862F294B1873001E3D3F /* NasalBreathingModels */,
-				DB2F6346292CB42900D0BFFD /* UserModel.swift */,
-				DB2F6357292D113800D0BFFD /* OTPModel.swift */,
-				DBB0C4CC293F414400373517 /* TimerModel.swift */,
-				DBB0C4CE293F414D00373517 /* QuotesModel.swift */,
-				DBB0C4D0293F415700373517 /* BarModel.swift */,
+				DB2C891E2958C71A004EA602 /* MainNavigationModels */,
 				DBB0C4E6293FD13800373517 /* SoundsModel.swift */,
 			);
 			path = Models;
@@ -791,7 +819,7 @@
 				DBB0C4E3293F570E00373517 /* MeditationFinishedView.swift in Sources */,
 				DB2F6365292E3EDB00D0BFFD /* NasalBreathingSheetView.swift in Sources */,
 				DB4F86712954C630001E3D3F /* NasalBreathingBreatheOutRestView.swift in Sources */,
-				DB2F635E292D5B8B00D0BFFD /* MeditationSettingsSheetView.swift in Sources */,
+				DB2F635E292D5B8B00D0BFFD /* FireBreathingSheetView.swift in Sources */,
 				DBD744E82927F4E00058225A /* OTPView.swift in Sources */,
 				DBB0C4E5293FB59F00373517 /* TimerButtonView.swift in Sources */,
 				DB4F8666295219B2001E3D3F /* NasalBreathingHoldView.swift in Sources */,
@@ -806,6 +834,7 @@
 				DBB0C4FE29410E7E00373517 /* StatsView.swift in Sources */,
 				DBDF41162932583A000992FD /* BreathCountModel.swift in Sources */,
 				DBB0C506294115C500373517 /* AnimatableNumberModifier.swift in Sources */,
+				DB2C89162958C006004EA602 /* FireBreathingStartButtonView.swift in Sources */,
 				DBD744DC2927E9C10058225A /* SignUpPrivacyPolicyRow.swift in Sources */,
 				DB4F863F2951DE13001E3D3F /* DividerView.swift in Sources */,
 				DBD744B92927B73B0058225A /* LoginView.swift in Sources */,
@@ -822,6 +851,7 @@
 				DBB0C4D9293F436600373517 /* BarView.swift in Sources */,
 				DBB0C4CA293F410600373517 /* CoreDataManager.swift in Sources */,
 				DB4F863A2951DAA3001E3D3F /* NasalMusicChoiceView.swift in Sources */,
+				DB2C89182958C150004EA602 /* FireBreathingViewModel.swift in Sources */,
 				DB2F6347292CB42900D0BFFD /* UserModel.swift in Sources */,
 				DBB0C4C1293F406D00373517 /* APIService.swift in Sources */,
 				DBD744BC2927B76E0058225A /* ColorData.swift in Sources */,
@@ -858,11 +888,13 @@
 				DB4F8631294B188B001E3D3F /* NasalBreathingModel.swift in Sources */,
 				DB2F62F42927F80A00D0BFFD /* BlueButtonSmaller.swift in Sources */,
 				DBD744DE2927EB4E0058225A /* GetStartedNavigationLinks.swift in Sources */,
+				DB2C89142958BF7F004EA602 /* FireBreathingMusicChoiseView.swift in Sources */,
 				DBB0C4EC293FDE3200373517 /* RainSoundsView.swift in Sources */,
 				DB2F6308292B5C6500D0BFFD /* HomeView.swift in Sources */,
 				DB4F866B295338B3001E3D3F /* NasalBreathingHoldWarningView.swift in Sources */,
 				DBB0C4FA2940F9D300373517 /* MeditationFinishedOnlineView.swift in Sources */,
 				DBB0C4D3293F417800373517 /* TimerViewModel.swift in Sources */,
+				DB2C891A2958C35E004EA602 /* FireBreathingBodyView.swift in Sources */,
 				DB4F86332951D90B001E3D3F /* NasalBreathingSettingsData.swift in Sources */,
 				DBB0C4EE29408EB200373517 /* OceanSoundsView.swift in Sources */,
 				DBB0C510294127E400373517 /* ResetPasswordContentView.swift in Sources */,
@@ -870,10 +902,10 @@
 				DBB0C501294111C700373517 /* TotalSessions.swift in Sources */,
 				DBB0C5122941358700373517 /* ToolbarBackButtonDismiss.swift in Sources */,
 				DBB0C50C29411B5600373517 /* FavoriteMeditationView.swift in Sources */,
-				DB2F6358292D113800D0BFFD /* OTPModel.swift in Sources */,
 				DBB0C4D7293F41BF00373517 /* BarChartViewModel.swift in Sources */,
 				DBB0C4CD293F414400373517 /* TimerModel.swift in Sources */,
 				DB2F62F72927F8F700D0BFFD /* CreateNewPasswordView.swift in Sources */,
+				DB2C891D2958C6FA004EA602 /* FireBreathingModel.swift in Sources */,
 				DB2F63052929635E00D0BFFD /* OTPTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

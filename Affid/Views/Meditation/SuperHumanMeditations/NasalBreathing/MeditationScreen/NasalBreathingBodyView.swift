@@ -21,11 +21,13 @@ struct NasalBreathingBodyView: View {
                     .cornerRadius(10)
                     .edgesIgnoringSafeArea(.all)
                 VStack{
-                    Text("Round \(nasalBreathingVm.round)")
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .padding()
+                    if nasalBreathingVm.roundState != NasalBreathingRoundState.finished{
+                        Text("Round \(nasalBreathingVm.round)")
+                            .foregroundColor(.white)
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .padding()
+                    }
                     
                     Spacer()
                     
@@ -52,8 +54,11 @@ struct NasalBreathingBodyView: View {
                 }
             }
             .onTapGesture(count: 2, perform: {
-                if nasalBreathingVm.roundState == RoundState.hold{
+                if nasalBreathingVm.roundState == NasalBreathingRoundState.hold{
                     nasalBreathingVm.holdStop = true
+                }
+                else if nasalBreathingVm.roundState == NasalBreathingRoundState.breathing{
+                    nasalBreathingVm.retentionIsEarly = true
                 }
             })
             .toolbar{
@@ -70,10 +75,10 @@ struct NasalBreathingBodyView: View {
                     }
                     
                 }
-                if nasalBreathingVm.roundState != RoundState.finished && nasalBreathingVm.firstRoundBreathHoldComplete{
+                if nasalBreathingVm.roundState != NasalBreathingRoundState.finished && nasalBreathingVm.firstRoundBreathHoldComplete{
                     ToolbarItemGroup(placement: .navigationBarTrailing){
                         Button {
-                            nasalBreathingVm.roundState = RoundState.finished
+                            nasalBreathingVm.roundState = NasalBreathingRoundState.finished
                         } label: {
                             Text("Finish")
                                 .foregroundColor(.white)

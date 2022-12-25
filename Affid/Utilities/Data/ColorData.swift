@@ -25,4 +25,8 @@ class ColorData: ObservableObject{
     var theLighterGreen = Color(red: 118/255, green: 199/255, blue: 158/255)
     var theDarkerGreen = Color(red: 108/255, green: 178/255, blue: 142/255)
     
+    var theRed = Color(red: 250/255, green: 110/255, blue: 90/255)
+    var thedarkerRed = Color(red: 240/255, green: 93/255, blue: 72/255)
+    var theOrange = Color(red: 204/255, green: 109/255, blue: 67/255)
+    
 }

@@ -30,7 +30,8 @@ class NasalBreathingViewModel: ObservableObject{
     @Published var round: Int = 1
     @Published var firstRoundBreathHoldComplete: Bool = false
     
-    @Published var roundState = RoundState.countdown
+    @Published var retentionIsEarly: Bool = false
+    @Published var roundState = NasalBreathingRoundState.countdown
     @Published var countdown: Int = 5
     @Published var holdStop: Bool = false
     @Published var breathHoldSecondsFinished: Int = 0
@@ -65,7 +66,7 @@ class NasalBreathingViewModel: ObservableObject{
         self.retentionPhaseMusic = false
         self.totalBreaths = 0
         self.sessionSelection.removeAll()
-        self.roundState = RoundState.countdown
+        self.roundState = NasalBreathingRoundState.countdown
         self.countdown = 5
         self.round = 1
         self.hasExited = true

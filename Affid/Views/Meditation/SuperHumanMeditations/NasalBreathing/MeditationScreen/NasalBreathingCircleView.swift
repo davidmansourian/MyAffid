@@ -28,17 +28,27 @@ struct NasalBreathingCircleView: View {
                         .scaleEffect(scale)
                         .animation(.easeInOut(duration: 2).repeatCount((2*(nasalBreathingVm.totalBreaths)), autoreverses: true), value: nasalBreathingVm.animate)
                         .onReceive(nasalBreathingVm.breathingTimer) { _ in
-                            if breathCounter < nasalBreathingVm.totalBreaths{
-                                breathCounter += 1
-                            }
-                            else if breathCounter == nasalBreathingVm.totalBreaths{
-                                nasalBreathingVm.breathingTimer.upstream.connect().cancel()
-                                withAnimation(.default){
-                                    nasalBreathingVm.roundState = RoundState.prepareHold
+                            if !nasalBreathingVm.retentionIsEarly{
+                                if breathCounter < nasalBreathingVm.totalBreaths{
+                                    breathCounter += 1
                                 }
+                                else if breathCounter == nasalBreathingVm.totalBreaths{
+                                    nasalBreathingVm.breathingTimer.upstream.connect().cancel()
+                                    withAnimation(.default){
+                                        nasalBreathingVm.roundState = NasalBreathingRoundState.prepareHold
+                                    }
+                                }
+                            }
+                            else if nasalBreathingVm.retentionIsEarly{
+                                nasalBreathingVm.roundState = NasalBreathingRoundState.prepareHold
                             }
                         }
                 }
+                Text("Double tap to enter retention")
+                    .foregroundColor(.white)
+                    .font(.title)
+                    .fontWeight(.light)
+                    .padding()
                 
             }
             .onAppear{
@@ -46,6 +56,7 @@ struct NasalBreathingCircleView: View {
             }
             .onDisappear{
                 nasalBreathingVm.animate = false
+                nasalBreathingVm.retentionIsEarly = false
             }
         }
     }

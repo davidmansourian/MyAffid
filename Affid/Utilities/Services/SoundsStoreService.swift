@@ -17,7 +17,6 @@ class SoundsStoreService: ObservableObject{
         print("starting shit")
         Firestore.firestore().collection("sounds").getDocuments { (snapshot, error) in
             guard let snapshot = snapshot else{
-                print(error)
                 return
             }
             

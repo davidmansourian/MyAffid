@@ -38,11 +38,10 @@ actor SoundManager{
         let storage = Storage.storage().reference(forURL: sound)
         storage.downloadURL(){ url, error in
             guard let url = url else{
-                print("hejsan", error)
                 return
             }
             do {
-                self.playerRemote = try AVPlayer(playerItem: AVPlayerItem(url: url))
+                self.playerRemote = AVPlayer(playerItem: AVPlayerItem(url: url))
                 try AVAudioSession.sharedInstance().setCategory(.playback)
                 try AVAudioSession.sharedInstance().setActive(true)
                 self.playerRemote?.play()

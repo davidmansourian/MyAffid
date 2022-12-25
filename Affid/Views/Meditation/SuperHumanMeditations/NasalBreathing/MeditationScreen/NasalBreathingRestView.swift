@@ -38,7 +38,7 @@ struct NasalBreathingRestView: View {
                     else if restTimer == 0{
                         nasalBreathingVm.oneSecondTimer.upstream.connect().cancel()
                         withAnimation(.default){
-                            nasalBreathingVm.roundState = RoundState.exhaleRest
+                            nasalBreathingVm.roundState = NasalBreathingRoundState.exhaleRest
                         }
                     }
                 }

@@ -34,7 +34,7 @@ struct NasalBreathingCountdownView: View {
                         nasalBreathingVm.oneSecondTimer.upstream.connect().cancel() // in while-loop, at the beginning of the loop
                         // For each round, i need to be checking if countdown is 0. Then when user exits meditation, I need to reset the countdown to 5 seconds
                         withAnimation(.default){
-                            nasalBreathingVm.roundState = RoundState.breathing
+                            nasalBreathingVm.roundState = NasalBreathingRoundState.breathing
                         }
                         
                     }

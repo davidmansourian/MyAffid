@@ -38,7 +38,7 @@ struct NasalBreathingHoldView: View {
                             nasalBreathingVm.breathHoldSecondsFinished = breathHoldSec
                             nasalBreathingVm.appendSessionTracker()
                             withAnimation(.default){
-                                nasalBreathingVm.roundState = RoundState.rest
+                                nasalBreathingVm.roundState = NasalBreathingRoundState.rest
                             }
                         }
                     }
@@ -47,6 +47,7 @@ struct NasalBreathingHoldView: View {
                     .foregroundColor(.white)
                     .font(.title)
                     .fontWeight(.light)
+                    .padding()
             }
         }
         .onDisappear{

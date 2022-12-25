@@ -29,6 +29,9 @@ class CoreDataManager: ObservableObject{
         print("Saved session")
     }
     
+    func storeNasalBreathingSession(){
+        
+    }
     
     // https://stackoverflow.com/questions/35378820/extract-entity-from-last-seven-days-core-data
     // total timesCompleted
@@ -69,7 +72,6 @@ class CoreDataManager: ObservableObject{
     }
     
     func countMeditations(meditationType: String) -> Int{
-        let favorite: String = ""
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Session")
         let predicate = NSPredicate(format: "type == %@", meditationType)
         fetchRequest.predicate = predicate
@@ -99,7 +101,4 @@ class CoreDataManager: ObservableObject{
         
         return [Session]()
     }
-    
-    
-    
 }

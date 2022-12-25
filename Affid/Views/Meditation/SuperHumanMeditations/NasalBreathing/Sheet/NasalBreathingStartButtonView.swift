@@ -21,9 +21,7 @@ struct NasalBreathingStartButtonView: View {
             HStack{
                 Spacer()
                 Button {
-                    Task{
-                        await nasalBreathingVm.getNasalBreathSettings()
-                    }
+                    nasalBreathingVm.getNasalBreathSettings()
                     closeAndDisplayFullScreen()
                 } label: {
                     Text("Start")

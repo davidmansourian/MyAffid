@@ -23,7 +23,7 @@ struct BreathHoldModel: Identifiable{
     
 }
 
-enum RoundState{
+enum NasalBreathingRoundState{
     case countdown, breathing, prepareHold, hold, rest, exhaleRest, finished
 }
 

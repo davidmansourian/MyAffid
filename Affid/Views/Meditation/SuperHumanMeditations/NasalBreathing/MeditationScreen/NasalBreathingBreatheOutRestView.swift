@@ -32,7 +32,7 @@ struct NasalBreathingBreatheOutRestView: View {
                 }
                 else if countdown == 1{
                     nasalBreathingVm.oneSecondTimer.upstream.connect().cancel()
-                    nasalBreathingVm.roundState = RoundState.breathing
+                    nasalBreathingVm.roundState = NasalBreathingRoundState.breathing
                     nasalBreathingVm.round += 1
                 }
             }
