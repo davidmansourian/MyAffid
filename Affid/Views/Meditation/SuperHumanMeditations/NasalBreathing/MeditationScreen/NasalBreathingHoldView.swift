@@ -50,7 +50,11 @@ struct NasalBreathingHoldView: View {
                     .padding()
             }
         }
+        .onAppear{
+            nasalBreathingVm.theStartDate = Date().timeIntervalSince1970
+        }
         .onDisappear{
+            nasalBreathingVm.theEndDate = Date().timeIntervalSince1970
             nasalBreathingVm.holdStop = false
         }
     }

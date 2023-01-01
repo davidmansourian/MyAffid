@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var viewModel: AuthViewModel
-    @StateObject var soundsService = SoundsStoreService()
     var body: some View {
         if let authedUser = viewModel.currentUser{
             ZStack{

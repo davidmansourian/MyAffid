@@ -38,6 +38,9 @@ class NasalBreathingViewModel: ObservableObject{
     
     @Published var longestRound: Int = 0
     
+    @Published var theStartDate: Double = 0
+    @Published var theEndDate: Double = 0
+    
     
     
     init(){
@@ -76,7 +79,7 @@ class NasalBreathingViewModel: ObservableObject{
     }
     
     func appendSessionTracker(){
-        self.sessionTracker.append(BreathHoldModel(round: self.round, timeBreathHeld: self.breathHoldSecondsFinished))
+        self.sessionTracker.append(BreathHoldModel(round: String("\(self.round)"), timeBreathHeld: self.breathHoldSecondsFinished))
         if self.breathHoldSecondsFinished > longestRound{
             longestRound = self.breathHoldSecondsFinished
         }
@@ -89,4 +92,12 @@ class NasalBreathingViewModel: ObservableObject{
         
         return String(format: "%0i:%02i", minutes, seconds)
     }
+    
+    func convertSecondsToTimeString(timeInSeconds: Int) -> String{
+        let minutes = timeInSeconds / 60
+        let seconds = timeInSeconds % 60
+        
+        return minutes > 0 ? String("\(minutes) min \(seconds) sec") : String("\(seconds) sec")
+    }
+
 }

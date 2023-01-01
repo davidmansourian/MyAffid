@@ -7,8 +7,6 @@
 
 import Foundation
 import AVKit
-import FirebaseFirestore
-import FirebaseStorage
 
 
 actor SoundManager{
@@ -35,21 +33,22 @@ actor SoundManager{
     }
     
     func playURLSound(sound: String){
-        let storage = Storage.storage().reference(forURL: sound)
-        storage.downloadURL(){ url, error in
-            guard let url = url else{
-                return
-            }
-            do {
-                self.playerRemote = AVPlayer(playerItem: AVPlayerItem(url: url))
-                try AVAudioSession.sharedInstance().setCategory(.playback)
-                try AVAudioSession.sharedInstance().setActive(true)
-                self.playerRemote?.play()
-            } catch let error {
-                print("DEBUG: Couldn't get audio due to \(error.localizedDescription)")
-                self.loading = false
-            }
+        loading = true
+        guard let urlString = URL(string: sound) else {
+            loading = false
+            return
+            
+        }
+        do {
+            self.playerRemote = AVPlayer(playerItem: AVPlayerItem(url: urlString))
+            try AVAudioSession.sharedInstance().setCategory(.playback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            loading = false
+            self.playerRemote?.play()
+        } catch let error {
+            print("DEBUG: Couldn't get audio due to \(error.localizedDescription)")
+            self.loading = false
         }
     }
-    
 }
+

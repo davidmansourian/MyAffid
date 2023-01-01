@@ -34,7 +34,7 @@ struct OceanSoundsView: View {
             }
             .onAppear(){
                 Task{
-                    await SoundManager.shared.playURLSound(sound: "gs://affid-777aa.appspot.com/noise/oceansounds.mp3")
+                    await SoundManager.shared.playURLSound(sound: "https://audio.davidmansourian.se/oceansounds.mp3")
                 }
             }
             .onDisappear(){

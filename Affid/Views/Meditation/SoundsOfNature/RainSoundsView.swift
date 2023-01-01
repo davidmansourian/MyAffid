@@ -34,7 +34,7 @@ struct RainSoundsView: View {
             }
             .onAppear(){
                 Task{
-                   await SoundManager.shared.playURLSound(sound: "gs://affid-777aa.appspot.com/noise/rainsounds.mp3")
+                   await SoundManager.shared.playURLSound(sound: "https://audio.davidmansourian.se/rainsounds.mp3")
                 }
             }
             .onDisappear(){

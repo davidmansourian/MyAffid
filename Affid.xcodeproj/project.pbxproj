@@ -75,7 +75,6 @@
 		DBB0C4E3293F570E00373517 /* MeditationFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4E2293F570E00373517 /* MeditationFinishedView.swift */; };
 		DBB0C4E5293FB59F00373517 /* TimerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4E4293FB59F00373517 /* TimerButtonView.swift */; };
 		DBB0C4E7293FD13800373517 /* SoundsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4E6293FD13800373517 /* SoundsModel.swift */; };
-		DBB0C4E9293FD17300373517 /* SoundsStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4E8293FD17300373517 /* SoundsStoreService.swift */; };
 		DBB0C4EC293FDE3200373517 /* RainSoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4EB293FDE3200373517 /* RainSoundsView.swift */; };
 		DBB0C4EE29408EB200373517 /* OceanSoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4ED29408EB200373517 /* OceanSoundsView.swift */; };
 		DBB0C4F02940C02300373517 /* SignUpTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4EF2940C02200373517 /* SignUpTextFieldView.swift */; };
@@ -180,7 +179,6 @@
 		DBB0C4E2293F570E00373517 /* MeditationFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationFinishedView.swift; sourceTree = "<group>"; };
 		DBB0C4E4293FB59F00373517 /* TimerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButtonView.swift; sourceTree = "<group>"; };
 		DBB0C4E6293FD13800373517 /* SoundsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsModel.swift; sourceTree = "<group>"; };
-		DBB0C4E8293FD17300373517 /* SoundsStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsStoreService.swift; sourceTree = "<group>"; };
 		DBB0C4EB293FDE3200373517 /* RainSoundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainSoundsView.swift; sourceTree = "<group>"; };
 		DBB0C4ED29408EB200373517 /* OceanSoundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OceanSoundsView.swift; sourceTree = "<group>"; };
 		DBB0C4EF2940C02200373517 /* SignUpTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextFieldView.swift; sourceTree = "<group>"; };
@@ -349,7 +347,6 @@
 			children = (
 				DB2F6344292CB17B00D0BFFD /* UserService.swift */,
 				DBB0C4C0293F406D00373517 /* APIService.swift */,
-				DBB0C4E8293FD17300373517 /* SoundsStoreService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -875,7 +872,6 @@
 				DB2F6315292B61D900D0BFFD /* MainMeditationView.swift in Sources */,
 				DBD744D22927D3930058225A /* LoginExternalPlatformView.swift in Sources */,
 				DB4F866F29547117001E3D3F /* GenericBreathingCircleView.swift in Sources */,
-				DBB0C4E9293FD17300373517 /* SoundsStoreService.swift in Sources */,
 				DB4F864A29520461001E3D3F /* SuperHumanMeditationsView.swift in Sources */,
 				DB2F634D292CD4C000D0BFFD /* LoadingView.swift in Sources */,
 				DBB0C4F02940C02300373517 /* SignUpTextFieldView.swift in Sources */,

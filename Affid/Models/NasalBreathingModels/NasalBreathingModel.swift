@@ -18,7 +18,7 @@ struct NasalBreathingModel{
 
 struct BreathHoldModel: Identifiable{
     let id = UUID()
-    let round: Int // round
+    let round: String // round
     let timeBreathHeld: Int // time held
     
 }
