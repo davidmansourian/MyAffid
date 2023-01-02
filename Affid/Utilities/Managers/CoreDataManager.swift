@@ -100,11 +100,11 @@ class CoreDataManager: ObservableObject{
         return 0
     }
     
-    func getSessionsPerMonth() -> [Session]{
+    func getCompletedSessions(startDate: Date, endDate: Date) -> [Session]{
         let today = Date.now
         let thisYear = Calendar.current.dateInterval(of: .year, for: today)!
         let fetchRequest: NSFetchRequest<Session> = Session.fetchRequest()
-        let predicate = NSPredicate(format: "date >= %@ AND date < %@ AND completed == %@", thisYear.start as NSDate, thisYear.end as NSDate, NSNumber(booleanLiteral: true))
+        let predicate = NSPredicate(format: "date >= %@ AND date < %@ AND completed == %@", startDate as NSDate, endDate as NSDate, NSNumber(booleanLiteral: true))
         var fetchedData: [Session] = []
         fetchRequest.predicate = predicate
         do {
@@ -116,6 +116,20 @@ class CoreDataManager: ObservableObject{
         
         return [Session]()
     }
+    
+    func getSessions() -> [Session]{
+        let fetchRequest: NSFetchRequest<Session> = Session.fetchRequest()
+        var fetchedData: [Session] = []
+        do{
+            fetchedData = try moc.fetch(fetchRequest)
+            return fetchedData
+        } catch let error {
+            print(error)
+        }
+        
+        return [Session]()
+    }
+    
 }
 
 

@@ -33,6 +33,7 @@ struct NasalBreathingCustomToolbarView: View {
             
             if nasalBreathingVm.roundState != NasalBreathingRoundState.finished && nasalBreathingVm.firstRoundBreathHoldComplete{
                 Button {
+                    nasalBreathingVm.sessionCounterTimer.upstream.connect().cancel()
                     nasalBreathingVm.roundState = NasalBreathingRoundState.finished
                     nasalBreathingVm.saveSession()
                 } label: {

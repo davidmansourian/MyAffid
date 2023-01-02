@@ -34,6 +34,9 @@ struct NasalBreathingBodyView: View {
                 Spacer()
             }
         }
+        .onReceive(nasalBreathingVm.sessionCounterTimer){ _ in
+            nasalBreathingVm.sessionLength += 1
+        }
         .onTapGesture(count: 2, perform: {
             if nasalBreathingVm.roundState == NasalBreathingRoundState.hold{
                 nasalBreathingVm.holdStop = true

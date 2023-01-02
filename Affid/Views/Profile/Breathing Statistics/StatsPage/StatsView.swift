@@ -17,11 +17,15 @@ struct StatsView: View {
             
             VStack(alignment: .leading){
                 Text("Statistics")
+                    .padding()
                     .foregroundColor(.white)
                     .font(.title)
                     .fontWeight(.light)
                 ScrollView{
+                    TotalSessionsView(statsVm: statsVm)
+                       // .preferredColorScheme(.dark)
                     
+                    AverageSessionLengthView(statsVm: statsVm)
                     
                 }
             }

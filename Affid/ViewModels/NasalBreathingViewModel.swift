@@ -12,17 +12,17 @@ import Combine
 class NasalBreathingViewModel: ObservableObject{
     private var hasExited: Bool = false
     private var meditationType: String = "Nasal Breathing"
-    private var sessionLength: Float = 0
     private var totalHoldLength: Int = 0
     private var averageHoldLength: Int = 0
     
     @Published var longestHoldRound: Int = 1
     @Published var breathsCompleted: Int = 1
-    
+    @Published var sessionLength: Float = 0
     @Published var sessionTracker: [BreathHoldModel] = [] // needs to be emptied when the session is intialized (not via init tho)
     
     let oneSecondTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect() // 1 sec timer
     let breathingTimer = Timer.publish(every: 4, on: .main, in: .common).autoconnect() // breathcounter-timer // make generic timer for all that publish ever 1 sec
+    let sessionCounterTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     
     

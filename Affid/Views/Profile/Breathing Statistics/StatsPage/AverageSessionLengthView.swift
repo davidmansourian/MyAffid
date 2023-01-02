@@ -1,5 +1,5 @@
 //
-//  TotalSessionsView.swift
+//  AverageSessionLengthView.swift
 //  Affid
 //
 //  Created by David on 2023-01-02.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Charts
 
-struct TotalSessionsView: View {
+struct AverageSessionLengthView: View {
     @StateObject var statsVm: StatsViewModel
     var statsBckgroundColor: Color = Color(red: 47/255, green: 49/255, blue: 54/255)
     
@@ -18,23 +18,18 @@ struct TotalSessionsView: View {
     var body: some View {
         VStack{
             VStack(alignment: .leading){
-                Text("Completed sessions this week")
+                Text("Average Session Length")
                     .foregroundColor(.white)
                     .font(.callout)
                     .fontWeight(.light)
                     .padding(.leading, 10)
                     .padding(.top, 5)
-                Text("\(statsVm.totalCompletedMeditations)")
-                    .foregroundColor(.white)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .padding(.leading, 10)
-                Chart(statsVm.sessionsPerDay){ element in
+                Chart(statsVm.allSessionsArr){ element in
                     BarMark(
-                        x: .value("Day", element.day),
-                        y: .value("Sessions", element.count)
+                        x: .value("Session", element.length), // need to account for number of times done, also need to show length in minutes
+                        y: .value("Type", element.type ?? "")
                     )
-                    .foregroundStyle(by: .value("Session Type", element.type))
+                    .foregroundStyle(by: .value("Session Type", element.type ?? ""))
                 }
                 .chartXAxis{
                     AxisMarks{ value in
@@ -59,14 +54,9 @@ struct TotalSessionsView: View {
         }
         .onAppear{
             Task{
-                await statsVm.getSessionsPerDayForWeek()
+                await statsVm.getAverageSessionLength()
             }
         }
-    }
-}
 
-struct TotalSessionsView_Previews: PreviewProvider {
-    static var previews: some View {
-        TotalSessionsView(statsVm: StatsViewModel())
     }
 }

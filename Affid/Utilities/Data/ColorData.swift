@@ -29,4 +29,6 @@ class ColorData: ObservableObject{
     var thedarkerRed = Color(red: 240/255, green: 93/255, blue: 72/255)
     var theOrange = Color(red: 204/255, green: 109/255, blue: 67/255)
     
+    var statsBckgroundColor: Color = Color(red: 28/255, green: 28/255, blue: 28/255)
+    
 }
