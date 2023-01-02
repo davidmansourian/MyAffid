@@ -16,7 +16,7 @@ class BarChartViewModel: ObservableObject{
     
     
     init(){
-        //loadBarChart()
+        loadBarChart()
     }
     
     
@@ -27,19 +27,22 @@ class BarChartViewModel: ObservableObject{
     }
     
     
-    /*func getYearlyStats(){
-        for session in coreDataManager.getCompletedSessions(){
+    func getYearlyStats(){
+        let today = Date.now
+        let thisYear = Calendar.current.dateInterval(of: .year, for: today)!
+        for session in coreDataManager.getCompletedSessions(startDate: thisYear.start, endDate: thisYear.end){
             let monthInt = Calendar.current.component(.month, from: session.date!)
             monthlyCountArr[monthInt-1].count += 1 // minus 1 because dictionary loads from 0 to 11
         }
-    }*/
+        print(monthlyCountArr)
+    }
     
-    /*func loadBarChart(){
+    func loadBarChart(){
         monthlyCountArr.removeAll()
         loadMonthCountWithMonth()
         getYearlyStats()
         let color: Color = ColorData.shared.appSystemYellow
-        let months = ["January", "February", "Mmars", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+        let months = ["January", "February", "Mars", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
         
         for month in monthlyCountArr{
             let barItem = Bar(name: "\(month.month)", month: months[month.month-1], value: Double(month.count), color: color)
@@ -47,6 +50,6 @@ class BarChartViewModel: ObservableObject{
         }
      
         
-    }*/
+    }
 }
     

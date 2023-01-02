@@ -16,12 +16,13 @@ struct StatsView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack(alignment: .leading){
-                Text("Statistics")
-                    .padding()
-                    .foregroundColor(.white)
-                    .font(.title)
-                    .fontWeight(.light)
                 ScrollView{
+                    Text("Statistics")
+                        .padding()
+                        .foregroundColor(.white)
+                        .font(.title)
+                        .fontWeight(.light)
+                    
                     TotalSessionsView(statsVm: statsVm)
                        // .preferredColorScheme(.dark)
                     
