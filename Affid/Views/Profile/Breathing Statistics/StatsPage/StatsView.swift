@@ -15,40 +15,15 @@ struct StatsView: View {
             ColorData.shared.backGroundColor
                 .edgesIgnoringSafeArea(.all)
             
-            VStack(alignment: .center){
+            VStack(alignment: .leading){
+                Text("Statistics")
+                    .foregroundColor(.white)
+                    .font(.title)
+                    .fontWeight(.light)
                 ScrollView{
                     
-                    Text("Total Sessions")
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .fontWeight(.thin)
-                        .padding(30)
-                    
-                    TotalSessions(statsVm: statsVm)
-                    
-                    Text("Sessions Completed")
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .fontWeight(.thin)
-                        .padding(30)
-                    
-                    SessionsCompletedView(statsVm: statsVm)
-                    
-                    
-                    Text("Favorite Meditation")
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .fontWeight(.thin)
-                        .padding(30)
-                    
-                    FavoriteMeditationView(statsVm: statsVm)
                     
                 }
-                
-                Image("birdOnBranch")
-                    .offset(x: 100)
-                
-                
             }
         }
         .toolbar{

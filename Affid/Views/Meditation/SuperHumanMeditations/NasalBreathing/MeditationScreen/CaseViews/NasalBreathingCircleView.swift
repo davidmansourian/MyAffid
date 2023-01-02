@@ -31,6 +31,7 @@ struct NasalBreathingCircleView: View {
                             if !nasalBreathingVm.retentionIsEarly{
                                 if breathCounter < nasalBreathingVm.totalBreaths{
                                     breathCounter += 1
+                                    nasalBreathingVm.breathsCompleted += 1
                                 }
                                 else if breathCounter == nasalBreathingVm.totalBreaths{
                                     nasalBreathingVm.breathingTimer.upstream.connect().cancel()

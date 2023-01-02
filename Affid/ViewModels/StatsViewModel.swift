@@ -14,8 +14,14 @@ class StatsViewModel: ObservableObject{
     @Published var totalMeditations: Int = 0
     @Published var favoriteMeditation: String = ""
     
+    // First bar chart preview:
+    // Total sessions (including all meditation sessions) per day / week
+    // Clicking on it will reveal a picker to sort by month and year as well
     
-    func getTotalMeditationsCompleted(){
+    
+    
+    
+    func getTotalMeditationsCompleted(){ // get number of total meditations, get session type, session
         totalCompletedMeditations = coreDataManager.countTotalTimesMeditatedCompleted()
     }
     

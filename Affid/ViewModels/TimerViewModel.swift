@@ -27,7 +27,7 @@ class TimerViewModel: ObservableObject{
     private var initialTime = 1
     private var endDate = Date()
     private var totalTimeRemaining: Int = 0
-    private var meditationType: String = "regular"
+    private var meditationType: String = "Regular"
     
     init(){
         loadPickerWithMinutes()

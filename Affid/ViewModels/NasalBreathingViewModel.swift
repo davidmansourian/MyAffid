@@ -13,10 +13,11 @@ class NasalBreathingViewModel: ObservableObject{
     private var hasExited: Bool = false
     private var meditationType: String = "Nasal Breathing"
     private var sessionLength: Float = 0
+    private var totalHoldLength: Int = 0
     private var averageHoldLength: Int = 0
     
-    @Published var longestHoldRound: Int = 0
-    @Published var breathsCompleted: Int = 0
+    @Published var longestHoldRound: Int = 1
+    @Published var breathsCompleted: Int = 1
     
     @Published var sessionTracker: [BreathHoldModel] = [] // needs to be emptied when the session is intialized (not via init tho)
     
@@ -71,7 +72,14 @@ class NasalBreathingViewModel: ObservableObject{
         print(self.sessionSelection)
     }
     
+    
     func cleanSession(){
+        self.sessionTracker.removeAll()
+        self.sessionLength = 0
+        self.averageHoldLength = 0
+        self.totalHoldLength = 0
+        self.breathsCompleted = 1
+        self.longestHoldRound = 1
         self.breathingPhaseMusic = false
         self.retentionPhaseMusic = false
         self.totalBreaths = 0
@@ -86,14 +94,17 @@ class NasalBreathingViewModel: ObservableObject{
     }
     
     func appendSessionTracker(){
+        self.totalHoldLength += self.breathHoldSecondsFinished
         self.sessionTracker.append(BreathHoldModel(round: String("\(self.round)"), timeBreathHeld: self.breathHoldSecondsFinished))
         if self.breathHoldSecondsFinished > longestRound{
-            longestRound = self.breathHoldSecondsFinished
+            self.longestRound = self.breathHoldSecondsFinished
+            self.longestHoldRound = self.round
         }
         print(sessionTracker)
     }
     
     func saveSession(){
+        self.averageHoldLength = self.totalHoldLength / self.round
         let now = Date()
         CoreDataManager.shared.storeNasalBreathingSession(theSession: self.sessionTracker, theDate: now, rounds: self.round, longestHold: self.longestRound, longestHoldRound: self.longestHoldRound, breathsChosen: self.totalBreaths, breathsCompleted: self.breathsCompleted, sessionLength: self.sessionLength, averageHoldLength: self.averageHoldLength, sessionType: self.meditationType)
     }

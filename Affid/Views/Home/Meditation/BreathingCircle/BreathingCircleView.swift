@@ -13,21 +13,21 @@ struct BreathingCircleView: View {
     @State private var animate = false
     @StateObject var timerVm = TimerViewModel()
     var body: some View {
-                ZStack{
-                    
-                    CirclesView()
-                    
-                    VStack{
-                        
-                        TimerView(timerVm: timerVm)
-                    }
-                    .onReceive(timerVm.timer){ _ in
-                        timerVm.updateCountdownw()
-                    }
-                    .sheet(isPresented: $timerVm.showingAlert, onDismiss: {timerVm.showingAlert = false}){
-                        MeditationFinishedSheet()
-                    }
-                    
-                }
+        ZStack{
+            
+            CirclesView()
+            
+            VStack{
+                
+                TimerView(timerVm: timerVm)
+            }
+            .onReceive(timerVm.timer){ _ in
+                timerVm.updateCountdownw()
+            }
+            .sheet(isPresented: $timerVm.showingAlert, onDismiss: {timerVm.showingAlert = false}){
+                MeditationFinishedSheet()
+            }
+            
+        }
     }
 }

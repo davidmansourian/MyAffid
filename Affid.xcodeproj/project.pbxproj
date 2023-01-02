@@ -32,6 +32,7 @@
 		DB2C89612962FB3C004EA602 /* FireBreathingSession+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C895B2962FB3C004EA602 /* FireBreathingSession+CoreDataProperties.swift */; };
 		DB2C89622962FB3C004EA602 /* Session+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C895C2962FB3C004EA602 /* Session+CoreDataClass.swift */; };
 		DB2C89632962FB3C004EA602 /* Session+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C895D2962FB3C004EA602 /* Session+CoreDataProperties.swift */; };
+		DB2C89662963121E004EA602 /* TotalSessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89652963121E004EA602 /* TotalSessionsView.swift */; };
 		DB2F62F42927F80A00D0BFFD /* BlueButtonSmaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F62F32927F80A00D0BFFD /* BlueButtonSmaller.swift */; };
 		DB2F62F72927F8F700D0BFFD /* CreateNewPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F62F62927F8F700D0BFFD /* CreateNewPasswordView.swift */; };
 		DB2F6303292962AB00D0BFFD /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6302292962AB00D0BFFD /* CustomTextField.swift */; };
@@ -99,11 +100,8 @@
 		DBB0C4FA2940F9D300373517 /* MeditationFinishedOnlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4F92940F9D300373517 /* MeditationFinishedOnlineView.swift */; };
 		DBB0C4FC2940F9DB00373517 /* MeditationFinishedOfflineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4FB2940F9DB00373517 /* MeditationFinishedOfflineView.swift */; };
 		DBB0C4FE29410E7E00373517 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C4FD29410E7E00373517 /* StatsView.swift */; };
-		DBB0C501294111C700373517 /* TotalSessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C500294111C700373517 /* TotalSessions.swift */; };
 		DBB0C5032941133700373517 /* StatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C5022941133700373517 /* StatsViewModel.swift */; };
 		DBB0C506294115C500373517 /* AnimatableNumberModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C505294115C500373517 /* AnimatableNumberModifier.swift */; };
-		DBB0C50A294117CD00373517 /* SessionsCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C509294117CD00373517 /* SessionsCompletedView.swift */; };
-		DBB0C50C29411B5600373517 /* FavoriteMeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C50B29411B5600373517 /* FavoriteMeditationView.swift */; };
 		DBB0C50E29411EA800373517 /* ProfileActionMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C50D29411EA800373517 /* ProfileActionMenuView.swift */; };
 		DBB0C510294127E400373517 /* ResetPasswordContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C50F294127E400373517 /* ResetPasswordContentView.swift */; };
 		DBB0C5122941358700373517 /* ToolbarBackButtonDismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB0C5112941358700373517 /* ToolbarBackButtonDismiss.swift */; };
@@ -158,6 +156,7 @@
 		DB2C895B2962FB3C004EA602 /* FireBreathingSession+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FireBreathingSession+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DB2C895C2962FB3C004EA602 /* Session+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DB2C895D2962FB3C004EA602 /* Session+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DB2C89652963121E004EA602 /* TotalSessionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalSessionsView.swift; sourceTree = "<group>"; };
 		DB2F62F32927F80A00D0BFFD /* BlueButtonSmaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonSmaller.swift; sourceTree = "<group>"; };
 		DB2F62F62927F8F700D0BFFD /* CreateNewPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordView.swift; sourceTree = "<group>"; };
 		DB2F6302292962AB00D0BFFD /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -219,11 +218,8 @@
 		DBB0C4F92940F9D300373517 /* MeditationFinishedOnlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationFinishedOnlineView.swift; sourceTree = "<group>"; };
 		DBB0C4FB2940F9DB00373517 /* MeditationFinishedOfflineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationFinishedOfflineView.swift; sourceTree = "<group>"; };
 		DBB0C4FD29410E7E00373517 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
-		DBB0C500294111C700373517 /* TotalSessions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalSessions.swift; sourceTree = "<group>"; };
 		DBB0C5022941133700373517 /* StatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewModel.swift; sourceTree = "<group>"; };
 		DBB0C505294115C500373517 /* AnimatableNumberModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableNumberModifier.swift; sourceTree = "<group>"; };
-		DBB0C509294117CD00373517 /* SessionsCompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsCompletedView.swift; sourceTree = "<group>"; };
-		DBB0C50B29411B5600373517 /* FavoriteMeditationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMeditationView.swift; sourceTree = "<group>"; };
 		DBB0C50D29411EA800373517 /* ProfileActionMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionMenuView.swift; sourceTree = "<group>"; };
 		DBB0C50F294127E400373517 /* ResetPasswordContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordContentView.swift; sourceTree = "<group>"; };
 		DBB0C5112941358700373517 /* ToolbarBackButtonDismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarBackButtonDismiss.swift; sourceTree = "<group>"; };
@@ -642,9 +638,7 @@
 			isa = PBXGroup;
 			children = (
 				DBB0C4FD29410E7E00373517 /* StatsView.swift */,
-				DBB0C500294111C700373517 /* TotalSessions.swift */,
-				DBB0C509294117CD00373517 /* SessionsCompletedView.swift */,
-				DBB0C50B29411B5600373517 /* FavoriteMeditationView.swift */,
+				DB2C89652963121E004EA602 /* TotalSessionsView.swift */,
 			);
 			path = StatsPage;
 			sourceTree = "<group>";
@@ -932,7 +926,6 @@
 				DBB0C4F62940F6E700373517 /* OfflineView.swift in Sources */,
 				DBD744A62927A9240058225A /* Affid.xcdatamodeld in Sources */,
 				DB2C895E2962FB3C004EA602 /* NasalBreathingSession+CoreDataClass.swift in Sources */,
-				DBB0C50A294117CD00373517 /* SessionsCompletedView.swift in Sources */,
 				DBB0C4FE29410E7E00373517 /* StatsView.swift in Sources */,
 				DBDF41162932583A000992FD /* BreathCountModel.swift in Sources */,
 				DB2C893D2962E64E004EA602 /* NasalBreathingSwitchContentView.swift in Sources */,
@@ -986,6 +979,7 @@
 				DBD744C92927D2560058225A /* GetStartedCloudsView.swift in Sources */,
 				DB2C89352962E519004EA602 /* FireBreathingTapActionView.swift in Sources */,
 				DBDF4118293258B6000992FD /* NasalBreathingViewModel.swift in Sources */,
+				DB2C89662963121E004EA602 /* TotalSessionsView.swift in Sources */,
 				DBD7449C2927A9220058225A /* ContentView.swift in Sources */,
 				DBD7449A2927A9220058225A /* AffidApp.swift in Sources */,
 				DBD744B32927AB750058225A /* GetStartedView.swift in Sources */,
@@ -1009,9 +1003,7 @@
 				DB2C89202958C848004EA602 /* FireBreathingNormalBreathView.swift in Sources */,
 				DBB0C510294127E400373517 /* ResetPasswordContentView.swift in Sources */,
 				DBB0C4E7293FD13800373517 /* SoundsModel.swift in Sources */,
-				DBB0C501294111C700373517 /* TotalSessions.swift in Sources */,
 				DBB0C5122941358700373517 /* ToolbarBackButtonDismiss.swift in Sources */,
-				DBB0C50C29411B5600373517 /* FavoriteMeditationView.swift in Sources */,
 				DBB0C4D7293F41BF00373517 /* BarChartViewModel.swift in Sources */,
 				DBB0C4CD293F414400373517 /* TimerModel.swift in Sources */,
 				DB2F62F72927F8F700D0BFFD /* CreateNewPasswordView.swift in Sources */,

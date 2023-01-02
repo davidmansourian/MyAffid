@@ -37,6 +37,7 @@ struct NasalBreathingBodyView: View {
         .onTapGesture(count: 2, perform: {
             if nasalBreathingVm.roundState == NasalBreathingRoundState.hold{
                 nasalBreathingVm.holdStop = true
+                
             }
             else if nasalBreathingVm.roundState == NasalBreathingRoundState.breathing{
                 nasalBreathingVm.retentionIsEarly = true

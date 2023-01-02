@@ -16,24 +16,25 @@ struct NasalBreathingCustomToolbarView: View {
     }
     var body: some View {
         HStack{
-            Button {
-                dismiss()
-                Task{
-                    nasalBreathingVm.cleanSession()
+                Button {
+                    dismiss()
+                    Task{
+                        nasalBreathingVm.cleanSession()
+                    }
+                } label: {
+                    Image(systemName: "x.circle")
+                        .foregroundColor(.white)
+                        .font(.title)
+                        .fontWeight(.bold)
                 }
-            } label: {
-                Image(systemName: "x.circle")
-                    .foregroundColor(.white)
-                    .font(.title)
-                    .fontWeight(.bold)
-            }
-            .padding()
+                .padding()
             
             Spacer()
             
             if nasalBreathingVm.roundState != NasalBreathingRoundState.finished && nasalBreathingVm.firstRoundBreathHoldComplete{
                 Button {
                     nasalBreathingVm.roundState = NasalBreathingRoundState.finished
+                    nasalBreathingVm.saveSession()
                 } label: {
                     Text("Finish")
                         .foregroundColor(.white)
