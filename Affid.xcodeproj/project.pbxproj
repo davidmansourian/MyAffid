@@ -17,6 +17,15 @@
 		DB2C89222958C900004EA602 /* FireBreathingExhaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89212958C900004EA602 /* FireBreathingExhaleView.swift */; };
 		DB2C89242958C9A2004EA602 /* FireBreathingHoldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89232958C9A2004EA602 /* FireBreathingHoldView.swift */; };
 		DB2C89282962D860004EA602 /* FireBreathingFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89272962D860004EA602 /* FireBreathingFinishedView.swift */; };
+		DB2C892B2962E332004EA602 /* FireBreathingCaseTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C892A2962E332004EA602 /* FireBreathingCaseTextView.swift */; };
+		DB2C892D2962E394004EA602 /* FireBreathingCustomNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C892C2962E394004EA602 /* FireBreathingCustomNavigationBarView.swift */; };
+		DB2C892F2962E3F0004EA602 /* FireBreathingCaseContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C892E2962E3F0004EA602 /* FireBreathingCaseContentView.swift */; };
+		DB2C89312962E43C004EA602 /* FireBreathingRoundCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89302962E43C004EA602 /* FireBreathingRoundCounterView.swift */; };
+		DB2C89332962E48C004EA602 /* FireBreatingCirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89322962E48C004EA602 /* FireBreatingCirclesView.swift */; };
+		DB2C89352962E519004EA602 /* FireBreathingTapActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89342962E519004EA602 /* FireBreathingTapActionView.swift */; };
+		DB2C89392962E5D3004EA602 /* NasalBreathingCustomToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89382962E5D3004EA602 /* NasalBreathingCustomToolbarView.swift */; };
+		DB2C893B2962E617004EA602 /* NasalBreathingRoundCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C893A2962E617004EA602 /* NasalBreathingRoundCounterView.swift */; };
+		DB2C893D2962E64E004EA602 /* NasalBreathingSwitchContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C893C2962E64E004EA602 /* NasalBreathingSwitchContentView.swift */; };
 		DB2F62F42927F80A00D0BFFD /* BlueButtonSmaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F62F32927F80A00D0BFFD /* BlueButtonSmaller.swift */; };
 		DB2F62F72927F8F700D0BFFD /* CreateNewPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F62F62927F8F700D0BFFD /* CreateNewPasswordView.swift */; };
 		DB2F6303292962AB00D0BFFD /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6302292962AB00D0BFFD /* CustomTextField.swift */; };
@@ -128,6 +137,15 @@
 		DB2C89212958C900004EA602 /* FireBreathingExhaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreathingExhaleView.swift; sourceTree = "<group>"; };
 		DB2C89232958C9A2004EA602 /* FireBreathingHoldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreathingHoldView.swift; sourceTree = "<group>"; };
 		DB2C89272962D860004EA602 /* FireBreathingFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreathingFinishedView.swift; sourceTree = "<group>"; };
+		DB2C892A2962E332004EA602 /* FireBreathingCaseTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreathingCaseTextView.swift; sourceTree = "<group>"; };
+		DB2C892C2962E394004EA602 /* FireBreathingCustomNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreathingCustomNavigationBarView.swift; sourceTree = "<group>"; };
+		DB2C892E2962E3F0004EA602 /* FireBreathingCaseContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreathingCaseContentView.swift; sourceTree = "<group>"; };
+		DB2C89302962E43C004EA602 /* FireBreathingRoundCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreathingRoundCounterView.swift; sourceTree = "<group>"; };
+		DB2C89322962E48C004EA602 /* FireBreatingCirclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreatingCirclesView.swift; sourceTree = "<group>"; };
+		DB2C89342962E519004EA602 /* FireBreathingTapActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreathingTapActionView.swift; sourceTree = "<group>"; };
+		DB2C89382962E5D3004EA602 /* NasalBreathingCustomToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingCustomToolbarView.swift; sourceTree = "<group>"; };
+		DB2C893A2962E617004EA602 /* NasalBreathingRoundCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingRoundCounterView.swift; sourceTree = "<group>"; };
+		DB2C893C2962E64E004EA602 /* NasalBreathingSwitchContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingSwitchContentView.swift; sourceTree = "<group>"; };
 		DB2F62F32927F80A00D0BFFD /* BlueButtonSmaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonSmaller.swift; sourceTree = "<group>"; };
 		DB2F62F62927F8F700D0BFFD /* CreateNewPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordView.swift; sourceTree = "<group>"; };
 		DB2F6302292962AB00D0BFFD /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -259,6 +277,57 @@
 				DB2F6346292CB42900D0BFFD /* UserModel.swift */,
 			);
 			path = MainNavigationModels;
+			sourceTree = "<group>";
+		};
+		DB2C89292962E320004EA602 /* BodyView */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C89192958C35E004EA602 /* FireBreathingBodyView.swift */,
+				DB2C892C2962E394004EA602 /* FireBreathingCustomNavigationBarView.swift */,
+				DB2C89302962E43C004EA602 /* FireBreathingRoundCounterView.swift */,
+				DB2C892A2962E332004EA602 /* FireBreathingCaseTextView.swift */,
+				DB2C892E2962E3F0004EA602 /* FireBreathingCaseContentView.swift */,
+				DB2C89322962E48C004EA602 /* FireBreatingCirclesView.swift */,
+				DB2C89342962E519004EA602 /* FireBreathingTapActionView.swift */,
+			);
+			path = BodyView;
+			sourceTree = "<group>";
+		};
+		DB2C89362962E5B7004EA602 /* BodyView */ = {
+			isa = PBXGroup;
+			children = (
+				DB4F865629520766001E3D3F /* NasalBreathingBodyView.swift */,
+				DB2C89382962E5D3004EA602 /* NasalBreathingCustomToolbarView.swift */,
+				DB2C893A2962E617004EA602 /* NasalBreathingRoundCounterView.swift */,
+				DB2C893C2962E64E004EA602 /* NasalBreathingSwitchContentView.swift */,
+			);
+			path = BodyView;
+			sourceTree = "<group>";
+		};
+		DB2C893E2962E6F5004EA602 /* CaseViews */ = {
+			isa = PBXGroup;
+			children = (
+				DB4F866E29547117001E3D3F /* GenericBreathingCircleView.swift */,
+				DB4F866729532645001E3D3F /* NasalBreathingCountdownView.swift */,
+				DB4F86442951F1FC001E3D3F /* NasalBreathingCircleView.swift */,
+				DB4F866A295338B3001E3D3F /* NasalBreathingHoldWarningView.swift */,
+				DB4F8665295219B2001E3D3F /* NasalBreathingHoldView.swift */,
+				DB4F866C29546F23001E3D3F /* NasalBreathingRestView.swift */,
+				DB4F86702954C630001E3D3F /* NasalBreathingBreatheOutRestView.swift */,
+				DB2C89112955C8D1004EA602 /* NasalBreathingFinishedView.swift */,
+			);
+			path = CaseViews;
+			sourceTree = "<group>";
+		};
+		DB2C893F2962E711004EA602 /* CaseViews */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C891F2958C848004EA602 /* FireBreathingNormalBreathView.swift */,
+				DB2C89212958C900004EA602 /* FireBreathingExhaleView.swift */,
+				DB2C89232958C9A2004EA602 /* FireBreathingHoldView.swift */,
+				DB2C89272962D860004EA602 /* FireBreathingFinishedView.swift */,
+			);
+			path = CaseViews;
 			sourceTree = "<group>";
 		};
 		DB2F62F52927F8E800D0BFFD /* New Password */ = {
@@ -440,11 +509,8 @@
 		DB4F866129520CD3001E3D3F /* MeditationScreen */ = {
 			isa = PBXGroup;
 			children = (
-				DB2C89192958C35E004EA602 /* FireBreathingBodyView.swift */,
-				DB2C891F2958C848004EA602 /* FireBreathingNormalBreathView.swift */,
-				DB2C89212958C900004EA602 /* FireBreathingExhaleView.swift */,
-				DB2C89232958C9A2004EA602 /* FireBreathingHoldView.swift */,
-				DB2C89272962D860004EA602 /* FireBreathingFinishedView.swift */,
+				DB2C89292962E320004EA602 /* BodyView */,
+				DB2C893F2962E711004EA602 /* CaseViews */,
 			);
 			path = MeditationScreen;
 			sourceTree = "<group>";
@@ -463,15 +529,8 @@
 		DB4F866329520CDC001E3D3F /* MeditationScreen */ = {
 			isa = PBXGroup;
 			children = (
-				DB4F866E29547117001E3D3F /* GenericBreathingCircleView.swift */,
-				DB4F865629520766001E3D3F /* NasalBreathingBodyView.swift */,
-				DB4F866729532645001E3D3F /* NasalBreathingCountdownView.swift */,
-				DB4F86442951F1FC001E3D3F /* NasalBreathingCircleView.swift */,
-				DB4F866A295338B3001E3D3F /* NasalBreathingHoldWarningView.swift */,
-				DB4F8665295219B2001E3D3F /* NasalBreathingHoldView.swift */,
-				DB4F866C29546F23001E3D3F /* NasalBreathingRestView.swift */,
-				DB4F86702954C630001E3D3F /* NasalBreathingBreatheOutRestView.swift */,
-				DB2C89112955C8D1004EA602 /* NasalBreathingFinishedView.swift */,
+				DB2C89362962E5B7004EA602 /* BodyView */,
+				DB2C893E2962E6F5004EA602 /* CaseViews */,
 			);
 			path = MeditationScreen;
 			sourceTree = "<group>";
@@ -822,9 +881,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB4F86452951F1FC001E3D3F /* NasalBreathingCircleView.swift in Sources */,
+				DB2C893B2962E617004EA602 /* NasalBreathingRoundCounterView.swift in Sources */,
 				DB2C89222958C900004EA602 /* FireBreathingExhaleView.swift in Sources */,
 				DBB0C5032941133700373517 /* StatsViewModel.swift in Sources */,
 				DB2F635B292D12BF00D0BFFD /* ResetLinkSentView.swift in Sources */,
+				DB2C89392962E5D3004EA602 /* NasalBreathingCustomToolbarView.swift in Sources */,
+				DB2C892F2962E3F0004EA602 /* FireBreathingCaseContentView.swift in Sources */,
+				DB2C89312962E43C004EA602 /* FireBreathingRoundCounterView.swift in Sources */,
 				DB4F864C29520586001E3D3F /* FocusAndProductivityView.swift in Sources */,
 				DBB0C4E3293F570E00373517 /* MeditationFinishedView.swift in Sources */,
 				DB2F6365292E3EDB00D0BFFD /* NasalBreathingSheetView.swift in Sources */,
@@ -843,6 +906,7 @@
 				DBB0C50A294117CD00373517 /* SessionsCompletedView.swift in Sources */,
 				DBB0C4FE29410E7E00373517 /* StatsView.swift in Sources */,
 				DBDF41162932583A000992FD /* BreathCountModel.swift in Sources */,
+				DB2C893D2962E64E004EA602 /* NasalBreathingSwitchContentView.swift in Sources */,
 				DBB0C506294115C500373517 /* AnimatableNumberModifier.swift in Sources */,
 				DB2C89162958C006004EA602 /* FireBreathingStartButtonView.swift in Sources */,
 				DBD744DC2927E9C10058225A /* SignUpPrivacyPolicyRow.swift in Sources */,
@@ -874,6 +938,7 @@
 				DBB0C50E29411EA800373517 /* ProfileActionMenuView.swift in Sources */,
 				DB2F6315292B61D900D0BFFD /* MainMeditationView.swift in Sources */,
 				DBD744D22927D3930058225A /* LoginExternalPlatformView.swift in Sources */,
+				DB2C892B2962E332004EA602 /* FireBreathingCaseTextView.swift in Sources */,
 				DB4F866F29547117001E3D3F /* GenericBreathingCircleView.swift in Sources */,
 				DB4F864A29520461001E3D3F /* SuperHumanMeditationsView.swift in Sources */,
 				DB2F634D292CD4C000D0BFFD /* LoadingView.swift in Sources */,
@@ -885,8 +950,10 @@
 				DB2C89282962D860004EA602 /* FireBreathingFinishedView.swift in Sources */,
 				DBD744D82927E8950058225A /* SignUpExternalPlatformView.swift in Sources */,
 				DB4F865729520766001E3D3F /* NasalBreathingBodyView.swift in Sources */,
+				DB2C89332962E48C004EA602 /* FireBreatingCirclesView.swift in Sources */,
 				DB2F6345292CB17B00D0BFFD /* UserService.swift in Sources */,
 				DBD744C92927D2560058225A /* GetStartedCloudsView.swift in Sources */,
+				DB2C89352962E519004EA602 /* FireBreathingTapActionView.swift in Sources */,
 				DBDF4118293258B6000992FD /* NasalBreathingViewModel.swift in Sources */,
 				DBD7449C2927A9220058225A /* ContentView.swift in Sources */,
 				DBD7449A2927A9220058225A /* AffidApp.swift in Sources */,
@@ -918,6 +985,7 @@
 				DBB0C4CD293F414400373517 /* TimerModel.swift in Sources */,
 				DB2F62F72927F8F700D0BFFD /* CreateNewPasswordView.swift in Sources */,
 				DB2C891D2958C6FA004EA602 /* FireBreathingModel.swift in Sources */,
+				DB2C892D2962E394004EA602 /* FireBreathingCustomNavigationBarView.swift in Sources */,
 				DB2F63052929635E00D0BFFD /* OTPTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

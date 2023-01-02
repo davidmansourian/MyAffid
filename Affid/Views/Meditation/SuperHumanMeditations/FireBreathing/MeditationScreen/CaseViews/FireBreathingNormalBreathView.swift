@@ -22,6 +22,9 @@ struct FireBreathingNormalBreathView: View {
                 .fontWeight(.bold)
                 .padding()
                 .onReceive(fireBreathingVm.oneSecondTimer) { _ in
+                    if fireBreathingVm.round == 2{
+                        fireBreathingVm.firstRoundBreathHoldComplete = true
+                    }
                     if countdown > 0{
                         countdown -= 1
                     }

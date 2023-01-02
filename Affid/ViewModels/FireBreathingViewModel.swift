@@ -18,6 +18,7 @@ class FireBreathingViewModel: ObservableObject{
     @Published var breathHoldSecondsFinished: Int = 0
     @Published var round: Int = 1
     @Published var longestRound: Int = 0
+    @Published var firstRoundBreathHoldComplete: Bool = false
     
     let oneSecondTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect() // 1 sec timer
     
@@ -40,6 +41,7 @@ class FireBreathingViewModel: ObservableObject{
     func cleanSession(){
         self.breathingPhaseMusic = false
         self.retentionPhaseMusic = false
+        self.firstRoundBreathHoldComplete = false
         self.sessionSelection.removeAll()
         self.roundState = FireBreathingRoundState.normalBreathing
         self.holdStop = false
