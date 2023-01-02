@@ -22,13 +22,13 @@ struct TotalSessionsView: View {
                     .foregroundColor(.white)
                     .font(.callout)
                     .fontWeight(.light)
-                    .padding(.leading, 10)
-                    .padding(.top, 5)
+                    .padding(.leading, 13)
+                    .padding(.top, 8)
                 Text("\(statsVm.totalCompletedMeditations)")
                     .foregroundColor(.white)
                     .font(.title)
                     .fontWeight(.bold)
-                    .padding(.leading, 10)
+                    .padding(.leading, 13)
                 Chart(statsVm.sessionsPerDay){ element in
                     BarMark(
                         x: .value("Day", element.day),
@@ -36,16 +36,12 @@ struct TotalSessionsView: View {
                     )
                     .foregroundStyle(by: .value("Session Type", element.type))
                 }
+                .padding()
                 .chartXAxis{
                     AxisMarks{ value in
                         AxisValueLabel()
                             .foregroundStyle(.white)
                             .font(.system(size: 10))
-                    }
-                }
-                .chartYAxis{
-                    AxisMarks{ value in
-                    
                     }
                 }
             }
