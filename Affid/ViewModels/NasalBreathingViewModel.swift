@@ -11,6 +11,13 @@ import Combine
 
 class NasalBreathingViewModel: ObservableObject{
     private var hasExited: Bool = false
+    private var meditationType: String = "Nasal Breathing"
+    private var sessionLength: Float = 0
+    private var averageHoldLength: Int = 0
+    
+    @Published var longestHoldRound: Int = 0
+    @Published var breathsCompleted: Int = 0
+    
     @Published var sessionTracker: [BreathHoldModel] = [] // needs to be emptied when the session is intialized (not via init tho)
     
     let oneSecondTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect() // 1 sec timer
@@ -84,6 +91,11 @@ class NasalBreathingViewModel: ObservableObject{
             longestRound = self.breathHoldSecondsFinished
         }
         print(sessionTracker)
+    }
+    
+    func saveSession(){
+        let now = Date()
+        CoreDataManager.shared.storeNasalBreathingSession(theSession: self.sessionTracker, theDate: now, rounds: self.round, longestHold: self.longestRound, longestHoldRound: self.longestHoldRound, breathsChosen: self.totalBreaths, breathsCompleted: self.breathsCompleted, sessionLength: self.sessionLength, averageHoldLength: self.averageHoldLength, sessionType: self.meditationType)
     }
     
     func convertSecondsToTime(timeInSeconds: Int) -> String{

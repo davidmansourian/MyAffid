@@ -26,6 +26,12 @@
 		DB2C89392962E5D3004EA602 /* NasalBreathingCustomToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89382962E5D3004EA602 /* NasalBreathingCustomToolbarView.swift */; };
 		DB2C893B2962E617004EA602 /* NasalBreathingRoundCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C893A2962E617004EA602 /* NasalBreathingRoundCounterView.swift */; };
 		DB2C893D2962E64E004EA602 /* NasalBreathingSwitchContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C893C2962E64E004EA602 /* NasalBreathingSwitchContentView.swift */; };
+		DB2C895E2962FB3C004EA602 /* NasalBreathingSession+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89582962FB3C004EA602 /* NasalBreathingSession+CoreDataClass.swift */; };
+		DB2C895F2962FB3C004EA602 /* NasalBreathingSession+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89592962FB3C004EA602 /* NasalBreathingSession+CoreDataProperties.swift */; };
+		DB2C89602962FB3C004EA602 /* FireBreathingSession+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C895A2962FB3C004EA602 /* FireBreathingSession+CoreDataClass.swift */; };
+		DB2C89612962FB3C004EA602 /* FireBreathingSession+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C895B2962FB3C004EA602 /* FireBreathingSession+CoreDataProperties.swift */; };
+		DB2C89622962FB3C004EA602 /* Session+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C895C2962FB3C004EA602 /* Session+CoreDataClass.swift */; };
+		DB2C89632962FB3C004EA602 /* Session+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C895D2962FB3C004EA602 /* Session+CoreDataProperties.swift */; };
 		DB2F62F42927F80A00D0BFFD /* BlueButtonSmaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F62F32927F80A00D0BFFD /* BlueButtonSmaller.swift */; };
 		DB2F62F72927F8F700D0BFFD /* CreateNewPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F62F62927F8F700D0BFFD /* CreateNewPasswordView.swift */; };
 		DB2F6303292962AB00D0BFFD /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6302292962AB00D0BFFD /* CustomTextField.swift */; };
@@ -146,6 +152,12 @@
 		DB2C89382962E5D3004EA602 /* NasalBreathingCustomToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingCustomToolbarView.swift; sourceTree = "<group>"; };
 		DB2C893A2962E617004EA602 /* NasalBreathingRoundCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingRoundCounterView.swift; sourceTree = "<group>"; };
 		DB2C893C2962E64E004EA602 /* NasalBreathingSwitchContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalBreathingSwitchContentView.swift; sourceTree = "<group>"; };
+		DB2C89582962FB3C004EA602 /* NasalBreathingSession+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NasalBreathingSession+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DB2C89592962FB3C004EA602 /* NasalBreathingSession+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NasalBreathingSession+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DB2C895A2962FB3C004EA602 /* FireBreathingSession+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FireBreathingSession+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DB2C895B2962FB3C004EA602 /* FireBreathingSession+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FireBreathingSession+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DB2C895C2962FB3C004EA602 /* Session+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DB2C895D2962FB3C004EA602 /* Session+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DB2F62F32927F80A00D0BFFD /* BlueButtonSmaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonSmaller.swift; sourceTree = "<group>"; };
 		DB2F62F62927F8F700D0BFFD /* CreateNewPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordView.swift; sourceTree = "<group>"; };
 		DB2F6302292962AB00D0BFFD /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -328,6 +340,19 @@
 				DB2C89272962D860004EA602 /* FireBreathingFinishedView.swift */,
 			);
 			path = CaseViews;
+			sourceTree = "<group>";
+		};
+		DB2C89642962FCD9004EA602 /* Subclass */ = {
+			isa = PBXGroup;
+			children = (
+				DB2C89582962FB3C004EA602 /* NasalBreathingSession+CoreDataClass.swift */,
+				DB2C89592962FB3C004EA602 /* NasalBreathingSession+CoreDataProperties.swift */,
+				DB2C895A2962FB3C004EA602 /* FireBreathingSession+CoreDataClass.swift */,
+				DB2C895B2962FB3C004EA602 /* FireBreathingSession+CoreDataProperties.swift */,
+				DB2C895C2962FB3C004EA602 /* Session+CoreDataClass.swift */,
+				DB2C895D2962FB3C004EA602 /* Session+CoreDataProperties.swift */,
+			);
+			path = Subclass;
 			sourceTree = "<group>";
 		};
 		DB2F62F52927F8E800D0BFFD /* New Password */ = {
@@ -677,6 +702,7 @@
 		DBD744AC2927AA090058225A /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				DB2C89642962FCD9004EA602 /* Subclass */,
 				DBD744A22927A9240058225A /* Persistence.swift */,
 				DBD744A42927A9240058225A /* Affid.xcdatamodeld */,
 			);
@@ -883,8 +909,10 @@
 				DB4F86452951F1FC001E3D3F /* NasalBreathingCircleView.swift in Sources */,
 				DB2C893B2962E617004EA602 /* NasalBreathingRoundCounterView.swift in Sources */,
 				DB2C89222958C900004EA602 /* FireBreathingExhaleView.swift in Sources */,
+				DB2C895F2962FB3C004EA602 /* NasalBreathingSession+CoreDataProperties.swift in Sources */,
 				DBB0C5032941133700373517 /* StatsViewModel.swift in Sources */,
 				DB2F635B292D12BF00D0BFFD /* ResetLinkSentView.swift in Sources */,
+				DB2C89632962FB3C004EA602 /* Session+CoreDataProperties.swift in Sources */,
 				DB2C89392962E5D3004EA602 /* NasalBreathingCustomToolbarView.swift in Sources */,
 				DB2C892F2962E3F0004EA602 /* FireBreathingCaseContentView.swift in Sources */,
 				DB2C89312962E43C004EA602 /* FireBreathingRoundCounterView.swift in Sources */,
@@ -903,6 +931,7 @@
 				DB2F6317292B61E800D0BFFD /* ProfileView.swift in Sources */,
 				DBB0C4F62940F6E700373517 /* OfflineView.swift in Sources */,
 				DBD744A62927A9240058225A /* Affid.xcdatamodeld in Sources */,
+				DB2C895E2962FB3C004EA602 /* NasalBreathingSession+CoreDataClass.swift in Sources */,
 				DBB0C50A294117CD00373517 /* SessionsCompletedView.swift in Sources */,
 				DBB0C4FE29410E7E00373517 /* StatsView.swift in Sources */,
 				DBDF41162932583A000992FD /* BreathCountModel.swift in Sources */,
@@ -913,6 +942,7 @@
 				DB4F863F2951DE13001E3D3F /* DividerView.swift in Sources */,
 				DBD744B92927B73B0058225A /* LoginView.swift in Sources */,
 				DB2F634A292CCE6A00D0BFFD /* SplashScreenView.swift in Sources */,
+				DB2C89602962FB3C004EA602 /* FireBreathingSession+CoreDataClass.swift in Sources */,
 				DBB0C4C8293F40F600373517 /* SoundManager.swift in Sources */,
 				DBB0C4E0293F56A600373517 /* TimerView.swift in Sources */,
 				DB2C89122955C8D1004EA602 /* NasalBreathingFinishedView.swift in Sources */,
@@ -934,6 +964,7 @@
 				DB4F864E295205BE001E3D3F /* SoundsOfNatureView.swift in Sources */,
 				DBD744E12927F1950058225A /* ResetPasswordView.swift in Sources */,
 				DBD744C12927BC4B0058225A /* GoogleButton.swift in Sources */,
+				DB2C89612962FB3C004EA602 /* FireBreathingSession+CoreDataProperties.swift in Sources */,
 				DB2F633E292BE00C00D0BFFD /* AuthViewModel.swift in Sources */,
 				DBB0C50E29411EA800373517 /* ProfileActionMenuView.swift in Sources */,
 				DB2F6315292B61D900D0BFFD /* MainMeditationView.swift in Sources */,
@@ -986,6 +1017,7 @@
 				DB2F62F72927F8F700D0BFFD /* CreateNewPasswordView.swift in Sources */,
 				DB2C891D2958C6FA004EA602 /* FireBreathingModel.swift in Sources */,
 				DB2C892D2962E394004EA602 /* FireBreathingCustomNavigationBarView.swift in Sources */,
+				DB2C89622962FB3C004EA602 /* Session+CoreDataClass.swift in Sources */,
 				DB2F63052929635E00D0BFFD /* OTPTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

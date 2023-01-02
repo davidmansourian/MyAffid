@@ -29,8 +29,20 @@ class CoreDataManager: ObservableObject{
         print("Saved session")
     }
     
-    func storeNasalBreathingSession(){
-        
+    func storeNasalBreathingSession(theSession: [BreathHoldModel], theDate: Date, rounds: Int, longestHold: Int, longestHoldRound: Int, breathsChosen: Int, breathsCompleted: Int, sessionLength: Float, averageHoldLength: Int, sessionType: String){
+        let sessionEntry = Session(context: moc)
+        sessionEntry.date = theDate
+        sessionEntry.completed = true
+        sessionEntry.length = sessionLength
+        sessionEntry.type = sessionType
+        sessionEntry.nasalSession = NasalBreathingSession(context: moc)
+        sessionEntry.nasalSession?.sessionContent = theSession as NSObject
+        sessionEntry.nasalSession?.totalRounds = Int32(rounds)
+        sessionEntry.nasalSession?.longestHold = Int32(longestHold)
+        sessionEntry.nasalSession?.longestHoldRound = Int32(longestHoldRound)
+        sessionEntry.nasalSession?.breaths = Int32(breathsChosen)
+        sessionEntry.nasalSession?.breathsCompleted = Int32(breathsCompleted)
+        sessionEntry.nasalSession?.averageHoldLength = Int32(averageHoldLength)
     }
     
     // https://stackoverflow.com/questions/35378820/extract-entity-from-last-seven-days-core-data

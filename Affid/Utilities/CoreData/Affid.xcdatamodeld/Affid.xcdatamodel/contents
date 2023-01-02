@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22A380" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Session" representedClassName="Session" syncable="YES" codeGenerationType="class">
+    <entity name="FireBreathingSession" representedClassName="FireBreathingSession" syncable="YES">
+        <attribute name="averageHoldLength" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="longestHold" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="longestHoldRound" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sessionContent" optional="YES" attributeType="Transformable"/>
+        <attribute name="totalRounds" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="session" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Session" inverseName="fireSession" inverseEntity="Session"/>
+    </entity>
+    <entity name="NasalBreathingSession" representedClassName="NasalBreathingSession" syncable="YES">
+        <attribute name="averageHoldLength" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="breaths" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="breathsCompleted" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="longestHold" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="longestHoldRound" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sessionContent" optional="YES" attributeType="Transformable"/>
+        <attribute name="totalRounds" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="session" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Session" inverseName="nasalSession" inverseEntity="Session"/>
+    </entity>
+    <entity name="Session" representedClassName="Session" syncable="YES">
         <attribute name="completed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="length" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="fireSession" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FireBreathingSession" inverseName="session" inverseEntity="FireBreathingSession"/>
+        <relationship name="nasalSession" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NasalBreathingSession" inverseName="session" inverseEntity="NasalBreathingSession"/>
     </entity>
 </model>
