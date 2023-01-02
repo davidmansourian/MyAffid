@@ -1,33 +1,32 @@
 //
-//  NasalBreathingFinishedView.swift
+//  FireBreathingFinishedView.swift
 //  Affid
 //
-//  Created by David on 2022-12-23.
+//  Created by David on 2023-01-02.
 //
 
 import SwiftUI
 import Charts
 
-struct NasalBreathingFinishedView: View {
-    @StateObject var nasalBreathingVm: NasalBreathingViewModel
+struct FireBreathingFinishedView: View {
+    @StateObject var fireBreathingVm: FireBreathingViewModel
     
-    init(nasalBreathingVm: NasalBreathingViewModel){
-        _nasalBreathingVm = StateObject(wrappedValue: nasalBreathingVm)
+    init(fireBreathingVm: FireBreathingViewModel){
+        _fireBreathingVm = StateObject(wrappedValue: fireBreathingVm)
     }
-    
     var body: some View {
             VStack{
-                Text("Good job! Your longest breath hold was \(nasalBreathingVm.longestRound) seconds")
+                Text("Good job! Your longest breath hold was \(fireBreathingVm.longestRound) seconds")
                     .foregroundColor(.white)
                     .font(.title)
                     .fontWeight(.light)
-                Chart(nasalBreathingVm.sessionTracker){ session in
+                Chart(fireBreathingVm.sessionTracker){ session in
                     BarMark(x: .value("Round", session.round),
                             y: .value("Held", session.timeBreathHeld))
                     .foregroundStyle(ColorData.shared.appSystemYellow.gradient)
                     .cornerRadius(10)
                     .annotation{
-                        Text("\(nasalBreathingVm.convertSecondsToTimeString(timeInSeconds: session.timeBreathHeld))")
+                        Text("\(fireBreathingVm.convertSecondsToTimeString(timeInSeconds: session.timeBreathHeld))")
                             .foregroundColor(ColorData.shared.appSystemBlue)
                             .font(.callout)
                             .fontWeight(.bold)
@@ -44,7 +43,7 @@ struct NasalBreathingFinishedView: View {
                     AxisMarks { value in
                         AxisValueLabel(){
                             if let intValue = value.as(Int.self){
-                                Text("\(nasalBreathingVm.convertSecondsToTime(timeInSeconds: intValue))")
+                                Text("\(fireBreathingVm.convertSecondsToTime(timeInSeconds: intValue))")
                                     .font(.system(size: 10))
                                     .foregroundColor(.white)
                                     .fontWeight(.bold)
@@ -58,11 +57,3 @@ struct NasalBreathingFinishedView: View {
             .padding()
     }
 }
-
-struct NasalBreathingfinishedView_Previews: PreviewProvider {
-    static var previews: some View {
-        NasalBreathingFinishedView(nasalBreathingVm: NasalBreathingViewModel())
-    }
-}
-
-

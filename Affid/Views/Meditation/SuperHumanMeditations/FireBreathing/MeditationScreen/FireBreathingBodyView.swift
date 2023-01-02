@@ -15,13 +15,34 @@ struct FireBreathingBodyView: View {
         _fireBreathingVm = StateObject(wrappedValue: fireBreathingVm)
     }
     var body: some View {
-        NavigationStack{
             ZStack{
                 LinearGradient(gradient: Gradient(colors: [ColorData.shared.thedarkerRed, ColorData.shared.theRed, ColorData.shared.appSystemYellow]), startPoint: .top, endPoint: .bottom).opacity(1)
                     .cornerRadius(10)
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack{
+                    HStack{
+                        Button {
+                            dismiss()
+                            Task{
+                                fireBreathingVm.cleanSession()
+                            }
+                        } label: {
+                            Image(systemName: "x.circle")
+                                .foregroundColor(.white)
+                                .font(.title)
+                        }
+                        .padding()
+                        Spacer()
+                    }
+                    
+                    if fireBreathingVm.roundState != FireBreathingRoundState.finished{
+                        Text("Round \(fireBreathingVm.round)")
+                            .foregroundColor(.white)
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .padding()
+                    }
                     
                     switch fireBreathingVm.roundState{
                     case .normalBreathing:
@@ -42,6 +63,12 @@ struct FireBreathingBodyView: View {
                             .font(.largeTitle)
                             .fontWeight(.light)
                             .padding()
+                    case .finished:
+                        Text("You did reallt well!")
+                            .foregroundColor(.white)
+                            .font(.largeTitle)
+                            .fontWeight(.light)
+                            .padding()
                     }
                     
                     ZStack{
@@ -57,6 +84,8 @@ struct FireBreathingBodyView: View {
                             FireBreathingExhaleView(fireBreathingVm: fireBreathingVm)
                         case .hold:
                             FireBreathingHoldView(fireBreathingVm: fireBreathingVm)
+                        case .finished:
+                            FireBreathingFinishedView(fireBreathingVm: fireBreathingVm)
                         }
                     }
                     
@@ -71,25 +100,11 @@ struct FireBreathingBodyView: View {
                     Spacer()
                 }
             }
-            .toolbar{
-                ToolbarItemGroup(placement: .navigationBarLeading){
-                    Button {
-                        dismiss()
-                        Task{
-                            fireBreathingVm.cleanSession()
-                        }
-                    } label: {
-                        Image(systemName: "x.circle")
-                            .foregroundColor(.white)
-                            .font(.title)
-                    }
-                }
-            }
             .onTapGesture(count: 2, perform: {
                 if fireBreathingVm.roundState == FireBreathingRoundState.hold{
                     fireBreathingVm.holdStop = true
                 }
             })
-        }
+
     }
 }

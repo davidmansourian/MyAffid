@@ -31,6 +31,8 @@ struct FireBreathingHoldView: View {
                     else if fireBreathingVm.holdStop{
                         fireBreathingVm.oneSecondTimer.upstream.connect().cancel()
                         fireBreathingVm.breathHoldSecondsFinished = breathHoldSec
+                        fireBreathingVm.appendSessionTracker()
+                        fireBreathingVm.round += 1
                         withAnimation(.default){
                             fireBreathingVm.roundState = FireBreathingRoundState.normalBreathing
                         }

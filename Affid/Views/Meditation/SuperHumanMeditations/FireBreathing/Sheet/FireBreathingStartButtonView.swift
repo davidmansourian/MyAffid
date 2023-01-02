@@ -19,6 +19,7 @@ struct FireBreathingStartButtonView: View {
         HStack{
             Spacer()
             Button {
+                fireBreathingVm.getNasalBreathSettings()
                 closeAndDisplayFullScreen()
             } label: {
                 Text("Start")

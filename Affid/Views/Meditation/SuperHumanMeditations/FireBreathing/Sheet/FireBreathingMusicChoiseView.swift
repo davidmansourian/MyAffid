@@ -25,6 +25,10 @@ struct FireBreathingMusicChoiseView: View {
                 .padding(.horizontal, 30)
                 .padding(.top, 30)
                 .toggleStyle(CheckmarkToggleView())
+                .onChange(of: breathingPhaseMusic) { newValue in
+                    fireBreathingVm.breathingPhaseMusic = newValue
+                }
+            
             
             DividerView()
             
@@ -35,6 +39,9 @@ struct FireBreathingMusicChoiseView: View {
                 .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                 .padding(.horizontal, 30)
                 .toggleStyle(CheckmarkToggleView())
+                .onChange(of: retentionPhaseMusic) { newValue in
+                    fireBreathingVm.retentionPhaseMusic = newValue
+                }
         }
     }
 }

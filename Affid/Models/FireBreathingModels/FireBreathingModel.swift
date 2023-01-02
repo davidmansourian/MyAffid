@@ -7,12 +7,13 @@
 
 import Foundation
 
-
-
-
+struct FireBreathingSettingsData{
+    let breathingPhaseMusic: Bool
+    let retentionPhaseMusic: Bool
+}
 
 
 
 enum FireBreathingRoundState{
-    case normalBreathing, exhale, hold
+    case normalBreathing, exhale, hold, finished
 }

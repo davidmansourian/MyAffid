@@ -16,6 +16,7 @@
 		DB2C89202958C848004EA602 /* FireBreathingNormalBreathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C891F2958C848004EA602 /* FireBreathingNormalBreathView.swift */; };
 		DB2C89222958C900004EA602 /* FireBreathingExhaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89212958C900004EA602 /* FireBreathingExhaleView.swift */; };
 		DB2C89242958C9A2004EA602 /* FireBreathingHoldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89232958C9A2004EA602 /* FireBreathingHoldView.swift */; };
+		DB2C89282962D860004EA602 /* FireBreathingFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89272962D860004EA602 /* FireBreathingFinishedView.swift */; };
 		DB2F62F42927F80A00D0BFFD /* BlueButtonSmaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F62F32927F80A00D0BFFD /* BlueButtonSmaller.swift */; };
 		DB2F62F72927F8F700D0BFFD /* CreateNewPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F62F62927F8F700D0BFFD /* CreateNewPasswordView.swift */; };
 		DB2F6303292962AB00D0BFFD /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6302292962AB00D0BFFD /* CustomTextField.swift */; };
@@ -126,6 +127,7 @@
 		DB2C891F2958C848004EA602 /* FireBreathingNormalBreathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreathingNormalBreathView.swift; sourceTree = "<group>"; };
 		DB2C89212958C900004EA602 /* FireBreathingExhaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreathingExhaleView.swift; sourceTree = "<group>"; };
 		DB2C89232958C9A2004EA602 /* FireBreathingHoldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreathingHoldView.swift; sourceTree = "<group>"; };
+		DB2C89272962D860004EA602 /* FireBreathingFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBreathingFinishedView.swift; sourceTree = "<group>"; };
 		DB2F62F32927F80A00D0BFFD /* BlueButtonSmaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonSmaller.swift; sourceTree = "<group>"; };
 		DB2F62F62927F8F700D0BFFD /* CreateNewPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordView.swift; sourceTree = "<group>"; };
 		DB2F6302292962AB00D0BFFD /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -442,6 +444,7 @@
 				DB2C891F2958C848004EA602 /* FireBreathingNormalBreathView.swift */,
 				DB2C89212958C900004EA602 /* FireBreathingExhaleView.swift */,
 				DB2C89232958C9A2004EA602 /* FireBreathingHoldView.swift */,
+				DB2C89272962D860004EA602 /* FireBreathingFinishedView.swift */,
 			);
 			path = MeditationScreen;
 			sourceTree = "<group>";
@@ -879,6 +882,7 @@
 				DBB0C4CF293F414D00373517 /* QuotesModel.swift in Sources */,
 				DB4F866829532645001E3D3F /* NasalBreathingCountdownView.swift in Sources */,
 				DBD744D42927D3C30058225A /* LoginCloudsView.swift in Sources */,
+				DB2C89282962D860004EA602 /* FireBreathingFinishedView.swift in Sources */,
 				DBD744D82927E8950058225A /* SignUpExternalPlatformView.swift in Sources */,
 				DB4F865729520766001E3D3F /* NasalBreathingBodyView.swift in Sources */,
 				DB2F6345292CB17B00D0BFFD /* UserService.swift in Sources */,
