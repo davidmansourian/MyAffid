@@ -18,24 +18,35 @@ struct AverageHoldTimePerSessionView: View {
     var body: some View {
         VStack{
             VStack(alignment: .leading){
-                Text("Average Session Length")
+                Text("Average Hold Length Past 7 days")
                     .foregroundColor(.white)
                     .font(.callout)
                     .fontWeight(.light)
                     .padding(.leading, 13)
                     .padding(.top, 8)
-                Chart(statsVm.averageLengthForType){ element in
-                    BarMark(
-                        x: .value("Session", element.length), // need to account for number of times done, also need to show length in minutes
-                        y: .value("Type", element.type )
+                Text("Longest Nasal Hold: ")
+                    .foregroundColor(.white)
+                    .font(.callout)
+                    .fontWeight(.bold)
+                    .padding(.leading, 13)
+                Text("Longest Fire Hold: ")
+                    .foregroundColor(.white)
+                    .font(.callout)
+                    .fontWeight(.bold)
+                    .padding(.leading, 13)
+                Chart(statsVm.averageHoldForSession){ element in
+                    LineMark(
+                        x: .value("Session", element.date), // need to account for number of times done, also need to show length in minutes
+                        y: .value("Average Hold", element.holdLength )
                     )
                     .foregroundStyle(by: .value("Session Type", element.type ))
-                    .annotation(position: .overlay){
-                        Text("\(statsVm.convertSecondsToTimeString(timeInSeconds: Int(element.length)))")
-                            .font(.system(size: 10))
-                            .foregroundColor(.white)
-                            .bold()
-                    }
+                    
+                    PointMark(
+                        x: .value("Session", element.date), // need to account for number of times done, also need to show length in minutes
+                        y: .value("Average Hold", element.holdLength )
+                    )
+                    .foregroundStyle(by: .value("Session Type", element.type ))
+                    
                 }
                 .padding()
                 .chartXAxis{
@@ -52,13 +63,15 @@ struct AverageHoldTimePerSessionView: View {
             .background(
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .fill(statsBckgroundColor))
-            .padding()
+            .padding(.horizontal, 10)
+            .padding(.top, 5)
             
         }
         .onAppear{
             Task{
-                await statsVm.getAverageSessionLength()
+                await statsVm.getAverageHoldPerSessionForDate()
             }
+            
         }
     }
 }

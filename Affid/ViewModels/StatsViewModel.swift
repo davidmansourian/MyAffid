@@ -14,8 +14,10 @@ class StatsViewModel: ObservableObject{
     @MainActor @Published var completedSsessionsArr: [Session] = []
     @MainActor @Published var sessionsPerDay: [SessionsPerWeekModel] = []
     @MainActor @Published var averageLengthForType: [AverageLengthForSessionTypeModel] = []
+    @MainActor @Published var averageHoldForSession: [AverageHoldForSessionByDate] = []
     @Published var totalMeditations: Int = 0
     @Published var favoriteMeditation: String = ""
+    
     
     // First bar chart preview:
     // Total sessions (including all meditation sessions) per day / week
@@ -31,13 +33,29 @@ class StatsViewModel: ObservableObject{
         }
     }
     
+    func getAverageHoldPerSessionForDate() async{
+        let calendar = NSCalendar.current
+        let now = NSDate()
+        let sevenDaysAgo = calendar.date(byAdding: .day, value: -7, to: now as Date)!
+        let startDate = calendar.startOfDay(for: sevenDaysAgo)
+        
+       
+        let nasalArr = coreDataManager.getAverageHoldLengthsForType(meditationType: "Nasal Breathing", startDate: startDate, endDate: now as Date, sessionType: "nasalSession")
+        let fireArr = coreDataManager.getAverageHoldLengthsForType(meditationType: "Fire Breathing", startDate: startDate, endDate: now as Date, sessionType: "fireSession")
+        let newArr = Array(Set(nasalArr + fireArr))
+        
+        
+        await MainActor.run{
+            self.averageHoldForSession = newArr
+            print(self.averageHoldForSession)
+        }
+    }
     
     func getSessionsForTimeInterval() async{
         let calendar = NSCalendar.current
         let now = NSDate()
         let sevenDaysAgo = calendar.date(byAdding: .day, value: -7, to: now as Date)!
         let startDate = calendar.startOfDay(for: sevenDaysAgo)
-        
         await MainActor.run {
             self.totalCompletedMeditations = coreDataManager.countTotalTimesMeditatedCompleted()
             let dateFormatter = DateFormatter()

@@ -2,7 +2,7 @@
 //  NasalBreathingSession+CoreDataProperties.swift
 //  Affid
 //
-//  Created by David on 2023-01-02.
+//  Created by David on 2023-01-03.
 //
 //
 
@@ -17,7 +17,6 @@ extension NasalBreathingSession {
     }
 
     @NSManaged public var sessionContent: NSObject?
-    @NSManaged public var date: Date?
     @NSManaged public var id: UUID?
     @NSManaged public var totalRounds: Int32
     @NSManaged public var averageHoldLength: Int32

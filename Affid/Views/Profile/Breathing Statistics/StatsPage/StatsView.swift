@@ -26,6 +26,8 @@ struct StatsView: View {
                     
                     AverageSessionLengthView(statsVm: statsVm)
                     
+                    AverageHoldTimePerSessionView(statsVm: statsVm)
+                    
                 }
             }
         }

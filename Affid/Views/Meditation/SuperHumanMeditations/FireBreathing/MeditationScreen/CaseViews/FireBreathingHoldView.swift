@@ -33,6 +33,7 @@ struct FireBreathingHoldView: View {
                         fireBreathingVm.breathHoldSecondsFinished = breathHoldSec
                         fireBreathingVm.appendSessionTracker()
                         fireBreathingVm.round += 1
+                        fireBreathingVm.roundsHeld += 1
                         withAnimation(.default){
                             fireBreathingVm.roundState = FireBreathingRoundState.normalBreathing
                         }

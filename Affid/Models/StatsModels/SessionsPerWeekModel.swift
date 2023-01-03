@@ -19,3 +19,10 @@ struct AverageLengthForSessionTypeModel: Identifiable{
     let type: String
     let length: Float
 }
+
+struct AverageHoldForSessionByDate: Identifiable, Hashable{
+    let id = UUID()
+    let type: String
+    let holdLength: Float
+    let date: String
+}

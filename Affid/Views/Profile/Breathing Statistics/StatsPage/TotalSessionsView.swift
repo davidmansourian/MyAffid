@@ -50,7 +50,8 @@ struct TotalSessionsView: View {
             .background(
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .fill(statsBckgroundColor))
-            .padding()
+            .padding(.horizontal, 10)
+            .padding(.top, 5)
             
         }
         .onAppear{

@@ -15,6 +15,7 @@ class NasalBreathingViewModel: ObservableObject{
     private var totalHoldLength: Int = 0
     private var averageHoldLength: Int = 0
     
+    @Published var roundsHeld: Int = 0
     @Published var longestHoldRound: Int = 1
     @Published var breathsCompleted: Int = 1
     @Published var sessionLength: Float = 0
@@ -74,6 +75,7 @@ class NasalBreathingViewModel: ObservableObject{
     
     
     func cleanSession(){
+        self.roundsHeld = 0
         self.sessionTracker.removeAll()
         self.sessionLength = 0
         self.averageHoldLength = 0
@@ -104,7 +106,7 @@ class NasalBreathingViewModel: ObservableObject{
     }
     
     func saveSession(){
-        self.averageHoldLength = self.totalHoldLength / self.round
+        self.averageHoldLength = self.totalHoldLength / self.roundsHeld
         let now = Date()
         CoreDataManager.shared.storeBreathingSession(theSession: self.sessionTracker, theDate: now, rounds: self.round, longestHold: self.longestRound, longestHoldRound: self.longestHoldRound, breathsChosen: self.totalBreaths, breathsCompleted: self.breathsCompleted, sessionLength: self.sessionLength, averageHoldLength: self.averageHoldLength, sessionType: self.meditationType)
     }

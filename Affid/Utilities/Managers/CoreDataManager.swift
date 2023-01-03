@@ -122,6 +122,43 @@ class CoreDataManager: ObservableObject{
         return 0
     }
     
+    func getAverageHoldLengthsForType(meditationType: String, startDate: Date, endDate: Date, sessionType: String) -> [AverageHoldForSessionByDate]{
+        let fetchRequest: NSFetchRequest<Session> = Session.fetchRequest()
+        let predicate = NSPredicate(format: "type == %@ AND date >= %@ AND date < %@", meditationType, startDate as NSDate, endDate as NSDate)
+        fetchRequest.predicate = predicate
+        fetchRequest.propertiesToFetch = ["date", sessionType]
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        var holdLengthsByDate = [String:Int]()
+        var resultsArr: [AverageHoldForSessionByDate] = []
+        
+        do {
+            let sessions = try moc.fetch(fetchRequest)
+            let groupedSessions = Dictionary(grouping: sessions) { dateFormatter.string(from: $0.date!) }
+            for (date, sessionsForDate) in groupedSessions {
+                let holdLengths = sessionsForDate.compactMap{
+                    sessionType == "nasalSession" ? $0.nasalSession?.averageHoldLength : $0.fireSession?.averageHoldLength
+                }
+                print("holdLength", holdLengths)
+                print(holdLengths.count)
+                let averageHoldLength = holdLengths.reduce(0, +) / Int32(holdLengths.count)
+                holdLengthsByDate[date] = Int(averageHoldLength)
+                print(averageHoldLength)
+            }
+            for theResult in holdLengthsByDate{
+                guard let theDate = dateFormatter.date(from: theResult.key) else { return [] }
+                dateFormatter.dateFormat = "EE"
+                let stringDate = dateFormatter.string(from: theDate)
+                resultsArr.append(AverageHoldForSessionByDate(type: meditationType, holdLength: Float(theResult.value), date: stringDate))
+            }
+            return resultsArr
+        } catch let error as NSError {
+            print("Fetch error: \(error.localizedDescription)")
+        }
+        
+        return []
+    }
+    
     func countMeditations(meditationType: String) -> Int{
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Session")
         let predicate = NSPredicate(format: "type == %@", meditationType)

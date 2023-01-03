@@ -14,6 +14,7 @@ class FireBreathingViewModel: ObservableObject{
     private var meditationType: String = "Fire Breathing"
     
     
+    @Published var roundsHeld: Int = 0
     @Published var breathingPhaseMusic: Bool = false
     @Published var retentionPhaseMusic: Bool = false
     @Published var sessionTracker: [BreathHoldModel] = [] // needs to be emptied when the session is intialized (not via init tho)
@@ -50,12 +51,13 @@ class FireBreathingViewModel: ObservableObject{
     }
     
     func saveSession(){
-        self.averageHoldLength = self.totalHoldLength / self.round
+        self.averageHoldLength = self.totalHoldLength / self.roundsHeld
         let now = Date()
         CoreDataManager.shared.storeFireBreathingSession(theSession: self.sessionTracker, theDate: now, rounds: self.round, longestHold: self.longestRound, longestHoldRound: self.roundForLongestHold, sessionLength: self.sessionLength, averageHoldLength: self.averageHoldLength, sessionType: self.meditationType)
     }
     
     func cleanSession(){
+        self.roundsHeld = 0
         self.longestRound = 0
         self.roundForLongestHold = 1
         self.sessionLength = 0

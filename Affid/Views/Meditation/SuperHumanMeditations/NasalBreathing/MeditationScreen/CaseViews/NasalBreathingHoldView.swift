@@ -36,6 +36,7 @@ struct NasalBreathingHoldView: View {
                         else if nasalBreathingVm.holdStop{
                             nasalBreathingVm.oneSecondTimer.upstream.connect().cancel()
                             nasalBreathingVm.breathHoldSecondsFinished = breathHoldSec
+                            nasalBreathingVm.roundsHeld += 1
                             nasalBreathingVm.appendSessionTracker()
                             withAnimation(.default){
                                 nasalBreathingVm.roundState = NasalBreathingRoundState.rest

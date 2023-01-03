@@ -31,10 +31,14 @@ struct AverageSessionLengthView: View {
                     )
                     .foregroundStyle(by: .value("Session Type", element.type ))
                     .annotation(position: .overlay){
-                        Text("\(statsVm.convertSecondsToTimeString(timeInSeconds: Int(element.length)))")
-                            .font(.system(size: 10))
-                            .foregroundColor(.white)
-                            .bold()
+                        if !(element.length.isInfinite || element.length.isNaN){
+                            Text("\(statsVm.convertSecondsToTimeString(timeInSeconds: Int(element.length)))")
+                                .font(.system(size: 10))
+                                .foregroundColor(.white)
+                        }
+                        else{
+                            Text("no data yet")
+                        }
                     }
                 }
                 .padding()
@@ -52,7 +56,8 @@ struct AverageSessionLengthView: View {
             .background(
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .fill(statsBckgroundColor))
-            .padding()
+            .padding(.horizontal, 10)
+            .padding(.top, 5)
             
         }
         .onAppear{
