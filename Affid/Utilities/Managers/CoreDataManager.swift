@@ -29,7 +29,7 @@ class CoreDataManager: ObservableObject{
         print("Saved session")
     }
     
-    func storeNasalBreathingSession(theSession: [BreathHoldModel], theDate: Date, rounds: Int, longestHold: Int, longestHoldRound: Int, breathsChosen: Int, breathsCompleted: Int, sessionLength: Float, averageHoldLength: Int, sessionType: String){
+    func storeBreathingSession(theSession: [BreathHoldModel], theDate: Date, rounds: Int, longestHold: Int, longestHoldRound: Int, breathsChosen: Int, breathsCompleted: Int, sessionLength: Float, averageHoldLength: Int, sessionType: String){
         let dict = theSession.dictionary
         let sessionEntry = Session(context: moc)
         sessionEntry.date = theDate
@@ -45,8 +45,26 @@ class CoreDataManager: ObservableObject{
         sessionEntry.nasalSession?.breathsCompleted = Int32(breathsCompleted)
         sessionEntry.nasalSession?.averageHoldLength = Int32(averageHoldLength)
         try? moc.save()
-        print("Saved session")
+        print("Saved nasal breathing session")
     }
+    
+    func storeFireBreathingSession(theSession: [BreathHoldModel], theDate: Date, rounds: Int, longestHold: Int, longestHoldRound: Int, sessionLength: Float, averageHoldLength: Int, sessionType: String){
+        let dict = theSession.dictionary
+        let sessionEntry = Session(context: moc)
+        sessionEntry.date = theDate
+        sessionEntry.completed = true
+        sessionEntry.length = sessionLength
+        sessionEntry.type = sessionType
+        sessionEntry.fireSession = FireBreathingSession(context: moc)
+        sessionEntry.fireSession?.sessionContent = dict as NSObject?
+        sessionEntry.fireSession?.totalRounds = Int32(rounds)
+        sessionEntry.fireSession?.longestHold = Int32(longestHold)
+        sessionEntry.fireSession?.longestHoldRound = Int32(longestHoldRound)
+        sessionEntry.fireSession?.averageHoldLength = Int32(averageHoldLength)
+        try? moc.save()
+        print("Saved firebreathingsession")
+    }
+    
     
     // https://stackoverflow.com/questions/35378820/extract-entity-from-last-seven-days-core-data
     // total timesCompleted

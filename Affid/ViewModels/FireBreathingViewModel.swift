@@ -9,6 +9,11 @@ import Foundation
 
 class FireBreathingViewModel: ObservableObject{
     private var hasExited: Bool = false
+    private var totalHoldLength: Int = 0
+    private var averageHoldLength: Int = 0
+    private var meditationType: String = "Fire Breathing"
+    
+    
     @Published var breathingPhaseMusic: Bool = false
     @Published var retentionPhaseMusic: Bool = false
     @Published var sessionTracker: [BreathHoldModel] = [] // needs to be emptied when the session is intialized (not via init tho)
@@ -18,8 +23,12 @@ class FireBreathingViewModel: ObservableObject{
     @Published var breathHoldSecondsFinished: Int = 0
     @Published var round: Int = 1
     @Published var longestRound: Int = 0
+    @Published var roundForLongestHold: Int = 1
     @Published var firstRoundBreathHoldComplete: Bool = false
+    @Published var sessionLength: Float = 0
     
+    
+    let sessionCounterTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     let oneSecondTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect() // 1 sec timer
     
     func getNasalBreathSettings(){
@@ -31,14 +40,28 @@ class FireBreathingViewModel: ObservableObject{
     }
     
     func appendSessionTracker(){
+        self.totalHoldLength += self.breathHoldSecondsFinished
         self.sessionTracker.append(BreathHoldModel(round: String("\(self.round)"), timeBreathHeld: self.breathHoldSecondsFinished))
         if self.breathHoldSecondsFinished > longestRound{
             longestRound = self.breathHoldSecondsFinished
+            self.roundForLongestHold = self.round
         }
         print(sessionTracker)
     }
     
+    func saveSession(){
+        self.averageHoldLength = self.totalHoldLength / self.round
+        let now = Date()
+        CoreDataManager.shared.storeFireBreathingSession(theSession: self.sessionTracker, theDate: now, rounds: self.round, longestHold: self.longestRound, longestHoldRound: self.roundForLongestHold, sessionLength: self.sessionLength, averageHoldLength: self.averageHoldLength, sessionType: self.meditationType)
+    }
+    
     func cleanSession(){
+        self.longestRound = 0
+        self.roundForLongestHold = 1
+        self.sessionLength = 0
+        self.averageHoldLength = 0
+        self.totalHoldLength = 0
+        self.sessionTracker.removeAll()
         self.breathingPhaseMusic = false
         self.retentionPhaseMusic = false
         self.firstRoundBreathHoldComplete = false

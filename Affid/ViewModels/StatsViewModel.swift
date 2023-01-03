@@ -26,6 +26,8 @@ class StatsViewModel: ObservableObject{
         await MainActor.run{
             self.averageLengthForType.append(AverageLengthForSessionTypeModel(type: "Regular", length: coreDataManager.getSessionLengthForType(meditationType: "Regular")))
             self.averageLengthForType.append(AverageLengthForSessionTypeModel(type: "Nasal Breathing", length: coreDataManager.getSessionLengthForType(meditationType: "Nasal Breathing")))
+            self.averageLengthForType.append(AverageLengthForSessionTypeModel(type: "Fire Breathing", length: coreDataManager.getSessionLengthForType(meditationType: "Fire Breathing")))
+            
         }
     }
     
@@ -47,7 +49,12 @@ class StatsViewModel: ObservableObject{
                 sessionsPerDay.append(SessionsPerWeekModel(day: dayOfWeek, count: 1, type: days.type ?? ""))
             }
         }
+    }
+    
+    func convertSecondsToTimeString(timeInSeconds: Int) -> String{
+        let minutes = timeInSeconds / 60
+        let seconds = timeInSeconds % 60
         
-        
+        return minutes > 0 ? String("\(minutes) min \(seconds) sec") : String("\(seconds) sec")
     }
 }

@@ -35,6 +35,7 @@
 		DB2C89662963121E004EA602 /* TotalSessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C89652963121E004EA602 /* TotalSessionsView.swift */; };
 		DB2C896929631EA9004EA602 /* SessionsPerWeekModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C896829631EA9004EA602 /* SessionsPerWeekModel.swift */; };
 		DB2C896B296354BD004EA602 /* AverageSessionLengthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C896A296354BD004EA602 /* AverageSessionLengthView.swift */; };
+		DB2C896D29645EF5004EA602 /* AverageHoldTimePerSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C896C29645EF5004EA602 /* AverageHoldTimePerSessionView.swift */; };
 		DB2F62F42927F80A00D0BFFD /* BlueButtonSmaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F62F32927F80A00D0BFFD /* BlueButtonSmaller.swift */; };
 		DB2F62F72927F8F700D0BFFD /* CreateNewPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F62F62927F8F700D0BFFD /* CreateNewPasswordView.swift */; };
 		DB2F6303292962AB00D0BFFD /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2F6302292962AB00D0BFFD /* CustomTextField.swift */; };
@@ -161,6 +162,7 @@
 		DB2C89652963121E004EA602 /* TotalSessionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalSessionsView.swift; sourceTree = "<group>"; };
 		DB2C896829631EA9004EA602 /* SessionsPerWeekModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsPerWeekModel.swift; sourceTree = "<group>"; };
 		DB2C896A296354BD004EA602 /* AverageSessionLengthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageSessionLengthView.swift; sourceTree = "<group>"; };
+		DB2C896C29645EF5004EA602 /* AverageHoldTimePerSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageHoldTimePerSessionView.swift; sourceTree = "<group>"; };
 		DB2F62F32927F80A00D0BFFD /* BlueButtonSmaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonSmaller.swift; sourceTree = "<group>"; };
 		DB2F62F62927F8F700D0BFFD /* CreateNewPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPasswordView.swift; sourceTree = "<group>"; };
 		DB2F6302292962AB00D0BFFD /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -652,6 +654,7 @@
 				DBB0C4FD29410E7E00373517 /* StatsView.swift */,
 				DB2C89652963121E004EA602 /* TotalSessionsView.swift */,
 				DB2C896A296354BD004EA602 /* AverageSessionLengthView.swift */,
+				DB2C896C29645EF5004EA602 /* AverageHoldTimePerSessionView.swift */,
 			);
 			path = StatsPage;
 			sourceTree = "<group>";
@@ -1011,6 +1014,7 @@
 				DB2F6308292B5C6500D0BFFD /* HomeView.swift in Sources */,
 				DB2C89242958C9A2004EA602 /* FireBreathingHoldView.swift in Sources */,
 				DB4F866B295338B3001E3D3F /* NasalBreathingHoldWarningView.swift in Sources */,
+				DB2C896D29645EF5004EA602 /* AverageHoldTimePerSessionView.swift in Sources */,
 				DBB0C4FA2940F9D300373517 /* MeditationFinishedOnlineView.swift in Sources */,
 				DBB0C4D3293F417800373517 /* TimerViewModel.swift in Sources */,
 				DB2C891A2958C35E004EA602 /* FireBreathingBodyView.swift in Sources */,

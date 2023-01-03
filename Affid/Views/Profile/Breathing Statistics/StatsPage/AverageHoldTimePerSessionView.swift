@@ -1,14 +1,14 @@
 //
-//  AverageSessionLengthView.swift
+//  AverageHoldTimePerSessionView.swift
 //  Affid
 //
-//  Created by David on 2023-01-02.
+//  Created by David on 2023-01-03.
 //
 
 import SwiftUI
 import Charts
 
-struct AverageSessionLengthView: View {
+struct AverageHoldTimePerSessionView: View {
     @StateObject var statsVm: StatsViewModel
     var statsBckgroundColor: Color = Color(red: 47/255, green: 49/255, blue: 54/255)
     
@@ -60,6 +60,5 @@ struct AverageSessionLengthView: View {
                 await statsVm.getAverageSessionLength()
             }
         }
-
     }
 }

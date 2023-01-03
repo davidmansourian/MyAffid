@@ -43,6 +43,9 @@ struct FireBreathingBodyView: View {
                 Spacer()
             }
         }
+        .onReceive(fireBreathingVm.sessionCounterTimer){ _ in
+            fireBreathingVm.sessionLength += 1
+        }
         .onTapGesture(count: 2, perform: {
             if fireBreathingVm.roundState == FireBreathingRoundState.hold{
                 fireBreathingVm.holdStop = true

@@ -31,7 +31,9 @@ struct FireBreathingCustomNavigationBarView: View {
             
             if fireBreathingVm.roundState != FireBreathingRoundState.finished && fireBreathingVm.firstRoundBreathHoldComplete{
                 Button {
+                    fireBreathingVm.sessionCounterTimer.upstream.connect().cancel()
                     fireBreathingVm.roundState = FireBreathingRoundState.finished
+                    fireBreathingVm.saveSession()
                 } label: {
                     Text("Finish")
                         .foregroundColor(.white)
