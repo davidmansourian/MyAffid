@@ -55,7 +55,7 @@ struct TotalSessionsView: View {
         }
         .onAppear{
             Task{
-                await statsVm.getSessionsPerDayForWeek()
+                await statsVm.getSessionsForTimeInterval()
             }
         }
     }

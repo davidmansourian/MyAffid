@@ -14,7 +14,7 @@ struct SessionsPerWeekModel: Identifiable{
     let type: String
 }
 
-struct LengthForSessionTypeModel: Identifiable{
+struct AverageLengthForSessionTypeModel: Identifiable{
     let id = UUID()
     let type: String
     let length: Float

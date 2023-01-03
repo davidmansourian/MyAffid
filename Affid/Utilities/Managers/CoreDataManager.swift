@@ -86,6 +86,24 @@ class CoreDataManager: ObservableObject{
         return 0
     }
     
+    func getSessionLengthForType(meditationType: String) -> Float{
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Session")
+        let predicate = NSPredicate(format: "type == %@", meditationType)
+        fetchRequest.predicate = predicate
+        
+        do{
+            let sessions = try moc.fetch(fetchRequest) as! [Session]
+            let count = try moc.count(for: fetchRequest)
+            let length = sessions.reduce(0, {$0 + $1.length})
+            let average = length/Float(count)
+            print(average)
+            return average
+        } catch {
+            print("Debug: Could not fetch total length for specific attribute")
+        }
+        return 0
+    }
+    
     func countMeditations(meditationType: String) -> Int{
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Session")
         let predicate = NSPredicate(format: "type == %@", meditationType)

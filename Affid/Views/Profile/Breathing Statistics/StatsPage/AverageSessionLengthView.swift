@@ -24,12 +24,12 @@ struct AverageSessionLengthView: View {
                     .fontWeight(.light)
                     .padding(.leading, 13)
                     .padding(.top, 8)
-                Chart(statsVm.allSessionsArr){ element in
+                Chart(statsVm.averageLengthForType){ element in
                     BarMark(
                         x: .value("Session", element.length), // need to account for number of times done, also need to show length in minutes
-                        y: .value("Type", element.type ?? "")
+                        y: .value("Type", element.type )
                     )
-                    .foregroundStyle(by: .value("Session Type", element.type ?? ""))
+                    .foregroundStyle(by: .value("Session Type", element.type ))
                 }
                 .padding()
                 .chartXAxis{

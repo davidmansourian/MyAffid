@@ -12,9 +12,8 @@ class StatsViewModel: ObservableObject{
     private var coreDataManager = CoreDataManager.shared
     @Published var totalCompletedMeditations: Int = 0
     @MainActor @Published var completedSsessionsArr: [Session] = []
-    @MainActor @Published var allSessionsArr: [Session] = []
     @MainActor @Published var sessionsPerDay: [SessionsPerWeekModel] = []
-    @MainActor @Published var lengthForType: [LengthForSessionTypeModel] = []
+    @MainActor @Published var averageLengthForType: [AverageLengthForSessionTypeModel] = []
     @Published var totalMeditations: Int = 0
     @Published var favoriteMeditation: String = ""
     
@@ -25,17 +24,13 @@ class StatsViewModel: ObservableObject{
     
     func getAverageSessionLength() async{
         await MainActor.run{
-            self.allSessionsArr = coreDataManager.getSessions()
-            
-            for theSession in self.allSessionsArr{
-                lengthForType.append(LengthForSessionTypeModel(type: theSession.type ?? "", length: theSession.length))
-            }
-            
+            self.averageLengthForType.append(AverageLengthForSessionTypeModel(type: "Regular", length: coreDataManager.getSessionLengthForType(meditationType: "Regular")))
+            self.averageLengthForType.append(AverageLengthForSessionTypeModel(type: "Nasal Breathing", length: coreDataManager.getSessionLengthForType(meditationType: "Nasal Breathing")))
         }
     }
     
     
-    func getSessionsPerDayForWeek() async{
+    func getSessionsForTimeInterval() async{
         let calendar = NSCalendar.current
         let now = NSDate()
         let sevenDaysAgo = calendar.date(byAdding: .day, value: -7, to: now as Date)!
@@ -49,7 +44,6 @@ class StatsViewModel: ObservableObject{
             
             for days in self.completedSsessionsArr{
                 let dayOfWeek = dateFormatter.string(from: days.date ?? Date())
-                print(days)
                 sessionsPerDay.append(SessionsPerWeekModel(day: dayOfWeek, count: 1, type: days.type ?? ""))
             }
         }
