@@ -34,7 +34,6 @@ class BarChartViewModel: ObservableObject{
             let monthInt = Calendar.current.component(.month, from: session.date!)
             monthlyCountArr[monthInt-1].count += 1 // minus 1 because dictionary loads from 0 to 11
         }
-        print(monthlyCountArr)
     }
     
     func loadBarChart(){

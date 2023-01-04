@@ -128,33 +128,37 @@ class CoreDataManager: ObservableObject{
         fetchRequest.predicate = predicate
         fetchRequest.propertiesToFetch = ["date", sessionType]
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        var holdLengthsByDate = [String:Int]()
-        var resultsArr: [AverageHoldForSessionByDate] = []
+        dateFormatter.dateFormat = "EE"
+        //var holdLengthsByDate = [String:Int]()
         
         do {
             let sessions = try moc.fetch(fetchRequest)
-            let groupedSessions = Dictionary(grouping: sessions) { dateFormatter.string(from: $0.date!) }
-            for (date, sessionsForDate) in groupedSessions {
-                let holdLengths = sessionsForDate.compactMap{
+            var sessionArr: [String:Int] = [:]
+            var resultsArr: [AverageHoldForSessionByDate] = []
+            
+            
+            
+            let groupedSessions = Dictionary(grouping: sessions){ dateFormatter.string(from: $0.date!) }
+            
+            for(date, holdLength) in groupedSessions{
+                let holdLengths = holdLength.compactMap{
                     sessionType == "nasalSession" ? $0.nasalSession?.averageHoldLength : $0.fireSession?.averageHoldLength
                 }
-                print("holdLength", holdLengths)
-                print(holdLengths.count)
-                let averageHoldLength = holdLengths.reduce(0, +) / Int32(holdLengths.count)
-                holdLengthsByDate[date] = Int(averageHoldLength)
-                print(averageHoldLength)
+                let averageHoldLength = holdLengths.reduce(0, +) / Int32(holdLengths.count) // rounds down
+                sessionArr[date] = Int(averageHoldLength)
             }
-            for theResult in holdLengthsByDate{
-                guard let theDate = dateFormatter.date(from: theResult.key) else { return [] }
-                dateFormatter.dateFormat = "EE"
-                let stringDate = dateFormatter.string(from: theDate)
-                resultsArr.append(AverageHoldForSessionByDate(type: meditationType, holdLength: Float(theResult.value), date: stringDate))
+            
+            print(sessionArr)
+            
+           for theResult in sessionArr{
+                resultsArr.append(AverageHoldForSessionByDate(type: meditationType, holdLength: Float(theResult.value), date: theResult.key))
             }
+            print(resultsArr)
             return resultsArr
         } catch let error as NSError {
             print("Fetch error: \(error.localizedDescription)")
         }
+        
         
         return []
     }

@@ -62,7 +62,6 @@ class NasalBreathingViewModel: ObservableObject{
             let roundSize = BreathCoundModel(count: i*5, breathIndex: i)
             roundsArr.append(roundSize)
         }
-        print(roundsArr)
     }
     
     func getNasalBreathSettings(){

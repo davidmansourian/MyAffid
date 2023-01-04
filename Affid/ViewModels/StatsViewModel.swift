@@ -29,6 +29,7 @@ class StatsViewModel: ObservableObject{
             self.averageLengthForType.append(AverageLengthForSessionTypeModel(type: "Regular", length: coreDataManager.getSessionLengthForType(meditationType: "Regular")))
             self.averageLengthForType.append(AverageLengthForSessionTypeModel(type: "Nasal Breathing", length: coreDataManager.getSessionLengthForType(meditationType: "Nasal Breathing")))
             self.averageLengthForType.append(AverageLengthForSessionTypeModel(type: "Fire Breathing", length: coreDataManager.getSessionLengthForType(meditationType: "Fire Breathing")))
+        
             
         }
     }
@@ -40,14 +41,17 @@ class StatsViewModel: ObservableObject{
         let startDate = calendar.startOfDay(for: sevenDaysAgo)
         
        
-        let nasalArr = coreDataManager.getAverageHoldLengthsForType(meditationType: "Nasal Breathing", startDate: startDate, endDate: now as Date, sessionType: "nasalSession")
+        print("nasalArr")
+       let nasalArr = coreDataManager.getAverageHoldLengthsForType(meditationType: "Nasal Breathing", startDate: startDate, endDate: now as Date, sessionType: "nasalSession")
+       // print(nasalArr)
+       
+        print("fireArr")
         let fireArr = coreDataManager.getAverageHoldLengthsForType(meditationType: "Fire Breathing", startDate: startDate, endDate: now as Date, sessionType: "fireSession")
-        let newArr = Array(Set(nasalArr + fireArr))
+        // let newArr = Array(Set(nasalArr + fireArr))
         
         
         await MainActor.run{
-            self.averageHoldForSession = newArr
-            print(self.averageHoldForSession)
+           self.averageHoldForSession = nasalArr + fireArr
         }
     }
     
