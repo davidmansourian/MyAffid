@@ -22,12 +22,24 @@ struct StatsView: View {
                     .font(.title)
                     .fontWeight(.light)
                 ScrollView{
-                    TotalSessionsView(statsVm: statsVm)
                     
-                    AverageSessionLengthView(statsVm: statsVm)
+                    NavigationLink {
+                        HomeView()
+                    } label: {
+                        TotalSessionsView(statsVm: statsVm)
+                    }
                     
-                    AverageHoldTimePerSessionView(statsVm: statsVm)
-                    
+                    NavigationLink {
+                        TotalAverageSesionLengthView(statsVm: statsVm)
+                    } label: {
+                        AverageSessionLengthView(statsVm: statsVm)
+                    }
+
+                    NavigationLink {
+                        HomeView()
+                    } label: {
+                        AverageHoldTimePerSessionView(statsVm: statsVm)
+                    }                    
                 }
             }
         }

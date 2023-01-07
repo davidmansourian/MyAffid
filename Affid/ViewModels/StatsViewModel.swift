@@ -15,6 +15,7 @@ class StatsViewModel: ObservableObject{
     @MainActor @Published var sessionsPerDay: [SessionsPerWeekModel] = []
     @MainActor @Published var averageLengthForType: [AverageLengthForSessionTypeModel] = []
     @MainActor @Published var averageHoldForSession: [AverageHoldForSessionByDate] = []
+    @MainActor @Published var averageHoldSessionsForTimeInterval: [AverageLengthForSessionTypeModel] = []
     @Published var totalMeditations: Int = 0
     @Published var favoriteMeditation: String = ""
     
@@ -29,37 +30,42 @@ class StatsViewModel: ObservableObject{
             self.averageLengthForType.append(AverageLengthForSessionTypeModel(type: "Regular", length: coreDataManager.getSessionLengthForType(meditationType: "Regular")))
             self.averageLengthForType.append(AverageLengthForSessionTypeModel(type: "Nasal Breathing", length: coreDataManager.getSessionLengthForType(meditationType: "Nasal Breathing")))
             self.averageLengthForType.append(AverageLengthForSessionTypeModel(type: "Fire Breathing", length: coreDataManager.getSessionLengthForType(meditationType: "Fire Breathing")))
-        
+            
             
         }
     }
     
-    func getAverageHoldPerSessionForDate() async{
+    func getAverageSessionLengthForTimeInterval(startDate: Date) -> [AverageLengthForSessionTypeModel]{
+        print(startDate)
+        var returnArr: [AverageLengthForSessionTypeModel] = []
+        returnArr.append(AverageLengthForSessionTypeModel(type: "Regular", length: coreDataManager.getAverageSessionLengthForTypeDate(meditationType: "Regular", startDate: startDate)))
+        returnArr.append(AverageLengthForSessionTypeModel(type: "Nasal Breathing", length: coreDataManager.getAverageSessionLengthForTypeDate(meditationType: "Nasal Breathing", startDate: startDate)))
+        returnArr.append(AverageLengthForSessionTypeModel(type: "Fire Breathing", length: coreDataManager.getAverageSessionLengthForTypeDate(meditationType: "Fire Breathing", startDate: startDate)))
+        
+        return returnArr
+    }
+    
+    func getAverageHoldPerSessionForDate(startDate: Date) async{
         let calendar = NSCalendar.current
         let now = NSDate()
-        let sevenDaysAgo = calendar.date(byAdding: .day, value: -7, to: now as Date)!
-        let startDate = calendar.startOfDay(for: sevenDaysAgo)
         
-       
+        
         print("nasalArr")
-       let nasalArr = coreDataManager.getAverageHoldLengthsForType(meditationType: "Nasal Breathing", startDate: startDate, endDate: now as Date, sessionType: "nasalSession")
-       // print(nasalArr)
-       
+        let nasalArr = coreDataManager.getAverageHoldLengthsForType(meditationType: "Nasal Breathing", startDate: startDate, endDate: now as Date, sessionType: "nasalSession")
+        // print(nasalArr)
+        
         print("fireArr")
         let fireArr = coreDataManager.getAverageHoldLengthsForType(meditationType: "Fire Breathing", startDate: startDate, endDate: now as Date, sessionType: "fireSession")
         // let newArr = Array(Set(nasalArr + fireArr))
         
         
         await MainActor.run{
-           self.averageHoldForSession = nasalArr + fireArr
+            self.averageHoldForSession = nasalArr + fireArr
         }
     }
     
-    func getSessionsForTimeInterval() async{
-        let calendar = NSCalendar.current
+    func getSessionsForTimeInterval(startDate: Date) async{
         let now = NSDate()
-        let sevenDaysAgo = calendar.date(byAdding: .day, value: -7, to: now as Date)!
-        let startDate = calendar.startOfDay(for: sevenDaysAgo)
         await MainActor.run {
             self.totalCompletedMeditations = coreDataManager.countTotalTimesMeditatedCompleted()
             let dateFormatter = DateFormatter()

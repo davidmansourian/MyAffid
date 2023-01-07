@@ -1,5 +1,5 @@
 //
-//  TotalSessionsView.swift
+//  AverageSessionLengthView.swift
 //  Affid
 //
 //  Created by David on 2023-01-02.
@@ -8,9 +8,8 @@
 import SwiftUI
 import Charts
 
-struct TotalSessionsView: View {
+struct AverageSessionLengthView: View {
     @StateObject var statsVm: StatsViewModel
-    var statsBckgroundColor: Color = Color(red: 47/255, green: 49/255, blue: 54/255)
     
     init(statsVm: StatsViewModel){
         _statsVm = StateObject(wrappedValue: statsVm)
@@ -18,23 +17,28 @@ struct TotalSessionsView: View {
     var body: some View {
         VStack{
             VStack(alignment: .leading){
-                Text("Completed sessions this week")
+                Text("Average Session Length")
                     .foregroundColor(.white)
                     .font(.callout)
                     .fontWeight(.light)
                     .padding(.leading, 13)
                     .padding(.top, 8)
-                Text("\(statsVm.totalCompletedMeditations)")
-                    .foregroundColor(.white)
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .padding(.leading, 13)
-                Chart(statsVm.sessionsPerDay){ element in
+                Chart(statsVm.averageLengthForType){ element in
                     BarMark(
-                        x: .value("Day", element.day),
-                        y: .value("Sessions", element.count)
+                        x: .value("Session", element.length), // need to account for number of times done, also need to show length in minutes
+                        y: .value("Type", element.type )
                     )
-                    .foregroundStyle(by: .value("Session Type", element.type))
+                    .foregroundStyle(by: .value("Session Type", element.type ))
+                    .annotation(position: .overlay){
+                        if !(element.length.isInfinite || element.length.isNaN){
+                            Text("\(statsVm.convertSecondsToTimeString(timeInSeconds: Int(element.length)))")
+                                .font(.system(size: 10))
+                                .foregroundColor(.white)
+                        }
+                        else{
+                            Text("no data yet")
+                        }
+                    }
                 }
                 .padding()
                 .chartXAxis{
@@ -44,26 +48,22 @@ struct TotalSessionsView: View {
                             .font(.system(size: 10))
                     }
                 }
+
             }
             .frame(height: 210)
             .frame(maxWidth: .infinity)
             .background(
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .fill(statsBckgroundColor))
+                .fill(ColorData.shared.profileMenuColor))
             .padding(.horizontal, 10)
             .padding(.top, 5)
             
         }
         .onAppear{
             Task{
-                await statsVm.getSessionsForTimeInterval()
+                await statsVm.getAverageSessionLength()
             }
         }
-    }
-}
 
-struct TotalSessionsView_Previews: PreviewProvider {
-    static var previews: some View {
-        TotalSessionsView(statsVm: StatsViewModel())
     }
 }

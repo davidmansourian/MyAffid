@@ -10,7 +10,6 @@ import Charts
 
 struct AverageHoldTimePerSessionView: View {
     @StateObject var statsVm: StatsViewModel
-    var statsBckgroundColor: Color = Color(red: 47/255, green: 49/255, blue: 54/255)
     
     init(statsVm: StatsViewModel){
         _statsVm = StateObject(wrappedValue: statsVm)
@@ -62,14 +61,18 @@ struct AverageHoldTimePerSessionView: View {
             .frame(maxWidth: .infinity)
             .background(
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .fill(statsBckgroundColor))
+                .fill(ColorData.shared.profileMenuColor))
             .padding(.horizontal, 10)
             .padding(.top, 5)
             
         }
         .onAppear{
             Task{
-                await statsVm.getAverageHoldPerSessionForDate()
+                let calendar = NSCalendar.current
+                let now = NSDate()
+                let sevenDaysAgo = calendar.date(byAdding: .day, value: -7, to: now as Date)!
+                let startDate = calendar.startOfDay(for: sevenDaysAgo)
+                await statsVm.getAverageHoldPerSessionForDate(startDate: startDate)
             }
             
         }

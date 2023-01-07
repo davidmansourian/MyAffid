@@ -122,6 +122,26 @@ class CoreDataManager: ObservableObject{
         return 0
     }
     
+    func getAverageSessionLengthForTypeDate(meditationType: String, startDate: Date) -> Float{
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Session")
+        let calendar = NSCalendar.current
+        let now = NSDate()
+        let predicate = NSPredicate(format: "(date >= %@) AND (date < %@) AND type == %@", startDate as NSDate, now, meditationType)
+        fetchRequest.predicate = predicate
+        
+        do{
+            let sessions = try moc.fetch(fetchRequest) as! [Session]
+            let count = try moc.count(for: fetchRequest)
+            let length = sessions.reduce(0, {$0 + $1.length})
+            let average = length/Float(count)
+            print(average)
+            return average
+        } catch {
+            print("Debug: Could not fetch total length for specific attribute")
+        }
+        return 0
+    }
+    
     func getAverageHoldLengthsForType(meditationType: String, startDate: Date, endDate: Date, sessionType: String) -> [AverageHoldForSessionByDate]{
         let fetchRequest: NSFetchRequest<Session> = Session.fetchRequest()
         let predicate = NSPredicate(format: "type == %@ AND date >= %@ AND date < %@", meditationType, startDate as NSDate, endDate as NSDate)
@@ -135,8 +155,6 @@ class CoreDataManager: ObservableObject{
             let sessions = try moc.fetch(fetchRequest)
             var sessionArr: [String:Int] = [:]
             var resultsArr: [AverageHoldForSessionByDate] = []
-            
-            
             
             let groupedSessions = Dictionary(grouping: sessions){ dateFormatter.string(from: $0.date!) }
             
@@ -158,7 +176,6 @@ class CoreDataManager: ObservableObject{
         } catch let error as NSError {
             print("Fetch error: \(error.localizedDescription)")
         }
-        
         
         return []
     }
